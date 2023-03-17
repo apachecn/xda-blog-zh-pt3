@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>How to install Hyper-V on Windows 11 Home</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何在Windows 11 Home上安装Hyper-V</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-to-install-hyper-v-windows-11-home/#0001-01-01">https://www.xda-developers.com/how-to-install-hyper-v-windows-11-home/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">Windows的每个主要版本都有一个<a href="https://www.xda-developers.com/windows-11-skus/">几个不同的版本</a>，或者SKU，它们有不同的特性。即将到来的<a href="https://www.xda-developers.com/windows-11/"> Windows 11 </a>也不例外，我们已经知道它会有家庭版、专业版等版本。通常只有Windows专业版才有的一大功能是Hyper-V，但经过一些修改，你实际上可以在家庭版上获得它。如果你感兴趣的话，下面是如何在Windows 11 Home上安装Hyper-V的方法。</p>
+
+ 
+<h2 id="what-is-hyper-v" class="translated">什么是Hyper-V？</h2>
+<p class="translated">Hyper-V是微软的虚拟机管理程序软件，它允许你在你的电脑上创建和运行虚拟机。虚拟机(VM)允许您创建不影响您的主机PC的操作系统的隔离实例。虚拟化软件有几种选择，但Hyper-V是Windows自带的，如果您正在管理Windows虚拟机，它是理想的选择。</p>
+
+<p class="translated">Hyper-V可以用于测试不稳定或危险的应用程序，或者如果您需要特定操作系统的特定功能。例如，如果你需要Linux的某些东西，但你更喜欢Windows作为你的主要操作系统，你可以安装Ubuntu。</p>
+
+
+
+<p class="translated">Hyper-V最初是在Windows Server 2008上实现的，从那以后它就成为了Windows的一部分。对于普通的Windows，它只适用于操作系统的专业版、企业版和教育版——也就是说，是官方版本。即使在那些版本中，它通常也是一个可选功能，所以你必须进入设置应用程序才能安装它。</p>
+
+<p class="translated">在Windows 11上，你可以通过进入<em>应用</em> &gt; <em>可选功能</em>来安装Hyper-V。滚动到页面底部，点击<em>更多Windows功能</em>，然后找到Hyper-V并安装。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="how-to-install-hyper-v-on-windows-11-home" class="translated">如何在Windows 11 Home上安装Hyper-V</h2>
+<p class="translated">你可能认为让Hyper-V在家庭版Windows上运行很复杂，但它却出奇的简单。你需要做的是:</p>
+
+<ul> <li class="translated">打开记事本(或其他纯文本编辑器)创建文本文件。</li> <li class="translated">将以下内容粘贴到文件中:</li> </ul>
+
+<p class="translated"><code>pushd "%~dp0"</code></p>
+
+<p class="translated">目录/b % SystemRoot % \服务\包\*Hyper-V*。mum &gt;hv.txt</p>
+
+<p class="translated">for/f % % I in(' findstr/I . HV . txt 2^&gt;nul')do dism/online/no restart/add-package:" % systemroot % \ servicing \ packages \ % % I "</p>
+
+<p class="translated">del hv.txt</p>
+
+<p class="translated">dism/online/enable-feature/feature name:Microsoft-Hyper-V-All/limit access/All</p>
+
+<p class="translated">中止</p>
+
+<ul> <li class="translated">用名称<strong> hv.bat </strong>保存文件。你可以把它保存在你喜欢的任何地方。</li> <li class="translated">保存后，右键单击文件并选择<em>以管理员身份运行</em>。</li> <li class="translated">让流程运行；这可能需要一段时间。一旦完成，你必须重新启动电脑。</li> <li class="translated">Hyper-V应该会自动安装，您可以通过在开始菜单中搜索找到它。它将被称为Hyper-V管理器。</li> </ul>
+
+
+
+<p class="translated">它也可以在Windows工具中找到。如果它没有出现，请尝试以下操作:</p>
+
+<ul> <li class="translated">打开设置应用，进入<em>应用</em> &gt; <em>可选功能</em>。</li> <li class="translated">滚动到底部，点击<em>更多Windows功能</em>。</li> <li class="translated">在列表中找到Hyper-V并启用它。之后您可能需要重新启动。</li> </ul>
+
+
+
+<ul> <li class="translated">现在，您应该能够使用Hyper-V来创建和管理虚拟机。</li> </ul>
+
+<p class="translated">在Windows 11 Home上安装Hyper-V大概就知道这么多了。本指南也适用于Windows 10。不幸的是，安装Hyper-V不能启用<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview"> Windows沙盒</a>，这是Windows的另一个很酷的虚拟化功能。Windows Sandbox会创建当前Windows版本的干净副本，以便您可以在其上测试软件。它有一个稍微不同的用例，因为它只复制您当前的Windows版本，而不是您想要的任何操作系统。此外，Windows沙盒会在每次关闭时重置。它实际上只是为了快速测试特定的应用程序或设置，而不会损坏你的电脑。</p>
+
+<p class="translated">使用Hyper-V，您可以使用自己的ISO文件创建虚拟机，也可以选择微软提供的选项之一。该公司实际上提供了开箱即用创建Ubuntu虚拟机的能力。虚拟机是持久的，除非你选择删除它们，所以与Windows沙盒相比，它们肯定有不同的应用程序。</p>
+
+<p class="translated">想在Windows 11正式发布的时候拿到？确保你有一台与升级兼容的电脑<a href="https://www.xda-developers.com/windows-11-compatible-pc/">。如果你想获得最新的更新，请关注我们的</a><a href="https://www.xda-developers.com/windows-11-update-tracker/"> Windows 11更新跟踪器</a>。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Microsoft rolls out Windows 10 build 19044.1586 – here’s what’s new</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">微软推出Windows 10 build 19044.1586——以下是新内容</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/windows-10-build-19044-1586/#0001-01-01">https://www.xda-developers.com/windows-10-build-19044-1586/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">我们又一次来到了新的一个月的第二个星期二，这意味着今天是补丁星期二。微软正在为所有受支持的Windows版本推出累积更新，包括Windows 11和Windows 10。虽然Windows 10不再有任何大的新功能，但这些更新应该会提高整体的稳定性和可靠性。提醒一下，只有Windows 10版本21H2、21H1和20H2受到官方支持，它们将分别更新到内部版本号19044.1586、19043.1586和19042.1586。</p>
+
+  
+<p class="translated">不过，这些都是相同的更新，这是因为这三个版本的Windows 10本质上是相同的，只是新版本启用了一些额外的功能。更新的标签是<a href="https://support.microsoft.com/en-us/help/5011487"> KB5011487 </a>，你可以<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011487">在这里</a>手动下载，如果你喜欢走那条路的话。至于新功能，微软已经解决了<a href="https://www.xda-developers.com/windows-11-reset-bug-onedrive-files/"> OneDrive数据在重置后可能会保留在你的PC上的问题</a>。以下是该修复的完整描述:</p>
+
+<ul> <li>  <ul> <li><p class="translated">解决当您尝试重置Windows设备及其应用程序包含包含<a href="https://docs.microsoft.com/windows/win32/fileio/reparse-points" target="_blank" rel="noopener">重解析数据</a>的文件夹时发生的已知问题，例如Microsoft OneDrive或Microsoft OneDrive for Business。当您选择<b>删除所有内容</b>时，从Microsoft OneDrive本地下载或同步的文件可能不会被删除。某些设备在安装此更新后可能需要七(7)天才能完全解决问题，并防止文件在重置后持续存在。为了立即生效，您可以使用<a href="https://support.microsoft.com/windows/windows-update-troubleshooter-19bc41ca-ad72-ae67-af3c-89ce169755dd" target="_blank" rel="noopener"> Windows Update故障诊断程序</a>中的说明手动触发Windows Update故障诊断程序。</p> </li> </ul> </li> </ul>
+
+<p class="translated">这就是此次更新的全部内容，这是因为微软喜欢在前一个月将大部分重大变化放在可选更新中——在本例中是<a href="https://support.microsoft.com/en-us/topic/february-15-2022-kb5010415-os-builds-19042-1566-19043-1566-and-19044-1566-preview-5a644b82-83f4-4cc2-a0e7-85f643252386"> KB5010415 </a>。所有这些变化都已纳入Windows 10内部版本19044.1586，现在它们是强制性的。以下是从可选更新中继承下来的所有内容:</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_4"><h3 id="fixes-for-windows-10-version-21h2-21h1-and-20h2" class="translated">Windows 10版本21H2、21H1和20H2的修复程序</h3><ul> <li class="translated"><i> <b>新增！</b> </i>提供在Microsoft Edge Internet Explorer模式和Microsoft Edge之间共享cookies的能力。</li> <li class="translated"><i> <b>新增！</b> </i>增加了对热添加和移除非易失性内存(NVMe)命名空间的支持。</li> <li class="translated">解决了当Windows Server 2016作为使用特定云计算虚拟桌面基础架构(VDI)的终端服务器运行时出现的问题。因此，服务器在运行一段时间后会随机停止响应。这也解决了一个回归问题，该回归主动检查以确保<b>rpcss.exe</b>中的CSharedLock被正确设置以避免死锁。</li> <li class="translated">解决影响Windows search服务并在使用近似运算符进行查询时出现的问题。</li> <li class="translated">解决wmipicmp.dll模块<b>中的内存泄漏问题，该问题导致系统中心运营管理器(SCOM)数据中心监控系统出现大量错误警报。</b></li> <li class="translated">解决了当登录用户数超过100时导致远程桌面服务(RDS)服务器变得不稳定的问题。这将阻止您在Windows Server 2019上使用RDS访问已发布的应用程序。</li> <li class="translated">解决了当您浏览域或组织单位(ou)时返回错误消息的问题。出现此问题的原因是内存清零不正确。</li> <li class="translated">解决了导致组策略管理控制台在您关闭后停止工作的问题。系统记录应用程序错误事件ID 1000和错误0xc 0000005(STATUS _ ACCESS _ VIOLATION)。故障模块是GPOAdmin.dll的<b/>。</li> <li class="translated">解决了无法在任务管理器中显示启动影响值的问题。</li> <li class="translated">解决了在间接显示场景中影响OpenGL和GPU重绘制的问题。</li> <li class="translated">解决了当<b>iexplore.exe</b>在Microsoft Edge Internet Explorer模式上下文中运行时，阻止<b> ShellWindows() </b>返回<b> InternetExplorer </b>对象的问题。</li> <li class="translated">解决了在Microsoft Edge Internet Explorer模式下影响对话框的问题。</li> <li class="translated">解决了当您按F1键时导致Microsoft Edge Internet Explorer模式停止工作的问题。</li> <li class="translated">解决导致动态数据交换(DDE)对象不正确清理的问题。这可以防止会话断开并导致会话停止响应。</li> <li class="translated">解决了当您使用超过50个窗口树时可能导致设备停止工作的问题。</li> <li class="translated">解决了阻止某些低完整性流程应用程序正常打印的问题。</li> <li class="translated">解决了导致证书注册失败并出现错误消息“0x800700a0 (ERROR _BAD_ARGUMENTS)”的问题。</li> <li class="translated">解决了影响只与Azure Active Directory (AAD)集成的应用程序的问题。这些应用程序将无法在加入Active Directory联合身份验证服务(ADFS)的计算机上运行。<b>T13】</b></li> <li class="translated">解决了在虚拟机脱机时扩展BitLocker分区可能导致BitLocker损坏虚拟机(VM)系统文件的问题。</li> <li class="translated">解决了一个遗留问题，该问题可能会导致<b> Get-TPM </b> PowerShell命令在尝试报告受信任的平台模块(TPM)信息时失败。该命令失败，并显示错误“0x80090011 Microsoft。Tpm.Commands.TpmWmiException，Microsoft。Tpm.Commands.GetTpmCommand "。</li> <li class="translated">解决了当驱动程序受虚拟机监控程序保护的代码完整性(HVCI)保护时，阻止您卸载和重新加载驱动程序的问题。</li> <li class="translated">解决了影响使用远程桌面应用将客户端的本地驱动器装载到终端服务器会话的可靠性问题。</li> <li class="translated">解决了导致登录时远程桌面会话的键盘和远程桌面协议(RDP)客户端不匹配的问题。</li> <li class="translated">解决了有时会导致简体中文输入法编辑器(IME)完全不可用的问题。</li> <li class="translated">解决了导致屏幕阅读器将后退按钮描述为“按钮”而不是“后退按钮”的问题。</li> <li class="translated">解决了当您尝试写入服务主体名称(SPN)别名(如www/FOO)而HOST/FOO已存在于另一个对象上时出现的问题。如果<b> RIGHT_DS_WRITE_PROPERTY </b>在碰撞对象的SPN属性上，您会收到一个“拒绝访问”错误。</li> <li class="translated">解决了阻止管理员和内容所有者打开过期的Active Directory Rights Management Services(AD RMS)内容的问题。</li> <li class="translated">解决了在您重新启动操作系统并登录后断开网络驱动器上的脱机文件的问题。如果分布式文件系统(DFS)路径被映射到网络驱动器，就会出现此问题。</li> <li class="translated">解决了由于<b> vhdmp.sys </b>接收同一文件的不同文件控制块(FCB)对象指针而导致虚拟机实时迁移失败的问题。</li> <li class="translated">解决了在安装网络驱动器时显示两次身份验证对话框的问题。</li> <li class="translated">解决重定向驱动器缓冲子系统(RDBSS)和<b> mrxsmb.sys </b>驱动程序中的内存泄漏问题。</li> <li class="translated">解决导致WebDav重定向器死锁的问题。当您尝试从本地TfsStore读取文件时，会发生此问题，这会导致系统停止响应。</li> <li class="translated">解决了阻止工作文件夹同步从客户端上的错误代码0x80c80003“服务器当前正忙”中恢复的问题。即使服务器上的HTTP请求队列没有指示负载，也会出现此问题。</li> <li class="translated">解决了在页面错误路径中调用上下文函数而导致7F错误的问题。​​​​​​</li> </ul> </div></section>
+<p class="translated">除了Windows 10版本21H2、21H1和20H2，还有其他版本的操作系统仅支持商业和教育客户。这些今天也收到更新，但你必须在一个支持的版本或分支才能获得这些更新。您可以在下表中查看并手动下载它们:</p>
+
+
+<p class="translated">你可以手动下载Windows 10 build 19044.1586或当今的任何更新，但如果你花的时间太长，它们最终会自动安装。这些都是强制更新，最好在方便的时候尽早安装，这样在你忙的时候就不会打扰你了。</p>
+
+<p class="translated">现在也是提醒用户对某些版本的支持即将下降的好时机。从5月10日开始，Windows 10版本20H2将不再支持家庭版和专业版，而版本1909将完全失去支持。现在是开始准备升级以便继续接收安全更新的好时机。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

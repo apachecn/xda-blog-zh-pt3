@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>How to install Android 12 and 12L on Google Pixel and other Android devices</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何在谷歌Pixel和其他Android设备上安装Android 12和12L</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-to-install-android-12/#0001-01-01">https://www.xda-developers.com/how-to-install-android-12/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">又到了一年的这个时候了！<a href="https://www.xda-developers.com/android-12/"> Android 12 </a>，即Android的下一个主要版本现已通过<a href="https://www.xda-developers.com/android-12-stable-rollout-google-pixel/">稳定渠道</a>在<a href="https://www.xda-developers.com/android-12-launched/">上市</a>。谷歌也已经开始推出Android 12L，这是一个功能下降，为大屏幕设备带来了一些优化和改进。对于拥有谷歌Pixel 3a、Pixel 3a XL、Pixel 4、Pixel 4 XL、Pixel 4a、Pixel 4a 5G、Pixel 5、Pixel 5a、<a href="https://www.xda-developers.com/google-pixel-6/"> Pixel 6或Pixel 6 Pro </a>的幸运用户来说，你将是第一批看到新操作系统更新提供了什么的用户。</p>
+
+  
+<p class="translated">如果你有任何上述Pixel智能手机运行和旧的稳定版本，并想知道如何安装Android 12或12L，只需向下滚动，因为我们已经为你准备好了教程。请记住，谷歌将为现有的测试版用户提供增量OTA，以转移到稳定版本，但他们也可以选择手动更新。一旦<a href="https://www.xda-developers.com/how-to-download-android-12/">下载了相关的Android 12发布包</a>，您将需要一台安装了ADB 和Fastboot的<a href="https://www.xda-developers.com/install-adb-windows-macos-linux/"> PC/Mac来成功执行安装过程。</a></p>
+
+<p class="translated">除了受支持的谷歌Pixel设备，Android 12/12L还以GSI的形式提供，可以在更广泛的设备上播放。原始设备制造商也加入了这场派对，你可以在以下手机上flash Beta 1:</p>
+
+
+
+<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id="custom_block_4"><p class="translated"><strong>警告:</strong>更新仅供开发者使用，所以不要安装在你的日常驱动上。这些构建是早期版本，包含错误和其他系统不稳定性。即使刷新过程不一定会擦除您的设备，也强烈建议您在继续之前备份数据。建议用户谨慎使用。</p> </div></section>
+<p class="translated"><strong>安装更新的三种方法是:</strong></p>
+
+
+
+<hr/>
+
+
+<h2 id="method-1-sideload-android-12-12l-via-recovery-and-adb" class="translated">方法1:通过恢复和ADB侧装Android 12/12L</h2>
+<p class="translated">要安装稳定版本，您需要通过ADB为您的设备从恢复中下载适当的OTA包。这种方法也适用于带有锁定引导程序的Google Pixel设备。</p>
+
+<ol> <li class="translated">下载更新。你电脑上的zip文件<a href="https://www.xda-developers.com/how-to-download-android-12/">从这里</a>。为了方便起见，您可以将该文件重命名为一个更简单的名称，并将该文件放在您计算机上ADB所在的目录中。</li> <li class="translated">可选但建议:验证您下载的文件的SHA-256校验和，以确保该文件已完全正确下载。</li> <li class="translated">在手机上启用USB调试-进入设置&gt;关于手机&gt;轻按“内部版本号”7次，(可选)输入您的模式，PIN或密码以启用开发者选项，然后导航到设置&gt;开发者选项&gt;启用“USB调试”。</li> <li class="translated">将手机连接到电脑。如果这是您第一次与亚行计算机连接，当手机上出现提示时，请在手机上授权您的计算机连接。</li> <li class="translated">在您的计算机上，运行命令:<pre> <code class="hljs ">adb reboot recovery</code> </pre></li> <li class="translated">你应该会在手机屏幕上看到“没有命令”。现在按住手机的电源键。按住电源的同时，按下音量增大按钮，然后快速放开这两个按钮。你应该Android恢复菜单。</li> <li class="translated">从恢复菜单中选择选项<em>应用来自ADB的更新</em>。</li> <li class="translated">在您的手机上，选择“应用亚行更新”选项</li> <li class="translated">在您的计算机上，运行命令:<pre> <code class="hljs ">adb devices</code> </pre>这将返回一个设备序列号，其名称旁边带有“sideload ”,表明您的设备以侧载模式连接到计算机。</li> <li class="translated">在您的计算机上，运行命令:<pre> <code class="hljs javascript">adb sideload <span class="hljs-string">"filename"</span>.zip</code> </pre>，其中“文件名”将替换为步骤1中下载的文件的名称</li> <li class="translated">更新应该会安装在您的手机上。安装完成后，在手机上选择“立即重启系统”，重启进入Android 12。</li> </ol>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="method-2-flashing-full-factory-image-via-fastboot" class="translated">方法2:通过快速启动刷新完整的工厂映像</h2>
+<p class="translated">如果你在谷歌Pixel设备上有一个解锁的引导程序，你需要通过Fastboot刷新Android 12或12L的完整出厂映像。通常，这是通过下载文件中包含的<em> flash-all.sh </em>或<em> flash-all.bat </em>脚本文件来完成的，但其默认配置也会完全擦除设备。但是，您可以通过从脚本的命令中删除“-w”wipe属性来保留您的数据。</p>
+
+<ol> <li class="translated">下载工厂图像。从这里打开你电脑上的<a href="https://www.xda-developers.com/how-to-download-android-12/">zip文件。</a></li> <li class="translated">可选但建议:验证您下载的文件的SHA-256校验和，以确保该文件已完全正确下载。</li> <li class="translated">提取。zip文件，为了方便起见，将结果文件复制并粘贴到您计算机上的ADB和fastboot文件夹中。</li> <li class="translated">可选:结果文件将包含一个<em> flash-all.sh </em>或<em> flash-all.bat </em>脚本文件。使用文本编辑器，打开<em> flash-all.sh </em>(如果你在macOS/Linux上)或<em> flash-all.bat </em>脚本文件(如果你在Windows上)。找到并移除/删除<code>fastboot update</code>命令中的-w标志。这将跳过你的手机数据擦除。为了避免兼容性问题，建议进行数据擦除。</li> <li class="translated">在手机上启用USB调试-进入设置&gt;关于手机&gt;轻按“内部版本号”7次，(可选)输入您的模式，PIN或密码以启用开发者选项，然后导航到设置&gt;开发者选项&gt;启用“USB调试”。</li> <li class="translated">将手机连接到电脑。如果这是您第一次与亚行计算机连接，当手机上出现提示时，请在手机上授权您的计算机连接。</li> <li class="translated">在你的电脑上运行:<pre> <code class="hljs ">adb reboot bootloader</code> </pre>这将重启你的手机进入快速启动模式。</li> <li class="translated">在您的Mac/Linux PC上，运行:<pre> <code class="hljs ">flash-all</code> </pre>该命令执行<em> flash-all.sh </em>脚本文件，然后安装必要的引导程序、基带固件和操作系统。如果您使用的是Windows，只需双击flash-all.bat文件。</li> <li class="translated">一旦脚本完成，您的设备将重新启动到新的操作系统。</li> </ol>
+
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="method-3-install-android-12-12l-gsi" class="translated">方法三:安装安卓12/12L GSI</h2>
+<p class="translated">即使你没有兼容的Pixel智能手机，你仍然可以安装谷歌官方的GSI二进制文件来测试Android 12或12L，前提是你的设备兼容Project Treble。您还需要一个解锁的引导加载程序。我们需要说的最后一件事是，刷新GSI将需要您在工厂重置您的设备，所以请确保您在继续操作之前准备好丢失应用程序数据！我们建议您进行设备外备份(例如在您的PC或SD卡上)，以防出现任何问题。</p>
+
+<ol> <li class="translated">官方Android 12/12L Beta GSIs的下载链接可以在<a href="https://www.xda-developers.com/how-to-download-android-12/">这里</a>找到。Google还没有发布基于稳定版本的GSIs。您应该根据您设备的架构下载合适的版本。要查看您的设备的架构，运行以下命令:<pre> <code class="hljs css"><span class="hljs-selector-tag">adb</span> <span class="hljs-selector-tag">shell</span> <span class="hljs-selector-tag">getprop</span> <span class="hljs-selector-tag">ro</span><span class="hljs-selector-class">.product</span><span class="hljs-selector-class">.cpu</span><span class="hljs-selector-class">.abi</span></code> </pre></li> <li class="translated">可选但建议:验证您下载的文件的SHA-256校验和，以确保该文件已完全正确下载。</li> <li class="translated">提取。zip文件，为了方便起见，将结果文件(<strong> system.img </strong>和<strong> vbmeta.img </strong>)复制并粘贴到您电脑上的ADB和fastboot文件夹中。</li> <li class="translated">在手机上启用USB调试-进入设置&gt;关于手机&gt;轻按“内部版本号”7次，(可选)输入您的模式，PIN或密码以启用开发者选项，然后导航到设置&gt;开发者选项&gt;启用“USB调试”。</li> <li class="translated">将手机连接到电脑。如果这是您第一次与亚行计算机连接，当手机上出现提示时，请在手机上授权您的计算机连接。</li> <li class="translated">在你的电脑上运行:<pre> <code class="hljs ">adb reboot bootloader</code> </pre>这将重启你的手机进入快速启动模式。</li> <li class="translated">如前所述，目标设备<strong>的引导程序必须事先解锁</strong>。</li> <li class="translated">接下来，我们需要禁用Android验证启动(AVB)。为此，运行以下命令:<pre> <code class="hljs css"><span class="hljs-selector-tag">fastboot</span> <span class="hljs-selector-tag">flash</span> <span class="hljs-selector-tag">vbmeta</span> <span class="hljs-selector-tag">vbmeta</span><span class="hljs-selector-class">.img</span></code> </pre></li> <li class="translated">可选但推荐:输入以下命令来擦除系统分区:<pre> <code class="hljs ">fastboot erase system</code> </pre></li> <li class="translated">flash Android 12/12L GSI:<pre> <code class="hljs css"><span class="hljs-selector-tag">fastboot</span> <span class="hljs-selector-tag">flash</span> <span class="hljs-selector-tag">system</span> <span class="hljs-selector-tag">system</span><span class="hljs-selector-class">.img</span></code> </pre></li> <li class="translated">让图像闪烁，这可能需要几分钟时间。一旦完成，清除用户数据分区:<pre> <code class="hljs ">fastboot -w</code> </pre></li> <li class="translated">最后，重启你的设备:<pre> <code class="hljs ">fastboot reboot</code> </pre></li> <li class="translated">希望你的设备能够启动新版本的Android。</li> </ol>
+
+<hr/>
+
+<p class="translated"><strong>请务必关注我们的<a href="https://www.xda-developers.com/tag/android-12/"> Android 12 </a>和<a href="https://www.xda-developers.com/tag/android-12l/"> Android 12L </a>标签，了解新Android版本的所有最新消息！</strong></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

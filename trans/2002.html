@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Windows 11 build 25145 brings OneDrive subscription management to Settings</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">Windows 11 build 25145将OneDrive订阅管理引入设置</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/windows-11-build-25145-dev-channel-onedrive-narrator-laps/#0001-01-01">https://www.xda-developers.com/windows-11-build-25145-dev-channel-onedrive-narrator-laps/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">微软正在向Dev频道的内部人士推出Windows 11的新版本，这一次它的版本号为25145。这个新版本提供了一些新功能，包括对讲述人的改进，以及设置应用程序中的OneDrive订阅管理。</p>
+
+  
+<p class="translated">后者是微软365订阅管理的扩展，已经在Windows 11版本22H2中可用。现在，如果你有一个独立的OneDrive订阅(100GB的存储空间)，你可以在设置应用程序的帐户部分看到有关信息。你可以查看你的重复付费信息以及你在OneDrive中剩余的存储空间，如果你接近你的限制，该页面将向你发出警告。</p>
+
+
+
+<p class="translated">Windows 11 build 25145的另一个改进是新的讲述人盲文驱动程序，它可以更容易地在内置讲述人和第三方屏幕阅读器之间无缝切换。如果您已经有了现有的盲文支持，您需要卸载它，然后安装新的，但这应该是一个非常受欢迎的辅助功能的改进。</p>
+
+<p class="translated">最后一项主要添加是将本地管理员密码解决方案作为Windows 11的一部分。这个传统工具允许用户管理加入域的计算机的本地密码，它过去是单独下载的，但现在它内置于Windows中，并带有新功能，尽管微软没有指定它们是什么。目前，LAPS将与加入Active Directory域的PC一起工作，但对Azure Active Directory的支持仅适用于一小部分内部人士。您可以在组策略编辑器中管理它。</p>
+
+
+
+<p class="translated">一些较小的改进包括查看特定系统功能的应用使用情况，如麦克风或网络摄像头，你可以在<strong>隐私和安全-应用</strong> <strong>权限</strong>下的设置应用中找到。这实际上是与<a href="https://www.xda-developers.com/windows-11-build-25140-fixes/"> build 25140 </a>一起推出的，但是微软上周没有提到它。现在，您还可以在文件资源管理器中用鼠标中键单击一个文件夹，在一个新的选项卡中打开它，并且“建议操作”功能现在已经向美国、加拿大和墨西哥的内部人员全面推出。</p>
+
+<p class="translated">和往常一样，最新的版本还附带了一系列修复和已知问题，您可以在下面找到。</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_8"><h3 id="windows-11-build-25145-fixes" class="translated">Windows 11构建了25145个修复程序</h3><p class="translated"><strong>【常规】</strong></p><ul> <li class="translated">修复了导致Surface Pro X设备上的Windows Insiders在尝试从休眠状态恢复时出现黑屏的问题。</li> <li class="translated">修正了一些内部人员遇到的与USBs相关的SYSTEM _ THREAD _ EXCEPTION _ NOT _ HANDLED错误检查。</li> <li class="translated">修复了错误0x1CA SYNTHETIC _ WATCHDOG _ time out的错误检查，该错误检查可能会在一些电脑闲置一段时间后偶尔发生。当笔记本电脑盖子合上时会发生这种情况，看起来好像笔记本电脑在睡眠时重新启动了。</li> <li class="translated">修复了上两次构建中导致InventorySvc运行时间越长，消耗的内存量越大的问题。</li> </ul><p class="translated"><strong>【文件浏览器】</strong></p><ul> <li class="translated">当按Tab或F6时，这一行标签现在应该包含在键盘焦点循环中。一旦焦点位于选项卡行中，您可以使用左箭头键或右箭头键在它们之间导航。</li> <li class="translated">修正了当你在文件浏览器中重新排列标签时，使用CTRL + Tab时标签顺序会出错的问题。</li> </ul><p class="translated"><strong>【开始】</strong></p><ul> <li class="translated">讲述人现在可以正确阅读从“开始”的上下文菜单中卸载应用程序时打开的对话框以及这些选项。</li> <li class="translated">在从右向左(RTL)语言中选择“开始”的“推荐”部分中的“更多”按钮时，动画现在应该会正确显示。</li> </ul><p class="translated"><strong>【任务栏】</strong></p><ul> <li class="translated">当使用键盘关闭通知中心时，它的关闭动画将会正确显示。</li> </ul><p class="translated"><strong>【设置】</strong></p><ul> <li class="translated">当使用阿拉伯语显示语言时，在设置搜索框中键入数字将不再显示框。</li> <li class="translated">修正了在最近几个版本中，当进入蓝牙&amp;设备&gt;打印机&amp;扫描仪时设置崩溃的问题。</li> <li class="translated">修复了一些内部人员在最近几个版本中打开快速设置的Wi-Fi部分时，或者在快速设置的Wi-Fi部分连接或断开网络后遇到的崩溃问题。</li> <li class="translated">修复了导致快速设置中的Wi-Fi选项和设置中的Wi-Fi部分有时需要几秒钟才能出现的问题。</li> <li class="translated">在编辑模式下使用触摸来重新排列快速设置中的项目不再会导致快速设置有时意外关闭。</li> </ul><p class="translated"><strong>【输入】</strong></p><ul> <li class="translated">在Courier新字体系列中添加了SOM货币符号(U+20C0)。</li> </ul><p class="translated"><strong>【任务管理器】</strong></p><ul> <li class="translated">现在按CTRL + Page Up和CTRL + Page Down应该可以在任务管理器中导航页面了。</li> </ul><p class="translated"><strong>【其他】</strong></p><ul> <li class="translated">修复了一个罕见的问题，可能会导致某些应用程序在启动时偶尔崩溃。</li> </ul> </div></section>
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_9"><h3 id="known-issues-in-windows-11-build-25145" class="translated">Windows 11内部版本25145中的已知问题</h3><p class="translated"><strong>【常规】</strong></p><ul> <li class="translated">我们正在调查关于<a href="https://docs.microsoft.com/en-us/windows/apps/design/style/mica">云母材料</a>和<a href="https://docs.microsoft.com/en-us/windows/apps/design/style/acrylic">丙烯酸</a>模糊效果在操作系统表面(如开始菜单、通知中心和其他区域)呈现不正确的报告。</li> <li class="translated">我们正在调查关于通过开始菜单关机对一些内部人员不起作用，而是意外重启的报道。</li> <li class="translated">一些使用Easy Anti-check的游戏可能会崩溃或导致您的电脑进行错误检查。</li> </ul><p class="translated"><strong>【文件浏览器】</strong></p><ul> <li class="translated">文件资源管理器选项卡中的向上箭头没有对齐。这将在未来的更新中得到解决。</li> <li class="translated">我们正在调查这样的报告:在使用黑暗模式时，以某些方式启动文件资源管理器(例如，从命令行)会在明亮模式下意外显示文件资源管理器的主体。</li> </ul><p class="translated"><strong>【微件】</strong></p><ul> <li class="translated">我们正在修复一个导致小部件首选项(温度单位和固定小部件)意外重置为默认值的问题。</li> </ul><p class="translated"><strong>【直播字幕】</strong></p><ul> <li class="translated">全屏模式下的某些应用程序(如视频播放器)会阻止显示实时字幕。</li> <li class="translated">位于屏幕顶部附近并在运行实时字幕前关闭的某些应用程序将在位于顶部的实时字幕窗口后重新启动。当应用程序有焦点时，使用系统菜单(ALT +空格键)将应用程序的窗口进一步下移。</li> </ul> </div></section>
+<p class="translated">如果你在开发频道，你可以在设置应用中检查更新，以立即获得Windows 11 build 25145。如果你不是，也没有很大的理由加入，因为与<a href="https://www.xda-developers.com/windows-11-22h2/"> Windows 11版本22H2 </a>相比，并没有增加很多新功能。</p>
+
+<hr/>
+
+<p class="translated">来源:<a href="https://blogs.windows.com/windows-insider/2022/06/22/announcing-windows-11-insider-preview-build-25145/">微软</a></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

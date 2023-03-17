@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Benchmarking the Qualcomm Snapdragon 8 Plus Gen 1 on an Engineering Platform</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">在工程平台上对高通骁龙8 Plus Gen 1进行基准测试</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/qualcomm-snapdragon-8-plus-gen-1-benchmarks/#0001-01-01">https://www.xda-developers.com/qualcomm-snapdragon-8-plus-gen-1-benchmarks/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">2021年12月，在夏威夷的发布会上，我们看到<a href="https://www.xda-developers.com/qualcomm-snapdragon-8-gen-1/">高通揭开了骁龙8 Gen 1 </a>的面纱。它比以往任何时候都有更高的性能，该公司还声称效率有所提高。然而，不是<a href="https://www.xda-developers.com/qualcomm-snapdragon-8-gen-1-benchmarks/">T3，而是比前几年的芯片组</a>更强大。现在骁龙8 Plus Gen 1已经上市，华硕友好地为我们提供了一台SM8475工程设备，以便在它发布之前运行我们自己的基准测试。</p>
+
+  
+<p class="translated">我们在从华硕获得的SM8475工程设备上运行了多个基准，包括一个整体基准(AnTuTu)、一个以CPU为中心的基准(Geekbench)和一个以GPU为中心的基准(GFXBench)。此外，我们还利用Burnout Benchmark来测量芯片组的功耗，特别是与骁龙8 Gen 1相比。骁龙8 Plus Gen 1由TSMC制造(8 Gen 1由三星代工制造)，一些人认为它将提高效率和热量。</p>
+
+<p class="translated">为了测试，我们启用了华硕的X模式。这是因为我们收到的设备是一个非常进步的工作。X-Mode是该公司为芯片组调整的第一个功能，因此，将充分利用骁龙8 Plus Gen 1。这些分数仅供参考，旨在展示这款新芯片组在最佳条件下的最大性能。</p>
+
+
+
+<p class="translated"><em> <strong>关于本文</strong>:华硕为我们提供了一个SM8475工程设备/测试平台，用于评估高通骁龙8 Plus Gen 1的基准测试和游戏性能。华硕没有投入到这篇文章的内容。</em></p>
+
+ 
+<h2 id="benchmarks-overview" class="translated">基准概述</h2>
+<ul> <li class="translated"><a href="http://www.antutu.com/en/index.htm"> <strong>安图图</strong> </a>:这是一个整体性的基准。AnTuTu测试CPU、GPU和内存性能，同时包括抽象测试和最近的相关用户体验模拟(例如，涉及滚动ListView的子测试)。最终得分根据设计者的考虑进行加权。</li> <li class="translated"><a href="https://www.geekbench.com/"> <strong> GeekBench </strong> </a>:以CPU为中心的测试，使用了几种计算工作负载，包括加密、压缩(文本和图像)、渲染、物理模拟、计算机视觉、光线追踪、语音识别和对图像的卷积神经网络推理。分数细分给出了具体的指标。最终分数根据设计者的考虑进行加权，重点是整数性能(65%)，然后是浮点性能(30%)，最后是加密(5%)。</li> <li class="translated"><a href="https://gfxbench.com/result.jsp"> <strong> GFXBench </strong> </a>:旨在使用最新的API模拟视频游戏图形渲染。大量的屏幕效果和高质量的纹理。较新的测试使用Vulkan，而遗留测试使用OpenGL ES 3.1。输出是测试期间的帧数和每秒帧数(本质上是另一个数除以测试长度)，而不是加权分数。<ul> <li class="translated"><strong>阿兹特克废墟</strong>:这些测试是GFXBench提供的计算量最大的测试。目前，顶级移动芯片组无法支持每秒30帧。具体来说，该测试提供了非常高的多边形计数几何图形、硬件镶嵌、高分辨率纹理、全局照明和大量阴影贴图、丰富的粒子效果，以及bloom和景深效果。这些技术中的大多数将强调处理器的着色器计算能力。</li> <li class="translated">曼哈顿ES 3.0/3.1 :鉴于现代游戏已经达到了其提出的图形保真度并实现了相同类型的技术，这项测试仍然具有相关性。它采用了复杂的几何体，包括多个渲染目标、反射(立方体贴图)、网格渲染、许多延迟光源，以及后期处理过程中的高光和景深。</li><p> </p> </ul> </li> <li class="translated"><a href="https://play.google.com/store/apps/details?id=skynet.cputhrottlingtest&amp;hl=en&amp;gl=US"> <strong> CPU节流测试</strong> </a>:这个应用程序用C语言重复了一个简单的多线程测试，时间短至15分钟，尽管我们运行了30分钟。该应用程序绘制了一段时间内的分数，这样你就可以看到手机何时开始节流。这个分数是以GIPS来衡量的，即每秒十亿次运算。</li> <li class="translated"><strong>它使用Android的BatteryManager API来计算测试期间使用的瓦特数，这可以用来了解智能手机的电池消耗情况。</strong></li> </ul>
+
+<p class="translated">在测试SM8475工程平台时，我们将它与开箱即用配置的<a href="https://www.xda-developers.com/oneplus-10-pro-review/">一加10 Pro </a>和<a href="https://www.xda-developers.com/redmagic-7-review/"> RedMagic 7 </a>进行了对比。这意味着一加10 Pro已经在芯片组上设置了油门(我们在评论中发现了这一点)，而RedMagic 7基本上没有受到阻碍。一加10 Pro是更受欢迎和更可靠的配置，而RedMagic 7是性能最好的配置之一。不同的公司以不同的方式通过软件驯服了骁龙8 Gen 1，这些结果有助于让你了解智能手机市场上该芯片组的变化。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="benchmark-results-for-the-snapdragon-8-plus-gen-1" class="translated">骁龙8加第1代的基准测试结果</h2>
+<h3 id="antutu" class="translated">安图图</h3>
+<p class="translated">从安图图开始，我们可以看到高通骁龙8加第一代自诩在某种程度上推动了骁龙8在红魔术7第一代。虽然这不是一个巨大的提升，但值得一提的是可以发现的改进，特别是与骁龙8 Gen 1参考设备相比。</p>
+
+
+
+<p class="translated">有趣的是，这个分数也大大高于高通所说的我们的结果范围，因为该公司说它应该在108万左右。AnTuTu是比较设备之间原始计算能力的一个很好的工具，即使并不是所有的计算能力都转化为现实世界的使用。</p>
+
+<h3 id="geekbench-5" class="translated">极客工作台5</h3>
+<p class="translated">Geekbench 5是一个有趣的测试，因为高通自己也承认，在比较骁龙888和骁龙8 Gen 1时，性能并没有太大的提高。然而，这里有一些全面的改进。我们看到单核性能的小幅提升和多核性能的大幅提升。</p>
+
+
+
+<h3 id="gfxbench" class="translated">GFXBench</h3>
+<p class="translated">高通仍然没有说太多关于它的GPU，所以除了它在性能上的进步，我们对GPU没有什么可说的。该软件将其识别为Adreno 730，与骁龙8 Gen 1中的包装相同，尽管该公司声称GPU时钟速度快10%，功耗降低30%。</p>
+
+
+
+<p class="translated">只有一些非常<a href="https://www.xda-developers.com/best-android-games/">好的Android游戏</a>需要大量的GPU马力，但是改进的GPU性能不仅仅是对游戏有用。话虽如此，游戏绝对是人们会关心这些基准测试结果的最大原因。与GFXBench相比，骁龙8 Plus Gen 1中的GPU性能似乎大致相同，尽管可能略有改善。请记住，这些结果仅展示了最高的GPU性能。</p>
+
+<h3 id="cpu-throttle-test" class="translated">CPU节流测试</h3>
+
+
+
+
+<p class="translated">CPU节流测试是一种可以测量芯片组持续性能的测试。虽然这也是OEM厂商做出的任何优化的要求(因此，可能会因设备而异)，但它让我们了解了你可以<em>潜在地</em>从采用这种芯片组的手机中期待什么。在骁龙8 Plus Gen 1的情况下，华硕能够从芯片中获得大量性能，它的节流水平仍然高于RedMagic 7所能达到的最高水平。我还观察到，虽然手机确实变热了，但摸起来并不烫手。</p>
+
+<h3 id="burnout-benchmark" class="translated">倦怠基准</h3>
+<p class="translated"><a href="https://play.google.com/store/apps/details?id=org.ai.throttling"> Burnout Benchmark </a>是我们添加到基准套件中的一项新测试，因为它允许我们轻松测量智能手机芯片组的功耗。我们与开发者安德烈·伊格纳托夫进行了交谈，以了解这款应用的工作原理。他告诉我们在最低亮度下运行这款充满电的设备，并启用飞行模式，因此，这里收集的所有数据都是在这些条件下进行的。伊格纳托夫告诉我们，以下测试是在SoC的不同组件上运行的，作为燃尽基准的一部分:</p>
+
+<ul> <li class="translated">GPU:使用OpenCL的并行视觉计算</li> <li class="translated">CPU:多线程计算主要涉及Arm Neon指令</li> <li class="translated">NPU:具有典型机器学习操作的人工智能模型</li> </ul>
+
+<p class="translated">在这三个组件中，每秒完成的操作数被称为“FPS”，我们测量了骁龙8 Gen 1和骁龙8 Plus Gen 1之间的CPU和GPU之间的差异。我们还测量了它们之间的功耗差异，并记录了一些有趣的结果。</p>
+
+<p class="translated">注意:一加10 Pro的得分明显较低，因为一加在芯片组上表现出的节流。</p>
+
+
+
+
+
+<p class="translated">首先也是最重要的是，效率明显提高。在峰值时，RedMagic 7中的骁龙8 Gen 1的功耗高达21.88W，骁龙8 Plus Gen 1的功耗为17.97W。峰值功耗下降了18%，这是一个显著的数字。从上面的图表可以明显看出，随着芯片组的降低，这种差异会进一步扩大。</p>
+
+<p class="translated">高通还指出，CPU性能大约有10%的提高，这与我们的发现相吻合。RedMagic 7的骁龙8 Gen 1每秒完成的最大CPU计算次数为15.91次，骁龙8 Gen 1 Plus每秒完成的最大CPU计算次数为17.86次，增加了12%。</p>
+
+<p class="translated">至于GPU，它似乎在巅峰时期稍微好一点，但后来却变得很慢。这可能是由于我们正在使用的华硕设备上的早期测试软件的性质。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="conclusion-a-big-plus-upgrade" class="translated">结论:一次大的升级</h2>
+
+
+<p class="translated">通过基准测试，骁龙8 Plus Gen 1的改进很容易发现，不应该被低估。CPU性能提高10%，同时峰值功耗降低近20%，这是一个不小的壮举，消费者将会注意到电池寿命和性能。从我们的结果来看，其中一些改善类似于逐年的代际改善，而不仅仅是“加”的变体。</p>
+
+<section class="emaki-custom-block emaki-custom-pullquote"><div class="emaki-custom pullquote" id="custom_block_35"><p class="translated">这些改善中的一些类似于同比的代际改善，而不仅仅是一个正变量。</p> </div></section>
+<p class="translated">然而，这有多少是由制造过程造成的呢？很难说。虽然我们确实注意到在较低的瓦数下有更好的性能，但芯片组不仅仅是制造过程。也可能是因为这是一个工程单元，我们可能会看到消费类设备再次遇到热量和功耗问题。虽然我有信心说，华硕SM8475工程部门显示了高通新芯片组的前景，但我们还没有明确发表任何声明，特别是关于三星晶圆厂与TSMC的关系。</p>
+
+<p class="translated">然而，这对于Android粉丝来说是一个令人兴奋的发展，因为这是我们看到的高通最近的旗舰芯片组终于开始被驯服的第一个迹象。我们期待着在未来试用更多采用这种芯片组的消费设备，以评估这些改进如何改变整个旗舰智能手机生态系统。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

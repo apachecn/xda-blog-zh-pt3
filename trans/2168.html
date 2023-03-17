@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Windows 11 build 22622.436 rolls out with new sharing features</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">Windows 11 build 22622.436推出新的共享功能</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/windows-11-build-22622-436-nearby-sharing-onedrive/#0001-01-01">https://www.xda-developers.com/windows-11-build-22622-436-nearby-sharing-onedrive/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">微软正在向注册了测试版渠道的内部人士推出Windows 11的新版本。严格来说，有两个新版本推出——版本22621.436和版本22622.436。本质上，这些更新是相同的，但是那些具有较高内部版本号的更新默认启用新功能，而其他更新则关闭它们。对于运行Windows 11 build 22622.436的用户来说，这个版本中的新功能主要与共享有关。</p>
+
+  
+<p class="translated">这方面有两个关键的改进。首先，附近的共享现在包括共享到通过UDP连接的电脑。这意味着，只要该网络设置为专用，就可以使用附近共享向同一网络上的PC发送文件，而不仅仅是使用蓝牙。另一个重大变化是，你现在可以在Windows 11共享面板中看到OneDrive作为共享目标。当您尝试共享本地存储在您计算机上的文件时，您可以从共享面板将其发送到OneDrive，这样可以更容易地与他人共享，还可以在云端备份。</p>
+
+
+
+<p class="translated">一个较小的变化已经进行了一段时间，那就是Windows终端现在是Windows 11中的默认终端应用程序。因此，当您尝试打开命令提示符或PowerShell时，这些工具将在Windows终端中打开。如果你想在常用的独立窗口中打开这些应用程序，你可以前往设置应用程序来禁用此功能。</p>
+
+<p class="translated">除了更重大的变化之外，Windows 11 build 22622.436还包括少量专门针对它的修复和改进。你可以在下面找到这些。</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_5"><h3 id="windows-11-build-22622-436-fixes-and-improvements" class="translated">Windows 11 build 22622.436修复和改进</h3><p class="translated"><strong>【文件浏览器】</strong></p><ul> <li class="translated">修正了当你在文件浏览器中重新排列标签时，使用CTRL + Tab时标签顺序会出错的问题。</li> <li class="translated">修正了拖动标签时explorer.exe崩溃的问题。</li> <li class="translated">如果启用了“显示所有文件夹”，文件资源管理器导航窗格中的分隔线将不再显示。有了这个改变，它应该也解决了分隔线在其他文件夹选择器中意外显示的问题。</li> <li class="translated">在新标签页中打开压缩文件夹时，标签页名称不应再为空。</li> <li class="translated">可移动驱动器不应再意外地单独显示在导航窗格的一个部分中，导航窗格会将该部分与此PC和网络分开。</li> <li class="translated">修正了使用水生或沙漠对比主题时添加新标签按钮不清晰的问题。</li> <li class="translated">当前选项卡和命令栏之间不应再显示模糊的线条。</li> <li class="translated">更新了悬停在标签上时的工具提示，建议使用CTRL + W关闭标签(而不是CTRL + F4，这不起作用)。</li> <li class="translated">如果焦点在选项卡行上，CTRL + W将不再意外地关闭两个选项卡，而不是只关闭焦点中的选项卡。</li> <li class="translated">修复了选项卡行可能意外垂直扩展，覆盖命令栏内容的问题。</li> </ul><p class="translated"><strong>【开始】</strong></p><ul> <li class="translated">修正了一个影响22622.160内部人员的启动崩溃。</li> </ul> </div></section>
+<p class="translated">同时，有一些修复程序适用于Windows 11内部版本22622.436和内部版本22621.436。这些是:</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_7"><h3 id="fixes-in-windows-11-build-22621-436-and-22622-436" class="translated">Windows 11内部版本22621.436和22622.436中的修复</h3><p/><p class="translated">此更新包括以下改进:</p><ul> <li class="translated">我们修复了阻止疑难解答程序打开的问题。</li> <li class="translated">我们修复了导致智能应用程序控件阻止目录签名文件的问题。</li> <li class="translated">我们修复了一个可能会严重扭曲您使用相机应用程序拍摄的照片的问题。在某些光线不足的条件下使用某些相机时会出现此问题。</li> <li class="translated">我们修复了使用Visual Studio 2022版本17.2或更高版本调试驱动程序时引发异常的问题。</li> <li class="translated">我们修复了导致Windows配置文件服务偶尔失败的问题。登录时可能会出现故障。错误消息是，“gpsvc服务登录失败。拒绝访问”。</li> <li class="translated">我们修复了阻止虚拟化App-V Office应用程序打开或导致它们停止响应的问题。</li> </ul><p class="translated"><strong>【常规】</strong></p><ul> <li class="translated">我们修复了一个问题，导致测试频道中的少数内部人员在Explorer.exe和其他Windows UI组件中经历周期性崩溃，使屏幕看起来像是在闪烁。请注意，此修复应该会阻止更多内部人员受到新的影响，但是如果您已经受到此影响，您将需要在PowerShell中运行以下命令来解决它:Add-appx package-Register-Path C:\ Windows \ system apps \ Microsoft。UI . xaml . CBS _ 8 wekyb 3d 8 bbwe \ app xmanifest . XML-disabled development mode-ForceApplicationShutdown</li> <li class="translated">修正了一个问题，该问题导致一些内部人员在之前的测试频道飞行中，从睡眠中醒来后，他们的电脑出现黑屏。</li> <li class="translated">修复了打开移动热点后会导致网络连接中断的问题。</li> <li class="translated">修复了一个导致内部版本22621.290 / 22622.290无法安装的问题，某些内部人员会出现错误0x800f081f。</li> </ul> </div></section>
+<p class="translated">这些更新还带来了一个已知的问题，如果您启用了制表符，则文件资源管理器窗口中的向上箭头会错位。</p>
+
+<p class="translated">如果你在Windows Insider Beta频道，最新版本可以作为定期更新，它让我们离<a href="https://www.xda-developers.com/windows-11-22h2/"> Windows 11版本22H2 </a>的正式发布更近了一步。微软将在本周举行一次Bug Bash，鼓励内部人员尝试并找到需要通过此次更新修复的问题。然而，我们仍然不知道微软计划何时推出它，以及是否所有这些新功能都将在发布时包括在内。</p>
+
+<hr/>
+
+<p class="translated">来源:<a href="https://blogs.windows.com/windows-insider/2022/07/19/announcing-windows-11-insider-preview-build-22621-436-and-22622-436/">微软</a></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

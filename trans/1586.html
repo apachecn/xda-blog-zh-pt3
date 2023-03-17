@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>How to install Google Play Store on Windows Subsystem for Android</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何在Android的Windows子系统上安装谷歌Play商店</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-to-install-google-play-store-windows-subsystem-for-android/#0001-01-01">https://www.xda-developers.com/how-to-install-google-play-store-windows-subsystem-for-android/#0001-01-01</a></blockquote><div><header class="article_heading">
+
+
+<h1 class="heading_title translated">以下是如何在Android的Windows子系统上安装Play Store和其他谷歌应用程序</h1>
+
+<p class="heading_sharing">
+ </p>
+
+
+<p class="heading_excerpt translated">WSAGAScript是一个全新的工具，可以让您轻松地为Android的Windows子系统安装谷歌Play商店。请继续阅读！</p>
+
+
+
+  </header>
+
+<section id="article-body" class="article-body" itemprop="articleBody">
+
+<div class="content-block-regular">
+<p class="translated">Android的Windows子系统终于来了<a href="https://www.xda-developers.com/android-apps-available-windows-11-beta-channel/"/>。更有趣的是，你现在就可以<a href="https://www.xda-developers.com/how-to-run-android-apps-on-any-windows-11-pc/">非正式地尝试一下</a>——即使你没有注册<a href="https://www.xda-developers.com/windows-11/"> Windows 11 </a>的测试频道。如果你对强制性的亚马逊应用商店整合不满意，你应该很高兴听到<a href="https://www.xda-developers.com/how-to-sideload-android-apps-on-windows-11/">应用程序侧装过程</a>也不难。也有可能<a href="https://www.xda-developers.com/how-to-bypass-amazon-appstore-region-lock-windows-subsystem-for-android/">安装第三方谷歌Play商店客户端</a>，但Android的Windows子系统中缺乏谷歌服务，这使得使用依赖于它们的应用程序有点困难。</p>
+
+  
+<p class="translated"><strong> <a href="https://www.xda-developers.com/hands-on-android-apps-windows-11/">动手操作Windows 11上的Android应用</a> </strong></p>
+
+<p class="translated">与传统的Android设备不同，Android的Windows子系统没有用户可访问的恢复环境。因此，最终用户不能简单地为Android子系统编译一个像TWRP这样的定制恢复，并立即安装那些流行的GApps(Google Apps的缩写)包之一。但是，如果您可以直接用必要的Google apps和库套件修补底层系统映像，让Play Store正常工作，会怎么样呢？XDA的资深成员ADeltaX现在提出了一个名为WSAGAScript的解决方案。</p>
+
+ 
+<h2 id="how-to-install-google-play-store-on-the-windows-subsystem-for-android" class="translated">如何在Android的Windows子系统上安装谷歌Play商店</h2>
+<h3 id="step-1-install-windows-subsystem-for-linux" class="translated">步骤1:为Linux安装Windows子系统</h3>
+<ol> <li class="translated">从运行提示符或终端窗口执行<code>optionalfeatures</code>命令，打开Windows功能工具。你也可以点击开始菜单，搜索“打开或关闭Windows功能”来做同样的事情。</li> <li class="translated">在新窗口中，选中虚拟机平台和Windows子系统for Linux条目。</li> <li class="translated">单击“确定”，等待Windows下载所需的组件。</li> <li class="translated">重启你的电脑。</li> <li class="translated">使用<a href="https://track.flexlinkspro.com/g.ashx?foid=1.24542&amp;trid=1198401.711&amp;foc=17&amp;fot=9999&amp;fos=1&amp;fobs=58f4de1b-2f9f-4f3a-a7f5-72dd7dcf61f5&amp;url=https%3A%2F%2Fwww.microsoft.com%2Fstore%2FproductId%2F9NBLGGH4MSV6">此链接</a>从微软商店的WSL下安装最新的Ubuntu LTS版本，并根据需要进行配置。</li> </ol>
+
+<p class="translated">如果你已经在WSL上安装了Ubuntu，你应该跳过这一步。</p>
+
+<h3 id="step-2-preparing-windows-subsystem-for-android-for-patching" class="translated">步骤2:为Android准备Windows子系统以进行修补</h3>
+<ol> <li class="translated">下载Android版Windows子系统的安装包。如果需要帮助可以参考本教程<a href="https://www.xda-developers.com/how-to-run-android-apps-on-any-windows-11-pc/">第一步</a>。</li> <li class="translated">一旦有了MSIXBUNDLE文件，使用<a href="https://www.7-zip.org/"> 7-Zip </a>解压特定于架构的安装程序。<ul> <li class="translated">如果您有一台普通的x86-64 PC，那么解压名为<code>WsaPackage_x.x.x.x_x64_Release-Nightly.msix</code>的文件。</li> <li class="translated">如果你在ARM设备上有一个<a href="https://www.xda-developers.com/best-windows-on-arm/">Windows</a>，那么解压名为<code>WsaPackage_x.x.x.x_ARM64_Release-Nightly.msix</code>的文件。</li><p> </p> </ul> </li> <li class="translated">现在将与您的设备架构相关的MSIX文件提取到一个文件夹中，例如D:\WSA。</li> <li class="translated">从文件夹中删除以下对象:<code>AppxBlockMap.xml</code>、<code>AppxSignature.p7x</code>、<code>[Content_Types].xml</code>和<code>AppxMetadata</code>文件夹。</li> </ol>
+
+<h3 id="step-3-patching-windows-subsystem-for-android-with-gapps" class="translated">步骤3:用GApps修补Android的Windows子系统</h3>
+<ol> <li class="translated">下载一个GApps包。开发者推荐<a href="https://opengapps.org/"> OpenGApps </a>的“Pico”变种。<ul> <li class="translated">如果你有一台普通的x86-64 PC，那么选择x86_64平台。</li> <li class="translated">如果你有ARM上的Windows设备，那么选择ARM64平台。<div class="body-img portrait"><div class="responsive-img image-expandable img-article-item-portrait" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/10/OpenGApps-for-WSA-x64.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;OpenGApps package selection for x86-64 Windows Subsystem for Android&quot;"><figure><picture><source media="(min-width: 1024px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/10/OpenGApps-for-WSA-x64.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/><source media="(min-width: 768px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/10/OpenGApps-for-WSA-x64.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/><source media="(min-width: 481px)" sizes="600px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/10/OpenGApps-for-WSA-x64.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/><source media="(min-width: 0px)" sizes="360px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/10/OpenGApps-for-WSA-x64.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/><img class="lazyload" alt="OpenGApps for WSA x64" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/10/OpenGApps-for-WSA-x64.jpg" src="../Images/4c096c28579ee42550c795dc1f9f8777.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/10/OpenGApps-for-WSA-x64.jpg"/></picture><figcaption class="body-img-caption">OpenGApps包选择为x86-64 Windows子系统为Android </figcaption> </figure> </div> </div></li><p> </p> </ul> </li> <li class="translated">在WSL上启动Ubuntu，安装<code>unzip</code>和<code>lzip</code>包。<pre> <code class="hljs sql">sudo apt-<span class="hljs-keyword">get</span> update<br/>sudo apt-<span class="hljs-keyword">get</span> install unzip lzip</code> </pre></li> <li class="translated">由ADeltaX: <pre> <code class="hljs php">git <span class="hljs-keyword">clone</span> https:</code> </pre>克隆<a href="https://github.com/ADeltaX/WSAGAScript"> WSAGAScript repo </a></li> <li class="translated">按照前述报告的<a href="https://github.com/ADeltaX/WSAGAScript/blob/main/README.md">自述文件执行实际的打补丁过程。</a><ul> <li class="translated">记得根据您在上一步中提取MSIX文件的位置来调整命令中的路径。</li><p> </p> </ul> </li> </ol>
+
+<h3 id="step-4-installing-the-gapps-patched-windows-subsystem-for-android" class="translated">步骤4:为Android安装GApps修补的Windows子系统</h3>
+<p class="translated">在尝试这一步之前，请确保您已经卸载了官方的Android Windows子系统包。你可以在开始菜单中找到相应的快捷方式，右击它，最后选择“卸载”选项。请记住，亚马逊应用商店将自动卸载。</p>
+
+<ol> <li class="translated">打开设置应用程序，导航至隐私和安全= &gt;面向开发者。然后打开开发者模式。</li> <li class="translated">使用内置的PowerShell配置文件以管理员身份启动Windows终端。</li> <li class="translated">将以下命令粘贴到终端窗口:<pre> <code class="hljs xml">Add-AppxPackage -Register <span class="hljs-tag">&lt;<span class="hljs-name">path-to-the-extracted-MSIX-folder</span>&gt;</span>\AppxManifest.xml</code> </pre>例如，如果您最初将MSIX文件的内容提取到D:\WSA，并随后修补它们，那么该命令应该是:<pre> <code class="hljs css"><span class="hljs-selector-tag">Add-AppxPackage</span> <span class="hljs-selector-tag">-Register</span> <span class="hljs-selector-tag">D</span>:\<span class="hljs-selector-tag">WSA</span>\<span class="hljs-selector-tag">AppxManifest</span><span class="hljs-selector-class">.xml</span></code> </pre></li> <li class="translated">等待安装完成。然后打开开始菜单，你应该会看到一个新的谷歌Play商店图标，旁边是熟悉的Android Windows子系统。</li> <li class="translated">点击“登录”选项，并输入您的谷歌帐户信息的凭据。如果一切顺利，那么你应该看到谷歌Play商店的主页。</li> </ol>
+
+<p class="translated">就是这样！您只需安装谷歌Play商店和一套必要的谷歌服务，就可以在Android的Windows子系统中运行许多流行的应用程序。现在你应该可以直接从Play Store在你的Windows 11 PC上安装Android应用了。让我们知道您计划使用谷歌Play商店在Android的Windows子系统上安装哪些应用程序！</p>
+
+ </div>
+
+
+<p id="article-waypoint"/>
+</section>
+
+
+        </div>    
+</body>
+</html>

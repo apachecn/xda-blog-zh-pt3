@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>What is Shizuku, and what can you do with it on your Android device?</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">什么是滴，你能用它在你的Android设备上做什么？</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/shizuku/#0001-01-01">https://www.xda-developers.com/shizuku/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">Android Debug Bridge，简称ADB，是一个方便的开发工具，可以与您的手机进行接口，用于调试和测试。通过ADB，开发者和高级用户可以访问Android内置的Linux命令行shell，拥有比用户安装的应用程序更大的权限。值得注意的是，ADB shell权限并不等同于超级用户权限，因此您可能仍然需要<a href="https://www.xda-developers.com/root/"> root您的设备</a>来完全控制操作系统。然而，根据您的修改需求，shell访问足以授予或拒绝权限，更改系统设置值，以及做更多的事情。这就是<strong>滴</strong>应用发挥作用的地方。</p>
+
+  
+<p class="translated"><strong>浏览这篇文章:</strong></p>
+
+
+
+<hr/>
+
+
+<h2 id="what-is-shizuku" class="translated">什么是滴？</h2>
+<p class="translated">滴是一个极好的解决方案，可以处理Android修改世界中相当复杂的场景:允许第三方应用程序访问系统级应用程序编程接口(API)。这个想法是运行一个具有shell级别权限的专用进程，作为系统服务器和应用程序之间的代理。开发人员可以利用滴服务器组件来执行提升的操作，而不是依赖于在<code>su</code> shell中运行命令。</p>
+
+<p class="translated">简而言之，如果一个应用程序需要特殊权限，只能通过ADB(或root)授予，<strong>你可以使用滴从你的Android设备授予权限</strong>。</p>
+
+<p class="translated">滴项目是开源的，由立夏(又名<a href="https://github.com/RikkaW"> RikkaW </a>)、<a href="https://github.com/haruue">harue</a>和其他几个开发者维护。</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="what-are-the-features-of-shizuku" class="translated">滴有什么特色？</h2>
+<ul> <li class="translated">最小的性能开销。</li> <li class="translated">极快的执行速度(由Android的进程间通信机制“binder”提供支持)。</li> <li class="translated">应用程序可以使用Android系统API，代码添加量可以忽略不计。</li> <li class="translated">在Android 11及更高版本上，你可以直接在你的设备上设置和启动滴。</li> </ul>
+
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="how-to-download-shizuku" class="translated">如何下载滴？</h2>
+<p class="translated">如前所述，滴项目是开源的，因此你可以从官方的GitHub库<a href="https://github.com/RikkaApps/Shizuku">获取源代码后，看看代码库或者自己编译。</a></p>
+
+<p class="translated">如果你正在寻找滴的预编译版本，你可以直接从谷歌Play商店上下载。开发者们还托管了几个镜像，使得下载APK官方版本更加容易。</p>
+
+ 
+
+
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="how-can-i-install-and-configure-shizuku" class="translated">我如何安装和配置滴？</h2>
+<p class="translated">滴的Google Play版本由Android自己的包管理器安装，并将继续由Play Store更新。如果你想选择GitHub的APK版本，那么你需要在你的Android设备上手动下载这个包。</p>
+
+<p class="translated">尽管您可以在非root环境中使用滴，但拥有root访问权限可以极大地简化设置滴服务的过程。按照下面的指南学习如何用您选择的方法配置滴。</p>
+
+<h3 id="with-root-access" class="translated">具有root访问权限</h3>
+<p class="translated">在以root权限安装滴之前，请确保您已经在目标设备上安装了最新版本的Magisk(T2)。</p>
+
+<ol> <li class="translated">找到滴图标，点击它打开应用程序。</li> <li class="translated">在主屏幕上，转到名为<em>开始(对于根设备)</em>的部分。</li> <li class="translated">点击开始按钮启动该过程。</li> <li class="translated">按下<em> Grant </em>在被请求时给予root权限。</li> <li class="translated">如果一切顺利，滴服务将在几秒钟内在新屏幕上启动，然后在完成后自动关闭。</li> <li class="translated">滚动到顶部，验证滴的运行状态。它应该显示一个版本号，后跟“root”</li> </ol>
+
+
+
+<p class="translated">默认情况下，滴服务在重启后不会自动启动。要更改行为，点击右上角的设置图标，然后找到<em>启动时启动(root) </em>选项。一旦启用，滴服务将在您重新启动设备后执行，无需任何用户干预。</p>
+
+
+
+<p class="translated">值得一提的是，项目的开发人员正在开发一个叫做Sui的高级前端。它最终会取代目前的滴应用程序。要尝试一下，从GitHub repo 下载最新版本<a href="https://github.com/RikkaApps/Sui">。由于Sui被设计为一个</a><a href="https://www.xda-developers.com/best-magisk-modules/"> Magisk模块</a>，你仍然需要Magisk来运行应用程序。</p>
+
+<p/><p class="translated"><strong> <a href="https://github.com/RikkaApps/Sui/releases/latest">下载隋</a> </strong></p>
+
+<p class="translated">与普通的配套应用不同，Sui没有提供典型的应用图标。要访问其界面，请执行以下操作之一:</p>
+
+<ul> <li class="translated">(Android 8.0+，Sui 12.1+)从首页app长按系统设置，会找到Sui的快捷方式。</li> <li class="translated">(Android 8.0+，Sui 12+)在系统设置中输入“开发者选项”，系统会要求你添加Sui的快捷方式。</li> <li class="translated">在默认拨号器应用中输入<code>*#*#784784#*#*</code>。</li> </ul>
+
+
+
+<p class="translated">虽然隋有自己的潜力，但这个项目的功能还没有完成。在从当前应用程序到Sui的迁移得到正式批准之前，建议使用主应用程序来配置的不同方面。</p>
+
+<h3 id="without-root-access" class="translated">没有root访问权限</h3>
+<p class="translated">从Android 11开始，谷歌在Android的开发者选项中加入了无线调试功能。它可用于在没有root访问权限的情况下在目标设备上配置滴服务。</p>
+
+<ol> <li class="translated">找到滴图标，点击它打开应用程序。</li> <li class="translated">在主屏幕上，转到名为<em>通过无线调试启动</em>的部分。</li> <li class="translated">轻触<em>配对</em>按钮，然后按下<em>开发者选项</em>。接下来，向下滚动，直到找到无线调试选项。打开它。</li> <li class="translated">勾选<em>总是允许在此网络上</em>框，然后按<em>允许</em>启用该功能。</li> <li class="translated">点击<em>无线调试</em>菜单。接下来，选择名为<em>的选项，将设备与配对代码</em>配对。</li> <li class="translated">现在，将唯一的6位数字Wi-Fi配对代码输入滴配对代码通知文本框。<ul> <li class="translated">你也可以在状态栏上向下滑动到滴通知，然后点击<em>输入配对代码</em>，并按下右边的发送按钮进行确认。</li> </ul> </li> <li class="translated">在此阶段，如果配对代码正确，您应该会看到一条<em>配对成功</em>消息。</li> <li class="translated">返回滴应用程序主屏幕。<ul> <li class="translated">在此之前，您可能需要扫开配对成功通知。</li> </ul> </li> <li class="translated">找到<em>通过无线调试开始</em>部分，点击开始按钮启用服务。</li> <li class="translated">滴服务现在会自动在一个新的屏幕上启动，然后在完成后自动关闭。</li> <li class="translated">滚动回顶部，验证滴的运行状态。它应该显示一个版本号，后跟“adb”</li> </ol>
+
+
+
+<p class="translated">请记住，您需要再次启用“无线调试”选项，并在重新启动目标设备后重新启动滴。</p>
+
+<p class="translated">也可以通过有线亚行接入来调用滴服务。这对于旧版本的Android或者一些OEM Android皮肤来说特别有用，在这些地方无线调试并不容易。然而，作为先决条件，你需要一台安装了ADB的PC/Mac以及OEM Android驱动。</p>
+
+<ol> <li class="translated">在继续之前，请确保目标设备可被您的PC/Mac上的ADB进程发现。<ul> <li class="translated">在终端窗口中键入<code>adb devices</code>，然后按回车键。您应该会在“连接的设备列表”下看到一个唯一的设备标识符编号，让您知道它已连接并被ADB接口识别。</li> </ul> </li> <li class="translated">在手机上至少打开一次滴应用程序。</li> <li class="translated">在PC/Mac的终端窗口执行以下命令:<pre> <code class="hljs ">adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh</code> </pre></li> <li class="translated">如果成功，您应该在几秒钟内在终端窗口上看到一个带有0 状态的<em>退出。</em></li> <li class="translated">在你的手机上，打开滴应用程序。然后滚动回顶部，验证滴的运行状态。它应该显示一个版本号，后跟“adb”</li> </ol>
+
+<p class="translated">如果你完成了所有这些，你现在应该在你的Android设备上有一个工作的滴实例。</p>
+
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="how-to-use-shizuku" class="translated">如何使用滴？</h2>
+<p class="translated">如果你熟悉Magisk，那么滴也很相似。但是它不是管理root访问，而是管理shell访问。因此，如果您有一个工作的滴实例，然后尝试打开一个利用滴执行提升操作的应用程序，您应该会看到一个允许访问的提示。一旦您允许，滴将无缝地满足API访问要求。</p>
+
+<p class="translated">下面你可以找到利用滴提升运营的热门应用的简短列表。这并不代表对上述应用程序的认可，也不是说其他人的工作应该被忽视。为了防止这篇文章变得太长，我们限制了链接的内容。</p>
+
+<ul> <li class="translated">Repainter为任何Android 12(或更新版本)设备和ROM带来可定制的动态素材。</li> <li class="translated"><a href="https://play.google.com/store/apps/details?id=rikka.appops"> App Ops </a> : App Ops是一个细粒度的App权限管理器。</li> <li class="translated"><a href="https://play.google.com/store/apps/details?id=com.aefyr.sai"> SAI (split APKs安装程序)</a> : SAI是一个高级的APK安装程序，支持Split APK。</li> <li class="translated"><a href="https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup"> Swift Backup </a> : Swift Backup可以免费无root备份你的apk，你的短信，你的通话记录，应用壁纸。</li> <li class="translated"><a href="https://play.google.com/store/apps/details?id=com.zacharee1.systemuituner"> SystemUI调谐器</a>:Android内置系统UI调谐器的功能丰富的替代品。</li> </ul>
+<div class="body-img portrait"><div class="responsive-img image-expandable img-article-item-portrait" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Shizuku-access-Swift-backup.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Swift backup requesting Shizuku access&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Shizuku-access-Swift-backup.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Shizuku-access-Swift-backup.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="600px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Shizuku-access-Swift-backup.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="360px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Shizuku-access-Swift-backup.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <img class="lazyload" alt="Shizuku access Swift backup" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Shizuku-access-Swift-backup.jpg" src="../Images/2030ad2e81be608528d4fe99569210f3.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Shizuku-access-Swift-backup.jpg"/> </picture> <figcaption class="body-img-caption">Swift backup requesting Shizuku access</figcaption> </figure> </div>
+
+
+ </div>
+
+
+<p class="translated">在大多数情况下，应用程序会在初始设置阶段要求滴访问。一旦获得授权，它们将公开需要提升访问权限的功能。如果没有安装(或配置)滴，应用程序将自动选择具有有限功能集的回退模式。</p>
+
+<p class="translated">还可以将滴与设备上的终端模拟器应用程序结合使用。这部分内容超出了本教程的范围，但是您可以通过点击应用程序主菜单上的“在终端应用程序中使用滴”选项来探索这一功能。</p>
+
+<p class="translated">对于Android应用程序开发社区，您可以轻松利用滴的力量。为此，看看我们的讲解者和滴API回购<a href="https://github.com/RikkaApps/Shizuku-API">吧。</a></p>
+
+<p/><p class="translated"><strong> <a href="https://shizuku.rikka.app/">滴官网</a> </strong></p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="conclusion" class="translated">结论</h2>
+<p class="translated">植根于你的Android设备会打开一个定制的世界，但这并不总是一个可行的选择。不幸的是，随着时间的推移，谷歌改进了篡改检测方法，剩下的空间越来越少。滴的应用程序在某种程度上填补了空白，这对于Android修改场景来说非常好。希望在不久的将来，我们会看到大量支持滴服务的应用和插件。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

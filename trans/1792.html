@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>How to create and edit custom themes for Gboard on your Android device using Rboard apps</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何在Android设备上使用Rboard应用程序创建和编辑Gboard的自定义主题</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-to-create-edit-gboard-custom-themes-rboard-apps/#0001-01-01">https://www.xda-developers.com/how-to-create-edit-gboard-custom-themes-rboard-apps/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">在永无止境的可定制的Android世界中，爱好者和修改者都在不断地努力使我们的设备更好地匹配我们的个性。我们喜欢调整我们能得到的任何东西，无论是新的壁纸，最热门的新图标包，还是完全定制的主题。这就是为什么许多用户喜欢Gboard作为他们的<a href="https://www.xda-developers.com/best-android-keyboard/">键盘应用</a>的原因，因为你可以通过像<a href="https://www.xda-developers.com/rboard-theme-manager-gboard-custom-themes-hidden-settings/"> Rboard主题管理器</a>这样的项目使用自定义主题来修改股票UI。</p>
+
+  
+<p class="translated">尽管谷歌为Gboard提供了太多现成的主题，但有一个完整的社区为键盘应用程序提供自制主题和其他mod。然而，定制一个现有的主题包或者从头开始创建一个定制主题并不是一件简单的工作。为了填补这一空白，两位经验丰富的Gboard主题人——XDA资深会员<a href="https://forum.xda-developers.com/m/rkbd.7544065/"> RKBD </a>和XDA会员<a href="https://forum.xda-developers.com/m/dertyp7214.7113548/">der typ 7214</a>——开发了一对应用程序:Rboard主题创建器和Rboard修补器。</p>
+
+<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id="custom_block_2"><ul> <li class="translated">Rboard主题创建器允许你创建基本的Gboard主题。</li> <li class="translated">使用Rboard Patcher，您可以进一步编辑主题的不同方面。</li> <li class="translated">定制的主题可以通过Rboard主题管理器来应用。</li> <li class="translated">您需要root权限来安装主题。</li> </ul> </div></section>
+<p class="translated"><strong>浏览本文:</strong></p>
+
+
+
+<hr/>
+
+
+<h2 id="internal-structure-of-a-gboard-theme" class="translated">Gboard主题的内部结构</h2>
+<p class="translated">在Gboard主题场景中，themepack可以通过它的。包”扩展。本质上，该文件是图像资产、样式表和元数据的集合——所有这些都以特殊的容器格式压缩。</p>
+
+<p class="translated"><a href="https://www.xda-developers.com/how-to-create-edit-gboard-custom-themes-rboard-apps/inside-a-gboard-theme-pack/" rel="attachment wp-att-705065"/></p>
+
+
+
+<p/>
+
+<p class="translated">由于大部分的主题组件都是未加密的，你也可以编写额外的补丁来动态修改主题的特定部分。补丁通常以ZIP文件的形式分发。</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="how-to-create-a-gboard-theme-using-rboard-theme-creator" class="translated">如何使用Rboard主题创建器创建一个Gboard主题</h2>
+<p class="translated">Rboard主题创建器是一个轻量级的Android应用程序，允许任何人在他们的手机上创建一个基本的Gboard主题。你甚至不需要访问PC来编译themepack，因为应用程序会为你处理一切。</p>
+
+ 
+
+
+
+<p class="translated">为了设计自己的Gboard主题，请执行以下操作:</p>
+
+<ol> <li class="translated">从前面提到的谷歌Play商店链接安装应用程序。</li> <li class="translated">打开应用程序，找到用于颜色选择的旋转转盘。<a href="https://www.xda-developers.com/how-to-create-edit-gboard-custom-themes-rboard-apps/rboard-theme-creator/" rel="attachment wp-att-705067">T12】</a></li> <li class="translated">接下来，选择配色方案(如<strong>深色</strong>或<strong>莫奈</strong>)和对应的UI组件(如<strong> AMOLED </strong>或<strong>三原色</strong>)。这款应用可以让你尝试各种可能的组合。</li> <li class="translated">现在调整颜色盘，直到你在预览部分得到你想要的主题用户界面。</li> <li class="translated">要保存您自定义创建的主题，点击左下角的共享图标，选择文件选择器，并在给它一个合适的名称和作者信息后保存它。</li> </ol>
+
+<p class="translated">或者，您可以将新创建的主题直接传输到Rboard Patcher(如果安装了的话)进行进一步的编辑。为此，点击<strong>添加主题</strong>按钮并按照向导进行操作。</p>
+
+<p class="translated">对于阅读本文的任何应用程序开发人员来说，Rboard主题创建器是完全开源的。你可以自由探索代码，提交新的补丁，或者自己编译应用程序。</p>
+
+<p/><p class="translated"><strong> <a href="https://github.com/DerTyp7214/RboardThemeCreator"> Rboard主题创建者GitHub资源库</a> </strong></p>
+
+<p class="translated">值得注意的是，开发者还拥有一个网页版的应用程序，这对于在你的PC/Mac上设计Gboard主题来说非常方便。</p>
+
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="how-to-patch-a-gboard-theme-using-rboard-patcher" class="translated">如何使用Rboard Patcher修补Gboard主题</h2>
+<p class="translated">Rboard Patcher是一款多功能的Gboard主题工具。首先，该应用程序允许您自定义基础主题包(*。pack)由Rboard主题创建器应用程序制作。此外，您还可以编辑现有的社区制作的主题，并使用公开托管的主题补丁修改它们的不同方面。该补丁程序还不支持第三方补丁回购，但该功能预计将很快登陆。</p>
+
+ 
+
+
+
+<p class="translated">以下是如何通过Rboard Patcher定制任何Rboard兼容的主题:</p>
+
+<ol> <li class="translated">从前面提到的谷歌Play商店链接安装应用程序。</li> <li class="translated">打开app，打开一个有效的Gboard主题*。使用文件选择器打包文件。<ul> <li class="translated">例如，你可以将应用指向Rboard Theme Creator制作的themepack。</li> </ul> </li> <li class="translated">Rboard Patcher将获取<a href="https://github.com/GboardThemes/Patches">公开托管的主题补丁</a>并将它们分类列出。<a href="https://www.xda-developers.com/how-to-create-edit-gboard-custom-themes-rboard-apps/rboard-patcher/" rel="attachment wp-att-705069">T19】</a></li> <li class="translated">点击您想要应用的选项(如字体或圆形图标)。</li> <li class="translated">要保存定制的主题，点击左下角的共享图标，选择文件选择器，并在给它一个合适的名称和作者信息后保存它。</li> </ol>
+
+<p class="translated">如果你想通过Rboard主题管理器立即准备好定制的闪烁主题，你可以点击<strong>添加到管理器</strong>按钮并按照向导进行操作。当然，你需要事先在你的设备上安装<a href="https://forum.xda-developers.com/t/4331445/"> Rboard主题管理器应用</a>，否则这个选项将不起作用。此外，您需要root权限来安装主题。</p>
+
+<p class="translated">Rboard Patcher也是开源的，这意味着欢迎您修改代码库。如果你想在不自己编译应用程序的情况下尝试前沿版本，选择<a href="https://github.com/DerTyp7214/RboardPatcher/actions/workflows/ci.yml">持续集成版本</a>。</p>
+
+<p/><p class="translated"><strong>T3】Rboard Patcher GitHub资源库T5】</strong></p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="conclusion" class="translated">结论</h2>
+<p class="translated">这就是全部了。如您所见，为Gboard创建定制主题并不难，尤其是当您可以利用Rboard社区提供的强大工具时。你用Gboard主题化得到多少粒度完全取决于你，但是如果你对Google的产品不满意，那么从头开始构建你想要的主题是最好的办法。</p>
+
+<p class="translated">你是否经常用不同的mod定制你的键盘应用程序，或者你对这样的主题化不感兴趣？请在下面的评论区告诉我们。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

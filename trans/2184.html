@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>How to sideload Nothing OS OTA updates on the Nothing Phone 1</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何在Nothing Phone 1上下载Nothing OS OTA更新</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-to-sideload-nothing-os-ota-updates-on-nothing-phone-1/#0001-01-01">https://www.xda-developers.com/how-to-sideload-nothing-os-ota-updates-on-nothing-phone-1/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">T2的Nothing手机终于上市了，它带有一个叫做Nothing OS的轻量级Android皮肤。它可能没有得到谷歌像素得到的一些第一方秘密酱，但用户界面是一个令人惊讶的香草体验，充满了无处不在的设计语言的微妙联系。然而，该软件并不是没有问题，没有什么很好地意识到这一事实。该公司定期推出无操作系统更新，以消除漏洞并引入新功能。</p>
+
+  
+<p class="translated">有时，您可能想要在软件更新通过无线方式到达之前手动安装它。别担心，我们将向您展示如何在您的Nothing Phone 1上下载Nothing OS OTA更新。这不是一个非常困难的过程，但如果没有正确遵循，<strong>你可能不得不彻底清除你的设备并重新开始</strong>。</p>
+
+<p class="translated"><strong>浏览这篇文章:</strong></p>
+
+
+
+<hr/>
+
+<hr/>
+
+
+<h2 id="how-to-sideload-nothing-os-ota-updates-on-nothing-phone-1" class="translated">如何在Nothing Phone 1上下载Nothing OS OTA更新</h2>
+<p class="translated">从侧面加载过程开始，首先，您需要为您的设备变体获取合适的OTA更新包。为此，请查看我们的<a href="https://www.xda-developers.com/nothing-phone-1-nothing-os-update-tracker/"> Nothing Phone 1更新跟踪器</a>，并下载与您想要安装的Nothing OS版本相对应的ZIP文件。</p>
+
+<p class="translated">对于每个Nothing OS版本，您应该能够找到两种类型的OTA文件:完整的和增量的。完整的更新包被推荐用于侧装，因为它们可以升级手机，不管以前安装的是什么版本。当您是根用户时，它们也很有用<a href="https://www.xda-developers.com/how-to-bootloader-unlock-root-magisk-nothing-phone-1/">，因为您可以从它们中提取股票引导映像，对其打补丁，然后刷新它以保持根用户访问。增量更新包比相应的完整OTA相对较小，但它只能在未接触的基础上应用。</a></p>
+
+<p class="translated">此手动安装过程不会擦除您的设备，但最好备份任何不可替代的数据，以防出现问题。</p>
+
+<h3 id="package-validation" class="translated">包验证</h3>
+<p class="translated">在尝试手动安装无操作系统更新之前，您应该验证下载的软件包的SHA-1哈希。在这种情况下，恢复ZIP的SHA-1校验和应该与文件名完全相同(减去*。zip扩展名)。即使一个字符的差异也足以表明文件被篡改。这就是你如何检测一个损坏的下载。</p>
+
+<p class="translated">Android附带了一个名为<code>sha1sum</code>的CLI工具，用于SHA-1校验和计算。您可以使用它来验证OTA文件的哈希。</p>
+
+
+
+<h3 id="install-via-recovery" class="translated">通过恢复安装</h3>
+<p class="translated">Nothing Phone 1带有谷歌像素式恢复模式。因此，您可以通过恢复界面轻松下载更新包。</p>
+
+<ol> <li class="translated">在PC/Mac/Chromebook上下载更新ZIP文件。</li> <li class="translated">确保ADB可以从您的计算机中发现“无电话1”。</li> <li class="translated">在您的计算机上，运行命令:<pre> <code class="hljs ">adb reboot recovery</code> </pre></li> <li class="translated">你应该会在手机屏幕上看到“没有命令”。现在按住手机的电源键。按住电源，按下音量增大按钮，然后快速放开两个按钮。你应该Android恢复菜单。<a href="https://www.xda-developers.com/nothing-phone-1-nothing-os-update-tracker/nothing-phone-1-recovery-mode/" rel="attachment wp-att-675883"> </a></li> <li class="translated">在手机上，选择<strong>应用来自ADB的更新</strong>选项。</li> <li class="translated">在您的计算机上，运行命令:<pre> <code class="hljs ">adb devices</code> </pre>这将返回一个设备序列号，其名称旁边带有“sideload ”,表明您的设备以侧载模式连接到计算机。</li> <li class="translated">在您的计算机上，运行命令:<pre> <code class="hljs javascript">adb sideload <span class="hljs-string">"filename"</span>.zip</code> </pre>，其中“文件名”将替换为完整路径，后跟在步骤1中下载的文件的名称。</li> <li class="translated">更新应该会安装在您的手机上。安装完成后，在手机上选择“立即重启系统”来重启到新版本。</li> </ol>
+
+<h3 id="install-via-local-system-update-wizard" class="translated">通过本地系统更新向导安装</h3>
+<p class="translated">Nothing OS带有内置的系统更新安装应用程序，但该公司尚未将其作为用户可访问的选项。不过，你可以使用自定义拨号器代码或通过任何活动启动器应用程序来启动它。</p>
+
+<ol> <li class="translated">在手机内部存储的根目录下创建一个名为“ota”(不带引号)的文件夹。然后将更新ZIP文件复制到该文件夹。</li> <li class="translated">拨<code>*#*#682#*#*</code>打开离线更新工具。<ul> <li class="translated">您还可以使用活动启动器应用程序来定位和执行“OfflineOTAUpgrade”工具。工具的包名是<code>com.nothing.OfflineOTAUpgradeApp</code>。<a href="https://www.xda-developers.com/nothing-phone-1-nothing-os-update-tracker/nothing-os-offline-ota-upgrade/" rel="attachment wp-att-675879"> </a></li> </ul> </li> <li class="translated">向导将尝试找到内存中存在的任何有效OTA文件并安装它。如果失败，它会让您手动浏览OTA包。</li> <li class="translated">选择OTA文件后，向导将应用更新并重启设备。</li> </ol>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="verification" class="translated">确认</h2>
+<p class="translated">检查您是否正确遵循了所有这些步骤并正确下载OTA文件的一个简单方法是在您的Nothing Phone 1上进入<strong>设置</strong> &gt; <strong>关于电话</strong> &gt; <strong>软件信息</strong>。</p>
+
+<p class="translated"><a href="https://www.xda-developers.com/nothing-phone-1-nothing-os-update-tracker/nothing-phone-1-software-info/" rel="attachment wp-att-675897"/></p>
+
+
+
+<p/>
+
+<p class="translated">这应该是您已经侧装的确切的Nothing OS版本，表明您已经成功地完成了安装过程。</p>
+
+<p/><p class="translated"><strong> <a href="https://forum.xda-developers.com/f/nothing-phone-1.12585/">没事电话1 XDA论坛</a> </strong></p>
+
+<p class="translated">Nothing OS还处于初级阶段，这就是为什么你还找不到很多定制选项的原因。尽管如此，在当前的公共版本上手动<a href="https://www.xda-developers.com/how-to-enable-glyph-lighting-music-visualization-nothing-phone-1/">启用隐藏的字形照明音乐可视化特性</a>是可能的。如果你没有Nothing Phone 1，但喜欢在你当前的Android设备上应用Nothing OS美学，你也可以通过<a href="https://www.xda-developers.com/download-nothing-phone-1-wallpapers/">下载股票壁纸</a>来实现。</p>
+
+<hr/>
+
+<p class="translated"><strong>你对虚无OS和虚无Phone 1有什么看法？下面就让我们知道吧！</strong></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

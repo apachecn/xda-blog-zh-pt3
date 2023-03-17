@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>How to create a Discord bot and add it to your server</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何创建一个不和谐的机器人，并将其添加到您的服务器</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-to-create-discord-bot/#0001-01-01">https://www.xda-developers.com/how-to-create-discord-bot/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">Discord多年来已经发展了很多，现在它不仅是游戏玩家的可靠平台，也是任何希望通过消息、视频聊天等方式与同龄人联系的人的可靠平台。许多人甚至用它来替代WhatsApp和其他T2流行的消息应用程序，尤其是因为它非常重视团体和社区。Discord拥有数百万日活跃用户，其中很大一部分人每天都在使用机器人来实现自动化。如果你以任何身份使用不和谐，那么很有可能你使用了机器人。如果你想知道如何自己创建一个，那么你来对地方了。在本文中，我们将告诉你如何制作一个不和谐机器人:</p>
+
+  
+<p class="translated"><strong>浏览这篇文章:</strong></p>
+
+
+
+
+<h2 id="prerequisites" class="translated">先决条件</h2>
+<p class="translated">创建一个不和谐机器人是一个相对简单的任务。你确实需要一点编程知识来进行设置，但是代码的复杂性取决于你要制作的机器人的类型。让我们来看看你需要开始做的几件事。首先，你需要一个不和谐账户，你可能有。如果没有，你可以去<a href="https://discord.com"> Discord主页</a>免费创建一个。你也可以下载Discord客户端，并在你的<a href="https://www.xda-developers.com/best-cheap-gaming-laptops/">游戏笔记本</a>甚至手机上使用。</p>
+
+<p class="translated">一旦完成，你需要<a href="https://support.discord.com/hc/en-us/articles/204849977-How-do-I-create-a-server-">设置你自己的服务器</a>来使用这个机器人。然后，通过几个简单的步骤，您就可以轻松地邀请机器人加入您的服务器。一旦bot到达您的服务器，您就可以为它编写一个函数，并在您的服务器中使用它，或者将它分配给其他您拥有管理权限的服务器。为了分配一个bot函数，我们将使用Node.js来访问discord.js节点库。可以从<a href="https://nodejs.org/en/download/">官网</a>下载Node.js的最新版本。</p>
+
+<p class="translated">此外，我们还需要一个代码编辑器来编写和修改机器人功能。在本教程中，我们将使用<a href="https://code.visualstudio.com/download"> Visual Studio代码</a>，尽管你可以随意使用。</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="how-to-create-and-add-a-discord-bot-to-your-server" class="translated">如何创建和添加一个不和谐机器人到您的服务器</h2>
+<p class="translated">第一步是在Discord上为你的机器人创建一个应用程序。这里的想法是为您的机器人生成一个令牌，以便Discord识别代码。为此，你需要前往Discord的申请页面。使用你的Discord帐户登录后，你将被直接转到该页面，在那里你将看到你的应用列表。如果列表为空，请不要担心，因为我们现在将创建一个。</p>
+
+<ul> <li class="translated">点击<em>新应用</em>按钮开始。</li> <li class="translated">现在，为您的应用程序命名，并点击<em> Create </em>。</li> <li class="translated">现在，它将带您进入一个页面，您可以在其中输入应用描述、添加标签、应用图标等详细信息。完成后，点击<em>保存更改</em>按钮继续。</li> <li class="translated">现在，在左侧栏的菜单列表中寻找Bot选项。点击它打开机器人页面，并按下<em>添加机器人</em>按钮。出现提示时，允许创建bot的权限。</li> <li class="translated">现在，您将在下一页看到您的机器人的安全令牌。如果令牌尚未生成，只需点击<em>重置</em>按钮即可创建新令牌。复制这个令牌ID，因为我们将在下面的部分中需要它。</li> <li class="translated">这个特殊的令牌允许你控制机器人，这意味着你不应该与任何人分享这个。如果您认为此令牌已被破坏，那么只需返回到此页面并点击重置按钮创建一个新的。</li> <li class="translated">现在，在左侧栏的菜单中找到OAuth2选项，点击它找到您的客户端ID。这是一个很长的数字串，你需要复制并粘贴到下面的URL用你刚才复制的实际客户端ID替换单词CLIENTID-<code>https://discordapp.com/oauth2/authorize?&amp;client_id=CLIENTID&amp;scope=bot&amp;permissions=8</code></li> <li class="translated">只需将这个特定的URL粘贴到您的web浏览器中，然后按回车键。它会打开一个页面，你可以告诉Discord把你的机器人送到哪里。从下拉菜单中选择要添加新机器人的服务器，如下所示</li> <li class="translated">单击“继续”,并确认是否要将服务器的管理权限授予您的机器人。您也可以在以后授予或撤销管理员权限，所以不要为这个选项担心。</li> <li class="translated">一旦你将机器人添加到你的服务器，你会看到一个消息，确认机器人的到来。这样你就知道它起作用了。您还会在右侧的会员栏中看到这个机器人。</li> </ul>
+
+<p class="translated">好了，就这样，你现在已经为你的服务器创建了一个不和谐机器人。如果您仔细遵循了所有步骤，您应该能够在您的服务器上看到bot。该机器人将保持离线，直到你用代码为它定义一个功能，并将其与Discord平台同步。这是真正的工作开始的地方，你将设置一些参数，并告诉你的机器人你想要它做什么。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="how-to-assign-bot-function-and-host-a-discord-bot" class="translated">如何分配机器人功能和主持一个不和谐的机器人</h2>
+<p class="translated">现在，按照以下步骤在您的电脑上创建并托管一个discord bot:</p>
+
+<p class="translated">在本教程中，我们将创建一个简单的“乒乓”不和谐机器人，顾名思义，它会在你每次键入“Ping”时回复“Pong”。</p>
+
+<ul> <li class="translated">在PC或Mac上的任意位置创建一个新文件夹。对于本教程，我们在Windows PC的桌面上创建了一个“新文件夹”。</li> <li class="translated">现在，打开Visual Studio代码，用下面提到的代码创建一个新文件。将“在此粘贴您的机器人令牌，不带引号”替换为您之前复制的机器人令牌。<section class="emaki-custom-block emaki-custom-note"> <div class="emaki-custom note" id=""> <p> DISCORD_TOKEN= "将您的机器人令牌粘贴到此处，不带引号。"</p> </div> </section></li> <li class="translated">接下来，创建一个新文件并添加以下代码。完成后，将这个特定文件保存为同一文件夹中的bot.js。这段代码将为你的不和谐机器人添加功能。每次你输入“乒”，它都会回复“乓”。<section class="emaki-custom-block emaki-custom-note"> <div class="emaki-custom note" id=""> <p>要求(‘dotenv’)。config()；const Discord = require(" Discord . js ")；const client =新的不和谐。客户端({intents: ["GUILDS "，" GUILD _ MESSAGES "]})；client.on("ready "，()= &gt; { console.log(`以${client.user.tag}身份登录)！`)}) client.on("message "，msg =&gt;{ if(msg . content = = = " ping "){ msg . reply(" pong ")；} })client . log in(process . env . discord _ TOKEN)；</p> </div> </section></li> <li class="translated">现在，从您创建的新文件夹中打开终端窗口，并使用以下命令安装Discord.js库。您需要在您的系统上安装Node.js，这样才能工作，所以请记住这一点。<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id=""><p>【NPM安装-保存discord.js dotenv </p> </div> </section></li> <li class="translated">下一步是创建package.json文件。使用以下命令创建它:</li> <li class="translated">最后，您现在可以使用“node bot.js”命令来运行bot。</li> </ul>
+
+<p class="translated">一旦运行node bot.js命令，您会注意到服务器中的Discord bot将处于在线状态。然后，您可以通过键入“ping”来测试机器人，它将对“pong”作出响应。</p>
+
+
+
+<p class="translated">你也可以创建一个不和谐，并把它放在云中供他人使用。为此，您必须使用在线IDE(如Replit)来托管您的代码。</p>
+
+<p class="translated">编码过程的复杂程度取决于您希望分配给机器人的功能。例如，一个简单的“问候机器人”的编码过程不会像一个可以在你喜欢的平台上播放音乐的“音乐机器人”那么复杂。你也可以创建一个机器人来调节你的服务器，甚至踢你的服务器中反复违反规则的成员。有大量有用的不和谐机器人，所以可能性是无穷无尽的，真的。如果你不想经历编码的麻烦，Top.gg 是一个寻找不和谐机器人的好地方。只需从网站上选择一个机器人，并根据您的需要进行必要的更改来修改该机器人。有很多选项可供选择，所以一定要使用顶部的搜索栏来找到您要找的东西。</p>
+
+<hr/>
+
+<p class="translated">好了，这就把我们带到了本教程的结尾。现在有大量有用的Discord机器人，所以我们强烈建议用谷歌搜索一下，看看是否有人已经创建了一个机器人来自动化你的过程。在你离开之前，我们还建议你<a href="https://www.xda-developers.com/official-xda-developers-discord-server/">加入XDA的Discord server </a>,在这里你会找到志同道合的人，并了解XDA的最新动态。那么你打算先造哪个不和谐机器人呢？请在下面的评论中留言告诉我们。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

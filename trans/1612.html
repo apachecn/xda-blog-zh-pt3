@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>How to install Android 13 on Google Pixel and other Android devices</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何在谷歌Pixel和其他Android设备上安装Android 13</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-to-install-android-13/#0001-01-01">https://www.xda-developers.com/how-to-install-android-13/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+
+<p class="translated">安卓13 的稳定版来了。如果你有一部<a href="https://www.xda-developers.com/how-to-download-android-13/">合格的Pixel智能手机</a>，你现在就可以试一试。谷歌还提供通用系统映像(GSI)，这意味着最新版本的Android也可以在非谷歌Project Treble兼容设备上启动。</p>
+
+  
+<p class="translated">如果你有Pixel 4、Pixel 4 XL、Pixel 4a、Pixel 4a 5G、Pixel 5、Pixel 5a、Pixel 6、Pixel 6 Pro或Pixel 6a运行较旧的稳定版本，并且想知道如何安装Android 13，只需向下滚动，因为我们已经为你准备好了教程。下面列出的方法同样适用于新发布的<a href="https://www.xda-developers.com/google-pixel-7-pro/"> Pixel 7系列</a>。您需要一台安装了<a href="https://www.xda-developers.com/install-adb-windows-macos-linux/"> ADB和Fastboot </a>的PC/Mac来成功执行安装过程。</p>
+
+<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id="custom_block_2"><p class="translated"><strong>警告:</strong>虽然你仍然可以flash预览版本，但那些预稳定的版本仅供开发人员使用，所以不要在你的日常驱动中安装它们。您可能会遇到showstopper错误或其他系统不稳定问题。强烈建议您在继续之前备份数据。建议用户谨慎使用。</p> </div></section>
+<p class="translated"><strong>安装更新的三种方法是:</strong></p>
+
+
+
+<hr/>
+
+
+<h2 id="method-1-sideload-android-13-via-recovery-and-adb" class="translated">方法一:通过恢复和ADB侧装Android 13</h2>
+<p class="translated">要安装开发者预览版/测试版，您需要通过ADB为您的设备从Recovery中下载适当的OTA包。这种方法也适用于带有锁定引导程序的Google Pixel设备。</p>
+
+<ol> <li class="translated">下载更新。从这里打开您计算机上的zip文件<a href="https://www.xda-developers.com/how-to-download-android-13/">。为了方便起见，您可以将该文件重命名为一个更简单的名称，并将该文件放在您计算机上ADB所在的目录中。</a></li> <li class="translated">可选，但建议:验证您下载的文件的SHA-256校验和，以确保文件已被完全和正确下载。</li> <li class="translated">在手机上启用USB调试-进入<em>设置</em> &gt; <em>关于手机</em> &gt;轻点<em>构建号</em> 7次，(可选)输入你的模式、PIN或密码启用开发者选项，然后导航至<em>设置</em> &gt; <em>开发者选项</em> &gt;启用<em> USB调试</em>。</li> <li class="translated">将手机连接到电脑。如果这是您第一次连接此计算机的ADB实例，当提示出现在您的电话上时，在您的电话上授权您的计算机连接。</li> <li class="translated">在您的计算机上，运行命令:<pre> <code class="hljs ">adb reboot recovery</code> </pre></li> <li class="translated">你应该会在手机屏幕上看到“没有命令”。现在按住手机的电源键。按住电源，按下音量增大按钮，然后快速放开两个按钮。你应该Android恢复菜单。</li> <li class="translated">从恢复菜单中选择选项<em>应用来自ADB的更新</em>。</li> <li class="translated">在您的计算机上，运行命令:<pre> <code class="hljs ">adb devices</code> </pre>这将返回一个设备序列号，其名称旁边带有“sideload ”,表明您的设备以sideload模式连接到计算机。</li> <li class="translated">在您的计算机上，运行命令:<pre> <code class="hljs xml">adb sideload <span class="hljs-string">"filename"</span>.zip</code> </pre>“filename”部分将替换为在步骤1中下载的文件的名称。</li> <li class="translated">更新应该会安装在您的手机上。安装完成后，在手机上选择<em>立即重启系统</em>重启进入Android 13。</li> </ol>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="method-2-flashing-full-factory-image-via-fastboot" class="translated">方法2:通过快速启动刷新完整的工厂映像</h2>
+<p class="translated">如果你在谷歌Pixel设备上有一个解锁的bootloader，你需要通过Fastboot刷新Android 13开发者预览版/测试版的出厂映像。通常，这是通过下载文件中包含的<em> flash-all.sh </em>或<em> flash-all.bat </em>脚本文件来完成的，但其默认配置也会完全擦除设备。但是，您可以通过从脚本的命令中删除“-w”wipe属性来保留您的数据。</p>
+
+<ol> <li class="translated">下载工厂图像。从这里打开您电脑上的zip文件<a href="https://www.xda-developers.com/how-to-download-android-13/">。</a></li> <li class="translated">可选，但建议:验证您下载的文件的SHA-256校验和，以确保文件已被完全和正确下载。</li> <li class="translated">提取。zip文件，为了方便起见，将结果文件复制并粘贴到您计算机上的ADB和fastboot文件夹中。</li> <li class="translated">可选:结果文件将包含一个<em> flash-all.sh </em>或<em> flash-all.bat </em>脚本文件。使用文本编辑器，如果你在macOS/Linux上，打开<em> flash-all.sh </em>，或者如果你在Windows上，打开<em> flash-all.bat </em>脚本文件。找到并移除/删除<code>fastboot update</code>命令中的-w标志。这将跳过你的手机数据擦除。为了避免兼容性问题，建议进行数据擦除。</li> <li class="translated">在手机上启用USB调试-进入<em>设置</em> &gt; <em>关于手机</em> &gt;轻点<em>编译号</em> 7次，(可选)输入你的模式、PIN或密码启用开发者选项，然后导航至<em>设置</em> &gt; <em>开发者选项</em> &gt;启用<em> USB调试</em>。</li> <li class="translated">将手机连接到电脑。如果这是您第一次连接此计算机的ADB实例，当提示出现在您的电话上时，在您的电话上授权您的计算机连接。</li> <li class="translated">在你的电脑上运行:<pre> <code class="hljs ">adb reboot bootloader</code> </pre>这将重启你的手机进入快速启动模式。</li> <li class="translated">在您的Mac/Linux PC上，运行:<pre> <code class="hljs ">flash-all</code> </pre>该命令执行<em> flash-all.sh </em>脚本文件，然后安装必要的引导加载程序、基带固件和操作系统。如果你在Windows上，你可以简单地双击<em> flash-all.bat </em>文件。</li> <li class="translated">一旦脚本完成，您的设备将重新启动到新的操作系统。</li> </ol>
+
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="method-3-install-android-13-gsi" class="translated">方法三:安装安卓13 GSI</h2>
+<p class="translated">即使你没有兼容的Pixel智能手机，你仍然可以安装谷歌官方的GSI二进制文件来测试Android 13，前提是你的设备兼容Project Treble。您还需要一个解锁的引导加载程序。我们需要说的最后一件事是，刷新GSI将需要您在工厂重置您的设备，所以请确保您在继续操作之前准备好丢失应用程序数据！我们建议您进行设备外备份(例如在您的PC或SD卡上)，以防出现任何问题。</p>
+
+<ol> <li class="translated">官方Android 13测试版GSIs的下载链接可以在<a href="https://www.xda-developers.com/how-to-download-android-13/">这里</a>找到。Google还没有发布基于稳定版本的GSIs。您应该根据您设备的架构下载合适的版本。要查看您的设备的架构，请运行以下命令:<pre> <code class="hljs css"><span class="hljs-selector-tag">adb</span> <span class="hljs-selector-tag">shell</span> <span class="hljs-selector-tag">getprop</span> <span class="hljs-selector-tag">ro</span><span class="hljs-selector-class">.product</span><span class="hljs-selector-class">.cpu</span><span class="hljs-selector-class">.abi</span></code> </pre></li> <li class="translated">可选但建议:验证您下载的文件的SHA-256校验和，以确保该文件已完全正确下载。</li> <li class="translated">提取。zip文件，为了方便起见，将结果文件(<strong> system.img </strong>和<strong> vbmeta.img </strong>)复制并粘贴到您电脑上的ADB和fastboot文件夹中。</li> <li class="translated">在手机上启用USB调试-进入设置&gt;关于手机&gt;轻按“内部版本号”7次，(可选)输入您的模式，PIN或密码以启用开发者选项，然后导航到设置&gt;开发者选项&gt;启用“USB调试”。</li> <li class="translated">将手机连接到电脑。如果这是您第一次与亚行计算机连接，当手机上出现提示时，请在手机上授权您的计算机连接。</li> <li class="translated">在你的电脑上运行:<pre> <code class="hljs ">adb reboot bootloader</code> </pre>这将重启你的手机进入快速启动模式。</li> <li class="translated">如前所述，目标设备<strong>的引导加载程序必须事先解锁</strong>。</li> <li class="translated">接下来，我们需要禁用Android验证启动(AVB)。为此，运行以下命令:<pre> <code class="hljs css"><span class="hljs-selector-tag">fastboot</span> <span class="hljs-selector-tag">flash</span> <span class="hljs-selector-tag">vbmeta</span> <span class="hljs-selector-tag">vbmeta</span><span class="hljs-selector-class">.img</span></code> </pre></li> <li class="translated">可选但推荐:输入以下命令来擦除系统分区:<pre> <code class="hljs ">fastboot erase system</code> </pre></li> <li class="translated">flash Android 13 GSI:<pre> <code class="hljs css"><span class="hljs-selector-tag">fastboot</span> <span class="hljs-selector-tag">flash</span> <span class="hljs-selector-tag">system</span> <span class="hljs-selector-tag">system</span><span class="hljs-selector-class">.img</span></code> </pre></li> <li class="translated">让图像闪烁，这可能需要几分钟时间。一旦完成，清除用户数据分区:<pre> <code class="hljs ">fastboot -w</code> </pre></li> <li class="translated">最后，重启你的设备:<pre> <code class="hljs ">fastboot reboot</code> </pre></li> <li class="translated">希望你的设备能够启动新版本的Android。</li> </ol>
+
+<hr/>
+
+<p class="translated">除了受支持的谷歌Pixel设备，Android 13作为一个主要版本也可以在不同OEM厂商的各种设备上使用——无论是测试版还是稳定版。万一你在寻找“<em>如何在我的手机上安装Android 13这个问题的答案呢？</em>"，看看以下OEM专用追踪器就知道了:</p>
+
+
+</div>
+
+
+</div>    
+</body>
+</html>

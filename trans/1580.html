@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>How to easily sideload apps on any iPhone using AltStore</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何使用AltStore在任何iPhone上轻松下载应用程序</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-to-sideload-apps-iphone-altstore/#0001-01-01">https://www.xda-developers.com/how-to-sideload-apps-iphone-altstore/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">苹果的<a href="https://www.xda-developers.com/best-iphone/">iphone</a>以封闭而闻名，越狱是大多数人能够想象的侧装应用程序的唯一方式。然而，<em>还有其他方式将应用下载到iPhone上，最简单的方式是通过AltStore。</em></p>
+
+  
+<p class="translated">AltStore，顾名思义，是iOS设备的替代应用商店。由<a href="http://rileytestut.com/blog/2019/09/25/introducing-altstore/"> Riley Testut </a>制造，这是在你的iPad或iPhone上下载应用程序最简单、最安全的方式。它不依赖于苹果一直在打击的企业证书，而是利用了苹果推出的一项功能，允许你使用你的Apple ID免费安装最多三个应用程序。</p>
+
+<p class="translated">如果你觉得这听起来不错，这里有你需要知道的关于它如何运行和如何安装的一切。</p>
+
+ 
+<h2 id="how-altstore-works" class="translated">AltStore如何工作</h2>
+<p class="translated">AltStore需要Apple ID和密码，但如果你不信任它，可以创建一个一次性帐户。开发者说它从来没有被发送到任何第三方服务器。它只会被直接发送到Apple进行鉴定，然后安全地储存在设备的钥匙串中，因此其他任何东西都无法检索它。然而，你完全有权利对将你的主要苹果ID放入应用程序感到不舒服，因此有了一次性账户。</p>
+
+<p class="translated">然后AltStore用你的Apple ID给应用签名，这样应用就可以运行了。你需要在你的设备设置中信任开发者证书，但当你这样做时，你通过AltStore安装的任何应用都将有效...七天了。苹果公司设置了一些限制，尽可能地使这个过程变得困难，但开发者设法绕过了这些限制。随着七天期限的临近，AltStore将刷新应用程序上的签名密钥，以便您可以获得额外的七天使用时间。这也可以在后台运行。</p>
+
+<section class="emaki-custom-block emaki-custom-pullquote"><div class="emaki-custom pullquote" id="custom_block_6"><p class="translated">AltStore利用了苹果推出的一项功能，允许你使用Apple ID免费安装最多三个应用程序。</p> </div></section>
+<p class="translated">然而，AltStore依赖于运行AltServer的同一网络上的电脑，因此您需要在该设备上安装iTunes和iCloud。AltServer是一个配套的应用程序，它会等待AltStore连接，应用程序只能通过AltServer安装和刷新。</p>
+
+<p class="translated">AltServer之所以有必要，是因为对免费苹果开发者账户的限制。不能使用免费的Apple ID通过无线方式分发应用程序。这意味着应用程序不能在本地安装，但可以使用iTunes Wi-Fi sync安装。AltServer最初也需要安装AltStore，但一旦安装完毕，AltStore就可以向AltServer发送命令进行应用安装。你只需要确保你在同一个网络上。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="how-to-install-altstore" class="translated">如何安装AltStore</h2>
+<p class="translated">你需要一台Windows或Mac电脑才能在你的iOS设备上安装AltStore。你还需要安装iTunes和iCloud，它们<strong>不能</strong>来自Windows Store。它们需要直接从苹果下载。</p>
+
+
+
+<p class="translated">现在，您可以开始AltStore安装过程。方法如下:</p>
+
+<ol> <li class="translated"><strong>通过<a href="http://altstore.io/" rel="noopener noreferrer" target="_blank">山寨商店的网站</a>下载山寨服务器</strong>。</li> <li class="translated">将你的<strong> iPhone </strong>连接到电脑。</li> <li class="translated">说你<strong>信任</strong>你接入的电脑。</li> <li class="translated">启动<strong> AltServer </strong>并让它在后台运行。</li> </ol>
+
+<p class="translated">接下来，您需要将它指向iCloud安装。</p>
+
+<ol> <li class="translated">打开<strong> iTunes。</strong></li> <li class="translated">在iPhone的设置中启用通过Wi-Fi与此iPhone同步<strong>。</strong></li> <li class="translated">拔掉你的iPhone。</li> <li class="translated">单击通知区域中的AltServer图标。</li> <li class="translated">点击<strong>安装AltStore </strong></li> <li class="translated">选择你的手机。</li> </ol>
+
+
+
+<p class="translated">然后会提示您输入Apple ID和密码。如前所述，您可以使用一次性帐户。稍等片刻，AltStore应该会安装在您的iPhone上。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="using-altstore" class="translated">使用AltStore</h2>
+<p class="translated">AltStore是一个相当简单的应用程序。它带有安装Delta(一个模拟器)或Clip(一个更高级的剪贴板管理器)的能力。您也可以安装您在线下载的自定IPA文件。</p>
+
+
+
+
+
+<p class="translated">若要安装应用程序，您需要确保您与运行AltServer的电脑在同一个Wi-Fi网络上，以便在安装应用程序时(它需要由AltServer签名和分发)。应用程序会尝试在后台自动刷新，但当你在同一个网络上时，如果应用程序尝试在后台刷新或不刷新，那就是运气。</p>
+
+<p class="translated">Testut建议偶尔在后台启动AltStore应用程序，以确保它可以更频繁地检查本地服务器，因为你的手机会识别出这是一个你经常使用的应用程序。</p>
+
+
+
+
+
+<p class="translated">你可以安装和试用很多应用程序，如果你<a href="https://www.patreon.com/rileytestut">成为Testut赞助人</a>，你还可以获得Delta和AltStore的测试版。成为赞助人的最大吸引力是能够向AltServer添加第三方源，你可以在谷歌或Reddit上查找它们，找到一些添加到你的iPhone上。</p>
+
+<p class="translated">我一直在使用AltStore的Delta来模拟一些复古游戏，我也在尝试让Dolphin工作。一些应用程序还不能在iOS 15上运行，但随着时间的推移，很多应用程序可能会更新。</p>
+
+<p class="translated">你用什么自定义应用？请在下面的评论中告诉我们！</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>
