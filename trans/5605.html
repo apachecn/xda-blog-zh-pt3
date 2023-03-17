@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Meteor Lake might have fewer cores than Raptor Lake, but does that make it slower?</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">流星湖可能比猛禽湖有更少的核心，但这使它更慢吗？</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/meteor-lake-less-cores-raptor-lake-slower/#0001-01-01">https://www.xda-developers.com/meteor-lake-less-cores-raptor-lake-slower/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">英特尔的第14代Meteor Lake芯片将于今年晚些时候推出，但在我们获得任何官方规格之前，许多人已经排除了它作为第13代Raptor Lake CPUs的升级的可能性。有可靠的传言说，流星湖将有六个性能核心，而不是猛禽湖的八个，这导致一些出版物将流星湖称为关于性能的“<a href="https://www.extremetech.com/computing/341788-intel-rumored-to-cancel-meteor-lake-desktop-cpus-in-favor-of-raptor-lake-refresh" rel="noopener noreferrer" target="_blank">后退了一步</a>”。甚至有传言说桌面版的《流星湖》<a href="https://wccftech.com/intel-meteor-lake-s-desktop-cpus-cancelled-lga-1851-support-trio-core-families-rumor/" rel="noopener noreferrer" target="_blank">已经被完全取消了</a>,更新版的《猛禽湖》将会填补空白。</p>
+
+  
+<p class="translated">我不打算剖析取消理论，因为不会真正知道，直到英特尔确认更多。我更感兴趣的是关于流星湖性能的论述，它被引用为英特尔尖端芯片跳过桌面的潜在原因。流星湖的核心数量减少可能不是一个错误，也不是一个仅为笔记本电脑考虑。相反，它发挥了英特尔在台式机和笔记本电脑上的优势。</p>
+
+ 
+<h2 id="hybrid-architecture-and-the-problem-with-p-cores" class="translated">混合架构和P内核的问题</h2>
+
+
+<p class="translated">大多数Alder Lake和Raptor Lake CPUs都有一种叫做“混合架构”的东西，也就是英特尔所说的在单个CPU中使用两种不同类型的内核。如果你听说过Arm的大。小科技，那你就熟悉这个概念了。英特尔使用性能内核(P内核)和效率内核(E内核)。尽管英特尔在2021年首次推出<a href="https://www.xda-developers.com/intel-12th-gen-alder-lake/"> Alder Lake时遇到了一些挫折</a>，但这种设计已经被证明是非常有效的，并在英特尔的东山再起中发挥了重要作用。</p>
+
+<p class="translated">阿尔德湖和猛禽湖并不完美，但这并不是因为E-core，它们经常被嘲笑为单独薄弱。事实上，E核是伟大的，Raptor Lake对它们的自由使用证明了这一点。实际上，P-core是Alder Lake和Raptor Lake CPUs的最大问题，因为它们消耗大量的电力。<a href="https://www.anandtech.com/show/17047/the-intel-12th-gen-core-i912900k-review-hybrid-performance-brings-hybrid-complexity/4">在对内核i9-12900K </a>的评估中，Anandtech发现，在单线程工作负载中，一个P内核消耗78瓦，而一个E内核消耗15瓦，这意味着P内核需要至少快五倍才能达到E内核的效率，而P内核通常远低于这一目标。</p>
+
+<p class="translated">更糟糕的是，P核还会占用大量空间。一个Raptor Lake P-core的大小与三个E-Core大致相同，这意味着Core i9-13900K的全P-core版本实际上只有12个，但无疑在13900K的253W TDP上性能更差。难怪英特尔想要使用E内核，因为P内核似乎只适用于在不需要大量内核的应用中提供良好的单线程性能。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="efficiency-gains-are-performance-gains" class="translated">效率的提高就是性能的提高</h2>
+<p class="translated">耗电绝对是阿尔德湖和猛禽湖最大的软肋。这就是为什么P-core比E-core数量少的原因，专为笔记本电脑制造的混合芯片最多有6个P-core，而不是我们在台式机上看到的8个。流星湖肯定是解决和修复这些问题的一种尝试，但理论上移除两个P-core不会对流星湖的性能有任何帮助。</p>
+
+<section class="emaki-custom-block emaki-custom-pullquote"><div class="emaki-custom pullquote" id="custom_block_9"><p class="translated">对于台式机和笔记本电脑市场来说，减少几个P内核似乎是正确的举措。</p> </div></section>
+<p class="translated">问题是，两个P-core可能无法决定流星湖的性能。凭借13900K，英特尔已经基本达到了一个主流CPU能消耗多少功率的极限。253W的峰值已经是相当高的TDP，但即使在库存设置下，13900K也可以大大超过300W。英特尔在这一点上基本上是功率受限的，如果不能实现更高的效率，就无法提高性能。很明显，P内核的效率不如E内核，所以去掉一对是很有意义的，尤其是因为它只会影响多核性能，根本不会降低单核性能。</p>
+
+<p class="translated">我们不知道与Raptor Lake相比，Meteor Lake的效率会提高多少，但有传言称，在相同的内核数量下，英特尔的目标是比Raptor Lake的效率提高<a href="https://wccftech.com/intel-14th-gen-meteor-lake-cpus-target-over-50-percent-performance-per-watt-gain-over-13th-gen-raptor-lake/" rel="noopener noreferrer" target="_blank"> 50%或更高</a>。由于流星湖最高端的芯片没有13900K那么多核心，我们知道传言不可能是指旗舰机型，但很难想象最高端的流星湖CPU不会比13900K更高效。即使效率提高20%,也意味着在相同功耗下性能提高20%。</p>
+
+<p class="translated">除非桌面流星湖芯片被限制在200W TDPs以下(这将限制高端性能)，否则对流星湖高端性能的担忧似乎是没有根据的。它位于英特尔的7纳米节点(官方称为英特尔4)上，具有新的架构，并使用新的瓦片设计。效率提高50%是合理的，这也是英特尔目前最需要的，因为增加功耗似乎不再是一个选项。对于台式机和笔记本电脑市场来说，减少几个P内核似乎是正确的举措。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="core-count-is-not-meteor-lake-39-s-biggest-weakness" class="translated">核心数并不是流星湖最大的弱点</h2>
+
+
+<p class="translated">如果说有什么东西搞垮了流星湖，那肯定不会是它的核心伯爵。与英特尔的10纳米节点相比，仅新工艺就可以在不增加功率的情况下将频率提高20%，或者在相同的时钟速度下将功率降低40%。这是最好的情况，但由于Meteor Lake也有架构改进，我们可以相信英特尔在提高其一些最好的CPU的性能和效率方面不会有太多问题。</p>
+
+<p class="translated">英特尔可能会有一个问题，实际上是把流星湖的所有部分放在一起，让它工作，并把它推向市场。<a href="https://www.digitaltrends.com/computing/why-i-am-worried-about-intel-meteor-lake/" rel="noopener noreferrer" target="_blank">英特尔正在研发的小芯片</a>(该公司称之为瓦片)令人深感担忧。AMD开发了一些不同的芯片，并使用其中的许多芯片来实现它想要的性能，而英特尔设计了几种不同的专用芯片，它们都有不同的制造考虑。对于英特尔来说，这意味着更高的开发成本，更少的使用瓦片的灵活性，最重要的是，增加了延迟的风险。如果没有准备好，一个单独的瓷砖可以支撑整个部分。</p>
+
+<p class="translated"><a href="https://www.xda-developers.com/intel-core-i9-12900k-vs-amd-ryzen-5950x/">12900k</a>和<a href="https://www.xda-developers.com/intel-core-i9-13900k-review/"> 13900K </a>出来的时候很棒，但是10nm的CPU一拖再拖，直到英特尔第四次尝试10nm才出了真正好的CPU。想象一下，第12代是在2018年或2019年而不是2021年推出的；这就是10纳米延迟让英特尔付出的代价。流星湖还没到达终点就担心核心似乎很奇怪。</p>
+
+<p class="translated">我们很快就会知道英特尔的7纳米工艺是否会像10纳米工艺一样糟糕，如果英特尔真的已经取消了桌面版的流星湖，那真是一个不好的迹象。三年多来，10纳米一直是笔记本电脑的专利，因为10纳米节点还不适合具有大量内核和高功耗的高端CPU。看起来英特尔的7纳米有能力制造大型CPU，但如果流星湖芯片由于技术问题而功率受限，那么这比几个核心缺失的问题要大得多。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

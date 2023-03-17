@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Android 14 may add an advanced memory protection feature to protect your device from memory safety bugs</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">Android 14可能会添加一个高级内存保护功能，以保护您的设备免受内存安全漏洞的影响</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/android-14-advanced-memory-protection/#0001-01-01">https://www.xda-developers.com/android-14-advanced-memory-protection/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">最近，内存安全一直是谷歌的首要任务，因为内存安全漏洞往往是软件开发中最严重的漏洞。事实上，在2022年之前，内存安全漏洞一直占Android严重漏洞的大多数，这是谷歌用<a href="https://www.xda-developers.com/google-developing-android-rust/"> Rust编程语言</a>而不是C/C++编写Android新本机代码的重要部分。谷歌一直致力于支持其他方法来缓解Android中的内存安全漏洞，其中一种方法称为内存标记。在运行<a href="https://www.xda-developers.com/android-14"> Android 14 </a>的支持设备上，可能会有一个新的“高级内存保护”设置可以切换该功能。</p>
+
+  
+<p class="translated">内存标记扩展(MTE)是Arm v9 CPUs的一项强制性硬件功能，通过提供有关内存违规的详细信息来防止内存安全错误(运行时性能开销很小)。<a href="https://source.android.com/docs/security/test/memory-safety/arm-mte" rel="noopener noreferrer" target="_blank">正如谷歌解释的</a>，“在一个高层次上，MTE用额外的元数据标记每个内存分配/释放。它将一个标记分配给一个内存位置，然后这个标记可以与引用该内存位置的指针相关联。在运行时，CPU会在每次加载和存储时检查指针和元数据标签是否匹配。</p>
+
+<p class="translated">谷歌已经在几个版本的Android软件栈中支持MTE了。在Android 12中，Android的堆分配器scudo在兼容设备上增加了对三种MTE操作模式的支持:同步模式、异步模式和非对称模式。Google还使得在构建时或通过系统属性和/或环境变量为系统进程启用MTE成为可能。应用程序可以通过<a href="https://developer.android.com/reference/android/R.attr#memtagMode" rel="noopener noreferrer" target="_blank"> android:memtagMode </a>属性选择支持MTE。当Android中的进程启用MTE时，诸如释放后使用和缓冲区溢出等一系列内存安全错误会触发崩溃，而不是无声的内存崩溃。</p>
+
+<p class="translated">在<a href="https://www.xda-developers.com/android-13"> Android 13 </a>中，谷歌为用户空间添加了一个ABI，将请求的MTE操作模式传达给引导加载程序。这可用于在默认情况下未启用MTE的兼容设备上启用它，或者也可用于在默认情况下启用它的兼容设备上禁用它。在Android 13中将ro . arm 64 . memtag . bootctl _ supported系统属性设置为“true”会告诉系统引导加载程序支持ABI，并且还会触发一个按钮出现在开发者选项菜单中，允许用户在下次重启时启用MTE。这是针对那些希望在启用MTE的情况下测试其应用程序行为的开发人员。</p>
+
+<p class="translated">不过，在Android 14中，在兼容设备上启用MTE可能需要更多开发者选项。如果设备具有支持MTE的Arm v8.5+ CPU，设备实现支持用于将所请求的MTE操作模式传达给引导加载程序的ABI，并且新的系统属性“ro . Arm 64 . memtag . bootctl _ Settings _ toggle”被设置为true，则新的“高级内存保护”页面可能会出现在“设置&gt;安全与隐私&gt;更多安全设置”中。这个页面也可以通过新的<a href="https://developer.android.com/reference/android/provider/Settings#ACTION_ADVANCED_MEMORY_PROTECTION_SETTINGS" rel="noopener noreferrer" target="_blank">动作_高级_内存_保护_设置</a>意图动作来启动。</p>
+
+
+
+
+
+<p class="translated">值得注意的是，<a href="https://forum.xda-developers.com/f/google-pixel-7.12607/">谷歌Pixel 7 </a>系列中的张量G2芯片组使用Arm v8.2 CPU内核，因此它们不支持MTE。如果即将推出的谷歌Pixel 8系列像许多其他旗舰Android设备一样使用新的Arm v9 CPU核心，那么他们将拥有支持MTE的硬件。然而，这种“高级内存保护”功能是否会在稳定版中实现还有待观察。</p>
+
+<p class="translated"><em>感谢安全研究员<a href="https://twitter.com/flawedworlddev" rel="noopener noreferrer" target="_blank"> @flawedworlddev </a>对本文的帮助！</em></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

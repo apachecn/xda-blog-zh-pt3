@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>How to back up and restore a Windows Subsystem for Linux (WSL) distro</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何备份和恢复Linux (WSL)发行版的Windows子系统</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-back-up-restore-wsl/#0001-01-01">https://www.xda-developers.com/how-back-up-restore-wsl/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">定期备份电脑是明智之举。无论你使用的是Windows、Mac、Linux还是Chrome操作系统，你都要非常小心。这同样适用于<a href="https://www.xda-developers.com/how-to-install-wsl-2-windows/">Linux(WSL)</a>的Windows子系统，它运行在Windows之上，但有点独立于Windows。</p>
+
+  
+<p class="translated">WSL实例很容易设置，但是如果没有备份，如果出现问题，您将不得不手动重做一切。WSL备份也是在机器之间转移环境的一种简单方法。</p>
+
+<p class="translated">幸运的是，在WSL上备份Linux发行版是一个非常简单的过程，如果需要的话还可以恢复它。</p>
+
+ 
+<h2 id="how-to-back-up-a-windows-subsystem-for-linux-wsl-distro" class="translated">如何备份Linux (WSL)发行版的Windows子系统</h2>
+
+
+<p class="translated">由于WSL不是运行在裸机上的Linux，我们不需要在发行版内部做任何事情来启动备份。相反，该操作完全从PowerShell运行。你需要做的是:</p>
+
+<ol> <li class="translated">在PowerShell配置文件中打开Windows终端(这应该是默认行为)。</li> <li class="translated">在PowerShell中运行命令<strong> wsl -l -v </strong>来打印所有当前安装的Linux发行版的列表。知道<strong>确切的</strong>名称来创建备份很重要。例如，你可能有<strong> Ubuntu-22.04 </strong>而不仅仅是Ubuntu。</li> <li class="translated">选择要保存备份的目录。在PowerShell窗口中，输入<strong> cd(目录)</strong>，将<strong>(目录)</strong>替换为您想要存储备份文件的路径。例如，我们在我们的<strong>文档</strong>库中选择一个名为<strong> WSL backups </strong>的文件夹，所以我们将输入这个命令:<pre>cd "C:\Users\joaoc\Documents\WSL backups"</pre></li> <li class="translated">输入以下命令来导出发行版:<pre> <code class="hljs javascript">wsl --<span class="hljs-keyword">export</span> (distribution) (filename.tar)</code> </pre></li> <li class="translated">或者，您可以在导出过程中指定文件位置和文件名，而不是使用<strong> cd </strong>进入正确的目录。比如:<pre> <code class="hljs javascript">wsl --<span class="hljs-keyword">export</span> Ubuntu C:\Users\joaoc\Documents\WSL backups\Ubuntubackup.tar</code> </pre></li> </ol>
+
+<p class="translated">这就是备份过程。您现在创建的文件既可以在同一台PC上使用，也可以在另一台PC上使用，来创建您的Linux发行版的精确副本。您可以使用Powershell中的import命令来完成此操作。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="how-to-import-a-wsl-distro-from-a-backup" class="translated">如何从备份中导入WSL发行版</h2>
+
+
+<p class="translated">如果您正在导出您的Linux发行版，您可能希望在某个时候恢复它。在WSL中，这是使用import命令完成的。如果您在同一台PC上使用它，我们假设您已经使用了<strong>-degree register</strong>命令来删除您当前的实例。如果你仍然安装了它，从备份导入不会覆盖，使用相同的发行版名称会产生冲突。</p>
+
+<p class="translated">它比export命令长一点，因为您需要指定它的安装位置以及要使用的文件。导入命令遵循以下模板:</p>
+
+<pre> <code class="hljs javascript">wsl --<span class="hljs-keyword">import</span> (distribution) (install location) (file path)</code> </pre>
+<p class="translated">因此，使用上面第5步中的示例导出，您将得到如下结果:</p>
+
+<pre> <code class="hljs javascript">wsl --<span class="hljs-keyword">import</span> Ubuntu c:\wsl c:\users\richard\desktop\ubuntumay27.tar</code> </pre>
+<p class="translated">过一会儿，你的发行版就安装好了，可以运行了。使用导出和导入的好处在于，您可以在很短的时间内在多台机器上设置相同的环境。您的用户和密码将被保留，就像您通过软件包管理器安装的任何东西一样。</p>
+
+<p class="translated">如果你想在关闭PowerShell窗口之前确认它安装正确，只需再次运行<strong> wsl -l -v </strong>，你应该会看到新导入的发行版。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

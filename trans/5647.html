@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>New Windows 11 Dev preview adds live captions in more languages</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">新的Windows 11开发预览版增加了更多语言的实时字幕</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/windows-11-build-25300-live-captions/#0001-01-01">https://www.xda-developers.com/windows-11-build-25300-live-captions/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">微软再次向Dev频道的内部人员发布了新版本的Windows 11，其中包含了一些显著的变化。本周的构建是25300，亮点是增加了对更多语言的直播字幕的支持。</p>
+
+ 
+<h2 id="live-captions-in-seven-new-languages" class="translated">七种新语言的实时字幕</h2>
+
+
+<p class="translated">直播字幕最初是在<a href="https://www.xda-developers.com/windows-11-22h2/"> Windows 11版本22H2 </a>中添加的，但它们只支持美国英语。此功能为所有从您的电脑发出的音频创建字幕，因此如果您有听力障碍，它可以大大有助于使视频和音频更容易理解。</p>
+
+<p class="translated">在这个版本中，微软增加了对其他英语方言的实时字幕支持，以及七种新语言，包括中文(简体或繁体)、法语、德语、意大利语、葡萄牙语(巴西)和西班牙语。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="snap-layout-updates" class="translated">快照布局更新</h2>
+
+
+<p class="translated">这一版本中其他值得注意的变化与Snap Layouts有关，这是Windows 11首次引入的功能，尽管并非每个人都可以使用。微软正在减少您在“捕捉布局”弹出按钮出现之前将鼠标悬停在最大化/恢复图标上所需的时间，当您选择一个应用程序时，您还会在布局中看到当前应用程序的图标。</p>
+
+<p class="translated">微软表示，它将继续尝试这一点，因此在未来的版本中可能会有其他变化。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="other-improvements" class="translated">其他改进</h2>
+<p class="translated">除了这些更大的变化，这个版本还有一些其他的改进。首先，微软已经完成了跨设备同步语音输入设置的功能，包括自动标点和语音输入启动器的设置。</p>
+
+<p class="translated">此更新还使得在“设置”应用程序的启动页面中访问有关应用程序的更多信息变得更加容易。此外，当你在“开始”菜单中右键单击Win32应用程序来卸载它时，你现在会被带到“设置”应用程序，而不是旧的控制面板。最后，微软改进了新的Linux Windows子系统的行为，因此当您尝试运行它时，它会自动提示您安装新的商店版本。</p>
+
+<p class="translated">当然，还有通常的修复列表，这是一个很长的列表。如果你有兴趣，可以看看下面的列表:</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_13"><p class="translated"><strong>【通用】</strong></p><ul> <li class="translated">我们修复了与combase.dll相关的底层问题，该问题在升级到Build 25290后导致使用GetKnownFolder APIs的多个应用程序崩溃，包括IME用户的记事本和Windows终端。这个问题也被认为是一些内部人员发现文件资源管理器中的某些操作在这些版本中需要几分钟才能完成的根本原因。</li> <li class="translated">我们修复了导致渲染问题和使用Windows恢复环境(WinRE)困难的问题。</li> <li class="translated">修复了一些用户在登录需要windows集成身份验证的企业网站时遇到问题的问题。</li> </ul><p class="translated"><strong>【任务栏&amp;系统托盘】</strong></p><ul> <li class="translated">在系统托盘上显示时钟秒数的功能，最初是由<a href="https://blogs.windows.com/windows-insider/2022/11/18/announcing-windows-11-insider-preview-build-25247/"> Build 25247 </a>引入的，如果它在上周更新到Build 25295后消失了，应该会在更新到Build 25300后恢复。</li> <li class="translated">修正了分辨率改变后任务栏被切断的问题。</li> <li class="translated">我们修复了一个问题，当鼠标悬停在任务栏上的应用图标上时，可能会意外地切换窗口焦点。</li> </ul><p class="translated"><strong>【小工具】</strong></p><ul> <li class="translated">由于修复了在多个Windows 11设备上使用Microsoft帐户登录时导致第三方widgets被解除锁定的问题，Dev Channel中最新的widgets更新将解除锁定第三方Widgets。内部人员将需要回到他们的插件板，并再次重新锁定这些插件。如果您仍然看到小工具被意外取消固定的问题，请提交反馈。</li> <li class="translated">小部件选择器中“查找更多小部件”的链接现在不再断开，将指向商店收藏<a href="ms-windows-store://collection/?collectionid=MerchandiserContent/Apps/WidgetCollection/Widgetsforeverything">这里</a>。</li> </ul><p class="translated"><strong>【输入】</strong></p><ul> <li class="translated">我们开始解决IME候选窗口和IME工具栏有时无法显示或被裁剪的问题。</li> </ul><p class="translated"><strong>【文件浏览器】</strong></p><ul> <li class="translated">跨选项卡拖放文件和文件夹应该可以再次工作。</li> </ul><p class="translated"><strong>【任务管理器】</strong></p><ul> <li class="translated">在搜索框中输入的进程名称不再会被意外地进行拼写检查。</li> <li class="translated">修正了讲述人在任务管理器中读出内容的几个问题。</li> <li class="translated">修正了设置中的下拉列表可能与你当前选择的主题不匹配的问题。</li> <li class="translated">当在应用历史页面使用搜索时，搜索结果不再会突然消失。</li> <li class="translated">如果您在设置中打开默认的起始页下拉菜单，单击任务管理器窗口应该会使下拉菜单消失。</li> <li class="translated">使用搜索框区域拖动窗口现在应该可以工作了(就像标题栏的其他区域一样)。</li> <li class="translated">修正了一个在细节标签中结束进程不显示确认对话框的问题。</li> <li class="translated">增加文本缩放比例不再会导致“查看更多”按钮没有内容出现。</li> <li class="translated">如果您进行搜索，然后按下向下箭头，键盘焦点现在应该从搜索框移到结果中。</li> <li class="translated">如果您启用了一个对比主题，并选择了Processes页面中的一行，该行现在应该显示它已被选中。</li> <li class="translated">修复了一个问题，焦点可能不会正确设置为搜索，导致讲述人没有说焦点是在搜索框上。</li> </ul><p class="translated"><strong>【其他】</strong></p><ul> <li class="translated">修正了在角色扮演页面中使用后退按钮时，讲述人的焦点不能正确返回快速设置窗口的问题。</li> </ul> </div></section>
+<p class="translated">尽管有很长的修复列表，仍然有一些已知的问题需要注意。这个列表相当长，如果你想在Arm64设备上使用新的实时字幕功能，你可能会遇到一些麻烦。您可以在下面找到更多信息:</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_15"><p class="translated"><strong>【常规】</strong></p><ul> <li class="translated">我们正在调查一个问题，一些用户在安装最近的版本时经历了比预期更长的更新时间。如果您遇到此问题，请在反馈中心提交一个新的带有日志的反馈项目。</li> <li class="translated">一些加入了AAD (Azure Active Directory)的用户现在在更新最新版本后登录Windows时会看到“为您做好准备”屏幕。我们正在调查这个问题。</li> <li class="translated">启动组策略编辑器可能会显示找不到displayName属性的错误。</li> <li class="translated">使用Windows Hello通过面部识别登录可能无法在Arm64 PCs上运行。解决这一问题的方法是使用Hello PIN路径。</li> <li class="translated">我们正在调查有关Windows Insider程序设置页面显示Windows Update中有新版本可用的报告，即使它们是Dev频道中最新的可用版本。</li> <li class="translated">[ <strong>新</strong> ]我们正在调查关于升级到Build 25295后，Snipping工具中的新按钮对一些内部人员不起作用的报道。如果您受此影响，转到设置&gt;应用程序&gt;默认应用程序，并将屏幕截图设置为ms-screenclip的默认应用程序，应该可以解决问题。</li> </ul><p class="translated"><strong>【小工具】</strong></p><ul> <li class="translated">我们正在调查一个问题，在某些情况下，第三方小工具可能无法按预期加载。</li> </ul><p class="translated"><strong>【任务栏&amp;系统托盘】</strong></p><ul> <li class="translated">对于一些拥有多台显示器的内部人员，任务栏上的应用程序图标可能会出现在错误的显示器上。</li> </ul><p class="translated"><strong>【Windows聚光灯】</strong></p><p class="translated"><em>以下已知问题仅适用于Windows内部人员，他们接受了Windows Spotlight的一种不同处理方式，该方式开始向内部人员推出</em> <a href="https://blogs.windows.com/windows-insider/2023/01/19/announcing-windows-11-insider-preview-build-25281/"> <em>内部版本25281 </em> </a> <em> : </em></p><ul> <li class="translated">点击辅助显示器并不能消除全屏体验。</li> </ul><p class="translated"><strong>【直播字幕】</strong></p><ul> <li class="translated">在Arm64设备上，增强的语音识别支持将无法通过语言和区域设置页面正确安装。Arm64用户不支持带首选语言的实时字幕的语音识别，可以使用此解决方法:<em> (1)卸载设置&gt;应用&gt;已安装应用中的所有“语音包–”应用条目；(2)在设置&gt;时间&amp;语言&gt;语言&amp;区域将首选语言列表中的第一种语言临时设置为可接受的替代语言；(3)启动直播字幕。</em></li> <li class="translated">繁体中文实时字幕目前无法在Arm64设备上运行。</li> <li class="translated">“语言和区域设置”页面上显示的某些语言将表示支持语音识别(如朝鲜语)，但尚不支持实时字幕。</li> <li class="translated">通过“语言和区域设置”页面添加语言时，语言功能的安装进度可能会隐藏，并且您可能看不到“增强的语音识别”的安装完成(实时字幕要求)。(您可以使用该语言的“语言选项”来监控进度。)如果发生这种情况，在实时字幕设置体验检测到这种情况并允许您继续之前，可能会有意外的延迟。</li> <li class="translated">首次登录后的一个小时内,“语言和区域设置”页面可能不会为实时字幕提供必要的语音识别语言支持。</li> <li class="translated">非英语语言中的字幕性能可能会降低，并且在非英语(美国)语言中会丢失语言外过滤，这意味着非字幕语言的语音将显示不正确的字幕。</li> </ul> </div></section>
+<p class="translated">像往常一样，如果你在开发频道注册，这个新版本应该会自动下载，但你可以进入设置应用程序，访问<strong> Windows Update </strong>部分，立即获得最新版本。</p>
+
+<hr/>
+
+<p class="translated"><strong>来源:</strong> <a href="https://blogs.windows.com/windows-insider/2023/02/15/announcing-windows-11-insider-preview-build-25300/" rel="noopener noreferrer" target="_blank">微软</a></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

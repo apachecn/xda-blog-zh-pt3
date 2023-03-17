@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>What is Ryzen 3D V-Cache, and why is it good for gaming?</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">什么是锐龙3D V-Cache，它为什么适合游戏？</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/amd-ryzen-3d-v-cache/#0001-01-01">https://www.xda-developers.com/amd-ryzen-3d-v-cache/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">内核和频率曾经是人们购买CPU时考虑的主要规格，但AMD的3D V-Cache技术改变了这一切。2022年的锐龙7 5800X3D证明了高速缓存是游戏性能最重要的因素，AMD能够通过添加该公司所谓的“3D V-Cache”将一个中端游戏CPU变成游戏冠军的竞争者。</p>
+
+  
+<p class="translated">3D V-Cache不仅仅是一些营销术语或像世嘉创世纪的“爆炸处理”一样的噱头，而是半导体行业有史以来面临的最大问题之一的解决方案。即使没有这一点，3D V-Cache也已被证明是一种很好的方式，可以提供更多优质和高端CPU，而无需AMD付出太多努力。</p>
+
+ 
+<h2 id="what-is-cache" class="translated">什么是缓存？</h2>
+
+
+<p class="translated">在我们谈论3D V-Cache之前，我们需要谈谈常规的旧缓存。很久以前，计算机使用两种基本的存储方式:硬盘和随机存取存储器(RAM)。硬盘速度慢但可以存储大量数据，而RAM只能存储少量数据但速度非常快。这种安排一直很有效，直到20世纪90年代，CPU性能提高的速度开始超过RAM，RAM需要变得更快，这样处理器才不会出现瓶颈。</p>
+
+<p class="translated">解决方案是缓存。这种内存比RAM小得多，但性能更好，而且它位于处理器中，而不是主板上的某个地方。这创造了一个内存层次结构，高速缓存在顶部，RAM在中间，存储(如硬盘驱动器和固态驱动器)在底部。但是高速缓存最终发展出自己的层次结构，具有不同级别的性能和容量，以适应每个芯片的需要。(这也适用于其他类型的处理器，如GPU。)</p>
+
+<p class="translated">今天，典型的高端CPU有一级(或l 1)、L2和三级高速缓存。L1高速缓存非常小，每个内核都有它来尽快处理小指令。L2缓存供一个内核集群专用，但规模更大，有时大一个数量级，并且存储在任何单个内核之外。L3缓存通常由单个CPU上的所有内核共享，并且通常是最大和最后一层。一些非常小众的CPU甚至配备了L4高速缓存，它通常不在CPU本身上，而是放在CPU封装上的一种RAM，如第四代至强的HBM2高速缓存。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="what-is-3d-v-cache" class="translated">什么是3D V-Cache？</h2>
+
+
+<p class="translated">3D V-Cache只是一个芯片，上面除了缓存什么都没有，锐龙5000和锐龙7000 CPUs在设计时就考虑到了3D V-Cache的兼容性。每个3D V-Cache芯片或小芯片都有64MB的L3缓存，是单个Zen计算小芯片的两倍。你可能会认为3D V-Cache应该算作L4缓存，因为它不是CPU本身的一部分，但AMD实际上是将这些小芯片垂直安装在计算小芯片上，所有核心和缓存都位于计算小芯片上，这就是<strong> 3D V </strong>缓存品牌的来源。</p>
+
+<p class="translated">锐龙7 5800X3D是第一个使用这项技术的AMD CPU，作为同代人中唯一的3D V-Cache CPU，它基本上是一个测试运行。锐龙7 5800X(不含V-Cache)的三级缓存为32MB，而5800X3D的三级缓存为96MB。添加所有这些缓存的目的是为了防止CPU需要尽可能多地与RAM通信，因为RAM比L3缓存慢得多。对于大多数应用程序来说，这是太多的缓存，但有一种软件喜欢缓存:游戏。</p>
+
+<p class="translated">游戏通常不需要大量的CPU内核和原始马力就能运行良好，而是需要CPU尽快处理大量的小数据。毕竟，大多数PC游戏玩家都希望以60 FPS或更高的速度运行他们的游戏，这意味着至少每16.67毫秒就有一个全新的帧。5800X3D在游戏性能上与锐龙9 5950X和酷睿i9-12900K相媲美，而且它仍然可以很好地对抗<a href="https://www.xda-developers.com/amd-ryzen-7900x-7950x-review/">锐龙9 7950X </a>和<a href="https://www.xda-developers.com/intel-core-i9-13900k-review/">酷睿i9-13900K </a>。当<a href="http://www.xda-developers.com/amd-ryzen-7000x3d-february-launch-449/">锐龙7000 X3D CPU</a>今年上市时，它们几乎肯定会是市场上最快的游戏芯片。</p>
+
+<p class="translated">也就是说，3D V-Cache并不完美，因为使用V-Cache的CPU比非3D CPU的时钟速度低。额外的缓存弥补了游戏中较低的频率，但在其他应用程序中，会有少量的性能损失。因此，3D V-Cache可能永远不会成为锐龙CPU的默认配置。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="what-39-s-so-special-about-3d-v-cache" class="translated">3D V-Cache有什么特别之处？</h2>
+<p class="translated">归根结底，3D V-Cache只是一个带有高速缓存的芯片，5800X3D的出色游戏性能更能说明高速缓存对于游戏有多棒，而不是3D V-Cache提供了更高的性能水平。但是3D V-Cache对于高速缓存来说并不是革命性的，而是对于处理器的构建方式和行业最大问题之一的潜在解决方案:摩尔定律的死亡。</p>
+
+<section class="emaki-custom-block emaki-custom-pullquote"><div class="emaki-custom pullquote" id="custom_block_15"><p class="translated">即使没有制造危机，3D V-Cache仍然是提供发烧友级产品的有效方式。</p> </div></section>
+<p class="translated">摩尔定律预测，两年后最快的芯片的晶体管数量将是现在最快芯片的两倍。晶体管是处理器的最小组件，晶体管越多通常意味着性能越好。由于处理器只能有这么大，满足摩尔定律的预期意味着实现更高的密度，而更高的密度主要是通过使用更好的制造工艺(也称为节点)来实现的。简而言之，该行业传统上能够通过使用最新的流程或节点来跟上摩尔定律。</p>
+
+<p class="translated">在过去的十年里，摩尔定律一直在维持生命，因为开发更好的新节点极其困难。密度增加的速度已经显著放缓，公司可能无法满足摩尔定律的预期，这意味着技术进步正在放缓。特别是高速缓存，一直非常抵制密度的提高，就在去年，TSMC宣布其3纳米工艺的初始版本不会有大于5纳米的高速缓存密度。</p>
+
+<p class="translated"><a href="https://www.xda-developers.com/how-death-sram-affect-future-pc/"> 3D V-Cache是解决这一问题的巧妙方案</a>。通过将CPU的大部分缓存放在自己的小芯片上，AMD可以将计算芯片上的更多空间专用于逻辑晶体管，这些逻辑晶体管构成单独的核心，比缓存更容易缩小。此外，这意味着AMD可以将更老、更便宜的节点用于V-Cache芯片，同时将尖端节点留给计算小芯片。我们已经可以看到AMD将这种设计理论应用到它的GPU上；<a href="https://www.xda-developers.com/amd-radeon-rx-7900-xt-review/">RX 7900 XTX和XT </a>有一个主GPU芯片，周围有六个包含所有三级缓存的其他小芯片。</p>
+
+<p class="translated">即使没有制造危机，3D V-Cache仍然是提供发烧友级产品的有效方式。AMD不需要专门为游戏设计CPU(这将使AMD很难盈利)，也不需要让其主流CPU拥有超过必要的缓存(这将使每个CPU都非常昂贵)。3D V-Cache是如此简单，却是如此改变游戏规则；我们有可能甚至很有可能看到像英特尔这样的公司用自己的高速缓存芯片复制3D V-Cache的成功。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>
