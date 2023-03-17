@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Nothing Phone 1 update tracker: Here are all the official Nothing OS builds to download and install</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">Nothing Phone 1 update tracker:这里有所有官方的Nothing OS版本可供下载和安装</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/nothing-phone-1-nothing-os-update-tracker/#0001-01-01">https://www.xda-developers.com/nothing-phone-1-nothing-os-update-tracker/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+
+<p class="translated">自从卡尔·裴支持的创业公司Nothing向世界推出了<a href="https://www.xda-developers.com/nothing-phone-1-review/"> Nothing Phone 1 </a>以来，它就因为各种原因而成为头条新闻。它的“字形”照明界面受到了很多关注，正如Nothing与NFT生态系统和第三方平台(如特斯拉)深度集成的愿望一样。Nothing Phone 1可以开箱即用地启动基于Android 12的Nothing操作系统，而Android 13现在可以作为一个逐步更新的版本用于该设备。在发布期间，该公司还承诺每两个月提供三年的Android升级和四年的安全更新。</p>
+
+  
+<p class="translated">不像谷歌，没有什么不遵循固定的更新频率为其手机1。尽管如此，它还是相当频繁地推出更新，至少到目前为止是针对它的一款手机。这篇文章将帮助我们的读者跟踪Nothing Phone 1的Nothing OS更新。</p>
+
+<hr/>
+
+<hr/>
+
+
+<h2 id="nothing-os-regional-variants" class="translated">没有任何地区差异</h2>
+<p class="translated">对于第一代Nothing OS(基于Android 12)，Nothing为Nothing OS维护了两个截然不同的区域变体。“EEA”版本适用于欧洲国家，因为它反映了欧盟电子隐私指令和通用数据保护法规(GDPR)的要求。另一个版本(以下称为全球变型)可在亚洲和澳大利亚装置上找到。</p>
+
+<p class="translated">Nothing Phone 1的所有者可以通过在ADB shell或终端仿真器应用程序中运行以下命令来轻松检查区域参数:</p>
+
+<pre> <code class="hljs css"><span class="hljs-selector-tag">getprop</span> <span class="hljs-selector-tag">ro</span><span class="hljs-selector-class">.product</span><span class="hljs-selector-class">.system</span><span class="hljs-selector-class">.name</span></code> </pre>
+<p class="translated">如果设备带有欧洲固件，这将返回“SpacewarEEA”。在全球模型上，输出应该只是“太空战”。</p>
+
+<p class="translated">虽然从技术上来说，交叉刷新不同地区的固件是可能的，但只有在你知道自己在做什么的情况下才尝试这样做。</p>
+
+<p class="translated">由于没有OS 1.5开放测试版2，两个区域更新变种已被合并，以简化后端服务。因此，从Android 13开始，全球和欧洲的变体都将切换到统一的OTA。</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="nothing-phone-1-update-index" class="translated">无电话1更新索引</h2>
+<p class="translated">没有什么遵循典型的分阶段部署模型，这意味着新的更新首先被随机推送给有限数量的用户。更大范围的推广通常需要在公司确保没有重大错误之后的几天。但是，您可以跳过等待队列，从下表中下载适合您的型号的OTA包后手动刷新更新。</p>
+
+<p class="translated">构件按时间顺序排列，最新的构件位于顶部。由于内部版本指纹通常在全球和欧洲固件包之间有所不同，为了便于识别，我们还提到了与每个版本相对应的部分版本字符串。例如，如果完整的构建指纹是<code>Nothing/SpacewarEEA/Spacewar:12/SKQ1.211230.001/1657910681:user/release-keys</code>，您应该能够在下面的索引中找到<code>SKQ1.211230.001/1657910681</code>部分。</p>
+
+<h3 id="nothing-os-1-5-android-13" class="translated">无操作系统1.5(安卓13)</h3>
+
+<h3 id="nothing-os-1-android-12" class="translated">无操作系统1(安卓12)</h3>
+<div class="table-container"><table border="1" cellpadding="1" cellspacing="1"><thead><tr><th><p class="translated">软件版本和更新渠道</p> </th><th><p class="translated">完整更新包</p> </th><th><p class="translated">增量更新包</p> </th><th><p class="translated">添加时间/状态上次更新时间</p> </th><p> </p> </tr><p> </p></thead><tbody><tr><td><p class="translated"><strong>无操作系统1稳定</strong></p> </td><td> </td><td> </td><td> </td><p> </p> </tr><tr><td><p class="translated">没有操作系统1.1.8</p><ul> <li class="translated">全球:skq 1.2 . 001/1676858686686</li> <li class="translated">欧洲经济区:skq 1.2001/167685866867</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><p> </p> </td><td><p class="translated"><a href="https://www.xda-developers.com/nothing-phone-1-nothing-os-1-1-8-update/">2023年1月19日</a></p> </td><p> </p> </tr><tr><td><p class="translated">无操作系统1.1.7修补程序</p><ul> <li class="translated">全球:不适用</li> <li class="translated">欧洲经济区:skq 1.2 . 001/1666665868666</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><p> </p> </td><td><p class="translated">2022年12月15日</p> </td><p> </p> </tr><tr><td><p class="translated">没有操作系统1.1.7</p><ul> <li class="translated">全球:skq 1.2 . 001/1666586866667</li> <li class="translated">欧洲经济区:skq 1.2001/1667686866686</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><p> </p> </td><td><p class="translated"><a href="https://www.xda-developers.com/nothing-phone-1-update-1-1-7/">2022年11月30日</a></p> </td><p> </p> </tr><tr><td><p class="translated">没有操作系统1.1.6</p><ul> <li class="translated">全球:skq 1.2 . 001/1666865866666</li> <li class="translated">欧洲经济区:skq 1.200001636686</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><p> </p> </td><td><p class="translated"><a href="https://www.xda-developers.com/nothing-phone-1-update-1-1-1-6/">2022年10月31日</a></p> </td><p> </p> </tr><tr><td><p class="translated">没有操作系统1.1.5</p><ul> <li class="translated">全球:skq 1.2 . 001/1665865868666</li> <li class="translated">欧洲经济区:</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><ul> <li class="translated">全球的</li> <li class="translated">欧洲经济区<ul> <li class="translated">1.1.4修补程序的增量</li><p> </p> </ul> </li><p> </p> </ul><p> </p> </td><td><p class="translated">2022年10月20日</p> </td><p> </p> </tr><tr><td><p class="translated">无操作系统1.1.4修补程序</p><ul> <li class="translated">全球:skq 1.2 . 001/1666586866667</li> <li class="translated">欧洲经济区:skq 1.200001636686</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><p> </p> </td><td><p class="translated">2022年9月28日</p> </td><p> </p> </tr><tr><td><p class="translated">没有操作系统1.1.4</p><ul> <li class="translated">全球:skq 1.2 . 001/1666586868686</li> <li class="translated">欧洲经济区:skq 1.200001636686</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><p> </p> </td><td><p class="translated"><a href="https://www.xda-developers.com/nothing-os-1-1-4-update/">2022年9月17日</a></p> </td><p> </p> </tr><tr><td><p class="translated">没有操作系统1.1.3</p><ul> <li class="translated">全球:skq 1.21 . 001/1665866866867</li> <li class="translated">欧洲经济区:skq 1.2001/1666668666686</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><p> </p> </td><td><p class="translated"><a href="https://www.xda-developers.com/nothing-phone-1-gets-nothing-os-1-1-3-update/">2022年8月23日</a></p> </td><p> </p> </tr><tr><td><p class="translated">没有操作系统1.1.2</p><ul> <li class="translated">全球:skq 1.2 . 001/1656585868686</li> <li class="translated">欧洲经济区:skq 1.2001/1656586566686</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><p> </p> </td><td><p class="translated"><a href="https://www.xda-developers.com/nothing-phone-1-nothing-os-1-1-2-update/">2022年8月3日</a></p> </td><p> </p> </tr><tr><td><p class="translated">没有操作系统1.1.0</p><ul> <li class="translated">全球:skq 1.2 . 001/1656585866667</li> <li class="translated">欧洲经济区:skq 1.2001/1658658666686</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><p> </p> </td><td><p class="translated"><a href="https://www.xda-developers.com/nothing-phone-1-nothing-os-1-1-0-update/">2022年7月20日</a></p> </td><p> </p> </tr><tr><td><p class="translated">没有操作系统1.0.2</p><ul> <li class="translated">全球:skq 1.2 . 001/1656585866667</li> <li class="translated">欧洲经济区:skq 1.200000156686</li><p> </p> </ul><p> </p> </td><td><p> </p> </td><td><p> </p> </td><td><p class="translated"><a href="https://www.xda-developers.com/nothing-phone-1-review/">2022年7月15日</a></p> </td><p> </p> </tr><p> </p></tbody> </table> </div>
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="installation" class="translated">装置</h2>
+<p class="translated">令人欣慰的是，没有什么能让你通过所谓的侧装过程轻松安装这些更新。本质上，这意味着您将下载相关的更新包并安装它们，而不是等待它们通过无线方式到达。</p>
+
+<p class="translated">通过访问我们的专用指南，您可以了解如何在您的Nothing Phone 1 上下载Nothing OS OTA更新。</p>
+
+<hr/>
+
+<p class="translated">我们将更新此索引，提供更新的Nothing OS版本的链接，请稍后再来查看！</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

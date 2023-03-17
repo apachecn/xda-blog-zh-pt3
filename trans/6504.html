@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>What is the Tensor G2 SoC on the Google Pixel 7 series? How is it different from the Tensor G1?</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">谷歌Pixel 7系列上的张量G2 SoC是什么？它和张量G1有什么不同？</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/google-tensor-g2/#0001-01-01">https://www.xda-developers.com/google-tensor-g2/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+
+<p class="translated">谷歌Pixel 7系列已经上市，随之而来的是一系列显著的全面改进。然而，最令人兴奋的改进之一来自芯片组的形式，因为它是任何智能手机的心脏。谷歌去年Pixel中的Tensor相当不错，尽管存在一些问题。这一次，该公司表示要在Tensor G2中改善电池寿命和其他方面，规格基本上是去年Tensor的迭代。</p>
+
+ 
+<h2 id="google-tensor-g2-specifications" class="translated">谷歌张量G2:规范</h2><div>
+<table> <thead> <tr> <th class="translated">规格</th> <th class="translated">谷歌张量G2</th> <th class="translated">谷歌张量</th> </tr> </thead> <tbody> <tr> <td class="translated"><strong>大核心</strong></td> <td class="translated">2个Cortex-X1 @ 2.85GHz</td> <td class="translated">2个Cortex-X1 @ 2.8GHz</td> </tr> <tr> <td class="translated"><strong>中芯</strong></td> <td class="translated">2个Cortex-A78 @ 2.35GHz</td> <td class="translated">2个Cortex-A76 @ 2.25GHz</td> </tr> <tr> <td class="translated"><strong>小核心</strong></td> <td class="translated">4x Cortex-A55 @ 1.8GHz</td> <td class="translated">4x Cortex-A55 @ 1.8GHz</td> </tr> <tr> <td class="translated"><strong> CPU L3缓存</strong></td> <td class="translated">4MB</td> <td class="translated">4MB</td> </tr> <tr> <td class="translated"><strong>系统级缓存(SLC) </strong></td> <td class="translated">8MB</td> <td class="translated">8MB</td> </tr> <tr> <td class="translated"><strong> GPU </strong></td> <td class="translated">ARM Mali G710 MP07</td> <td class="translated">马里G78 MP20</td> </tr> <tr> <td class="translated"><strong> TPU </strong></td> <td class="translated">下一代定制边缘TPU</td> <td class="translated">自定义边缘TPU</td> </tr> <tr> <td class="translated"><strong> DSP </strong></td> <td class="translated">是</td> <td class="translated">死后无子女。</td> </tr> <tr> <td class="translated"><strong> ISP </strong></td> <td>  <ul> <li class="translated">10位HDR</li> <li class="translated">谷歌HDRnet</li> <li class="translated">108兆像素ZSL</li> <li class="translated">4K60视频</li> </ul> </td> <td>  <ul> <li class="translated">8位HDR</li> <li class="translated">谷歌HDRnet</li> <li class="translated">4K60视频</li> </ul> </td> </tr> <tr> <td class="translated"><strong>语境枢纽</strong></td> <td class="translated">是</td> <td class="translated">是</td> </tr> <tr> <td class="translated"><strong>安全</strong></td> <td>  <ul> <li class="translated">张量安全核</li> <li class="translated">经过认证的M2安全芯片</li> <li class="translated">CPU虚拟化</li> <li class="translated">TrustZone上的可信操作系统</li> <li class="translated">5年的安全更新</li> </ul> </td> <td>  <ul> <li class="translated">张量安全核</li> <li class="translated">经过认证的M2安全芯片</li> <li class="translated">CPU虚拟化</li> <li class="translated">TrustZone上的可信操作系统</li> <li class="translated">5年的安全更新</li> </ul> </td> </tr> <tr> <td class="translated"><strong> DRAM </strong></td> <td class="translated">LPDDR5</td> <td class="translated">LPDDR5</td> </tr> </tbody></table>
+</div>
+
+<p class="ad-odd">
+</p>
+
+
+<h2 id="google-tensor-g2-doubles-down-on-the-same-cpu-formula-as-tensor" class="translated">Google Tensor G2在与Tensor相同的CPU公式上翻倍</h2>
+<p class="translated">比较这两种芯片组会发现许多相似之处，每组内核的基本功能都保留了下来。谷歌仍然保持其有点不正常的2+2+4设置，而是选择稍微缓冲大中型核心的时钟速度。理论上，这意味着谷歌将在任何使用两个线程处理的应用程序中拥有性能优势，尽管这取决于它节流的速度。</p>
+
+<p class="translated">谷歌也将中间的内核提升到一对A78内核，这是一个非常受欢迎的变化。去年令人困惑的是，谷歌选择了一对A76内核，因为它们的能效和性能都比A77和A78差。这应该有望看到一些明显的性能和效率提升，从而延长电池寿命。</p>
+
+<p class="translated">最后，和去年的张量一样，保留了四个小核。这里没有真正的变化。</p>
+
+<p class="translated">总的来说，虽然看到完全升级到Armv9(配有Cortex X2、A710和A510 trio)会很好，但这将需要谷歌进行大规模的重新设计，特别是考虑到这是对已经是经过修改的Exynos设计的修改。也许明年？</p>
+
+<h3 id="is-google-tensor-g2-4nm-or-5nm" class="translated">谷歌张量G2是4nm还是5nm？</h3>
+<p class="translated">虽然最初的报道表明Tensor G2是在4纳米工艺上制造的，但谷歌后来证实事实并非如此。谷歌张量G2是在三星的5nm节点上编造的。目前还不清楚该公司是使用三星的5LPE还是5LPP，尽管5LPP比5LPE更好，而且最初的张量是在5LPE上制造的。除非另有说明，否则我假定它在5lp上。LPE代表低功率早期(并且是该公司的第一代4纳米制造工艺)，而LPP代表低功率增强。</p>
+
+<h3 id="is-google-tensor-g2-faster-than-the-original-google-tensor" class="translated">Google Tensor G2比原来的Google Tensor快吗？</h3>
+<p class="translated">在性能方面，Google Tensor G2的性能与最初的Google Tensor大致相同。唯一的改进是从A76到A78中等内核的变化，大内核和中等内核的时钟速度都有所提高。会有一些小的改进，但是在现实世界中，感觉是一样的。</p>
+<div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/google-pixel-7-pro-vs-pixel-6-pro-1024x512.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Pixel 7 Pro (left) and Pixel 6 Pro (right).&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/google-pixel-7-pro-vs-pixel-6-pro-1024x512.jpg?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/google-pixel-7-pro-vs-pixel-6-pro-1024x512.jpg?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/google-pixel-7-pro-vs-pixel-6-pro-1024x512.jpg?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/google-pixel-7-pro-vs-pixel-6-pro-1024x512.jpg?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <img class="lazyload" alt="Google Pixel 7 Pro and Pixel 6 Pro back panels" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/google-pixel-7-pro-vs-pixel-6-pro-1024x512.jpg" src="../Images/4e02d4c2d994a5561f2eb1a06daabe1b.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/google-pixel-7-pro-vs-pixel-6-pro-1024x512.jpg"/> </picture> <figcaption class="body-img-caption">Pixel 7 Pro (left) and Pixel 6 Pro (right).</figcaption> </figure> </div>
+
+
+ </div>
+
+<p class="ad-even">
+</p>
+
+
+<h2 id="google-tensor-g2-rsquo-s-gpu-has-a-pretty-nice-upgrade" class="translated">谷歌张量G2的GPU有一个相当不错的升级</h2>
+<p class="translated">Google Tensor G2在GPU部门进行了一次相当大的升级，从Mali G78 MP20升级到Mali G710 MP07。Mali G710 MP07与Dimensity 9000中的GPU类似，但可能会有一些修改，因为后缀是“MP07”。作为参考，联发科天玑9000有一个Mali G710 MC10。很可能“7”指的是核心的数量(就像在原始张量的情况下一样)，但我们必须等等看。</p>
+
+<p class="translated">然而，Mali G710的改进不仅仅来自核心数量，而是来自实际结构本身。它承诺不仅在图形方面有重大改进，尤其是在Vulkan性能方面。我们需要等待，看看这些改进会有多少成果，但理论上，不仅在游戏和其他图形密集型任务中，甚至在像<a href="https://www.xda-developers.com/aethersx2-playstation-emulator/"> AetherSX2 </a>这样的模拟器中，都应该有更好的性能。</p>
+
+<p class="translated">上一次，张量中G78的20核怪兽虽然强大，但在开始减速前仅真正保留了几秒钟的功率。一开始，它保持高频率，但由此产生的高能耗和高热量是一个主要问题。看到谷歌把它调低一点，倾向于一个更正常的移动GPU配置，确实给了我们希望。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="the-modem-is-improved-though-we-39-re-not-sure-by-how-much" class="translated">调制解调器得到了改进，尽管我们不确定改进了多少</h2>
+<p class="translated">最初的谷歌Pixel 6系列中的调制解调器表现如此糟糕的部分原因是，它实际上是三星的第一代5G调制解调器——exy nos 5123。它是作为Galaxy S11系列中的Exynos 990 SoC的一部分推出的，所以这应该会让你知道它有多老。这一次，谷歌使用了更新的Exynos 5300调制解调器。</p>
+
+<section class="emaki-custom-block emaki-custom-pullquote"><div class="emaki-custom pullquote" id="custom_block_19"><p class="translated">有趣的是，我现在在以前无法接收到信号的地方接收到了信号</p> </div></section>
+<p class="translated">虽然没有太多关于这种特殊调制解调器的信息(因为它刚刚推出，之前没有在任何其他设备上提供)，但从我们自己的测试来看，它似乎有了很大的改进。有趣的是，我现在可以在以前无法接收到信号的地方接收到信号，包括我公寓里基本上不可能接收到任何信号的地方。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="google-tensor-g2-tpu-improvements" class="translated">谷歌张量G2 TPU改进</h2>
+
+
+<p class="translated">谷歌正在宣传Tensor G2的TPU是“下一代”，在去年Tensor SoC已经令人印象深刻的基础上进行改进。去年，谷歌的张量芯片组在驱动程序中提到了“edgeTPU”。如果它是该公司在其云平台和<a href="https://coral.ai/products/dev-board/"> Coral devices </a>中宣传的同一款Edge TPU，那么它只需2W的电源就能支持4 TOPS。</p>
+
+<p class="translated">在Google Tensor G2的例子中，Google称TPU的功能和效率分别提高了60%和20%。这些都是相当大的改进，假设TPU的优势是一样的，已经很好了。它支持照片模糊和电影模糊等功能。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="is-google-tensor-g2-just-as-good-as-the-snapdragon-8-gen-1-or-the-exynos-2200" class="translated">谷歌张量G2和骁龙8 Gen 1或Exynos 2200一样好吗？</h2>
+<p class="translated">当比较规格时，谷歌的张量G2落后于竞争对手很多。由于其不寻常的核心布局和围绕其调制解调器的问题，这款SoC无疑比骁龙8第1代更弱，并且通过扩展，也比骁龙8加第1代更弱。然而，与Exynos 2200相比，事情变得更加接近。Exynos 2200采用4纳米工艺制造，在基准测试中得分较高，但几位用户也<a href="https://www.xda-developers.com/samsung-galaxy-s22-exynos-performance-display-issues/">报告称在三星Galaxy S22设备上的体验很差</a>。</p>
+
+<p class="translated">所有这些都是说，虽然谷歌张量G2在理论上更差，但它似乎表现得更好。这可能很大程度上归功于各种软件优化的结合。智能手机不仅仅是制造它们的部件，尽管谷歌张量G2看起来动力不足，但在正常使用中你可能不会注意到它...除非你在玩游戏。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="google-tensor-g2-improves-the-fundamentals" class="translated">谷歌张量G2改善了基本面</h2>
+<section class="emaki-custom-block emaki-custom-pullquote"><div class="emaki-custom pullquote" id="custom_block_29"><p class="translated">张量G2对张量的最佳位加倍，同时对需要返工的东西进行返工</p> </div></section>
+<p class="translated">谷歌张量G2看起来可能是一个非常好的芯片组，但我们不知道它是否足以改善张量去年下降的地方。它确实加倍了张量的最佳位，同时修改了需要修改的东西。</p>
+
+<p class="translated">然而，芯片组不仅仅是其部件的总和。几乎可以肯定的是，在驱动程序中有额外的改进和优化，用于允许操作系统与SoC的不同方面进行接口。这些改进更加难以捉摸，但累积起来会给人带来更好的整体体验。</p>
+
+<p class="translated">从我们自己的测试来看，Tensor G2的用户体验有了很大的改善。它运行起来没有那么热，它在需要的地方进行了改进，谷歌总体上似乎一直在倾听。我最大的批评是不要完全迁移到Armv9，无论是切换到以下两种配置之一:</p>
+
+<ul> <li class="translated">皮质X2 A710。A510</li> <li class="translated">皮质X3，A715，A510更新</li> </ul>
+
+<p class="translated">我想，如果该公司继续修改Arm的核心设计，我们可以期待在未来看到类似的事情。</p>
+
+<div class="display-card tag"><div class="w-display-card-content"> <div class="w-display-card-description"><p class="display-card-description translated">Pixel 7包含第二代Tensor SoC、更亮的显示屏和改进的摄像头。</p> </div> </div> </div>
+<div class="display-card tag"><div class="w-img "><div class="body-img landscape"><div class="responsive-img img-article-square" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-3.webp" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Google Pixel 7 Pro&quot;"> <figure> <picture>  <source media="(min-width: 1024px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-3.webp?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="320px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-3.webp?q=50&amp;fit=crop&amp;w=320&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="400px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-3.webp?q=50&amp;fit=crop&amp;w=400&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="300px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-3.webp?q=50&amp;fit=crop&amp;w=300&amp;dpr=1.5"/> <img class="lazyload" alt="The Pixel 7 Pro is Google's top-of-the-line flagship of the year, featuring the second-gen Tensor SoC, a 120Hz LTPO display, a telephoto sensor, and a bigger battery." data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-3.webp" src="../Images/26bf32dcd1e54473d448d9be3b56170c.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-3.webp"/> </picture> <figcaption class="body-img-caption">Google Pixel 7 Pro</figcaption> </figure> </div> </div> </div><div class="w-display-card-content"> <h5 class="display-card-title translated">谷歌Pixel 7 Pro</h5><div class="w-display-card-description"><p class="display-card-description translated">Pixel 7 Pro是谷歌今年的顶级旗舰产品，具有第二代张量SoC，120Hz LTPO显示屏，长焦传感器和更大的电池。</p> </div> </div> </div></div>
+
+
+</div>    
+</body>
+</html>

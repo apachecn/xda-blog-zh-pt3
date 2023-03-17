@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>How to remove bloatware from the Samsung Galaxy Z Fold 4</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何从三星Galaxy Z Fold 4中删除膨胀软件</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-to-remove-bloatware-samsung-galaxy-z-fold-4/#0001-01-01">https://www.xda-developers.com/how-to-remove-bloatware-samsung-galaxy-z-fold-4/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">许多现代Android旗舰手机都配有膨胀软件。这不仅仅是一两家制造商的专利，因为在我们的<a href="https://www.xda-developers.com/best-android-phones/">最佳安卓手机</a>系列中提到的大多数流行设备都预装了一些你没有要求的应用程序。在你闪亮的1000美元新旗舰设备上看到臃肿的软件不是一种愉快的体验，在目前市场上最昂贵的旗舰手机之一<a href="https://www.xda-developers.com/samsung-galaxy-z-fold-4-review/"> Galaxy Z Fold 4 </a>上也肯定是不可接受的。是的，这款手机自带了很多预装的应用程序。在本文中，我们将向您展示如何从三星Galaxy Z Fold 4中删除膨胀软件。</p>
+
+  
+<p class="translated">这些预装的应用程序不会妨碍你日常使用手机。然而，它们确实会占用你手机中的空间，占用存储空间，甚至在后台使用系统资源。如果你看不到自己在使用这些应用，最好把它们去掉。这里有几个简单的步骤，使用它们你可以清理你的新Galaxy Z Fold 4，并删除“无法安装”的臃肿软件。</p>
+
+<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id="custom_block_2"><p class="translated"><strong>注意:</strong>你也可以按照本文提到的步骤清理你的其他安卓智能手机。</p> </div></section>
+
+<h2 id="how-to-uninstall-bloatware-from-samsung-galaxy-z-fold-4-without-root-access" class="translated">如何在没有root权限的情况下卸载三星Galaxy Z Fold 4的膨胀软件</h2>
+
+
+<p class="translated">在本教程中，我们将解释如何使用ADB和ADB应用程序删除GUI(如“通用Android解包器”)从您的手机中删除膨胀软件。使用这些方法最好的一点是，它们不需要手机的root访问，这意味着你应该能够没有太多麻烦地做到这一点。</p>
+
+<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id="custom_block_6"><p class="translated"><strong>注意:</strong>卸载对手机正常工作至关重要的系统应用程序可能极其危险，可能会导致故障，甚至是智能手机死机。我们建议您仅删除那些您认为绝对不必要且不会影响设备功能的内容。</p> </div></section>
+<h3 id="step-1-enable-usb-debugging-on-your-samsung-galaxy-z-fold-4" class="translated">第一步:在三星Galaxy Z Fold 4上启用USB调试</h3>
+<ul> <li class="translated">你需要做的第一件事是打开你的Galaxy Z Fold 4上的<em>设置</em>应用，并一直向下滚动，找到关于手机的<em>部分。</em></li> <li class="translated">现在，寻找<em>软件信息</em>选项并选择它以显示您手机的所有软件细节，包括Android版本、一个UI版本等。</li> <li class="translated">在该页面中查找<em>构建号</em>选项，并点击几次以启用<em>开发者选项</em>。</li> <li class="translated">一旦完成，你现在可以在主<em>设置</em>页面的<em>关于手机</em>选项下面看到<em>开发者选项</em>。</li> <li class="translated">进入开发者选项，向下滚动直到在<em>调试</em>部分找到<em> USB调试</em>选项。</li> <li class="translated">当提示在您的三星Galaxy Z Fold 4上启用USB调试时，选择此选项并选择“确定”。</li> </ul>
+
+<h3 id="step-2-remove-installed-packages-using-adb" class="translated">步骤2:使用ADB删除已安装的软件包</h3>
+<ul> <li class="translated">您需要在您的计算机上安装ADB来完成这一特定步骤，因此在继续之前，请确保您已经对其进行了分类。您可以查看我们的'<a href="https://www.xda-developers.com/install-adb-windows-macos-linux/">如何安装ADB '指南</a>来轻松完成。</li> <li class="translated">下一步是将Galaxy Z Fold 4插入您的计算机，并在出现提示时将USB设置从仅<em>充电手机</em>模式更改为<em>传输文件</em>模式。</li> <li class="translated">使用Windows计算机执行此过程的用户可以浏览到ADB的安装目录，然后按Shift +右键单击该目录的名称，并在此处打开命令/PowerShell窗口。</li> <li class="translated">Mac用户将需要启动一个终端窗口，并使用cd <code>&lt;path to the directory&gt;</code>导航到ADB目录。只是给你一个理解，在我的Macbook上是<code>cd /Users/karthiksmac/Desktop/platform-tool</code>。</li> <li class="translated">一旦你连接上了，只需输入<code>adb devices</code>并按回车键就能看到你手机的序列号。在苹果电脑上，你必须输入<code>./adb devices</code>才能看到序列号。</li> <li class="translated">该代码将在您的手机上触发一个提示，要求您授权继续。您可以点击<em>允许</em>进行下一步。</li> <li class="translated">之后，重新运行<code>adb devices</code>或<code>./adb devices</code>代码以查看序列号。</li> </ul>
+
+<h3 id="step-3-removing-the-bloatware" class="translated">步骤3:移除膨胀件</h3>
+<ul> <li class="translated">这里你需要做的第一件事是键入<code>adb shell</code>或<code>./adb shell</code>并按回车键。</li> <li class="translated">然后，您可以使用以下命令来填充手机上安装的Samsung应用程序列表:</li> <li class="translated">你也可以只过滤掉三星应用程序包，但列表仍然会很长。相反，我们建议下载一个名为软件包名称查看器2.0的应用程序，以确定您要卸载的正确应用程序。</li> <li class="translated">一旦你有了想要卸载的应用程序的正确包名，你就可以使用以下命令将其从Galaxy Z Fold 4中删除。<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id=""><p>pm uninstall-k-user 0 name of package</p></div></section></li> <li class="translated">请注意，您必须将上面提到的命令中的“NameOfPackage”替换为您要卸载的应用程序的完整软件包名称，不带任何“或&lt;&gt;。</li> </ul>
+
+<p class="translated">继续使用软件包名称查看器2.0应用程序找到膨胀软件的正确软件包名称，并卸载它们。就这样，你现在已经成功地从Galaxy Z Fold 4上卸载了臃肿软件。移除臃肿软件并不复杂，但你需要花一些时间浏览应用程序并手动输入软件包名称。</p>
+
+<p class="translated">如果这太单调乏味，并且你不想逐个检查每个应用程序，你也可以使用一个应用程序删除GUI来一次性删除膨胀软件。你可以去我们的<a href="https://forum.xda-developers.com/t/2022-04-03-v0-5-universal-android-debloater.4069209/"> XDA论坛的“通用Android解包器”</a>线程下载并学习使用这个特定GUI的步骤。</p>
+
+
+
+<p class="translated">使用GUI来删除臃肿的软件相对容易，因为你可以选择一堆软件包，然后简单地点击一个按钮就可以把它们从手机上删除。它还会给你一个恢复它们的选项，只需点击一个按钮，如果你最终误删除了一个包，这是非常方便的。</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="closing-thoughts" class="translated">结束语</h2>
+<p class="translated">处理膨胀软件总是很烦人，但谢天谢地，这是一个相当简单的任务。您也可以使用本文中提到的相同方法来删除其他Android智能手机中的膨胀软件，因此可以随意开始清理您的Android手机。</p>
+
+<div class="display-card tag"><div class="w-img "><div class="body-img landscape"><div class="responsive-img img-article-square" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/08/Samsung-Galaxy-Z-Fold-4-Burgundy.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Samsung Galaxy Z Fold 4&quot;"> <figure> <picture>  <source media="(min-width: 1024px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/08/Samsung-Galaxy-Z-Fold-4-Burgundy.jpg?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="320px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/08/Samsung-Galaxy-Z-Fold-4-Burgundy.jpg?q=50&amp;fit=crop&amp;w=320&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="400px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/08/Samsung-Galaxy-Z-Fold-4-Burgundy.jpg?q=50&amp;fit=crop&amp;w=400&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="300px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/08/Samsung-Galaxy-Z-Fold-4-Burgundy.jpg?q=50&amp;fit=crop&amp;w=300&amp;dpr=1.5"/> <img class="lazyload" alt="The Galaxy Z Fold 4 has fewer compromises, is more durable and overall a much better smartphone than its predecessors." data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/08/Samsung-Galaxy-Z-Fold-4-Burgundy.jpg" src="../Images/376ad5acd59cec0c830475d60d556f9c.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/08/Samsung-Galaxy-Z-Fold-4-Burgundy.jpg"/> </picture> <figcaption class="body-img-caption">Samsung Galaxy Z Fold 4</figcaption> </figure> </div> </div> </div><div class="w-display-card-content"> <div class="w-display-card-description"><p class="display-card-description translated">Galaxy Z Fold 4的妥协更少，更耐用，总体而言是一款比其前辈好得多的智能手机。</p> </div> </div><p class="w-display-card-link"> </p> </div>
+<p class="translated">如果你刚刚为自己买了一台全新的Galaxy Z Fold 4，那么你可能会有兴趣看看我们为它收集的<a href="https://www.xda-developers.com/best-samsung-galaxy-z-fold-4-cases/">最佳案例</a>。这是一部昂贵的手机，所以如果你还没有保护它，为什么不用保护套保护它呢？如果你想为Galaxy Z Fold 4挑选一款新的快速充电器，我们还收集了一些<a href="https://www.xda-developers.com/best-samsung-galaxy-z-fold-4-chargers/">最佳充电器</a>。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

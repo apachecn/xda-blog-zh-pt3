@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>How to root the Google Pixel 7 or Pixel 7 Pro with Magisk</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何用Magisk谷歌Pixel 7或Pixel 7 Pro</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/how-to-unlock-bootloader-root-magisk-google-pixel-7-pro/#0001-01-01">https://www.xda-developers.com/how-to-unlock-bootloader-root-magisk-google-pixel-7-pro/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">有些人无法想象在没有<a href="https://www.xda-developers.com/root/"> root权限</a>的情况下使用Android。虽然谷歌Pixel智能手机是最容易解锁引导程序、root和安装售后软件的设备之一，但令人惊讶的是，典型的引导映像补丁技术不再适用于最新的Pixel 7系列。</p>
+
+  
+<p class="translated">如果你购买了<a href="https://www.xda-developers.com/google-pixel-7-review/"> Pixel 7 </a>或<a href="https://www.xda-developers.com/google-pixel-7-pro-camera-review/"> Pixel 7 Pro </a>并想学习如何去root它，我们将在本教程中告诉你如何去做。你需要把你的电脑放在手边，并且熟悉亚洲开发银行。</p>
+
+<p class="translated"><strong> <a href="https://forum.xda-developers.com/f/google-pixel-7.12607/">谷歌Pixel 7 XDA论坛</a> || <a href="https://forum.xda-developers.com/f/google-pixel-7-pro.12609/">谷歌Pixel 7 Pro XDA论坛</a> </strong></p>
+
+<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id="custom_block_3"><ul> <li class="translated">你需要一个解锁的引导程序来启动谷歌Pixel 7或7 Pro。</li> <li class="translated">解锁引导加载程序将擦除您的Pixel 7/7 Pro。</li> <li class="translated">您必须用Magisk修补init_boot映像，而不是启动映像，以便进行根访问。</li> </ul> </div></section>
+<p class="translated"><strong>浏览本文:</strong></p>
+
+
+
+
+
+<hr/>
+
+
+<h2 id="how-to-root-the-google-pixel-7-and-7-pro" class="translated">如何root谷歌Pixel 7和7 Pro</h2>
+<p class="translated">在我们开始研究如何确定Pixel 7的根之前，记得<a href="https://www.xda-developers.com/how-to-backup-android/">做一个设备外备份</a>。那是因为寻根过程<strong>需要擦除手机上的所有数据，包括内部存储的文件</strong>。</p>
+
+<h3 id="step-1-ndash-get-the-stock-init-boot-image-for-the-pixel-7-7-pro" class="translated">步骤1–获取Pixel 7/7 Pro的库存init_boot映像</h3>
+<p class="translated">对于像Pixel 7系列这样使用Android 13的设备，一般的内存磁盘会从启动映像中删除，并放在一个名为“init_boot”的单独位置。boot.img只保存<a href="https://source.android.com/docs/core/architecture/bootloader/partitions/generic-boot">通用内核映像</a> (GKI)。</p>
+
+<p class="translated">因此，为root访问修补boot.img对这些设备不起作用。相反，我们需要得到与init_boot分区相对应的映像，它与手机当前运行的软件版本相匹配。</p>
+
+<p class="translated">幸运的是，我们不需要任何专门的工具来从目标设备中抓取init_boot映像。它可以很容易地从谷歌公布的Pixel 7/7 Pro的工厂图像中提取出来。</p>
+
+<p class="translated">为了确保你下载了正确的出厂映像，你需要检查你的手机当前运行的是哪个软件版本。要检查这一点，进入<strong>设置</strong> &gt; <strong>关于手机</strong>。在底部，寻找<strong>内部版本号</strong>部分。在工厂映像下载页面上找到匹配的内部版本号，并下载该文件。</p>
+
+<p class="translated"><strong> <a href="https://www.xda-developers.com/how-to-download-android-13/">为谷歌Pixel手机下载Android 13</a></strong></p>
+
+<p class="translated">接下来，解压缩工厂图像ZIP文件。找到图像-[设备代码]-[版本]。zip文件(是的，在ZIP中有一个ZIP)并从中提取init_boot.img文件。这是您需要传输到手机内部存储器进行修补的文件。</p>
+
+
+
+<h3 id="step-2-ndash-patch-the-stock-init-boot-image-using-magisk" class="translated">步骤2–使用Magisk修补股票init_boot映像</h3>
+<p class="translated">现在我们已经有了init_boot映像，我们可以很容易地用Magisk修补它。事实上，你可以在Pixel 7以外的其他Android设备上安装它，但你也需要在辅助设备上安装Magisk应用程序。</p>
+
+<p class="translated">虽然Magisk的当前稳定版本可以修补Pixel 7的init_boot映像，但您可能希望选择Magisk的出血边缘金丝雀版本进行更多修复。</p>
+
+<p class="translated"><strong>下载Magisk: <a href="https://github.com/topjohnwu/Magisk/releases/latest">稳定</a> || <a href="https://raw.githubusercontent.com/topjohnwu/magisk-files/canary/app-release.apk">金丝雀</a> </strong></p>
+
+<p class="translated">安装Magisk APK后，打开应用程序，找到最顶层卡上的<strong>安装</strong>按钮。选择<strong>选择并修补<strong>方法</strong>下的一个文件</strong>，选择stock init_boot镜像。这将打开Android文件选择器。继续，找到您从PC上传输的init_boot.img并选择它。Magisk应用程序会将图像修补到手机的下载文件夹中。您必须传输这个修补的文件(应该命名为“magisk _ patched _[random _ strings])。img ")回到您的PC，因为接下来，我们将解锁引导加载程序，这将清除所有数据，就像我们之前警告的那样。</p>
+
+<p class="translated">值得注意的是，如果你浏览Pixel 7或7 Pro的XDA论坛，你可能会幸运地找到一个预打补丁的init_boot映像。既然如此，我们总是建议你自己获取官方固件并修补股票引导映像，以避免由于映像版本不匹配而导致的不可预见的故障。</p>
+
+<h3 id="step-3-ndash-enable-oem-unlocking-and-unlock-the-bootloader" class="translated">步骤3–启用OEM解锁并解锁引导加载程序</h3>
+<p class="translated">为了在Pixel 7上刷新第三方软件，我们必须解锁bootloader。为此，转到<strong>设置</strong> &gt; <strong>关于手机</strong> &gt; <strong>内部版本号</strong>并点击该条目7次以启用<strong>开发者选项</strong>。启用后，返回主设置页面，点击<strong>系统</strong>，然后进入<strong>开发者选项</strong>。从那里，切换<strong> OEM解锁</strong>选项。请记住，您需要输入密码/模式/PIN来验证某些操作。</p>
+
+<p class="translated">值得注意的是，一些美国运营商如威瑞森根本不允许解锁引导程序，这使得你的手机无法root。不过，有时人们会找到非官方的变通办法，如果找到了，我们会让你知道。</p>
+
+<p class="translated">启用OEM解锁后，关闭手机。按住音量键和电源键来打开你的手机并进入引导菜单。假设你已经安装了最新的<a href="https://www.xda-developers.com/install-adb-windows-macos-linux/"> ADB和Fastboot二进制文件</a>，你也可以使用下面的命令直接从Android重启到bootloader模式。</p>
+
+<pre> <code class="hljs ">adb reboot bootloader</code> </pre>
+<p class="translated">请确保您的手机连接到PC/Mac/Chromebook。接下来，在终端窗口中，键入:</p>
+
+<pre> <code class="hljs sql">fastboot flashing <span class="hljs-keyword">unlock</span></code> </pre>
+<p class="translated">您将看到一个屏幕，告诉您即将启动引导加载程序解锁过程。使用音量按钮导航，使用电源按钮接受。<strong>同样，这将清除你手机上的所有数据，所以在继续</strong>之前，请确保你已经备份了数据。</p>
+
+<h3 id="step-4-ndash-flash-magisk-patched-init-boot-image" class="translated">步骤4–刷新Magisk修补的init_boot映像</h3>
+<p class="translated">在你的Pixel 7(或者7 Pro)的bootloader解锁，init_boot镜像打补丁之后，你离root就一步之遥了。</p>
+
+<p class="translated">一旦引导加载程序解锁过程完成，手机将在几分钟后启动。在此阶段跳过设置向导并关闭手机。您现在想要通过再次按住音量和电源按钮来引导回引导加载程序。到达后，将手机连接到PC/Mac/Chromebook并执行以下命令:</p>
+
+<pre> <code class="hljs ">fastboot flash init_boot path/to/magisk_patched.img</code> </pre>
+<p class="translated">一旦你按下回车键，打了补丁的init_boot镜像就会被刷新到你的手机上。接下来，使用<code>fastboot reboot</code>重启，Magisk应用应该会出现在你的主屏幕和/或应用抽屉中。如果没有(例如，您只能看到一个存根图标)，只需手动安装Magisk APK。你现在扎根了！</p>
+<div class="body-img portrait"><div class="responsive-img image-expandable img-article-item-portrait" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-rooted.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Screenshot courtesy: XDA Member &lt;a href=\&quot;https:\/\/forum.xda-developers.com\/m\/edcsxz.8391058\/\&quot;&gt;edcsxz&lt;\/a&gt;&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-rooted.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-rooted.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="600px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-rooted.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="360px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-rooted.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <img class="lazyload" alt="Google Pixel 7 Pro rooted" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-rooted.jpg" src="../Images/7a03fb6f5a2af9e5ef03c2939270c740.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-rooted.jpg"/> </picture> <figcaption class="body-img-caption">Screenshot courtesy: XDA Member <a href="https://forum.xda-developers.com/m/edcsxz.8391058/">edcsxz</a></figcaption> </figure> </div>
+
+
+ </div>
+
+
+<p class="translated">请记住，您必须在每次更新手机时重复步骤1、2和4，因为init_boot映像会随着每次更新而改变。要了解更多，看看我们的教程<a href="https://www.xda-developers.com/how-to-install-ota-updates-keep-root-google-pixel-phone/">如何在你的谷歌Pixel手机上安装OTA更新和保持root</a>。</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="what-to-do-after-rooting" class="translated">生根后怎么办？</h2>
+<p class="translated">一旦你的Pixel 7扎根，你就可以对设备进行一些有趣的修改，如<a href="https://www.xda-developers.com/best-magisk-modules/"> Magisk模块</a>和<a href="https://www.xda-developers.com/best-xposed-modules/"> Xposed模块</a>。当然，在谷歌设备上没有root用户也可以做很多事情，但拥有root用户访问权限仍然是一个额外的好处，尤其是如果你认为<a href="https://www.xda-developers.com/best-android-root-apps/">最佳root应用</a>。</p>
+
+<div class="display-card tag"><div class="w-img "><div class="body-img landscape"><div class="responsive-img img-article-square" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-renders-on-white-background-qjwbnfjwenf-6.webp" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Google Pixel 7&quot;"> <figure> <picture>  <source media="(min-width: 1024px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-renders-on-white-background-qjwbnfjwenf-6.webp?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="320px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-renders-on-white-background-qjwbnfjwenf-6.webp?q=50&amp;fit=crop&amp;w=320&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="400px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-renders-on-white-background-qjwbnfjwenf-6.webp?q=50&amp;fit=crop&amp;w=400&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="300px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-renders-on-white-background-qjwbnfjwenf-6.webp?q=50&amp;fit=crop&amp;w=300&amp;dpr=1.5"/> <img class="lazyload" alt="The Pixel 7 packs the second-gen Tensor SoC, a brighter display, and improved cameras." data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-renders-on-white-background-qjwbnfjwenf-6.webp" src="../Images/8b31c0e15e95c3f8bf719fbd3ebefc29.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-renders-on-white-background-qjwbnfjwenf-6.webp"/> </picture> <figcaption class="body-img-caption">Google Pixel 7</figcaption> </figure> </div> </div> </div><div class="w-display-card-content"> <div class="w-display-card-description"><p class="display-card-description translated">普通的谷歌Pixel 7与高端的Pro型号非常相似，但便宜300美元，性价比更高。</p> </div> </div><p class="w-display-card-link"> </p> </div>
+<div class="display-card tag"><div class="w-img "><div class="body-img landscape"><div class="responsive-img img-article-square" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-5.webp" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Google Pixel 7 Pro&quot;"> <figure> <picture>  <source media="(min-width: 1024px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-5.webp?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="320px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-5.webp?q=50&amp;fit=crop&amp;w=320&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="400px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-5.webp?q=50&amp;fit=crop&amp;w=400&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="300px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-5.webp?q=50&amp;fit=crop&amp;w=300&amp;dpr=1.5"/> <img class="lazyload" alt="Best Buy is carrying the Pixel 7 Pro in all three colors. You can buy one and get a $200 Best Buy e-gift card for free." data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-5.webp" src="../Images/6179081b5d17a266099a7657cad6cfc5.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-Pro-renders-on-white-background-qjwefbqwkejf-5.webp"/> </picture> <figcaption class="body-img-caption">Google Pixel 7 Pro</figcaption> </figure> </div> </div> </div><div class="w-display-card-content"> <h5 class="display-card-title translated">谷歌Pixel 7 Pro</h5><div class="w-display-card-description"><p class="display-card-description translated">高端的Pixel 7 Pro有更好的显示屏更高的分辨率和刷新率，更大的电池，背面还有一个额外的长焦镜头。</p> </div> </div><p class="w-display-card-link"> </p> </div></div>
+
+
+</div>    
+</body>
+</html>
