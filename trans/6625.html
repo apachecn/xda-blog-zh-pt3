@@ -1,0 +1,643 @@
+<html>
+<head>
+<title>Android 13 'Tiramisu': Everything you need to know about Google’s big 2022 update</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">Android 13“提拉米苏”:关于谷歌2022年的重大更新，你需要知道的一切</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/android-13/#0001-01-01">https://www.xda-developers.com/android-13/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+
+<p class="translated">一个大的Android更新最令人兴奋的事情是能够遵循一个可预测的发布模式来体验所有的新功能。谷歌的<a href="https://www.xda-developers.com/android-12/"> Android 12 </a>更新标志着自Android 5 Lollipop以来操作系统最大的视觉重新设计，这要感谢<a href="https://www.xda-developers.com/material-you/"> Material You </a>。新的设计理念，以及详尽的新功能列表，使Android 12的外观和感觉与以前的版本完全不同。</p>
+
+  
+<p class="translated">就整体美学而言，Android 13在很大程度上与之前的版本相似，但在引擎盖下有大量新东西。它已经测试了很长时间，每个新版本都增加了功能，并对Android系统的不同元素进行了较小的改进。Android 13已经正式成为金色，现在可用于所有支持的Pixel设备和其他一些非Pixel手机。如果你想在一个地方找到所有Android 13的信息，那么你来对了页面。这里有你需要知道的关于Android 13的一切！</p>
+
+ 
+<h2 id="what-39-s-android-13-called" class="translated">Android 13叫什么？</h2>
+
+
+<p class="translated">两年前，随着Android 10的品牌重新设计，谷歌<a href="https://www.xda-developers.com/android-10-android-q-brand-redesign/">放弃了其Android甜点命名方案</a>。然而，公司内部的开发团队继续使用甜点的名称。例如，Android 11在内部被称为“红色天鹅绒”，而Android 12在内部被称为“雪锥”。同样，Android 13也叫<a href="https://www.xda-developers.com/google-android-13-t-tiramisu-dessert-name/">提拉米苏</a>。谷歌不再对此保密，因为它是在去年7月AOSP精神的一次提交中被发现的。</p>
+
+<p class="translated">对于那些好奇的人来说，这些是迄今为止所有Android版本的甜点名称(内部或公开):</p>
+
+<ul> <li class="translated">安卓1.5:纸杯蛋糕</li> <li class="translated">安卓1.6:甜甜圈</li> <li class="translated">安卓2.0:艾克蕾尔</li> <li class="translated">安卓2.2: Froyo</li> <li class="translated">安卓2.3:姜饼</li> <li class="translated">安卓3.0:蜂巢</li> <li class="translated">安卓4.0:冰淇淋三明治</li> <li class="translated">安卓4.1:果冻豆</li> <li class="translated">安卓4.4: KitKat</li> <li class="translated">安卓5.0:棒棒糖</li> <li class="translated">安卓6.0:棉花糖</li> <li class="translated">安卓7.0:牛轧糖</li> <li class="translated">安卓8.0:奥利奥</li> <li class="translated">安卓9:馅饼</li> <li class="translated">安卓10:木瓜馅饼</li> <li class="translated">安卓11:红色天鹅绒蛋糕</li> <li class="translated">安卓12:雪锥</li> <li class="translated">安卓13:提拉米苏</li> </ul>
+
+<p class="translated">值得一提的是，我们已经知道Android 14的名字是什么。Android Gerrit上弹出的一些与Android 14相关的首批提交已经揭示了下一版本Android的<a href="https://www.xda-developers.com/google-codename-android-14/">代号“颠倒蛋糕”</a>。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="android-13-release-date" class="translated">Android 13发布日期</h2>
+<p class="translated">谷歌于2022年8月15日向公众发布了稳定的Android 13更新。该更新与<a href="https://www.xda-developers.com/android-13-source-code/">源代码</a>一起提供给该公司的Pixel手机。谷歌的Android 13开发者预览计划于2022年2月开始，自那以来发生了很多变化，导致了2022年8月的最终发布。以下是谷歌为Android 13测试版发布的原始路线图:</p>
+<div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Android-13-release-timeline-1024x233.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;&amp;copy; Android Developers&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Android-13-release-timeline-1024x233.jpg?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Android-13-release-timeline-1024x233.jpg?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Android-13-release-timeline-1024x233.jpg?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Android-13-release-timeline-1024x233.jpg?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <img class="lazyload" alt="Android 13 release timeline" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Android-13-release-timeline-1024x233.jpg" src="../Images/4d7299883e49a00dce7581be7aa027b7.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/06/Android-13-release-timeline-1024x233.jpg"/> </picture> <figcaption class="body-img-caption">© Android Developers</figcaption> </figure> </div>
+
+
+ </div>
+
+
+<p class="translated">正如预期的那样，Android 13在两次开发者预览版和两次完整测试版发布后，于2022年6月达到了“平台稳定性”。该公司随后在2022年7月发布了Android 13 Beta 4，也就是最终的候选版本。</p>
+
+
+
+<p class="translated">谷歌目前正在推出季度平台发布(QPR)版本。我们刚刚在本月早些时候收到了Android 13 QPR1 Beta 2更新，预计未来几个月将有更多版本到来。我们建议您查看上面的文章索引，以了解构建变更日志。</p>
+
+<h3 id="android-13-developer-preview" class="translated">Android 13开发者预览版</h3>
+<p class="translated">2022年2月10日，当谷歌开始推出<a href="https://www.xda-developers.com/android-13-developer-preview-1/">第一个开发者预览版</a>时，我们第一次尝到了Android 13“提拉米苏”的味道。与去年不同，我们没有获得Android 13的开发者预览版1.1补丁。而是在2022年3月17日直接收到了<a href="https://www.xda-developers.com/android-13-developer-preview-2/"> Android 13开发者预览版2 </a>。</p>
+
+<p class="translated">正如标题“开发者预览版”所暗示的，这些版本仅供开发者使用。它为世界上最大的操作系统的下一次迭代奠定了基础，并允许应用程序开发人员测试新功能，并开始平台迁移，直至最终发布。对我们来说，这些预览版让我们看到了未来稳定版本的一瞥。我们在下面的章节中详细介绍了Android 13开发者预览版1更新带来的所有新特性和功能，请务必查看。</p>
+
+<h3 id="android-13-beta" class="translated">安卓13测试版</h3>
+<p class="translated">谷歌跳过了Android 13的开发者预览版3，并随着2022年4月26日Android 13 Beta 1 的<a href="https://www.xda-developers.com/android-13-beta-1-released/">首次发布退出了“开发者预览”阶段。第二个Android 13测试版</a>于2022年5月11日作为谷歌I/O 2022的一部分到来，而第三个则于2022年6月8日问世。第四个也是最后一个发布候选于2022年7月13日发布。然后，谷歌在2022年8月正式推出了公开的Android 13 build。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="will-my-device-get-android-13" class="translated">我的设备会得到Android 13吗？</h2>
+<p class="translated">谷歌的Pixel智能手机是今年晚些时候推出的首批Android 13“提拉米苏”智能手机之一。没有办法知道非像素设备何时会收到Android 13更新，因为这在很大程度上取决于各个原始设备制造商决定他们要花多少时间来开发他们的UX皮肤。可以肯定的是，UX皮肤较浅的智能手机，如华硕的Zen UI，将在相对较重的皮肤(如小米的MIUI)之前收到Android 13更新。</p>
+
+<p class="translated">不过目前，谷歌已经通过开发者预览计划为一些非Pixel设备打开了Android 13测试版的大门。如果你有下面提到的符合条件的设备之一，你现在就可以加入Android 13派对，体验一下未来会发生什么:</p>
+
+<h3 id="here-rsquo-s-every-device-currently-eligible-for-the-android-13-beta" class="translated">这是目前符合Android 13测试版条件的所有设备</h3>
+<ul> <li class="translated">谷歌像素7/7专业版</li> <li class="translated">谷歌Pixel 6/6 Pro/6a</li> <li class="translated">谷歌像素5/5a</li> <li class="translated">谷歌像素4/4 XL</li> <li class="translated">谷歌像素4a/4a 5G</li> <li class="translated">华硕ZenFone 8</li> <li class="translated">Vivo X80 Pro</li> <li class="translated">联想P12 Pro</li> <li class="translated">一加10专业版</li> <li class="translated">小米12</li> <li class="translated">小米12 Pro</li> <li class="translated">小米Pad 5</li> <li class="translated">Oppo Find X5 Pro</li> <li class="translated">Oppo Find N(仅限中国)</li> <li class="translated">中兴Axon 40 Ultra</li> <li class="translated">皇家GT2专业版</li> <li class="translated">AQUOS sense6</li> <li class="translated">卡蒙19 Pro 5G</li> <li class="translated">诺基亚X20</li> </ul>
+
+<p class="translated">如果/当他们有资格接收Android 13测试版更新时，我们将继续向该列表添加更多设备。如果你没有Pixel手机或上述OEM设备之一，那么你可以通过安装通用系统映像(GSI)来尝试Android 13测试版。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="where-do-i-download-android-13-beta-from" class="translated">我从哪里下载Android 13测试版？</h2>
+<p class="translated">一旦稳定的Android 13包向公众发布，我们将更新这一部分，提供下载这些包的链接。与此同时，你可以查看我们的专门文章，找到迄今为止所有Android 13版本的<a href="https://www.xda-developers.com/how-to-download-android-13/">最新下载链接。您可以从列表中找到适用于您的合格设备的正确软件包，手动安装，然后尝试新软件。</a></p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="how-to-install-android-13-beta" class="translated">如何安装Android 13测试版？</h2>
+<p class="translated">一旦你为你的智能手机下载了正确的软件包，你就可以通过几个额外的安装步骤来试用Android 13了。我们建议你去看看我们的<a href="https://www.xda-developers.com/how-to-install-android-13/"> Android 13安装指南</a>来详细了解这个过程。</p>
+
+<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id="custom_block_29"><p class="translated">警告:预览版/测试版仅供开发人员使用，所以我们不建议将它们安装在您的日常驱动程序上。这些早期版本可能会有一些破坏系统的错误和其他不稳定性。还强烈建议您在继续之前备份您的数据。建议用户谨慎使用。</p> </div></section><p class="ad-odd">
+</p>
+
+
+<h2 id="what-39-s-new-in-android-13" class="translated">Android 13有什么新功能？</h2>
+
+
+<p class="translated">Android 13的更新可能没有Android 12大，但它仍然带来了许多新功能和变化。由于开发人员预览版和测试版的发布，我们已经有机会体验这些新特性，但是许多未宣布的变化仍然隐藏在幕后。我们将尽最大努力强调beta 2更新之前的每一个变化，但可以肯定地说，所有功能的完整列表只有在我们拿到最终版本后才能得到。</p>
+
+<p class="translated">到目前为止，谷歌已经发布了一系列Android 13的开发者预览版和测试版。我们将深入研究一长串特性，其中一些比其他的更有纪念意义。该公司还倾向于在这些版本中发布许多隐藏的功能。在我们为最终版本添加更多细节之前，我们将在每一节中包括一些我们认为值得一提的重要内容。</p>
+
+<h3 id="android-13-developer-preview-1-announced-features" class="translated">Android 13开发者预览版1:公布的功能</h3>
+<p class="translated">正如我们之前提到的，Android 13开发者预览版1 build于2022年2月10日发布。下面快速浏览一下引起我们注意的一些重要功能:</p>
+
+<p class="translated"><strong> Android的蓝牙和超宽带堆栈现在是主线模块</strong></p>
+
+<p class="translated">谷歌宣布将<a href="https://www.xda-developers.com/bluetooth-ultra-wideband-mainline-modules-android-13/">在Android 13中制造蓝牙和超宽带栈主线模块</a>。这使得该公司能够推出新的蓝牙和超宽带功能以及针对这些组件的安全补丁，而无需依赖原始设备制造商来推出软件更新。对于外行人来说，这是<a href="https://www.xda-developers.com/android-project-mainline-modules-explanation/">谷歌项目主线</a>的一部分，允许它负责关键的框架组件和系统应用。</p>
+
+<p class="translated"><strong>更快的断字速度</strong></p>
+
+<p class="translated">当文本到达TextView或容器中的行尾时，可以插入连字符。它本质上是一个换行符，使文本在下一行换行。Android可以为您处理断字，但这是以性能为代价的。因此，默认情况下它是关闭的。然而，在Android 13中，谷歌表示已经改进了这一功能，性能提升了200%。这意味着开发人员现在可以在他们的文本视图中启用断字，而对渲染性能几乎没有影响。</p>
+
+<p class="translated"><strong>Wi-Fi的附近设备许可</strong></p>
+
+<p class="translated">在Android 13之前，需要连接附近Wi-Fi设备的应用程序必须请求位置许可。这是一个多余的请求，因为应用程序并不真正需要设备的位置才能运行。谷歌正在通过Android 13改变这一状况，将该功能拆分为新的运行时权限，名为NEARBY _ WIFI _ DEVICES。面向Android 13应用的开发者现在可以使用“neverForLocation”标志请求NEARBY _ WIFI _ DEVICES权限。</p>
+
+<p class="translated"><strong> OpenJDK 11更新</strong></p>
+
+<p class="translated">正如我们在Android 13 DP1报道中提到的，Android 13的核心库更新到了最新的open JDK 11 LTS版本。我们正在考虑为应用和平台开发者提供库更新和Java 11编程语言支持。谷歌还指出，这些变化将通过对ART模块的更新被反向移植到Android 12设备上。</p>
+
+<p class="translated"><strong>新的快速设置磁贴</strong></p>
+
+<p class="translated">Android 13 DP1版本的另一个有趣之处是新的快速设置磁贴。该公司增加了一系列这样的功能，包括扫描二维码、切换颜色校正、启用单手模式等。</p>
+
+
+
+<p class="translated"><strong>注意:</strong>作为Android 13新API变化的一部分，谷歌还增加了一个新的<a href="https://developer.android.com/reference/android/app/StatusBarManager#requestAddTileService(android.content.ComponentName,%20java.lang.CharSequence,%20android.graphics.drawable.Icon,%20java.util.concurrent.Executor,%20java.util.function.Consumer%3Cjava.lang.Integer%3E)">磁贴放置API </a>，它将让应用程序提示用户直接将他们的自定义磁贴添加到活动快速设置磁贴集中。</p>
+
+<p class="translated"><strong>每个应用程序的语言偏好</strong></p>
+
+<p class="translated">多语言用户可以在Android 12的设置app中<strong>系统&gt;语言&amp;输入</strong>下选择自己喜欢的语言。然而，语言设置目前是在系统范围内应用的，这对于那些想要使用一种语言的一些应用程序和另一种语言的其他应用程序的人来说可能不是理想的。Android 13借助<a href="https://developer.android.com/reference/android/app/LocaleManager">新平台API </a>改变了这一点。用户只需进入设置&gt;系统&gt;语言&amp;输入&gt;应用程序语言，即可为每个应用程序设置首选语言。</p>
+
+<p class="translated"><strong>主题应用图标</strong></p>
+
+<p class="translated">谷歌在Android 12自带的主题选择器应用中引入了“实验性”主题图标功能。作为测试版功能，它在本质上非常有限，但谷歌已经更新了AdaptiveIconDrawable API，以支持Android 13中的主题应用图标。有了这一点，现在积极鼓励应用程序开发者提供兼容的图标，以允许用户更好地定制他们的主屏幕。</p>
+
+
+
+<p class="translated">除此之外，谷歌还添加了一个新的照片选择器API，无需访问设备上的所有照片、可编程着色器等即可调用。你可以查看我们的<a href="https://www.xda-developers.com/android-13-developer-preview-1/"> Android 13 DP1报道</a>来详细了解这些变化。</p>
+
+<hr/>
+
+<h3 id="android-13-developer-preview-1-unannounced-changes" class="translated">Android 13开发者预览版1:未宣布的变化</h3>
+<p class="translated">正如我们之前提到的，谷歌也在每个新的Android版本中发布了很多未经宣布的变化。让我们快速浏览一下在开发者预览版1中发现的一些隐藏特性:</p>
+
+<p class="translated"><strong>像素启动器的两个主屏幕布局</strong></p>
+
+<p class="translated">Android 13 DP1 <a href="https://www.xda-developers.com/android-13-two-home-screen-layouts-pixel-launcher/">在Pixel手机上增加了对多个主屏幕布局</a>的支持，允许Pixel launcher支持两个独立的布局。除了标准布局，一些用户还可以通过将Pixel手机的DPI设置为600或更高来触发大屏幕布局。</p>
+
+
+
+<p class="translated"><strong>剪贴板自动清除功能</strong></p>
+
+<p class="translated">另一个没有发布在官方公告上的有趣功能是<a href="https://www.xda-developers.com/android-13-clipboard-auto-clear/">新的剪贴板自动清除</a>。Android 13带来了一个新的剪贴板自动清除功能，可以在一段时间后从全局剪贴板中删除主剪辑，很像Gboard。更有趣的是，Android 13中的这个新功能还提供了一个选项，让你可以更改剪辑被清除后的持续时间。</p>
+
+<p class="translated"><strong>新用户档案切换器</strong></p>
+
+<p class="translated">Android 13 DP1版本配备了一个新的键盘守卫配置文件切换器，它作为一个下拉菜单出现在锁屏PIN/密码/模式输入页面上。这将允许用户甚至在解锁设备之前切换配置文件。keyguard配置文件切换器默认是禁用的，但下面是启用时的样子:</p>
+
+
+
+
+
+<p class="translated"><strong>数据保留时间更长的隐私仪表盘</strong></p>
+
+<p class="translated">Android 13的DP1版本在隐私仪表盘中引入了一个新的<a href="https://www.xda-developers.com/android-13-dp1-privacy-dashboard/">“显示7天”按钮，将显示过去7天的权限访问数据。如果你想知道有什么新功能，Android 12引入的原始隐私仪表盘功能只能显示过去24小时的数据。然而，这个功能在Android 13 DP1中是默认不启用的，尽管这可能会随着最终版本的发布而改变。</a></p>
+
+
+
+
+
+<p class="translated"><strong> LED闪光灯亮度控制API </strong></p>
+
+<p class="translated">Android 13 DP1版本为CameraManager类引入了两个新的API——getTorchStrengthLevel和turnOnTorchWithStrengthLevel。简而言之，这些新的API将让用户<a href="https://www.xda-developers.com/android-13-flashlight-brightness-adjustment/">调整手机闪光灯的亮度</a>，就像一些原始设备制造商已经在做的定制Android皮肤一样。</p>
+
+<p class="translated"><strong>平板电脑的中枢模式</strong></p>
+
+<p class="translated">Android 13 DP1版本中宣布的一系列变化中的最后一个包括关于平板电脑的新<a href="https://www.xda-developers.com/android-13-might-include-a-new-hub-mode-for-tablets/">中枢模式的暗示。这种新模式将允许用户在不同档案间共享应用，而无需借用登录数据或在档案间切换。值得注意的是，Hub模式还允许用户建立“可信网络”，从而防止其他人访问共享的应用程序/数据，除非连接到指定的网络。</a></p>
+
+<hr/>
+
+<h3 id="android-13-developer-preview-2-announced-features" class="translated">Android 13开发者预览版2:公布的功能</h3>
+<p class="translated">Android 13开发者预览版2于2022年3月17日发布，它在之前的开发者预览版基础上增加了一堆新功能和大量改进。让我们来看看正式发布时宣布的变化:</p>
+
+<p class="translated"><strong>通知权限</strong></p>
+
+<p class="translated">如果你讨厌在手机上收到太多不需要的应用程序的通知，这个功能将是你的救星。Android 13的DP版本带有新的运行时权限，可以从应用程序发送通知。针对Android 13的应用程序将需要向用户请求权限才能推送通知。谷歌表示，它正在积极鼓励开发者尽早将Android 13作为目标，并为各自的应用程序请求通知权限。</p>
+
+
+
+<p class="translated">这将是一个很棒的功能，因为它直接让最终用户负责选择他们希望看到通知的应用程序。你很快就可以阻止一个随机的应用程序向你发送通知，包括促销信息。</p>
+
+<p class="translated"><strong>开发商降级权限</strong></p>
+
+<p class="translated">Android 13引入了一个<a href="https://developer.android.com/reference/android/content/Context#revokeOwnPermissionsOnKill(java.util.Collection%3Cjava.lang.String%3E)">新的API </a>，允许开发者降级之前授予的运行时权限，这些权限在应用的更新版本中不再需要。</p>
+
+<p class="translated"><strong>改进的日语文本换行</strong></p>
+
+<p class="translated">正如我们之前提到的，Android 13 DP1引入了更快断字的文本换行改进。这一次，该公司正在对DP2版本进行更多的改进，特别是针对日语文本。TextViews现在可以通过Bunetsu(连贯单词的最小单位)而不是字符来换行。这应该为一些精致易读的日语应用程序让路。开发人员可以使用TextViews启用Android:lineBreakWordStyle = " phrase "来利用这一点。</p>
+
+
+
+<p class="translated"><strong>改进了非拉丁文字的行高</strong></p>
+
+<p class="translated">谷歌在Android 13中改进了对泰米尔语、缅甸语、泰卢固语和藏语等非拉丁文字的支持。新版本现在使用适应每种语言的行高，从而防止字符的剪裁和定位。</p>
+
+
+
+<p class="translated"><strong> MIDI 2.0 </strong></p>
+
+<p class="translated">Android 13增加了对新的MIDI 2.0标准的支持，包括通过USB连接MIDI 2.0硬件的能力。对于外行来说，MIDI 2.0提供了对控制器分辨率的改进，对非西方语调的支持，以及使用每个音符控制器的更富表现力的性能。</p>
+
+<p class="translated"><strong>蓝牙LE音频支持</strong></p>
+
+<p class="translated">蓝牙低能耗(LE)音频通过使用低复杂度通信编解码器(LC3)承诺更低的功耗和更高的音频质量。市场上有很多支持BLE音频的硬件产品，所以我们很高兴看到谷歌在Android 13中增加了对乐音频的支持。</p>
+
+<p class="translated"><strong>彩色矢量字体</strong></p>
+
+<p class="translated">Android 13可以渲染COLR版本1字体，这是一种新的高度紧凑的字体格式，支持颜色分级。Android 13 DP2 build还将系统表情符号更新为COLRv1格式。你可以在Chrome <a href="https://developer.chrome.com/blog/colrv1-fonts/">公告</a>中了解更多关于COLRv1的信息。</p>
+
+<p class="translated"><strong>新前台服务(FGS)任务经理</strong></p>
+
+<p class="translated">Android 13 DP2包括一个新的前台服务(FGS)任务管理器，它显示了当前运行前台服务的应用程序列表。它还允许用户停止前台服务，而不管目标SDK版本如何。新的“活动应用程序”列表可以通过向下滑动通知抽屉并点击设置目录旁边的新图标来访问。点击它将打开一个卡片，上面有应用程序的名称，在前台活跃的时间，还有一个停止按钮。然而，值得指出的是，通过FGS任务管理器停止应用程序与从最近屏幕关闭应用程序或使用“强制停止”选项没有相同的效果。你可以在这里了解更多关于这个特殊功能<a href="https://www.xda-developers.com/android-13-foreground-services-task-manager/">的信息。</a></p>
+
+
+
+<p class="translated">Android 13开发者预览版2也带来了大量其他开发者生产力的提高。我们建议您查看我们的<a href="https://www.xda-developers.com/android-13-developer-preview-2/"> Android 13 DP2报道</a>以详细了解这些公告。</p>
+
+<hr/>
+
+<h3 id="android-13-developer-preview-2-unannounced-changes" class="translated">Android 13开发者预览版2:未宣布的变化</h3>
+<p class="translated">就像第一个开发者预览版一样，Android DP2版本也充满了许多隐藏的功能，这些功能不是谷歌官方声明的一部分。来，看一看:</p>
+
+<p class="translated"><strong>任务栏中的应用抽屉</strong></p>
+
+<p class="translated">谷歌在一些大屏幕设备的底部添加了任务栏，包括一些平板电脑和可折叠手机，作为其中一个<a href="https://www.xda-developers.com/android-12l/"> Android 12L </a>更新的一部分。在Android 13 DP2版本中也可以看到相同的任务栏，但它带有一个额外的图标，可以让你打开<a href="https://www.xda-developers.com/android-13-app-drawer-taskbar/">应用程序抽屉</a>。</p>
+<div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/03/FOETkjsX0AgvUlY.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Credit: Mishaal Rahman&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/03/FOETkjsX0AgvUlY.jpg?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/03/FOETkjsX0AgvUlY.jpg?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/03/FOETkjsX0AgvUlY.jpg?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/03/FOETkjsX0AgvUlY.jpg?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <img class="lazyload" alt="Android 13 taskbar" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/03/FOETkjsX0AgvUlY.jpg" src="../Images/9c0985b18746b28c6360ef6a06b064be.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/03/FOETkjsX0AgvUlY.jpg"/> </picture> <figcaption class="body-img-caption">Credit: Mishaal Rahman</figcaption> </figure> </div>
+
+
+ </div>
+
+
+<p class="translated"><strong>更新了媒体控件和输出选择器</strong></p>
+
+<p class="translated">随着一系列新功能和API的变化，Android 13的第二个开发者预览版也带来了<a href="https://www.xda-developers.com/android-13-media-controls/">更新的媒体控件</a>。Android 13的媒体控件仍然位于快速设置菜单和通知面板之间，但小工具本身现在大了很多。虽然这意味着更少的点击来控制你的媒体，但也留给通知更少的空间。值得注意的是，更新的媒体控制也更容易挑选输出。现在，轻按媒体控制右上角的按钮即可访问新的输出选取器，它会显示所有可用输出设备的列表以及“配对新设备”按钮。</p>
+
+
+
+
+
+<p class="translated"><strong>一个新的剪贴板弹出</strong></p>
+
+<p class="translated">谷歌在Android 11中调整了截图功能，增加了一个覆盖图，给你一个缩略图预览、一个分享按钮和一个编辑按钮。该公司现在正在将这一概念扩展到Android 13中的剪贴板内容。现在，每次你复制一个文本或图像，<a href="https://www.xda-developers.com/android-13-dp2-clipboard-popup/">新的剪贴板覆盖图</a>将出现在左下角，带有复制内容的预览和一个编辑按钮。如果复制的内容包含任何可操作的信息，那么您会看到一个附加按钮，可以选择使用关联的应用程序打开它。例如，如果你复制地图坐标，那么你会看到一个按钮来打开谷歌地图中的特定位置。</p>
+
+
+
+<p class="translated"><strong>注意:</strong>尽管新的剪贴板弹出功能在Android 13的DP2版本中被发现，但直到2022年4月的beta 1版本才启用。</p>
+
+<p class="translated"><strong>壁纸特效生成API </strong></p>
+
+<p class="translated">壁纸效果生成API本质上是一个新的设备个性化功能，允许用户在他们的壁纸上应用各种有趣的效果。这是一个正在开发的特性，但是我们希望它能在今年晚些时候为最终版本做好准备。很难说这看起来像什么，或者它如何帮助用户定制他们的壁纸，因为它现在被禁用了。值得注意的是，还有一个壁纸变暗的功能，预计将在最终版本中推出。这个特殊的功能将允许你调暗壁纸的亮度，而不改变设备本身的亮度。壁纸效果API对原始设备制造商开放，这意味着我们最终可能会在定制的Android皮肤中看到壁纸定制功能。</p>
+
+<p class="translated"><strong>无需解锁即可控制智能家居设备</strong></p>
+
+<p class="translated">谷歌在Android 11中添加了设备控制快速设置磁贴和锁屏快捷方式，让用户无需打开应用程序即可控制他们的智能家居设备。但要通过快速设置磁贴或锁屏快捷方式使用这些控件，用户首先必须解锁他们的设备。然而，在Android 13中，应用程序可以让用户<a href="https://www.xda-developers.com/android-13-smart-home-device-controls-unlocking/">控制他们的智能家居设备，而无需解锁他们的设备</a>。值得一提的是，这一特殊功能不会让用户在手机锁定时选择可用的设备控制。Google在Control类中加入了isAuthRequired方法，如果它返回“true”，那么用户就可以与控件进行交互，而无需进行身份验证。这里有一个快速的视频来展示这个特殊的API的运行:</p>
+
+ 
+<p class="w-rich w-youtube" id="Po96y5IvsIs">
+ </p>
+
+
+<p class="translated"><strong>注意:</strong>新的“从锁定设备控制”开关仅在2022年4月的Android 13 beta 1版本中面向所有用户推出。</p>
+
+<p class="translated"><strong>颗粒振动滑块</strong></p>
+
+<p class="translated">Android 13带有一个颗粒振动滑块，用于不同的振动场景，包括警报、电话、通知等。许多Android设备允许你改变电话和通知的振动强度，但没有额外的粒度。此外，您还可以启用一个选项，当您接到电话时，设备会在逐渐响铃之前振动。</p>
+
+ 
+
+
+
+<p class="translated"><strong>像素启动器中的新搜索栏</strong></p>
+
+<p class="translated">Android 13 DP2搭载的Pixel launcher自带<a href="https://www.xda-developers.com/google-pixel-launcher-search-bar/">一个更新的搜索栏</a>。一旦启用，这个搜索栏可以通过主屏幕和应用程序抽屉访问，它可以获得小工具、保存的截图、谷歌搜索等结果。这一更新的搜索栏有望让人们在自己的设备上搜索商品变得更加容易。无需打开Google Photos应用程序或文件目录就能搜索图片，这让搜索变得更加方便。这种新的搜索栏预计将与Android 13的最终版本一起发布，或者更快推出像素功能。</p>
+
+
+
+
+
+<p class="translated"><strong>支持Wi-Fi 7 </strong></p>
+
+<p class="translated">IEEE 802.11be，或我们所知的Wi-Fi 7，是下一代Wi-Fi标准，承诺提供令人难以置信的快速和非常低的延迟。第一套Wi-Fi 7产品预计将在今年年底或明年年初进入市场。好消息是Android 13增加了对Wi-Fi 7的初步支持。Android 13的DeviceWiphyCapabilities类在其标准和支持的信道宽度列表中分别有802.11be和320MHz。</p>
+
+<p class="translated"><strong>更多材质颜色可选</strong></p>
+
+<p class="translated">谷歌在Android 12中引入了动态颜色，作为其新材料You design语言的关键功能之一。谷歌的主题引擎，代号为“莫奈”生成了丰富的彩色调色板，这些颜色来自你的壁纸。然后将这些颜色应用于系统的不同部分，以获得更统一的外观。你引擎的材料在Android 12中已经有一个很长的颜色列表，但看起来谷歌正在为另外五种风格腾出空间，这五种风格分别叫做TONAL_SPOT，VIBRANT，EXPRESSIVE，SPRITZ，RAINBOW和FRUIT_SALAD。</p>
+
+
+
+
+
+<p class="translated"><strong>面向开发人员的带宽调节选项</strong></p>
+
+<p class="translated">Android 13终于增加了一个备受开发者欢迎的功能，这些开发者希望为他们的应用程序模拟缓慢的网络条件。Android 13的开发者选项中现在有了一个新的设置，允许开发者为所有能够提供互联网接入的网络设置带宽速率限制。它被称为“网络下载速率限制”，它有六个不同的选项可供选择，从“无限制”到“15Mbps”</p>
+
+<p class="translated"><strong>改进的屏幕保护程序</strong></p>
+
+<p class="translated">谷歌在Android Jelly Bean中添加了屏幕保护程序。这是很好的几年，但屏幕保护程序从未真正起飞，也没有得到重大检修。随着Android 13的发布，这种情况似乎正在改变，因为DP2版本似乎引入了许多新的屏幕保护程序相关代码。看起来谷歌正在努力改进屏幕保护程序，可以显示额外的信息叠加，类似于Wear OS上的复杂功能。斯珀的米沙·拉赫曼设法使隐藏的并发症。除了“颜色”、“时钟”和“照片”屏幕保护程序之外，您还可以激活复杂功能来查看屏幕保护程序顶部覆盖的“一览”小工具、日期和时间、天气和电池信息。</p>
+
+ 
+
+
+
+<p class="translated"><strong>多eSIM支持</strong></p>
+
+<p class="translated">据报道，Android 13 DP2版本包括对<a href="https://www.xda-developers.com/android-13-esim-report/">启用多SIM卡配置文件</a>的多启用配置文件(MEP)实现。其工作原理是将调制解调器和eSIM芯片之间的单个物理数据总线分成多个逻辑接口，这些接口在单个物理接口上多路复用。你可能不知道，eSIM模块在设备中占用的空间更少，从而在机箱中留出更多空间来放置更大的电池、更好的摄像头硬件等。新的功能可能会使eSIM在手机上得到更广泛的支持，但这可能需要一段时间，因为大多数运营商仍然不支持eSIM。</p>
+
+<p class="translated"><strong>游戏加载时间改进</strong></p>
+
+<p class="translated">Android 13在GameManager API中增加了一个名为setGameState的新方法，可以用来向power HAL发送加载时间提示，以激活新的GAME_LOADING模式，提升CPU性能。虽然这可能会对<a href="https://www.xda-developers.com/android-13-game-loading-mode-improvements/">游戏加载时间</a>产生积极影响，但当GAME_LOADING模式处于活动状态时，OEM将如何调整CPU性能仍有待观察。值得指出的是，许多原始设备制造商已经实施了各种优化来改善他们设备上的游戏加载时间。</p>
+
+<p class="translated"><strong>camera 2 API中的HDR视频</strong></p>
+
+<p class="translated">Camera2API允许开发人员检查设备上有哪些相机功能，并向应用程序公开粒度相机功能。谷歌正在为Camera2API添加更多功能，以使它变得更好。Android 13的HAL允许智能手机制造商将10位视频输出暴露给Camera2 API。如果OEM设备支持其他HDR格式，如HDR10+和Dolby Vision，设备制造商可以使用camera characteristics # REQUEST _ RECOMMENDED _ TEN _ BIT _ DYNAMIC _ RANGE _ PROFILE常量向应用程序发布推荐的配置文件。此外，值得一提的是，Camera2 API还包括对“流用例”的支持，允许OEM在不同的流场景中优化相机性能。</p>
+
+<p class="translated">设备制造商需要实施以下流用例:</p>
+
+<ul> <li class="translated">实时取景器预览和应用内图像分析</li> <li class="translated">静态照片捕捉的静态_捕捉</li> <li class="translated">VIDEO_RECORD用于录制视频片段</li> <li class="translated">PREVIEW_VIDEO_STILL用于取景器、视频录制和静态图像捕捉的单个视频流。</li> <li class="translated">用于长时间视频通话的VIDEO_CALL</li> </ul>
+
+<p class="translated"><strong>HTTPS域名系统</strong></p>
+
+<p class="translated">Android 13终于增加了对HTTPS域名系统(DoH)的原生支持。早在2021年9月，就首次发现了针对HTTPS本地DNS的代码更改。它现在终于作为Android 13 DP2版本的一部分出现了。TLS上的DNS使用TLS(也称为SSL)来加密流量，而HTTPS上的DNS使用HTTP或HTTP/2协议来发送DNS查询和响应。使用DoH优于DoT的一个主要优点是，后者使用一个专用端口，网络层的任何人都可以看到进出的流量。另一方面，DoH使用端口443，这是HTTPS流量的标准端口。这意味着通过DoH发送的请求和流量可以隐藏在其余的HTTPS流量中，使得攻击者或网络管理员几乎不可能监控或阻止DoH查询。</p>
+
+<p class="translated"><strong>从通知分屏启动应用</strong></p>
+
+<p class="translated">Android 13 DP2版本的用户现在可以直接从通知面板以分屏多任务模式启动应用程序。这可以通过长按通知，然后将其拖放到屏幕的任一半来实现。这一特殊功能最早是在Android 12L中推出的，该公司通过这一功能开始关注大屏幕设备上的Android。</p>
+
+ 
+
+
+
+<p class="translated"><strong>更好的内存管理防止应用程序杀人</strong></p>
+
+<p class="translated">正如你可能已经知道的那样，许多Android设备都面临着内存管理的问题。这导致延迟通知或应用程序在后台被杀死。一些原始设备制造商更好地调整了他们的软件来处理这个问题，但像Vivo这样的制造商的许多设备都深受其害。但看起来Android 13可能会永久解决这个问题，这要归功于一个名为“多代最近最少使用”(或MGLRU)的功能。</p>
+
+<p class="translated">这个特别的特性实现了几个目标，包括总体上减少了内存不足(OOM)应用程序查杀。早在今年4月份，当我们第一次听说“<a href="https://www.google.com/url?q=https://www.xda-developers.com/future-android-versions-app-killing/&amp;sa=D&amp;source=docs&amp;ust=1654509028617474&amp;usg=AOvVaw1kITyyut-3U7jQg2PQCBmQ">多代最近最少使用的</a>”功能进入Android时，我们就详细地写了它，所以请务必查看更多细节。</p>
+
+<hr/>
+
+<h3 id="android-13-beta-1-announced-features" class="translated">Android 13 Beta 1:宣布的功能</h3>
+<p class="translated">谷歌在2022年4月26日随着Android 13 Beta 1的首次发布退出了Android 13的“开发者预览”阶段。beta版本比DP版本更稳定，但是在日常驱动中安装它的时候还是要小心。话虽如此，让我们快速浏览一下随着Android 13 beta 1版本的到来，我们看到的一些官方宣布的功能:</p>
+
+<p class="translated"><strong>对媒体文件访问的更精细的许可</strong></p>
+
+<p class="translated">目前，Android设备上的所有应用程序都可以在READ_EXTERNAL_STORAGE权限的帮助下访问手机存储上的文件。然而，该权限将允许应用程序访问存储上的所有类型的媒体文件。例如，一个音频播放应用程序可以通过这个权限访问你的照片，这是完全没有必要的。但谷歌正在改变这一点，在Android 13中引入了三个新的权限:</p>
+
+<ul> <li class="translated">READ_MEDIA_IMAGES(用于图像和照片)</li> <li class="translated">READ_MEDIA_VIDEO(视频)</li> <li class="translated">READ_MEDIA_AUDIO(用于音频文件)</li> </ul>
+
+<p class="translated">如果一个特定的应用。请求访问一种以上的媒体文件类型，然后您会看到一个对话框，用于授予两种权限，如下所示:</p>
+
+
+
+<p class="translated"><strong>预期音频路由</strong></p>
+
+<p class="translated">Google在AudioManager类中添加了一组新的音频路由API，允许媒体应用程序识别音频将如何路由。getAudioDevicesForAttributes()和getDirectProfilesForAttributes()API可用于收集指定音频的可用设备列表，并检查音频流是否可以直接播放。</p>
+
+<hr/>
+
+<h3 id="android-13-beta-1-unannounced-changes" class="translated">Android 13 Beta 1:未宣布的变更</h3>
+<p class="translated">谷歌官方的Android 13 beta 1公告让它看起来对新功能很容易，但许多新的未记录的功能都是从新版本中提取的。来，看一看:</p>
+
+<p class="translated"><strong>请勿打扰模式将持续存在</strong></p>
+
+<p class="translated">Android 13 DP2版本附带了“优先模式”，这实际上是“请勿打扰”模式的重命名版本。结果是，谷歌不喜欢这个名字，因为它最终在Beta 1版本中恢复了这个变化。优先模式有可能在未来的Android 13测试版更新中回归，或者在未来的Android版本中被重命名。不过，现在“请勿打扰”还会继续存在。</p>
+
+ 
+
+
+
+<p class="translated"><strong>媒体控制中的新动画</strong></p>
+
+<p class="translated">Android 13的DP1版本更新了快速设置下媒体控件的设计。你可以在上面的Android 13 DP1:未宣布的变化部分了解更多信息。嗯，beta 1版本有一点额外的特色:一个弯曲的进度条。</p>
+<div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/ezgif.com-gif-maker-2-1.gif" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Android 13 Beta 1 media animation (Credit: Mishaal Rahman)&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/ezgif.com-gif-maker-2-1.gif?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/ezgif.com-gif-maker-2-1.gif?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/ezgif.com-gif-maker-2-1.gif?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/ezgif.com-gif-maker-2-1.gif?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <img class="lazyload" alt="Android 13 media squiggly animation (it squiggles)" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/ezgif.com-gif-maker-2-1.gif" src="../Images/b597e12852810d464587b5c373e758bb.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/ezgif.com-gif-maker-2-1.gif"/> </picture> <figcaption class="body-img-caption">Android 13 Beta 1 media animation (Credit: Mishaal Rahman)</figcaption> </figure> </div>
+
+
+ </div>
+
+
+<p class="translated"><strong>壁纸&amp;风格应用</strong>的新颜色和主题选项</p>
+
+<p class="translated">Android 13 beta 1为Pixel设备上的Wallpaper &amp; style应用程序添加了几个新的颜色和主题选项。更新的beta 1版本包括四页墙纸颜色和基本颜色，墙纸颜色和基本颜色的总数达到16种。相比之下，Android 13开发者预览版2中的Wallpaper &amp; style应用程序只提供了四种颜色。</p>
+
+ 
+
+
+
+<p class="translated"><strong>屏幕分辨率设置</strong></p>
+
+<p class="translated">Android 13更容易在设置应用中切换分辨率。Android 13 beta 1 build在“设置”&gt;“显示”下新增了一个“屏幕分辨率”页面。不言而喻，这将只适用于支持用户在FHD+ (1080p)或QHD+ (1440p)之间选择的设备。这实际上是一个额外的定制层，它位于允许您更改当前刷新率的功能之上。</p>
+<div class="body-img portrait"><div class="responsive-img image-expandable img-article-item-portrait" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/android-13-screen-resolution-setting-473x1024.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Credit: Esper&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/android-13-screen-resolution-setting-473x1024.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/android-13-screen-resolution-setting-473x1024.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="600px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/android-13-screen-resolution-setting-473x1024.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="360px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/android-13-screen-resolution-setting-473x1024.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <img class="lazyload" alt="Screen resolution settings page with two options" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/android-13-screen-resolution-setting-473x1024.jpg" src="../Images/574022c54085873caaa4ee29b9ac46d1.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/04/android-13-screen-resolution-setting-473x1024.jpg"/> </picture> <figcaption class="body-img-caption">Credit: Esper</figcaption> </figure> </div>
+
+
+ </div>
+
+
+<p class="translated">另外值得一提的是，Android的一些自定义皮肤，比如三星的One UI，已经有了改变当前屏幕分辨率的选项。</p>
+
+<p class="translated"><strong>无法访问侧装应用的可访问性APIs】</strong></p>
+
+<p class="translated">正如您可能已经知道的，可访问性API是强大的工具，旨在帮助开发人员帮助残疾用户。但最近，我们已经看到了许多恶意软件，如FluBot利用这些API进行恶意攻击。然而，谷歌正在通过阻止侧装应用程序访问这些API来打击这种恶意软件。没错，来自app store之外的任何侧装应用都将无法启用其辅助功能服务。</p>
+
+
+
+<p class="translated">轻按该选项以启用它时，您的设备将显示一个弹出窗口，说明“为了您的安全，此设置目前不可用”。</p>
+
+<p class="translated"><strong>塔雷:安卓资源经济</strong></p>
+
+<p class="translated">Android 13带来了新的能源管理功能，让应用程序充分利用设备上的可用电池寿命。TARE主要关注设备上的能源使用管理，该功能通过AlarmManager和JobScheduler策略工作。TARE本质上将“信用”委托给应用程序，然后它们可以在排队任务上“花费”作为付款。分配给特定应用程序的积分数量将取决于电池寿命等因素。</p>
+
+
+
+
+
+<p class="translated">这项功能最初是在去年发现的，但据报道，Android 13 Beta 1改变了TARE在引擎盖下的工作方式。据斯珀的米沙·拉赫曼称，谷歌已经改变了安卓资源积分分配给各种应用的方式。配额的“最大流通”限制了分配给所有应用程序的配额数量，现在已经取消。它已被一个“消费限额”所取代，该限额限制了在一个放电周期内所有应用程序可以消费的积分。简而言之，如果/当电池电量低时，您的设备将执行较少的操作。</p>
+
+<p class="translated">谷歌在Android 13 beta 1版本中添加了一些其他值得注意的功能，所以请务必查看我们的报道以了解更多信息。</p>
+
+<hr/>
+
+<h3 id="android-13-beta-2-announced-features" class="translated">Android 13 Beta 2:宣布的功能</h3>
+<p class="translated">谷歌在谷歌I/O 2022上发布了Android 13的第二个公测版本。Android 13 beta 2版本带来了一些有趣的功能，包括预测性的背部手势。让我们来看一看:</p>
+
+<p class="translated"><strong>安全和隐私设置在同一页面</strong></p>
+
+<p class="translated">谷歌宣布将在Android 13中引入统一的安全和隐私设置页面。这个新页面将所有的安全和隐私设置放在一个屋檐下，使人们更容易找到他们需要的东西。虽然这个页面是在Google I/O上发布的，但看起来它在beta 2版本中是不可用的。我们将密切关注此页面，并在它上线后报告/更新此空间。</p>
+
+
+
+<hr/>
+
+<h3 id="android-13-beta-2-unannounced-changes" class="translated">Android 13 Beta 2:未宣布的变更</h3>
+<p class="translated">与Android 13的其他版本一样，第二次公开测试版也添加了一系列未经宣布的功能。让我们来看看:</p>
+
+<p class="translated"><strong>指定支持的应用程序语言的资源文件</strong></p>
+
+<p class="translated">有了Android 13 beta 2版本，开发者<a href="https://developer.android.com/about/versions/13/features/app-languages#use-localeconfig">现在可以指定他们的应用</a>可以支持哪些语言，这样用户就可以基于每个应用选择语言。你可以在上面的Android 13 DP1部分了解更多关于基于每个应用程序使用语言的信息。</p>
+
+<p class="translated"><strong>预测性后退手势</strong></p>
+
+<p class="translated">谷歌在Android 13中引入了“预测性背部手势”，允许用户在完成之前预览背部手势的目的地或其他结果。这将使您能够决定是继续使用该手势还是停留在当前视图中。应用程序开发人员也可以轻松地将其集成到他们的应用程序中。</p>
+
+<p class="translated">一旦这一特殊功能完全可用，您可以前往设置&gt;系统&gt;开发者选项，选择预测背景动画，并查看它的行动。</p>
+
+<p class="translated"><strong>支持蓝牙LE Audio的广播</strong></p>
+
+<p class="translated">Android 13 beta 2 build增加了对Bluetooth LE Audio的<a href="https://www.xda-developers.com/android-13-beta-2-broadcast-audio/">广播音频功能</a>的支持，基本上可以让用户通过蓝牙将支持设备的音频广播给附近的用户。这是一个很棒的功能，因为附近的其他设备可以使用蓝牙来收听您的广播。想要广播媒体的用户将在媒体输出选择器中找到一个广播媒体的选项，而想要收听其他广播的用户必须扫描QR码或输入广播的名称和密码。</p>
+
+<p class="translated"><strong>安卓电视的扩展画中画模式</strong></p>
+
+
+
+<p class="translated">Android TV多年来一直支持画中画模式，但值得一提的是，Android 13将是第一个允许开发者创建<a href="https://www.xda-developers.com/android-tv-13-beta-2-pip/">扩展PiP窗口</a>的版本。这将允许用户无缝地改变画中画窗口的大小。Google没有在beta 1版本中发布扩展的PiP。然而，它终于随着一个新的停靠模式出现了，该模式可以调整主应用程序的大小，以允许PiP窗口位于边缘。</p>
+
+<p class="translated"><strong> Gboard的表情厨房获得新表情</strong></p>
+
+<p class="translated">谷歌的表情厨房是我们最喜欢的Gboard功能之一。如果你想知道，它可以让你结合两个不同的表情符号来创建一个全新的。Gboard的表情厨房中并不缺少表情符号，但Android 13 Beta 2提供了对四种额外表情符号的支持，包括爪印、樱桃、西瓜和岩石。</p>
+
+ 
+
+
+
+<hr/>
+
+<h3 id="android-13-beta-2-1-bug-fixes" class="translated">Android 13 Beta 2.1:错误修复</h3>
+<p class="translated">Android 13 Beta 2.1与之前的开发者预览版和测试版更新相比是一个较小的版本。因此，beta 2.1更新包了一些软件修复，以提高软件的整体稳定性。</p>
+
+<p class="translated"><strong>安卓13 Beta 2.1 bug修复</strong></p>
+
+<ul> <li class="translated">修正了在搜索栏中输入会导致空白建议列表的问题。</li> <li class="translated">修复了当打开热点时设备会崩溃和重启的问题。</li> <li class="translated">修正了一个问题，在打电话时，可以听到连续的电话拨号声。</li> <li class="translated">修复了一个问题，设备将崩溃，并重新启动后，从机器人自动断开。</li> </ul>
+
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="android-13-beta-3-announced-features" class="translated">Android 13 Beta 3:公布的功能</h2>
+<p class="translated">谷歌于2022年6月8日发布了Android 13 Beta 3 build。正如最初的平台路线图中提到的，第三个测试版将Android 13带到了平台稳定性的里程碑。这意味着<em>“Android 13已经达到最终的内部和外部API，最终的面向应用的行为，以及最终的非SDK API列表(灰名单)。”</em>现在让我们来快速浏览一下这个版本中官方宣布的一些特性:</p>
+
+<p class="translated"><strong>应用兼容性</strong></p>
+
+<p class="translated">由于Android 13现在已经达到了平台稳定性的里程碑，现在开发者可以测试他们的应用了。谷歌基本上希望所有的开发者在运行Android 13 beta 3的设备上测试他们的应用程序，以确保最大限度的兼容性。开发人员应该以新的API为目标，并加入对所有行为变化的支持。事实上，谷歌已经强调了应用程序开发人员在Android 13 beta 3上测试应用程序时应该注意的几个变化，包括通知的运行时权限、剪贴板预览、作业调度器预取等。</p>
+
+<p class="translated"><strong>平板电脑和大屏幕支持</strong></p>
+
+<p class="translated">此外，谷歌还强调，开发者应该将平板电脑和其他大屏幕设备作为测试的一部分。这可以通过在Android Studio中设置Android模拟器或使用兼容的大屏幕设备来完成，如联想Tab P12 Pro。谷歌在其官方公告中强调的一些变化如下:</p>
+
+<ul> <li class="translated">多窗口模式:这种模式现在默认为所有应用程序启用，该公司希望开发者确保他们的应用程序正确处理分屏。</li> <li class="translated"><strong>任务栏交互:</strong>谷歌还希望开发者能够检查他们的应用在大屏幕上使用新任务栏时的反应。Android 13 DP2首次亮相的任务栏现在将在大屏幕设备上持续存在。</li> <li class="translated"><strong>媒体投影:</strong>开发者需要检查他们的应用程序如何响应媒体投影，以便在大屏幕上播放、播放或播放媒体。</li> </ul>
+
+<p class="translated">你可以查看我们的<a href="https://www.xda-developers.com/android-13-beta-3-released/"> Android 13 Beta 3报道</a>，更详细地了解平板电脑和大屏幕设备即将发生的所有变化。</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="android-13-beta-3-unannounced-changes" class="translated">Android 13 Beta 3:未宣布的变化</h2>
+<p class="translated">除了谷歌在其官方帖子中宣布的新功能和变化，新的Android 13 Beta 3版本还包括一些未记录的变化。在这里，看看他们:</p>
+
+<p class="translated"><strong>提示查看通知设置</strong></p>
+
+<p class="translated">在启动Android 13 Beta 3版本后，你首先会注意到的一件事是一个查看通知设置的提示。这有助于用户了解新的通知模式在Android 13中是如何工作的，让最终用户负责选择他们希望看到通知的应用程序。</p>
+
+ 
+
+
+
+<p class="translated"><strong>在搜索设置中切换网页建议</strong></p>
+
+<p class="translated">谷歌在Android 13 Beta 3中的Pixel Launcher设置包括一个<a href="https://www.xda-developers.com/android-13-pixel-launcher-web-suggestions/">“网页建议”</a>切换。这可以在主页设置的<em>搜索您的手机</em>选项中找到。启用后，Pixel Launcher还会在主屏幕或应用抽屉的搜索栏中输入时显示web结果。</p>
+
+
+
+<p class="translated"><strong>每应用语言功能推送</strong></p>
+
+<p class="translated">Android 13 DP1版本引入了一个选项来启用每个应用程序的语言偏好，以允许用户为每个应用程序设置他们喜欢的语言。针对Android 13的应用程序开发人员应该在locales_config.xml资源文件中列出他们的应用程序实际支持的语言。正如斯珀的Mishaal Rahman在Twitter上指出的那样，从Android 13 Beta 3版本开始，不提供locales_config.xml资源文件的应用将不会显示在每个应用的语言首选项页面中。虽然你可以强制系统显示所有的应用程序，但它显示了谷歌如何推动面向Android 13的开发者主动列出支持的语言。</p>
+
+<p class="translated"><strong>名为“儿童模式”的新导航栏模式</strong></p>
+
+<p class="translated">Android 13中现在有一个新的导航栏模式，称为“儿童模式”，可以在大屏幕设备上启用。它具有不同的可绘制性和导航栏上的back和home图标的新布局。值得注意的是，最近的应用程序图标在这种模式下消失了，这可能是有原因的。更有趣的是，当应用程序进入沉浸式模式时，导航栏保持可见。作为Android 13 Beta 3版本改进的一部分，它们现在即使在全屏模式下播放视频时也能持续显示在屏幕上。然而，当几秒钟没有按下时，按钮确实会逐渐消失。来，看一看:</p>
+
+ 
+
+
+
+<hr/>
+
+<h3 id="android-13-beta-3-1-restores-the-android-beta-feedback-app" class="translated">Android 13 Beta 3.1:恢复Android Beta反馈app</h3>
+<p class="translated">就在推出Android 13 Beta 3版本的几天后，谷歌以<a href="https://www.xda-developers.com/a-minor-issue-fix-arrives-in-android-13-beta-3-1-update/"> Android 13 Beta 3.1更新</a>的形式推出了一个小补丁。这个版本的软件恢复了Android Beta反馈应用程序，在第三次测试更新中发现有些应用程序丢失了。Android Feedback应用程序对于测试版来说至关重要，因为它是提交bug、请求功能和其他关于当前测试版或开发者预览版的反馈的最佳方式。</p>
+
+<hr/>
+
+<h3 id="android-13-beta-3-2-major-bug-fixes" class="translated">Android 13 Beta 3.2:主要错误修复</h3>
+<p class="translated">谷歌于2022年6月16日向符合条件的设备推出了<a href="https://www.xda-developers.com/android-13-beta-3-2-released/"> Android 13 Beta 3.2版本</a>。这个特别的构建包含了一些主要的错误修复，以提高软件的整体稳定性。</p>
+
+<p class="translated"><strong>安卓13 Beta 3.2: Bug修复变更日志:</strong></p>
+
+<ul> <li class="translated">修正了后退手势在某些应用中不起作用的问题。</li> <li class="translated">修正了浏览设置页面在滚动时会不一致地折叠的问题。</li> <li class="translated">修正了一些应用程序在打开时会立即崩溃的问题。</li> <li class="translated">修正了一个问题，在不相关的设备使用期间，麦克风会意外地打开和关闭。</li> <li class="translated">修正了谷歌照片应用程序经常崩溃的问题。</li> </ul>
+
+<hr/>
+
+<h3 id="android-13-beta-3-3-bug-fixes" class="translated">Android 13 Beta 3.3:错误修复</h3>
+<p class="translated">Android 13 Beta 3.3是另一个增量版本，作为Android 13第三个测试分支的扩展。此更新于2022年6月27日推送，内部版本号为TPB3.220617.002。您可以在我们专门的<a href="https://www.xda-developers.com/android-13-beta-3-3-released/"> Android 13 Beta 3.3帖子</a>中找到此特定版本的变更日志，其中我们已经详细强调了每个修复以及其他一些相关信息。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="android-13-beta-4-the-release-candidate-build" class="translated">Android 13 Beta 4:发布候选版本</h2>
+<p class="translated">2022年7月13日发布的Android 13 Beta 4是谷歌Pixel设备和Android模拟器的候选版本。这一特殊版本标志着Android 13预发布测试软件之路的结束，因此它更多地关注于漏洞修复和完善，而不是推出新功能。以下是谷歌在Android 13 Beta 4版本中强调的一些关键变化:</p>
+
+<ul> <li class="translated"><strong>通知的运行时权限:</strong>最新版本的Android引入了从应用程序发送通知的新运行时权限。</li> <li class="translated"><strong>剪贴板预览:</strong>谷歌指出，开发者必须确保他们的应用在Android 13的新剪贴板预览中隐藏敏感数据，如密码或信用卡信息。</li> <li class="translated"><strong> JobScheduler预取:</strong> <a href="https://developer.android.com/reference/android/app/job/JobScheduler" rel="noopener" target="_blank"> JobScheduler </a>现在会尝试预测应用程序的下一次启动时间，并在该时间之前运行任何相关的预取作业。Google建议开发人员测试他们的预取作业功能在这个版本中是否如预期的那样工作。</li> </ul>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="android-13-final-release" class="translated">Android 13:最终版本</h2>
+<p class="translated">经过数月的开发者预览和测试版发布，谷歌终于在2022年8月15日为谷歌Pixel智能手机发布了稳定的Android 13 build。这是Android 13的最终版本，最终将在今年晚些时候和2023年进入其他Android旗舰。谷歌没有给这个特别的版本添加任何新功能，因为它本质上是我们过去收到的版本的改进版本。</p>
+
+<p class="translated">然而，首次公开推出Android 13并不标志着Android 13测试版计划的结束。谷歌计划通过与那些已经注册Android 13测试版项目的人分享其季度平台发布(QPR)版本来继续测试修复和改进。该公司将在明年预览Android 14之前发布Android 13 QPR1、Android 13 QPR2和Android 13 QPR3版本。我们在下面强调了QPR版本的变更日志。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="android-13-qpr1-beta-1" class="translated">Android 13 QPR1 Beta 1</h2>
+<p class="translated">第一个<a href="https://www.xda-developers.com/google-has-released-android-13-qpr1-beta-1/">Android 13 13 qpr 1 Beta</a>build于2022年9月8日针对支持的Pixel设备发布。这个版本进行了一些修复和改进，这些在当时并不是公共版本的一部分。下面快速浏览一下Android 13 QPR1 Beta 1的变更日志:</p>
+
+<ul> <li class="translated">修复了一些设备的问题，当设备在他们的口袋里时，错误地导致用户的紧急联系人从锁定屏幕上被拨打。</li> <li class="translated">修复了Pixel 6a设备的各种问题，这些问题使用户难以解锁他们的设备或设置指纹解锁。</li> <li class="translated">修复了在某些情况下导致系统界面崩溃的问题，例如从屏幕边缘打手势返回。</li> <li class="translated">修复了有时导致显示5G图标而不是5G UW图标的问题，即使受影响的设备已经成功连接到5G UW网络。</li> </ul>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="android-13-qpr1-beta-2" class="translated">Android 13 QPR1 Beta 2</h2>
+<p class="translated">Android 13 QPR1 Beta 2于10月5日发布，适用于谷歌支持的像素设备，如Pixel 4a、Pixel 4a 5G、Pixel 5、Pixel 5a和Pixel 6。谷歌尚未分享Android 13 QPR1 Beta 2变更日志，其中突出了修复和改进，因此一旦我们有了更多明确的信息，我们将更新这个空间。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="android-13-qpr1-beta-3" class="translated">Android 13 QPR1 Beta 3</h2>
+<p class="translated">谷歌于2022年10月20日发布了Android 13 QPR1 Beta 3，这是第一个与Pixel 7和Pixel 7 Pro相匹配的QPR1 Beta版本。除了我们在这些测试版中常见的一系列错误修复之外，QPR1 Beta 3还带来了一些新功能。</p>
+
+<ul> <li class="translated"><strong>谷歌Pixel 7和Pixel 7 Pro的清晰通话:</strong>谷歌承诺的清晰通话功能在发布时没有出现在新的Pixel手机上，但它是QPR1 Beta 3的一部分。</li> <li class="translated"><strong>电池共享开关:</strong>qp R1 Beta 3版本增加了电池共享开关，让你更容易控制反向充电功能。</li> </ul>
+
+<p class="translated">谷歌还在2022年11月7日推出了相对较小的Android 13 QPR1 Beta 3.1版本。它旨在粉碎一些臭名昭著的错误，你可以在<a href="https://developer.android.com/about/versions/13/release-notes#beta3"> Android开发者平台发布说明</a>中了解更多信息。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="android-13-qpr2-beta-1" class="translated">Android 13 QPR2 Beta 1</h2>
+<p class="translated">谷歌第二个Android 13季度平台发布(QPR)的第一个测试版于2022年12月13日开始推出。它在同一天推广到所有受支持的Pixel智能手机，包括新的Pixel 7和Pixel 7 Pro。这个特别版本的一个亮点是它在Pixel 6 Pro上启用了1080p支持。</p>
+
+ 
+
+
+
+<p class="translated">行业专家很快发现了这一特殊变化，你可以在谷歌发布的官方数据中看到<a href="https://android.googlesource.com/kernel/google-modules/display/+/b4bd65659595b2a44e224915a441e49aa50f5b95">承诺</a>。这实质上允许谷歌Pixel 6 Pro用户从1440p显示分辨率切换到1080p，而不依赖于<a href="https://www.xda-developers.com/google-pixel-6-and-pixel-6-pro-gain-1080p-support-with-android-13/">自定义内核</a>。T2B1.221118.006版本的大小为192MB，现在可供注册该计划的人接收测试版。它有相当多的错误，你可以通过前往谷歌官方<a href="https://developer.android.com/about/versions/13/release-notes">发布说明</a>了解更多。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="android-13-qpr2-beta-2" class="translated">Android 13 QPR2 Beta 2</h2>
+<p class="translated">谷歌在2023年推出了另一个Android 13季度平台发布(QPR)测试版更新。它于1月9日以软件版本<strong> T2B2.221216.006. </strong>的形式向符合条件的Pixel手机(Pixel 4a和更新版本)发布了<a href="https://www.xda-developers.com/android-13-qpr2-beta-2-google-pixel/"> QPR2 Beta 2更新</a>，它主要专注于修复之前测试版中发现的问题。我们没有获得任何新功能，但2023年1月的安全补丁提供了更新。以下是完整的变化列表:</p>
+
+<ul> <li class="translated">修正了系统界面有时会导致主屏幕无响应的问题。</li> <li class="translated">修复了一个问题，即在谷歌相机应用程序中从慢动作模式切换回正常视频捕捉模式后，如果在慢动作模式下捕捉速度在1/8倍和1/4倍之间变化，应用程序会继续捕捉慢动作视频。</li> </ul>
+
+<p class="translated">此外，QPR2 Beta 2更新将Google Play服务版本从22.39.10提升至22.41.13。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="android-13-qpr2-beta-2-1" class="translated">Android 13 QPR2 Beta 2.1</h2>
+<p class="translated">谷歌推出了QPR2 Beta 2的后续更新，修复了一些有用的漏洞。1月20日，<a href="https://www.xda-developers.com/android-13-qpr2-beta-21-update-google-pixel/"> Beta 2.1补丁</a>以更新T2B2.221216.008的形式对所有兼容的Pixel设备可用。此次更新中最值得注意的错误修复解决了一个问题，即即使网络可用，设备有时也无法连接到5G。它还解决了加密蓝牙连接将无限期保持连接的问题。你可以在<a href="https://developer.android.com/about/versions/13/release-notes">谷歌的开发者门户</a>查看这个特别更新的发布说明。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="android-13-qpr2-beta-3" class="translated">Android 13 QPR2 Beta 3</h2>
+<p class="translated">Android 13 QPR2 Beta 3更新于2023年2月1日推出，面向所有参加测试计划的合格Pixel手机。这一空中(OTA)更新解决了许多问题，为2023年3月的稳定发布做了最后的润色。此次更新没有带来任何安全补丁，但它将Google Play服务版本从22.41.13升级到了23.03.13。以下是一些变更/修复的快速浏览:</p>
+
+<ul> <li class="translated">修复了通知组中的通知有时显示为直角而不是圆角的问题。(<a href="https://issuetracker.google.com/issues/264287776" rel="noopener noreferrer" target="_blank">期号264287776 </a>，<a href="https://issuetracker.google.com/issues/265529116" rel="noopener noreferrer" target="_blank">期号265529116 </a>)</li> <li class="translated">修复了一个问题，即通知阴影中的消息表明一个活跃的VPN连接与关于应用程序与活跃的前台服务的消息重叠。(<a href="https://issuetracker.google.com/issues/266075977" rel="noopener noreferrer" target="_blank">问题编号266075977 </a></li> <li class="translated">修复了编辑快速设置图块时无法访问溢出菜单的问题。(<a href="https://issuetracker.google.com/issues/263484657" rel="noopener noreferrer" target="_blank">问题编号263484657 </a></li> <li class="translated">修正了一个问题，有时会导致一个设备的振动启用振动太长时间后，它收到了通知。(<a href="https://issuetracker.google.com/issues/239676913" rel="noopener noreferrer" target="_blank">问题#239676913 </a></li> </ul>
+
+<p class="translated">你可以在我们的<a href="https://www.xda-developers.com/android-13-qpr2-beta-3-google-pixel/"> Android 13 QPR2 Beta 3帖子</a>查看此次更新的完整变更日志。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="android-13-qpr2-beta-3-1-amp-3-2" class="translated">Android 13 QPR2 Beta 3.1和3.2</h2>
+<p class="translated">谷歌很快跟进了QPR2 Beta 3的更新，做了一些小的更新。这两次更新只相隔了几周，它们解决了一些关键的错误，改善了整体用户体验。Android 13 QPR2 Beta 3.1更新<strong> T2B3.230109.004 </strong>修复了系统蓝牙模块的一个问题，该问题“可能允许由于内存损坏而可能出现的越界写入。”值得注意的是，它还发布了对系统映像中一些缺失的罗马尼亚语翻译的修复。</p>
+
+<p class="translated">另一方面，Android 13 QPR2 Beta 3.2更新修复了一些Pixel设备的屏幕会闪烁绿色或包含其他视觉伪像的问题。这次特别的更新还为Pixel 6和Pixel 7系列带来了对Jio 5G网络的支持。如果你想阅读其他微小变化的完整列表，你可以前往我们的<a href="https://www.xda-developers.com/android-13-qpr2-beta-32-display-fix/"> Android 13 QPR2 Beta 3.2帖子</a>。</p>
+
+<hr/>
+
+<p class="translated">Android 13的最终版本已经出来了，并在各种旗舰设备上运行。然而，在明年Android 14预览版发布之前，你可以期待谷歌每月发布QPR测试版。当新的QPR建筑曝光时，我们将继续更新这篇文章。同时，我们想知道您对Android 13的看法。你的智能手机已经有了吗？如果是，那么你已经在你的设备上安装了吗？请在下面的评论中告诉我们！</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>
