@@ -4,16 +4,16 @@
 <link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="translated">如何解锁bootloader并用Magisk root谷歌Pixel 6a</h1>
+<h1 class="translated">如何解锁 bootloader 并用 Magisk root 谷歌 Pixel 6a</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/how-to-unlock-bootloader-root-magisk-google-pixel-6a/#0001-01-01">https://www.xda-developers.com/how-to-unlock-bootloader-root-magisk-google-pixel-6a/#0001-01-01</a></blockquote><div><div class="content-block-regular">
-<p class="translated">距离谷歌发布中端产品Pixel 6a T1已经过去了几周时间，相比之前的Pixel-A系列手机，它进行了几项显著的升级。除了Android 13测试版的可用性，Pixel 6a的工厂图像和内核源代码也已经公布，这正是改装爱好者开始摆弄设备的正确成分。</p>
+<p class="translated">距离谷歌发布中端产品 Pixel 6a T1 已经过去了几周时间，相比之前的 Pixel-A 系列手机，它进行了几项显著的升级。除了 Android 13 测试版的可用性，Pixel 6a 的工厂图像和内核源代码也已经公布，这正是改装爱好者开始摆弄设备的正确成分。</p>
 
   
-<p class="translated">我们开始看到越来越多的人开始使用谷歌Pixel 6a，所以对于那些在<a href="https://www.xda-developers.com/root/">寻找帮助的人来说，这里有一个简单的分步指南。本指南将带您了解如何解锁Pixel 6a的引导程序，并使用Magisk获得手机的root访问权限。TWRP，最受欢迎的自定义恢复，将需要一些时间来移植到最新的像素，因此目前的根方法比你可能习惯的要复杂一些。</a></p>
+<p class="translated">我们开始看到越来越多的人开始使用谷歌 Pixel 6a，所以对于那些在<a href="https://www.xda-developers.com/root/">寻找帮助的人来说，这里有一个简单的分步指南。本指南将带您了解如何解锁 Pixel 6a 的引导程序，并使用 Magisk 获得手机的 root 访问权限。TWRP，最受欢迎的自定义恢复，将需要一些时间来移植到最新的像素，因此目前的根方法比你可能习惯的要复杂一些。</a></p>
 
-<p/><p class="translated"><strong>T5】谷歌Pixel 6a XDA论坛T7】</strong></p>
+<p/><p class="translated"><strong>T5】谷歌 Pixel 6a XDA 论坛 T7】</strong></p>
 
-<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id="custom_block_3"><ul> <li class="translated">你可以用Magisk修补Google Pixel 6a的启动映像，让它成为root用户。</li> <li class="translated">要刷新打了补丁的引导映像，您必须解锁Pixel 6a的引导加载程序。</li> <li class="translated">解锁引导加载程序将擦除你的像素6a。</li> </ul> </div></section>
+<section class="emaki-custom-block emaki-custom-note"><div class="emaki-custom note" id="custom_block_3"><ul> <li class="translated">你可以用 Magisk 修补 Google Pixel 6a 的启动映像，让它成为 root 用户。</li> <li class="translated">要刷新打了补丁的引导映像，您必须解锁 Pixel 6a 的引导加载程序。</li> <li class="translated">解锁引导加载程序将擦除你的像素 6a。</li> </ul> </div></section>
 <p class="translated"><strong>浏览本文:</strong></p>
 
 
@@ -23,21 +23,21 @@
 <hr/>
 
 
-<h2 id="how-to-root-the-google-pixel-6a" class="translated">如何root谷歌Pixel 6a</h2>
-<p class="translated">在我们开始研究如何确定你的像素6a的根之前，你需要做一些事情。首先，你需要备份手机上的所有数据。这是因为<strong>root需要擦除手机上的所有数据，这不仅包括已安装的应用程序，还包括保存到内部存储的所有文件。</strong></p>
+<h2 id="how-to-root-the-google-pixel-6a" class="translated">如何 root 谷歌 Pixel 6a</h2>
+<p class="translated">在我们开始研究如何确定你的像素 6a 的根之前，你需要做一些事情。首先，你需要备份手机上的所有数据。这是因为<strong>root 需要擦除手机上的所有数据，这不仅包括已安装的应用程序，还包括保存到内部存储的所有文件。</strong></p>
 
-<p class="translated">您还需要确保您的PC上有大约5GB的可用存储空间，因为您需要为您的手机下载出厂映像。完成后，您可以删除这些文件来释放空间。尽管如此，保存最新的工厂映像是一个好主意，以防您在root后的冒险中遇到任何问题，需要恢复库存。</p>
+<p class="translated">您还需要确保您的 PC 上有大约 5GB 的可用存储空间，因为您需要为您的手机下载出厂映像。完成后，您可以删除这些文件来释放空间。尽管如此，保存最新的工厂映像是一个好主意，以防您在 root 后的冒险中遇到任何问题，需要恢复库存。</p>
 
-<p class="translated">值得注意的是，这些步骤<strong>可能不适用于谷歌Pixel 6a </strong>的美国运营商型号。例如，威瑞森喜欢完全阻止引导加载程序解锁，这样就不可能对你的手机进行root。不过，有时人们会找到非官方的变通办法，如果找到了，我们会让你知道。</p>
+<p class="translated">值得注意的是，这些步骤<strong>可能不适用于谷歌 Pixel 6a </strong>的美国运营商型号。例如，威瑞森喜欢完全阻止引导加载程序解锁，这样就不可能对你的手机进行 root。不过，有时人们会找到非官方的变通办法，如果找到了，我们会让你知道。</p>
 
-<h3 id="step-1-get-the-stock-boot-image-for-the-pixel-6a" class="translated">步骤1–获取Pixel 6a的库存引导映像</h3>
-<p class="translated">在我们可以根，我们需要得到我们的手股票启动图像匹配目前的软件建设的手机正在运行。我们将用Magisk修补这个启动映像。</p>
+<h3 id="step-1-get-the-stock-boot-image-for-the-pixel-6a" class="translated">步骤 1–获取 Pixel 6a 的库存引导映像</h3>
+<p class="translated">在我们可以根，我们需要得到我们的手股票启动图像匹配目前的软件建设的手机正在运行。我们将用 Magisk 修补这个启动映像。</p>
 
-<p class="translated">要获得启动映像，您需要从Pixel 6a工厂映像中提取它，该文件包含进行完全恢复所需的所有手机映像。为了确保你下载了正确的出厂映像，你需要检查你的手机当前运行的是哪个软件版本。要对此进行检查，请前往<strong>设置</strong> &gt; <strong>关于手机</strong>。在底部，寻找<strong>建造编号</strong>部分。在工厂映像下载页面上找到匹配的内部版本号，并下载该文件。</p>
+<p class="translated">要获得启动映像，您需要从 Pixel 6a 工厂映像中提取它，该文件包含进行完全恢复所需的所有手机映像。为了确保你下载了正确的出厂映像，你需要检查你的手机当前运行的是哪个软件版本。要对此进行检查，请前往<strong>设置</strong> &gt; <strong>关于手机</strong>。在底部，寻找<strong>建造编号</strong>部分。在工厂映像下载页面上找到匹配的内部版本号，并下载该文件。</p>
 
-<p/><p class="translated"><strong> <a href="https://www.xda-developers.com/how-to-download-android-12/">为谷歌Pixel手机下载Android 12</a>| |<a href="https://www.xda-developers.com/how-to-download-android-13/">为谷歌Pixel手机下载Android 13</a></strong></p>
+<p/><p class="translated"><strong> <a href="https://www.xda-developers.com/how-to-download-android-12/">为谷歌 Pixel 手机下载 Android 12</a>| |<a href="https://www.xda-developers.com/how-to-download-android-13/">为谷歌 Pixel 手机下载 Android 13</a></strong></p>
 
-<p class="translated">接下来，提取工厂图像ZIP文件。找到图像-blue Jay-[版本]。zip文件(是的，在ZIP中有一个ZIP)并从中提取boot.img文件。这是股票启动图像，你需要把它转移到你的手机的存储。</p>
+<p class="translated">接下来，提取工厂图像 ZIP 文件。找到图像-blue Jay-[版本]。zip 文件(是的，在 ZIP 中有一个 ZIP)并从中提取 boot.img 文件。这是股票启动图像，你需要把它转移到你的手机的存储。</p>
 
 <p class="translated"><a href="https://www.xda-developers.com/?attachment_id=687189" rel="attachment wp-att-687189"/></p>
 
@@ -45,22 +45,22 @@
 
 <p/>
 
-<h3 id="step-2-patch-the-stock-boot-image-using-magisk" class="translated">步骤2–使用Magisk修补普通引导映像</h3>
-<p class="translated">有了手机上的启动镜像文件，接下来你需要下载并安装最新的Magisk应用程序。事实上，你可以在Pixel 6a以外的其他Android设备上安装它，但你也需要在辅助设备上安装Magisk应用程序。</p>
+<h3 id="step-2-patch-the-stock-boot-image-using-magisk" class="translated">步骤 2–使用 Magisk 修补普通引导映像</h3>
+<p class="translated">有了手机上的启动镜像文件，接下来你需要下载并安装最新的 Magisk 应用程序。事实上，你可以在 Pixel 6a 以外的其他 Android 设备上安装它，但你也需要在辅助设备上安装 Magisk 应用程序。</p>
 
-<p/><p class="translated"><strong> <a href="https://github.com/topjohnwu/Magisk/releases/latest">下载Magisk </a> </strong></p>
+<p/><p class="translated"><strong> <a href="https://github.com/topjohnwu/Magisk/releases/latest">下载 Magisk </a> </strong></p>
 
-<p class="translated">在Magisk应用程序中，您需要点击最顶层卡上的<strong>安装</strong>按钮。选择<strong>选择<strong>方法</strong>下的一个文件</strong>，选择股票引导镜像。这将打开Android文件选择器。继续前进，找到你从你的电脑传输的boot.img并选择它。Magisk应用程序会将图像修补到手机的下载文件夹中。您必须传输这个修补的文件(应该命名为“magisk _ patched _[random _ strings])。img ")回到您的PC，因为接下来，我们将解锁引导加载程序，这将清除所有数据，就像我们之前警告的那样。</p>
+<p class="translated">在 Magisk 应用程序中，您需要点击最顶层卡上的<strong>安装</strong>按钮。选择<strong>选择<strong>方法</strong>下的一个文件</strong>，选择股票引导镜像。这将打开 Android 文件选择器。继续前进，找到你从你的电脑传输的 boot.img 并选择它。Magisk 应用程序会将图像修补到手机的下载文件夹中。您必须传输这个修补的文件(应该命名为“magisk _ patched _[random _ strings])。img ")回到您的 PC，因为接下来，我们将解锁引导加载程序，这将清除所有数据，就像我们之前警告的那样。</p>
 
-<p class="translated">值得注意的是，如果你浏览Pixel 6a的XDA论坛，你可能会幸运地找到一个预先打好补丁的启动映像。这可能会省去您执行步骤1和2的麻烦，但请确保您下载的任何Magisk修补的启动映像都与您的软件构建版本相匹配，否则您将在刷新后面临几个异常。这也是为什么我们一直建议自己抢官方固件，自己打股票开机镜像补丁。</p>
+<p class="translated">值得注意的是，如果你浏览 Pixel 6a 的 XDA 论坛，你可能会幸运地找到一个预先打好补丁的启动映像。这可能会省去您执行步骤 1 和 2 的麻烦，但请确保您下载的任何 Magisk 修补的启动映像都与您的软件构建版本相匹配，否则您将在刷新后面临几个异常。这也是为什么我们一直建议自己抢官方固件，自己打股票开机镜像补丁。</p>
 
-<h3 id="step-3-enable-oem-unlocking-and-unlock-the-bootloader" class="translated">步骤3–启用OEM解锁并解锁引导加载程序</h3>
-<p class="translated">为了在Pixel 6a上刷新第三方软件，我们必须解锁bootloader。为此，进入<strong>设置</strong> &gt; <strong>关于手机</strong> &gt; <strong>内部版本号</strong>并点击该条目7次以启用<strong>开发者选项</strong>。启用后，返回主设置页面并点击<strong>系统</strong>，然后转到<strong>开发者选项</strong>。从那里，切换<strong> OEM解锁</strong>选项。请记住，您需要输入密码/模式/PIN来验证某些操作。</p>
+<h3 id="step-3-enable-oem-unlocking-and-unlock-the-bootloader" class="translated">步骤 3–启用 OEM 解锁并解锁引导加载程序</h3>
+<p class="translated">为了在 Pixel 6a 上刷新第三方软件，我们必须解锁 bootloader。为此，进入<strong>设置</strong> &gt; <strong>关于手机</strong> &gt; <strong>内部版本号</strong>并点击该条目 7 次以启用<strong>开发者选项</strong>。启用后，返回主设置页面并点击<strong>系统</strong>，然后转到<strong>开发者选项</strong>。从那里，切换<strong> OEM 解锁</strong>选项。请记住，您需要输入密码/模式/PIN 来验证某些操作。</p>
 
-<p class="translated">启用OEM解锁后，关闭手机。按住音量键和电源键来打开你的手机并进入引导菜单。假设您已经安装了最新的<a href="https://www.xda-developers.com/install-adb-windows-macos-linux/"> ADB和Fastboot二进制文件</a>，您也可以使用下面的命令直接从Android重启到bootloader模式。</p>
+<p class="translated">启用 OEM 解锁后，关闭手机。按住音量键和电源键来打开你的手机并进入引导菜单。假设您已经安装了最新的<a href="https://www.xda-developers.com/install-adb-windows-macos-linux/"> ADB 和 Fastboot 二进制文件</a>，您也可以使用下面的命令直接从 Android 重启到 bootloader 模式。</p>
 
 <pre> <code class="hljs ">adb reboot bootloader</code> </pre>
-<p class="translated">请确保您的手机连接到PC/Mac/Chromebook。接下来，在终端窗口中，键入:</p>
+<p class="translated">请确保您的手机连接到 PC/Mac/Chromebook。接下来，在终端窗口中，键入:</p>
 
 <pre> <code class="hljs sql">fastboot flashing <span class="hljs-keyword">unlock</span></code> </pre>
 <p class="translated">您将看到一个屏幕，告诉您即将启动引导加载程序解锁过程。使用音量按钮导航，使用电源按钮接受。<strong>同样，这将清除您手机上的所有数据，因此请确保您在继续操作之前备份了数据</strong>。</p>
@@ -72,13 +72,13 @@
  </div>
 
 
-<h3 id="step-4-flash-magisk-patched-boot-image" class="translated">步骤4–刷新Magisk修补的启动映像</h3>
-<p class="translated">在你的Pixel 6a的bootloader解锁，你的引导镜像打好补丁之后，你离root就一步之遥了。</p>
+<h3 id="step-4-flash-magisk-patched-boot-image" class="translated">步骤 4–刷新 Magisk 修补的启动映像</h3>
+<p class="translated">在你的 Pixel 6a 的 bootloader 解锁，你的引导镜像打好补丁之后，你离 root 就一步之遥了。</p>
 
-<p class="translated">一旦引导加载程序解锁过程完成，手机将在几分钟后启动。在此阶段跳过设置向导并关闭手机。您现在想要通过再次按住音量和电源按钮来引导回引导加载程序。到达后，将手机连接到PC/Mac/Chromebook并执行以下命令:</p>
+<p class="translated">一旦引导加载程序解锁过程完成，手机将在几分钟后启动。在此阶段跳过设置向导并关闭手机。您现在想要通过再次按住音量和电源按钮来引导回引导加载程序。到达后，将手机连接到 PC/Mac/Chromebook 并执行以下命令:</p>
 
 <pre> <code class="hljs ">fastboot flash boot path/to/magisk_patched.img</code> </pre>
-<p class="translated">一旦你按下回车键，补丁启动图像将被刷新到你的手机。接下来，使用<code>fastboot reboot</code>重启，Magisk应用应该会出现在你的主屏幕和/或应用抽屉中。如果没有(例如，您只能看到一个存根图标)，只需手动安装Magisk APK。这是所有需要根你的像素6a。</p>
+<p class="translated">一旦你按下回车键，补丁启动图像将被刷新到你的手机。接下来，使用<code>fastboot reboot</code>重启，Magisk 应用应该会出现在你的主屏幕和/或应用抽屉中。如果没有(例如，您只能看到一个存根图标)，只需手动安装 Magisk APK。这是所有需要根你的像素 6a。</p>
 
 <p class="translated"><a href="https://www.xda-developers.com/?attachment_id=687195" rel="attachment wp-att-687195"/></p>
 
@@ -86,7 +86,7 @@
 
 <p/>
 
-<p class="translated">请记住，每次更新手机时，您都必须重复步骤1、2和4，因为每次更新时启动映像都会发生变化。</p>
+<p class="translated">请记住，每次更新手机时，您都必须重复步骤 1、2 和 4，因为每次更新时启动映像都会发生变化。</p>
 
 <hr/>
 <p class="ad-odd">
@@ -94,9 +94,9 @@
 
 
 <h2 id="what-s-next" class="translated">下一步是什么？</h2>
-<p class="translated">如果你正在寻找与你的新根Pixel 6a有关的事情，看看我们的最佳根应用精选列表<a href="https://www.xda-developers.com/best-android-root-apps/">。一旦您的设备启动并运行Magisk，您还可以试用一些</a><a href="https://www.xda-developers.com/best-magisk-modules/">最佳Magisk模块</a>来无缝应用复杂的mod，而无需接触底层系统。</p>
+<p class="translated">如果你正在寻找与你的新根 Pixel 6a 有关的事情，看看我们的最佳根应用精选列表<a href="https://www.xda-developers.com/best-android-root-apps/">。一旦您的设备启动并运行 Magisk，您还可以试用一些</a><a href="https://www.xda-developers.com/best-magisk-modules/">最佳 Magisk 模块</a>来无缝应用复杂的 mod，而无需接触底层系统。</p>
 
-<div class="display-card tag"><div class="w-img "><div class="body-img landscape"><div class="responsive-img img-article-square" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Google Pixel 6a&quot;"> <figure> <picture>  <source media="(min-width: 1024px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="320px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg?q=50&amp;fit=crop&amp;w=320&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="400px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg?q=50&amp;fit=crop&amp;w=400&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="300px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg?q=50&amp;fit=crop&amp;w=300&amp;dpr=1.5"/> <img class="lazyload" alt="The Google Pixel 6a keeps many of what made the Pixel 6 so great, at a lower price point. " data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg" src="../Images/10e0e7f405aeb4c2c97f4e91ae46d208.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg"/> </picture> <figcaption class="body-img-caption">Google Pixel 6a</figcaption> </figure> </div> </div> </div><div class="w-display-card-content"> <div class="w-display-card-description"><p class="display-card-description translated">谷歌Pixel 6a是一款配备谷歌张量和高端摄像头的中档智能手机。</p> </div> </div> </div></div>
+<div class="display-card tag"><div class="w-img "><div class="body-img landscape"><div class="responsive-img img-article-square" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Google Pixel 6a&quot;"> <figure> <picture>  <source media="(min-width: 1024px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="320px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg?q=50&amp;fit=crop&amp;w=320&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="400px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg?q=50&amp;fit=crop&amp;w=400&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="300px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg?q=50&amp;fit=crop&amp;w=300&amp;dpr=1.5"/> <img class="lazyload" alt="The Google Pixel 6a keeps many of what made the Pixel 6 so great, at a lower price point. " data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg" src="../Images/10e0e7f405aeb4c2c97f4e91ae46d208.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/05/Pixel-6a-in-three-colors.jpg"/> </picture> <figcaption class="body-img-caption">Google Pixel 6a</figcaption> </figure> </div> </div> </div><div class="w-display-card-content"> <div class="w-display-card-description"><p class="display-card-description translated">谷歌 Pixel 6a 是一款配备谷歌张量和高端摄像头的中档智能手机。</p> </div> </div> </div></div>
 
 
 </div>    

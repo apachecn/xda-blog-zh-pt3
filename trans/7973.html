@@ -4,22 +4,22 @@
 <link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="translated">三星Galaxy S23 Ultra获得非官方TWRP端口</h1>
+<h1 class="translated">三星 Galaxy S23 Ultra 获得非官方 TWRP 端口</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/samsung-galaxy-s23-ultra-twrp-unofficial/#0001-01-01">https://www.xda-developers.com/samsung-galaxy-s23-ultra-twrp-unofficial/#0001-01-01</a></blockquote><div><div class="content-block-regular">
-<p class="translated">TeamWin Recovery Project，或者简称为<a href="https://www.xda-developers.com/how-to-install-twrp/"> TWRP </a>，是目前为止Android修改场景中最流行的定制恢复解决方案。虽然这些年来修补爱好者已经明显减少，但仍然有人致力于这种工艺，这意味着最近的旗舰接收TWRP港是一件相当大的事情。这正是发生在<a href="https://www.xda-developers.com/samsung-galaxy-s23/"> Galaxy S23系列</a>上的事情，XDA资深成员<a href="https://forum.xda-developers.com/m/afaneh92.4770483/"> afaneh92 </a>已经设法为三星的最新产品提供了一个几乎功能性的TWRP构建。</p>
+<p class="translated">TeamWin Recovery Project，或者简称为<a href="https://www.xda-developers.com/how-to-install-twrp/"> TWRP </a>，是目前为止 Android 修改场景中最流行的定制恢复解决方案。虽然这些年来修补爱好者已经明显减少，但仍然有人致力于这种工艺，这意味着最近的旗舰接收 TWRP 港是一件相当大的事情。这正是发生在<a href="https://www.xda-developers.com/samsung-galaxy-s23/"> Galaxy S23 系列</a>上的事情，XDA 资深成员<a href="https://forum.xda-developers.com/m/afaneh92.4770483/"> afaneh92 </a>已经设法为三星的最新产品提供了一个几乎功能性的 TWRP 构建。</p>
 
   
-<p class="translated">当谈到Galaxy S系列时，<a href="https://www.xda-developers.com/samsung-flagship-cpu-performance-exynos-vs-snapdragon/"> Exynos与骁龙</a>一直是一个大话题——无论是在普通消费者还是在售后开发圈。韩国OEM厂商过去在比骁龙更多的地区销售Exynos变体。此外，美国和加拿大骁龙型号的引导加载程序无法解锁，这一设计基本上迫使大多数修改工作围绕Exynos驱动的版本进行。随着Galaxy S23系列的出现，这种情况发生了变化，因为所有地区的变体现在都由经过修改的骁龙8 Gen 2芯片组提供支持。因此，您不再需要为Galaxy S系列处理两套独立的TWRP版本。</p>
+<p class="translated">当谈到 Galaxy S 系列时，<a href="https://www.xda-developers.com/samsung-flagship-cpu-performance-exynos-vs-snapdragon/"> Exynos 与骁龙</a>一直是一个大话题——无论是在普通消费者还是在售后开发圈。韩国 OEM 厂商过去在比骁龙更多的地区销售 Exynos 变体。此外，美国和加拿大骁龙型号的引导加载程序无法解锁，这一设计基本上迫使大多数修改工作围绕 Exynos 驱动的版本进行。随着 Galaxy S23 系列的出现，这种情况发生了变化，因为所有地区的变体现在都由经过修改的骁龙 8 Gen 2 芯片组提供支持。因此，您不再需要为 Galaxy S 系列处理两套独立的 TWRP 版本。</p>
 
-<p class="translated">目前，非官方的TWRP只兼容<a href="https://www.xda-developers.com/samsung-galaxy-s23-ultra-review/"> Galaxy S23 Ultra </a>，准确地说是SM-S918B型号。这一发展是一项重要成就的原因有很多。首先，<em> afaneh92 </em>依靠设备自带的股票内核编译恢复镜像。由于三星尚未公布Galaxy S23系列的内核源代码，开发者无法查看实际的代码库。不支持处理加密例程，并且您不能读/写EROFS格式的分区，但是其余的功能应该可以正常工作。</p>
+<p class="translated">目前，非官方的 TWRP 只兼容<a href="https://www.xda-developers.com/samsung-galaxy-s23-ultra-review/"> Galaxy S23 Ultra </a>，准确地说是 SM-S918B 型号。这一发展是一项重要成就的原因有很多。首先，<em> afaneh92 </em>依靠设备自带的股票内核编译恢复镜像。由于三星尚未公布 Galaxy S23 系列的内核源代码，开发者无法查看实际的代码库。不支持处理加密例程，并且您不能读/写 EROFS 格式的分区，但是其余的功能应该可以正常工作。</p>
 
-<p class="translated"><strong> <a href="https://forum.xda-developers.com/t/4551215/">下载三星Galaxy S23 Ultra的非官方TWRP</a></strong></p>
+<p class="translated"><strong> <a href="https://forum.xda-developers.com/t/4551215/">下载三星 Galaxy S23 Ultra 的非官方 TWRP</a></strong></p>
 
-<p class="translated">请务必通读逐步安装说明，以避免遇到引导循环或其他问题。即使你有一个引导加载程序可解锁的Galaxy S23型号，请记住，安装第三方二进制文件(如TWRP) <strong>会不可逆转地触发Knox保修位</strong>并且<strong>会禁用后续OTA更新</strong>，因此请谨慎操作。</p>
+<p class="translated">请务必通读逐步安装说明，以避免遇到引导循环或其他问题。即使你有一个引导加载程序可解锁的 Galaxy S23 型号，请记住，安装第三方二进制文件(如 TWRP) <strong>会不可逆转地触发 Knox 保修位</strong>并且<strong>会禁用后续 OTA 更新</strong>，因此请谨慎操作。</p>
 
-<p class="translated"><strong> XDA论坛:<a href="https://forum.xda-developers.com/f/samsung-galaxy-s23.12707/">三星Galaxy S23</a>| |<a href="https://forum.xda-developers.com/f/samsung-galaxy-s23-plus.12709/">Galaxy S23 Plus</a>| |<a href="https://forum.xda-developers.com/f/samsung-galaxy-s23-ultra.12713/">Galaxy S23 Ultra</a></strong></p>
+<p class="translated"><strong> XDA 论坛:<a href="https://forum.xda-developers.com/f/samsung-galaxy-s23.12707/">三星 Galaxy S23</a>| |<a href="https://forum.xda-developers.com/f/samsung-galaxy-s23-plus.12709/">Galaxy S23 Plus</a>| |<a href="https://forum.xda-developers.com/f/samsung-galaxy-s23-ultra.12713/">Galaxy S23 Ultra</a></strong></p>
 
-<div class="display-card tag"><div class="w-display-card-content"> <div class="w-display-card-description"><p class="display-card-description translated">Galaxy S23 Ultra是市场上最好的手机之一，装有全新的200MP传感器，精致的设计，为Galaxy芯片组定制的骁龙8 Gen 2，以及一个UI 5.1。</p> </div> </div> </div></div>
+<div class="display-card tag"><div class="w-display-card-content"> <div class="w-display-card-description"><p class="display-card-description translated">Galaxy S23 Ultra 是市场上最好的手机之一，装有全新的 200MP 传感器，精致的设计，为 Galaxy 芯片组定制的骁龙 8 Gen 2，以及一个 UI 5.1。</p> </div> </div> </div></div>
 
 
 </div>    
