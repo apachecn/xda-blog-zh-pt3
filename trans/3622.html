@@ -4,54 +4,54 @@
 <link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="translated">什么是AppData，什么是Local、LocalLow和Roaming？</h1>
+<h1 class="translated">什么是 AppData，什么是 Local、LocalLow 和 Roaming？</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/appdata/#0001-01-01">https://www.xda-developers.com/appdata/#0001-01-01</a></blockquote><div><div class="content-block-regular">
-<p class="translated">如果你有一台Windows PC，那么你可能听说过AppData。该文件夹包含三个子文件夹:Local、LocalLow和Roaming。了解不同类型的AppData文件夹及其用途有助于故障排除、管理存储空间等。如果你想知道这些文件夹是做什么用的，为什么它们如此重要，那你来对地方了。在本文中，我们将解释三种主要类型的AppData文件夹之间的区别，以及每种文件夹中通常存储什么类型的信息。</p>
+<p class="translated">如果你有一台 Windows PC，那么你可能听说过 AppData。该文件夹包含三个子文件夹:Local、LocalLow 和 Roaming。了解不同类型的 AppData 文件夹及其用途有助于故障排除、管理存储空间等。如果你想知道这些文件夹是做什么用的，为什么它们如此重要，那你来对地方了。在本文中，我们将解释三种主要类型的 AppData 文件夹之间的区别，以及每种文件夹中通常存储什么类型的信息。</p>
 
  
-<h2 id="what-is-appdata" class="translated">什么是AppData？</h2>
+<h2 id="what-is-appdata" class="translated">什么是 AppData？</h2>
 
 
-<p class="translated">当你在Windows上安装一个程序时，它通常会被安装在<strong> C:\Program Files </strong>中，或者在32位程序的情况下，被安装在<strong> C:\Program Files (x86) </strong>中。该应用程序将为计算机上的所有用户安装，并且需要管理员访问权限才能写入。存储在该文件夹中的任何应用程序设置也将传播给所有用户。</p>
+<p class="translated">当你在 Windows 上安装一个程序时，它通常会被安装在<strong> C:\Program Files </strong>中，或者在 32 位程序的情况下，被安装在<strong> C:\Program Files (x86) </strong>中。该应用程序将为计算机上的所有用户安装，并且需要管理员访问权限才能写入。存储在该文件夹中的任何应用程序设置也将传播给所有用户。</p>
 
-<p class="translated">这就是AppData的用武之地。它是一个隐藏的文件夹，位于每个用户文件夹下。它位于<strong>C:\ Users \&lt;username&gt;\ AppData</strong>中，包含与程序运行能力无关的程序特定信息，比如用户配置。在您的AppData文件夹中，您会找到类似以下内容的文件:</p>
+<p class="translated">这就是 AppData 的用武之地。它是一个隐藏的文件夹，位于每个用户文件夹下。它位于<strong>C:\ Users \&lt;username&gt;\ AppData</strong>中，包含与程序运行能力无关的程序特定信息，比如用户配置。在您的 AppData 文件夹中，您会找到类似以下内容的文件:</p>
 
 <ul> <li class="translated">特定于用户的安装</li> <li class="translated">应用程序配置文件</li> <li class="translated">缓存文件</li> </ul>
 
-<p class="translated">如果你曾经安装过一个程序，问你是否要为所有用户安装它，它基本上是问你是否要将它安装到程序文件或AppData中。Python就是一个这样的程序。此外，AppData中有三个子文件夹，它们之间的差异值得注意。</p>
+<p class="translated">如果你曾经安装过一个程序，问你是否要为所有用户安装它，它基本上是问你是否要将它安装到程序文件或 AppData 中。Python 就是一个这样的程序。此外，AppData 中有三个子文件夹，它们之间的差异值得注意。</p>
 
 <h3 id="what-is-local" class="translated">什么是本地？</h3>
-<p class="translated">本地文件夹用于存储无法从您的用户配置文件中移动的文件，并且通常包含可能太大而无法与服务器同步的文件。例如，它可能包含运行视频游戏所需的一些文件或您的web浏览器缓存，这些文件可能太大或无法传输到其他地方。开发人员也可以使用Local来存储与这台特定机器上的文件路径相关的信息。将这些配置文件移动到另一台机器上可能会导致程序停止工作，因为文件路径不匹配。</p>
+<p class="translated">本地文件夹用于存储无法从您的用户配置文件中移动的文件，并且通常包含可能太大而无法与服务器同步的文件。例如，它可能包含运行视频游戏所需的一些文件或您的 web 浏览器缓存，这些文件可能太大或无法传输到其他地方。开发人员也可以使用 Local 来存储与这台特定机器上的文件路径相关的信息。将这些配置文件移动到另一台机器上可能会导致程序停止工作，因为文件路径不匹配。</p>
 
-<h3 id="what-is-locallow" class="translated">什么是LocalLow？</h3>
-<p class="translated">LocalLow与Local非常相似，但名称中的“低”是指授予应用程序的较低访问级别。例如，匿名模式下的浏览器可能被限制为只能访问LocalLow文件夹，以防止它能够访问存储在本地的正常用户数据。</p>
+<h3 id="what-is-locallow" class="translated">什么是 LocalLow？</h3>
+<p class="translated">LocalLow 与 Local 非常相似，但名称中的“低”是指授予应用程序的较低访问级别。例如，匿名模式下的浏览器可能被限制为只能访问 LocalLow 文件夹，以防止它能够访问存储在本地的正常用户数据。</p>
 
 <h3 id="what-is-roaming" class="translated">什么是漫游？</h3>
-<p class="translated">如果您在域中使用Windows计算机(即，具有处理您的登录的中央域控制器的计算机网络)，那么您可能对漫游文件夹很熟悉。如果您登录到同一个域，此文件夹中的文件会同步到其他设备，因为这些文件被认为对使用您的设备很重要。这可能是您的网页浏览器收藏夹和书签，重要的应用程序设置，等等。</p>
+<p class="translated">如果您在域中使用 Windows 计算机(即，具有处理您的登录的中央域控制器的计算机网络)，那么您可能对漫游文件夹很熟悉。如果您登录到同一个域，此文件夹中的文件会同步到其他设备，因为这些文件被认为对使用您的设备很重要。这可能是您的网页浏览器收藏夹和书签，重要的应用程序设置，等等。</p>
 
 <p class="translated">当存储的数据可以毫无问题地在设备间移动时，建议使用此文件夹。例如，《我的世界》将其世界文件、屏幕截图等存储在漫游文件夹中，因为这些文件都可以被带到并迁移到新设备上，并在那里工作。</p>
 <p class="ad-odd">
 </p>
 
 
-<h2 id="how-to-find-appdata-on-windows" class="translated">如何在Windows上查找AppData</h2>
-<p class="translated">在Windows的任何默认安装中查找AppData都非常简单，但是除非您知道自己在做什么，否则不应该乱用它。</p>
+<h2 id="how-to-find-appdata-on-windows" class="translated">如何在 Windows 上查找 AppData</h2>
+<p class="translated">在 Windows 的任何默认安装中查找 AppData 都非常简单，但是除非您知道自己在做什么，否则不应该乱用它。</p>
 
 <ol> <li class="translated">同时按下<strong>窗口键+ R </strong>。</li> <li class="translated">根据您想要转到漫游文件夹还是本地文件夹，键入“<strong> %appdata% </strong>”或“<strong> %localappdata% </strong>”。</li> <li class="translated">按下<strong>键进入</strong>。</li> </ol>
 
-<p class="translated">单词周围的百分号告诉运行提示查看本地系统变量，以找到AppData和LocalAppData文件夹的位置。因为这些位置会因用户而异，所以不能用系统变量来管理它们，所以它们是用每个新用户帐户创建的。</p>
+<p class="translated">单词周围的百分号告诉运行提示查看本地系统变量，以找到 AppData 和 LocalAppData 文件夹的位置。因为这些位置会因用户而异，所以不能用系统变量来管理它们，所以它们是用每个新用户帐户创建的。</p>
 
 
 
-<p class="translated">在Windows 10上，通过点击顶部的<strong>视图</strong>，确保勾选<strong>隐藏项目</strong>，确保可以看到隐藏的文件夹。在Windows 11上，点击顶部的<strong>查看</strong>，悬停在<strong>显示</strong>上，点击<strong>隐藏项目</strong>。</p>
+<p class="translated">在 Windows 10 上，通过点击顶部的<strong>视图</strong>，确保勾选<strong>隐藏项目</strong>，确保可以看到隐藏的文件夹。在 Windows 11 上，点击顶部的<strong>查看</strong>，悬停在<strong>显示</strong>上，点击<strong>隐藏项目</strong>。</p>
 
 
 
-<p class="translated">或者，您可以在Windows资源管理器中导航到<strong>C:\ Users \&lt;user&gt;\ AppData</strong>。</p>
+<p class="translated">或者，您可以在 Windows 资源管理器中导航到<strong>C:\ Users \&lt;user&gt;\ AppData</strong>。</p>
 
 <hr/>
 
-<p class="translated">不管你使用的是Windows 10还是Windows 11 ，你现在应该可以找到你的AppData了。默认情况下，它是隐藏的，在大多数情况下，您不应该访问它，这样做可能会扰乱您的计算机的功能。但是如果你需要，你现在知道在哪里可以找到它。</p>
+<p class="translated">不管你使用的是 Windows 10 还是 Windows 11 ，你现在应该可以找到你的 AppData 了。默认情况下，它是隐藏的，在大多数情况下，您不应该访问它，这样做可能会扰乱您的计算机的功能。但是如果你需要，你现在知道在哪里可以找到它。</p>
 
  </div>
 

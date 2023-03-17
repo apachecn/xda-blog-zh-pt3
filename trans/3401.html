@@ -6,37 +6,37 @@
 <body>
 <h1 class="translated">蒸汽甲板上的质子是如何工作的</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/how-proton-on-the-steam-deck-works/#0001-01-01">https://www.xda-developers.com/how-proton-on-the-steam-deck-works/#0001-01-01</a></blockquote><div><div class="content-block-regular">
-<p class="translated">如果你有一个<a href="https://www.xda-developers.com/steam-deck-review/"> Steam Deck </a>，你可能会惊讶于许多游戏在上面运行得如此之好。它不仅是一款掌上电脑，还是一款运行Linux的掌上电脑。尽管该操作系统在运行视频游戏方面名声不佳，但诸如<em>赛博朋克:2077 </em>和<em>侠盗猎车手:V </em>等AAA游戏在Steam平台上运行得非常好。这要归功于Proton，这是Valve和CodeWeavers开发的兼容层。</p>
+<p class="translated">如果你有一个<a href="https://www.xda-developers.com/steam-deck-review/"> Steam Deck </a>，你可能会惊讶于许多游戏在上面运行得如此之好。它不仅是一款掌上电脑，还是一款运行 Linux 的掌上电脑。尽管该操作系统在运行视频游戏方面名声不佳，但诸如<em>赛博朋克:2077 </em>和<em>侠盗猎车手:V </em>等 AAA 游戏在 Steam 平台上运行得非常好。这要归功于 Proton，这是 Valve 和 CodeWeavers 开发的兼容层。</p>
 
  
 <h2 id="what-is-proton-how-does-it-work" class="translated">质子是什么？它是如何工作的？</h2>
 
 
-<p class="translated">Proton其实比Steam Deck早几年，Steam Deck最早发布于2018年8月。当时，Valve表示，“目前没有Linux版本的Windows游戏现在可以直接从Linux Steam客户端安装和运行，并提供原生Steamworks和OpenVR支持。”</p>
+<p class="translated">Proton 其实比 Steam Deck 早几年，Steam Deck 最早发布于 2018 年 8 月。当时，Valve 表示，“目前没有 Linux 版本的 Windows 游戏现在可以直接从 Linux Steam 客户端安装和运行，并提供原生 Steamworks 和 OpenVR 支持。”</p>
 
-<p class="translated">在Proton之前，Linux上的游戏玩家通常需要游戏的本地端口，或者被迫依赖第三方兼容层，如Wine。Wine运行得相当好，但往往需要大量的调整才能让事情完美运行，像<em> DOOM (2016) </em>这样的游戏只需一点点努力就可以玩了。</p>
+<p class="translated">在 Proton 之前，Linux 上的游戏玩家通常需要游戏的本地端口，或者被迫依赖第三方兼容层，如 Wine。Wine 运行得相当好，但往往需要大量的调整才能让事情完美运行，像<em> DOOM (2016) </em>这样的游戏只需一点点努力就可以玩了。</p>
 
 <p class="translated">这就是质子的用武之地。它消除了最终用户方面的任何工作需求。这个想法是，你只需安装游戏，就像在本地运行一样，最终用户不需要知道游戏中发生了什么。</p>
 
-<p class="translated">质子工程与葡萄酒的修改版本。Wine作为一个层，将Windows API调用转换为POSIX(可移植操作系统接口)调用，同时重新创建Windows目录结构，并提供系统服务的替代实现。Wine不使用任何仿真或虚拟化来执行Windows二进制文件。</p>
+<p class="translated">质子工程与葡萄酒的修改版本。Wine 作为一个层，将 Windows API 调用转换为 POSIX(可移植操作系统接口)调用，同时重新创建 Windows 目录结构，并提供系统服务的替代实现。Wine 不使用任何仿真或虚拟化来执行 Windows 二进制文件。</p>
 
-<p class="translated">质子的另一个重要部分是它翻译Direct3D API调用的能力。它包括DXVK，一个基于Vulkan的Direct3D 9、10和11的翻译层，并通过VKD3D-Proton提供对Direct3D 12的支持，VKD3D-Proton是Wine的VKD3D的一个分支。</p>
+<p class="translated">质子的另一个重要部分是它翻译 Direct3D API 调用的能力。它包括 DXVK，一个基于 Vulkan 的 Direct3D 9、10 和 11 的翻译层，并通过 VKD3D-Proton 提供对 Direct3D 12 的支持，VKD3D-Proton 是 Wine 的 VKD3D 的一个分支。</p>
 
-<p class="translated">至于Direct3D，它是一个用于Windows机器的图形API，是DirectX的一部分，Proton本质上解释了这些Direct3D API调用。质子创造了自己的版本，游戏可以与这个库接口。然后，Proton在内部将这些调用路由到Vulkan API，允许游戏像在Windows机器上一样运行。</p>
+<p class="translated">至于 Direct3D，它是一个用于 Windows 机器的图形 API，是 DirectX 的一部分，Proton 本质上解释了这些 Direct3D API 调用。质子创造了自己的版本，游戏可以与这个库接口。然后，Proton 在内部将这些调用路由到 Vulkan API，允许游戏像在 Windows 机器上一样运行。</p>
 
 
 
-<p class="translated">质子是完全开源的，Valve称这将“使高级用户能够改变质子”最受欢迎的定制质子构建是<a href="https://github.com/GloriousEggroll/proton-ge-custom" rel="noopener noreferrer" target="_blank">质子-GE </a>，它包含了最近的质子实验变化。它还包含其他常规质子没有的补丁和功能。</p>
+<p class="translated">质子是完全开源的，Valve 称这将“使高级用户能够改变质子”最受欢迎的定制质子构建是<a href="https://github.com/GloriousEggroll/proton-ge-custom" rel="noopener noreferrer" target="_blank">质子-GE </a>，它包含了最近的质子实验变化。它还包含其他常规质子没有的补丁和功能。</p>
 <p class="ad-odd">
 </p>
 
 
 <h2 id="the-future-of-proton" class="translated">质子的未来</h2>
-<p class="translated">质子可以一直工作和改进，但就其现状而言，它已经是一个成熟和发达的项目。随着大量的游戏已经可以通过它来玩，游戏玩家没有更多的要求了。仍然有一些兼容性问题和图形故障出现，但总的来说，通过质子播放与在Windows上播放没有什么区别。</p>
+<p class="translated">质子可以一直工作和改进，但就其现状而言，它已经是一个成熟和发达的项目。随着大量的游戏已经可以通过它来玩，游戏玩家没有更多的要求了。仍然有一些兼容性问题和图形故障出现，但总的来说，通过质子播放与在 Windows 上播放没有什么区别。</p>
 
-<p class="translated">Valve接下来绝对可以关注的一件事是，将Proton所基于的Wine版本升级到一个更新的版本。Proton落后于最新的官方Wine版本几个版本，而Proton-GE等开源社区项目旨在为最新版本的Wine添加更多功能和基础。</p>
+<p class="translated">Valve 接下来绝对可以关注的一件事是，将 Proton 所基于的 Wine 版本升级到一个更新的版本。Proton 落后于最新的官方 Wine 版本几个版本，而 Proton-GE 等开源社区项目旨在为最新版本的 Wine 添加更多功能和基础。</p>
 
-<p class="translated">当然，Valve的最终目标是稳定性和兼容性，这就是为什么它不仅仅包括质子-GE等项目已经能够实现的所有这些变化。如果你是一个超级用户，那么没有什么可以阻止你安装和使用Proton-GE，但对于日常游戏玩家来说，稳定的Proton肯定是更好的选择。</p>
+<p class="translated">当然，Valve 的最终目标是稳定性和兼容性，这就是为什么它不仅仅包括质子-GE 等项目已经能够实现的所有这些变化。如果你是一个超级用户，那么没有什么可以阻止你安装和使用 Proton-GE，但对于日常游戏玩家来说，稳定的 Proton 肯定是更好的选择。</p>
 
  </div>
 

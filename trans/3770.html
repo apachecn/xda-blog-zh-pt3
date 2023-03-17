@@ -4,59 +4,59 @@
 <link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="translated">这个2019年的漏洞仍然可以危及三星的最新旗舰</h1>
+<h1 class="translated">这个 2019 年的漏洞仍然可以危及三星的最新旗舰</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/tts-samsung-exploit-how-it-works/#0001-01-01">https://www.xda-developers.com/tts-samsung-exploit-how-it-works/#0001-01-01</a></blockquote><div><div class="content-block-regular">
-<p class="translated">智能手机是我们许多生活的核心。我们与所爱的人交谈，计划我们的日子，并通过他们组织我们的生活。它们是一种工具，可以说是我们自身的延伸，这就是移动安全如此重要的原因。这就是为什么当像XDA高级成员<a href="https://forum.xda-developers.com/m/k0mraid3.11993791/">k0 raid 3</a>的漏洞出现并授予用户几乎任何<em>三星智能手机的完全系统访问权时，这是一件大事。</em></p>
+<p class="translated">智能手机是我们许多生活的核心。我们与所爱的人交谈，计划我们的日子，并通过他们组织我们的生活。它们是一种工具，可以说是我们自身的延伸，这就是移动安全如此重要的原因。这就是为什么当像 XDA 高级成员<a href="https://forum.xda-developers.com/m/k0mraid3.11993791/">k0 raid 3</a>的漏洞出现并授予用户几乎任何<em>三星智能手机的完全系统访问权时，这是一件大事。</em></p>
 
   
-<p class="translated">当然，这些东西在喜欢修改和玩智能手机的最终用户手中也有好处。更大的系统访问权限允许用户做像<a href="https://www.xda-developers.com/dsu-sideloader-boot-custom-android-gsi/">启动GSI </a>或改变他们设备的CSC这样的事情。但是，因为这授予用户1000的UID(这是系统的访问权限)，所以它也可以以危险的方式使用。它绕过所有权限检查，可以访问所有应用程序组件，发送受保护的广播，在后台启动活动，等等。</p>
+<p class="translated">当然，这些东西在喜欢修改和玩智能手机的最终用户手中也有好处。更大的系统访问权限允许用户做像<a href="https://www.xda-developers.com/dsu-sideloader-boot-custom-android-gsi/">启动 GSI </a>或改变他们设备的 CSC 这样的事情。但是，因为这授予用户 1000 的 UID(这是系统的访问权限)，所以它也可以以危险的方式使用。它绕过所有权限检查，可以访问所有应用程序组件，发送受保护的广播，在后台启动活动，等等。</p>
 
-<p class="translated">如果你想试试这个漏洞，看看你能在你的系统中改变什么，我们有一个<a href="https://www.xda-developers.com/samsung-galaxy-system-shell-access-how-to/">教程告诉你怎么做。如果您对这种利用背后的历史以及它是如何工作的感兴趣，那么请继续阅读。我们采访了K0mraid3，问他它是如何工作的，他从头到尾向我们讲述了2019年的这一漏洞如何影响每一部三星智能手机，包括2022年的旗舰手机。</a></p>
+<p class="translated">如果你想试试这个漏洞，看看你能在你的系统中改变什么，我们有一个<a href="https://www.xda-developers.com/samsung-galaxy-system-shell-access-how-to/">教程告诉你怎么做。如果您对这种利用背后的历史以及它是如何工作的感兴趣，那么请继续阅读。我们采访了 K0mraid3，问他它是如何工作的，他从头到尾向我们讲述了 2019 年的这一漏洞如何影响每一部三星智能手机，包括 2022 年的旗舰手机。</a></p>
 
  
 <h2 id="samsung-39-s-text-to-speech-tts-application-is-where-this-problem-originates" class="translated">三星的文本到语音(TTS)应用程序是这个问题的源头</h2>
-<p class="translated">早在2019年，据报道，3.0.02.7之前版本的CVE CVE-2019-16253漏洞影响了三星的TTS引擎。此漏洞允许本地攻击者将权限提升为系统权限，后来得到了修补和修复。</p>
+<p class="translated">早在 2019 年，据报道，3.0.02.7 之前版本的 CVE CVE-2019-16253 漏洞影响了三星的 TTS 引擎。此漏洞允许本地攻击者将权限提升为系统权限，后来得到了修补和修复。</p>
 
-<p class="translated">本质上，三星的TTS应用程序会盲目地接受它从TTS引擎收到的任何数据。您可以向TTS引擎传递一个库，这个库将被提供给TTS应用程序，然后应用程序将加载这个库并以系统权限执行它。这一点后来被修补，以便TTS应用程序可以验证来自引擎的数据，从而堵塞这个特殊的漏洞。</p>
+<p class="translated">本质上，三星的 TTS 应用程序会盲目地接受它从 TTS 引擎收到的任何数据。您可以向 TTS 引擎传递一个库，这个库将被提供给 TTS 应用程序，然后应用程序将加载这个库并以系统权限执行它。这一点后来被修补，以便 TTS 应用程序可以验证来自引擎的数据，从而堵塞这个特殊的漏洞。</p>
 
-<p class="translated">然而，在Android 10中，Google引入了通过使用ENABLE_ROLLBACK参数安装应用程序来回滚应用程序的功能。这允许用户将安装在设备上的应用程序版本恢复到安装在设备上的应用程序的<strong>先前</strong>版本。Komraid3表示，他认为一个“疏忽”使得这一功能扩展到了三星目前在任何三星设备上的文本到语音转换应用程序，因为用户可以在新款三星手机上降级到的旧版TTS应用程序此前从未安装在这些手机上。</p>
+<p class="translated">然而，在 Android 10 中，Google 引入了通过使用 ENABLE_ROLLBACK 参数安装应用程序来回滚应用程序的功能。这允许用户将安装在设备上的应用程序版本恢复到安装在设备上的应用程序的<strong>先前</strong>版本。Komraid3 表示，他认为一个“疏忽”使得这一功能扩展到了三星目前在任何三星设备上的文本到语音转换应用程序，因为用户可以在新款三星手机上降级到的旧版 TTS 应用程序此前从未安装在这些手机上。</p>
 
-<p class="translated"><strong>(更新时间:01/24/23 @ 15:05) </strong>这个错误的原因实际上似乎是因为在安装旧的TTS应用程序时在adb命令中添加了'-d '标志。它应该只适用于可调试的应用程序，但它也适用于不可调试的应用程序<a href="https://blog.esper.io/adb-29-how-to-downgrade-rollback-app/" rel="noopener noreferrer" target="_blank">根据</a> <em> <a href="https://blog.esper.io/adb-29-how-to-downgrade-rollback-app/" rel="noopener noreferrer" target="_blank">【斯珀】</a>，</em>这就是为什么TTS应用程序可以被强制降级。</p>
+<p class="translated"><strong>(更新时间:01/24/23 @ 15:05) </strong>这个错误的原因实际上似乎是因为在安装旧的 TTS 应用程序时在 adb 命令中添加了'-d '标志。它应该只适用于可调试的应用程序，但它也适用于不可调试的应用程序<a href="https://blog.esper.io/adb-29-how-to-downgrade-rollback-app/" rel="noopener noreferrer" target="_blank">根据</a> <em> <a href="https://blog.esper.io/adb-29-how-to-downgrade-rollback-app/" rel="noopener noreferrer" target="_blank">【斯珀】</a>，</em>这就是为什么 TTS 应用程序可以被强制降级。</p>
 
-<p class="translated">换句话说，尽管2019年的漏洞已被修复，TTS应用程序的更新版本也已发布，但用户在三年(或许四年)后发布的设备上安装和利用它是微不足道的。</p>
+<p class="translated">换句话说，尽管 2019 年的漏洞已被修复，TTS 应用程序的更新版本也已发布，但用户在三年(或许四年)后发布的设备上安装和利用它是微不足道的。</p>
 <p class="ad-odd">
 </p>
 
 
-<h2 id="samsung-has-known-about-the-problem-since-october-2022" class="translated">三星自2022年10月以来就知道了这个问题</h2>
-<p class="translated">这种特殊利用最可怕的不是它授予的访问级别，而是三星知道2022年10月7日的事实。K0mraid3告诉我，他在1月份再次联系三星，以跟进并了解发生了什么事情，但被告知这是AOSP的问题，并提交了一份谷歌官方报告。有趣的是，三星还表示，该问题已在谷歌Pixel智能手机上得到证实。</p>
+<h2 id="samsung-has-known-about-the-problem-since-october-2022" class="translated">三星自 2022 年 10 月以来就知道了这个问题</h2>
+<p class="translated">这种特殊利用最可怕的不是它授予的访问级别，而是三星知道 2022 年 10 月 7 日的事实。K0mraid3 告诉我，他在 1 月份再次联系三星，以跟进并了解发生了什么事情，但被告知这是 AOSP 的问题，并提交了一份谷歌官方报告。有趣的是，三星还表示，该问题已在谷歌 Pixel 智能手机上得到证实。</p>
 <div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/samsungexploitgoogleemailsamsungkomraid3.png" data-img-desc="&quot;&lt;br \/&gt;\nEmail sent to K0mraid3 from Samsung.&quot;" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Email sent to K0mraid3 from Samsung.&quot;">
  
 <figure> <picture>  <source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/samsungexploitgoogleemailsamsungkomraid3.png?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/samsungexploitgoogleemailsamsungkomraid3.png?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/samsungexploitgoogleemailsamsungkomraid3.png?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/samsungexploitgoogleemailsamsungkomraid3.png?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <img class="lazyload" alt="SamsungExploitGoogleEmailSamsungKomraid3" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/samsungexploitgoogleemailsamsungkomraid3.png" src="../Images/b9f19b8748c885cd4b74aa8c38da6718.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/samsungexploitgoogleemailsamsungkomraid3.png"/> </picture> <figcaption class="body-img-caption">Email sent to K0mraid3 from Samsung.</figcaption> </figure> </div>
 
-<p class="img-description translated"><br/>三星发给K0mraid3的邮件。</p>
+<p class="img-description translated"><br/>三星发给 K0mraid3 的邮件。</p>
 
 
  </div>
 
 
-<p class="translated">K0mraid3去跟Google举报，发现三星<em>和</em>另一个调研都已经跟Google举报了。另一位研究人员在三星之后不久报告了这一情况。我们目前无法访问这些错误报告，因为它们在谷歌的问题跟踪器上被标记为私有。K0mraid3分享了来自谷歌和三星的邮件，证实了这些bug报告的存在。</p>
+<p class="translated">K0mraid3 去跟 Google 举报，发现三星<em>和</em>另一个调研都已经跟 Google 举报了。另一位研究人员在三星之后不久报告了这一情况。我们目前无法访问这些错误报告，因为它们在谷歌的问题跟踪器上被标记为私有。K0mraid3 分享了来自谷歌和三星的邮件，证实了这些 bug 报告的存在。</p>
 
 
 
-<p class="translated">如果这确实是AOSP的问题，还不清楚谷歌将如何解决这个问题。</p>
+<p class="translated">如果这确实是 AOSP 的问题，还不清楚谷歌将如何解决这个问题。</p>
 <p class="ad-even">
 </p>
 
 
 <h2 id="what-can-users-do-to-protect-themselves" class="translated">用户可以做些什么来保护自己？</h2>
-<p class="translated">正如K0mraid3在他的<a href="https://forum.xda-developers.com/t/system-shell-exploit-all-samsung-mobile-devices-no-bl-unlock-required.4543071/"> XDA论坛帖子</a>中所说，用户保护自己的最佳方式是自己设置并使用这个漏洞。一旦这样做了，其他用户就不能将第二个库加载到TTS引擎中。或者，您也可以禁用或移除Samsung TTS。</p>
+<p class="translated">正如 K0mraid3 在他的<a href="https://forum.xda-developers.com/t/system-shell-exploit-all-samsung-mobile-devices-no-bl-unlock-required.4543071/"> XDA 论坛帖子</a>中所说，用户保护自己的最佳方式是自己设置并使用这个漏洞。一旦这样做了，其他用户就不能将第二个库加载到 TTS 引擎中。或者，您也可以禁用或移除 Samsung TTS。</p>
 
-<p class="translated">目前，还不清楚这是否会影响2023年发布的设备，我们很好奇它是否会影响即将发布的<a href="https://xda-developers.com/samsung-galaxy-s23">三星Galaxy S23 </a>系列。此外，K0mraid3提到一些联合开发制造(JDM)设备(如三星Galaxy A03)可能会有问题。他们可能只需要一个来自旧JDM设备的正确签名的TTS应用程序，但目前还不清楚。</p>
+<p class="translated">目前，还不清楚这是否会影响 2023 年发布的设备，我们很好奇它是否会影响即将发布的<a href="https://xda-developers.com/samsung-galaxy-s23">三星 Galaxy S23 </a>系列。此外，K0mraid3 提到一些联合开发制造(JDM)设备(如三星 Galaxy A03)可能会有问题。他们可能只需要一个来自旧 JDM 设备的正确签名的 TTS 应用程序，但目前还不清楚。</p>
 
 <p class="translated">我们已经联系了谷歌和三星进行评论，如果有回音，我们一定会更新这篇文章。</p>
 
-<p class="translated"><em>感谢XDA资深会员K0mraid3对本文的宝贵投入！</em></p>
+<p class="translated"><em>感谢 XDA 资深会员 K0mraid3 对本文的宝贵投入！</em></p>
 
  </div>
 

@@ -6,56 +6,56 @@
 <body>
 <h1 class="translated">一名安全研究员如何将一台谷歌家用迷你电脑变成窃听装置</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/how-security-researcher-google-home-mini-wiretap/#0001-01-01">https://www.xda-developers.com/how-security-researcher-google-home-mini-wiretap/#0001-01-01</a></blockquote><div><div class="content-block-regular">
-<p class="translated">如今，在家里拥有一台永远监听的设备是非常常见的事情，尤其是随着亚马逊Echo系列设备和谷歌home系列的激增。虽然它们是非常有用的技术，但它们也存在隐私问题。他们有永远活跃的麦克风和互联网连接，这对一些人来说，是对他们在家里的隐私的太多侵犯。安全研究员马特·昆泽已经证明，这些担心很可能是合理的，因为他能够将他的谷歌Home Mini变成本质上可以被描述为窃听的东西。</p>
+<p class="translated">如今，在家里拥有一台永远监听的设备是非常常见的事情，尤其是随着亚马逊 Echo 系列设备和谷歌 home 系列的激增。虽然它们是非常有用的技术，但它们也存在隐私问题。他们有永远活跃的麦克风和互联网连接，这对一些人来说，是对他们在家里的隐私的太多侵犯。安全研究员马特·昆泽已经证明，这些担心很可能是合理的，因为他能够将他的谷歌 Home Mini 变成本质上可以被描述为窃听的东西。</p>
 
   
-<p class="translated">虽然这个漏洞是在谷歌Home Mini上发现并测试的，但昆泽说，他认为这种攻击在谷歌的其他智能扬声器型号上也有类似的效果。</p>
+<p class="translated">虽然这个漏洞是在谷歌 Home Mini 上发现并测试的，但昆泽说，他认为这种攻击在谷歌的其他智能扬声器型号上也有类似的效果。</p>
 
  
-<h2 id="reverse-engineering-the-google-home-mini" class="translated">对谷歌Home Mini进行逆向工程</h2><div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/link_request.png" data-img-desc="&quot;A POST request to a \/deviceuserlinksbatch endpoint, as identified via mitmproxy.&quot;" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;A POST request to a \/deviceuserlinksbatch endpoint, as identified via mitmproxy.&quot;">
+<h2 id="reverse-engineering-the-google-home-mini" class="translated">对谷歌 Home Mini 进行逆向工程</h2><div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/link_request.png" data-img-desc="&quot;A POST request to a \/deviceuserlinksbatch endpoint, as identified via mitmproxy.&quot;" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;A POST request to a \/deviceuserlinksbatch endpoint, as identified via mitmproxy.&quot;">
  
 <figure> <picture>  <source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/link_request.png?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/link_request.png?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/link_request.png?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/link_request.png?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <img class="lazyload" alt="link_request" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/link_request.png" src="../Images/0f58d044022d06642e6f8732815612a3.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/01/link_request.png"/> </picture> <figcaption class="body-img-caption">A POST request to a /deviceuserlinksbatch endpoint, as identified via mitmproxy.</figcaption> </figure> </div>
 
-<p class="img-description translated">对通过mitmproxy标识的/deviceuserlinksbatch终结点的POST请求。</p>
+<p class="img-description translated">对通过 mitmproxy 标识的/deviceuserlinksbatch 终结点的 POST 请求。</p>
 
 
  </div>
 
 
-<p class="translated">将一个帐户链接到Google Home设备上，你就可以对它进行大量控制，设备的“例程”能够远程执行命令。例程对于基于特定条件预定义功能非常有用，但是如果有人能够远程访问并控制设备，它们可能会被滥用。例行程序的一个例子是说“嘿，谷歌，早上好”，它打开你的灯，告诉你当天的天气。</p>
+<p class="translated">将一个帐户链接到 Google Home 设备上，你就可以对它进行大量控制，设备的“例程”能够远程执行命令。例程对于基于特定条件预定义功能非常有用，但是如果有人能够远程访问并控制设备，它们可能会被滥用。例行程序的一个例子是说“嘿，谷歌，早上好”，它打开你的灯，告诉你当天的天气。</p>
 
 <p class="translated">昆泽着手发现攻击者是否有可能将自己的谷歌账户链接到某人的谷歌主页。这实质上允许他通过将一个帐户链接到一个设备来利用控制权，并被用来在某人的网络上远程执行命令。</p>
 
-<p class="translated">利用中间人代理(<a href="https://mitmproxy.org/" rel="noopener noreferrer" target="_blank"> mitmproxy </a>)和<a href="https://frida.re/docs/android/" rel="noopener noreferrer" target="_blank"> Frida </a>等工具，他能够观察智能手机上的Google Home应用程序和Google Home设备之间的流量。在那里，他发现可以通过本地API获取谷歌账户的信息，然后向谷歌的服务器发送一个带有链接信息的请求，从而将谷歌账户链接到设备上。昆泽写了一个Python脚本，获取谷歌凭证和一个IP地址，然后将谷歌账户链接到给定IP地址的设备。</p>
+<p class="translated">利用中间人代理(<a href="https://mitmproxy.org/" rel="noopener noreferrer" target="_blank"> mitmproxy </a>)和<a href="https://frida.re/docs/android/" rel="noopener noreferrer" target="_blank"> Frida </a>等工具，他能够观察智能手机上的 Google Home 应用程序和 Google Home 设备之间的流量。在那里，他发现可以通过本地 API 获取谷歌账户的信息，然后向谷歌的服务器发送一个带有链接信息的请求，从而将谷歌账户链接到设备上。昆泽写了一个 Python 脚本，获取谷歌凭证和一个 IP 地址，然后将谷歌账户链接到给定 IP 地址的设备。</p>
 
 
 
-<p class="translated">一旦他控制了给定的设备，他就可以创建任何程序并在连接的设备上激活它。您可以调用助手来拨打电话号码，他可以随时这样做。为了使攻击尽可能隐蔽，昆泽还启用了“夜间模式”，降低最大音量和led亮度。音乐音量完全不受影响，这使得用户不太可能注意到。</p>
+<p class="translated">一旦他控制了给定的设备，他就可以创建任何程序并在连接的设备上激活它。您可以调用助手来拨打电话号码，他可以随时这样做。为了使攻击尽可能隐蔽，昆泽还启用了“夜间模式”，降低最大音量和 led 亮度。音乐音量完全不受影响，这使得用户不太可能注意到。</p>
 
-<p class="translated">然而，更糟糕的是，你甚至不需要在同一个Wi-Fi网络上进行攻击:你只需要靠近设备。如果您向Google Home设备发送取消身份验证数据包，它会认为网络已经关闭，并创建一个Wi-Fi网络，以便您可以再次连接到它，并为新的Wi-Fi网络重新配置它。身份验证帧(管理帧的一种)可以通过嗅探IP地址发送，很难防范，因为WPA2网络不加密管理帧。</p>
+<p class="translated">然而，更糟糕的是，你甚至不需要在同一个 Wi-Fi 网络上进行攻击:你只需要靠近设备。如果您向 Google Home 设备发送取消身份验证数据包，它会认为网络已经关闭，并创建一个 Wi-Fi 网络，以便您可以再次连接到它，并为新的 Wi-Fi 网络重新配置它。身份验证帧(管理帧的一种)可以通过嗅探 IP 地址发送，很难防范，因为 WPA2 网络不加密管理帧。</p>
 
-<p class="translated">然而，就像你可以滥用Google Home设备的本地API，并通过在同一个Wi-Fi网络上将它链接到Google帐户一样，当它处于设置模式时，你可以在连接到它时做同样的事情。</p>
+<p class="translated">然而，就像你可以滥用 Google Home 设备的本地 API，并通过在同一个 Wi-Fi 网络上将它链接到 Google 帐户一样，当它处于设置模式时，你可以在连接到它时做同样的事情。</p>
 <p class="ad-odd">
 </p>
 
 
-<h2 id="remotely-listening-to-the-google-home-39-s-microphone" class="translated">远程监听Google Home的麦克风</h2>
+<h2 id="remotely-listening-to-the-google-home-39-s-microphone" class="translated">远程监听 Google Home 的麦克风</h2>
  
 <p class="w-rich w-youtube" id="2FNctCA7JaI">
  </p>
 
 
-<p class="translated">昆泽编写并测试了一份详细的概念证明，证明谷歌Home Mini可以用来监视某人。</p>
+<p class="translated">昆泽编写并测试了一份详细的概念证明，证明谷歌 Home Mini 可以用来监视某人。</p>
 
-<ol> <li class="translated">创建一个“攻击者”谷歌账户。</li> <li class="translated">进入谷歌之家的无线邻近区域。</li> <li class="translated">开始向Google Home发送身份验证数据包。</li> <li class="translated">连接到Google Home的设置网络。</li> <li class="translated">执行Python脚本将设备链接到攻击者的Google帐户。</li> <li class="translated">停止发送身份验证数据包，并等待设备连接到互联网。</li> <li class="translated">你现在可以在Google Home设备上执行命令，包括让它呼叫你的电话号码。</li> </ol>
+<ol> <li class="translated">创建一个“攻击者”谷歌账户。</li> <li class="translated">进入谷歌之家的无线邻近区域。</li> <li class="translated">开始向 Google Home 发送身份验证数据包。</li> <li class="translated">连接到 Google Home 的设置网络。</li> <li class="translated">执行 Python 脚本将设备链接到攻击者的 Google 帐户。</li> <li class="translated">停止发送身份验证数据包，并等待设备连接到互联网。</li> <li class="translated">你现在可以在 Google Home 设备上执行命令，包括让它呼叫你的电话号码。</li> </ol>
 
-<p class="translated">攻击者还可以让设备在所有者的网络内发送任意HTTP请求。这增加了攻击面，因为攻击者可能会尝试与网络上的其它设备(包括路由器)进行交互。</p>
+<p class="translated">攻击者还可以让设备在所有者的网络内发送任意 HTTP 请求。这增加了攻击面，因为攻击者可能会尝试与网络上的其它设备(包括路由器)进行交互。</p>
 <p class="ad-even">
 </p>
 
 
 <h2 id="google-has-fixed-the-problem" class="translated">谷歌已经解决了这个问题</h2>
-<p class="translated">从好的方面来看，在昆泽于2021年1月8日报告这一情况后，谷歌最终修复了它。如果没有已经链接到Google Home设备的帐户的邀请，您就不能再将该帐户链接到Google Home设备，并且您也不能再通过例程远程拨打电话号码。同样，在带有显示屏的设备上，设备为配置而创建的网络受WPA2保护，需要密码才能加入。</p>
+<p class="translated">从好的方面来看，在昆泽于 2021 年 1 月 8 日报告这一情况后，谷歌最终修复了它。如果没有已经链接到 Google Home 设备的帐户的邀请，您就不能再将该帐户链接到 Google Home 设备，并且您也不能再通过例程远程拨打电话号码。同样，在带有显示屏的设备上，设备为配置而创建的网络受 WPA2 保护，需要密码才能加入。</p>
 
 <p class="translated">虽然这个漏洞现在才被披露，但其他人发现并滥用它也不是不可能的。如果你担心总是监听设备，那么这肯定是一个理由。即使<em>这个</em>特定的问题被修复，也不是说以后就不会有更多的漏洞了。</p>
 
