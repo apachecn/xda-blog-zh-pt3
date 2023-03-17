@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Phone-to-PC screen mirroring tool scrcpy's latest update adds Android 13 support with seamless copy-paste</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">手机到PC屏幕镜像工具scrcpy的最新更新添加了对Android 13的无缝复制粘贴支持</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/scrcpy-update-android-13-clipboard-access/#0001-01-01">https://www.xda-developers.com/scrcpy-update-android-13-clipboard-access/#0001-01-01</a></blockquote><div><header class="article_heading">
+
+
+<h1 class="heading_title translated">屏幕镜像工具scrcpy现在支持Android 13的剪贴板访问</h1>
+
+<p class="heading_sharing">
+ </p>
+
+
+<p class="heading_excerpt translated">从电脑上控制你的手机变得更加容易</p>
+
+
+
+  </header>
+
+<section id="article-body" class="article-body" itemprop="articleBody">
+
+<div class="content-block-regular">
+<p class="translated">scrcpy的粉丝们今天有一些好消息，因为流行的Android屏幕镜像实用程序的维护者现在推出了该应用程序的1.25版本。这个版本主要集中在小的改进和修复上，但也有一些值得注意的变化，特别是如果你使用的是<a href="https://www.xda-developers.com/android-13"> Android 13 </a>。</p>
+
+  
+<p class="translated">对于那些不熟悉这个工具的人来说，scrcpy(screen copy的缩写)有两个组件。第一个是推送到目标Android设备的服务器应用程序，而另一个是PC的客户端，通过<a href="https://www.xda-developers.com/install-adb-windows-macos-linux/"> ADB </a>隧道与服务器通信。除了是一个免费的解决方案，scrcpy也是开源的和高度可定制的，这使它成为最好的远程控制和屏幕镜像工具之一。</p>
+
+<p class="translated">v1.25更新的头条功能是scrcpy现在完全兼容Android 13，包括复制粘贴支持。虽然以前版本的scrcpy可以镜像运行Android 13的设备的屏幕，但将剪贴板中的任何内容从主机粘贴到Android设备(反之亦然)会导致崩溃。现在服务器模块符合Android剪贴板管理器中的<a href="https://android.googlesource.com/platform/frameworks/base.git/+/0e3e509b3bf4d561c26d87213387a290dfd688e3%5E%21/">属性标签，在剪贴板访问期间没有这样的错误。</a></p>
+
+<p class="translated">与UI相关的另一个改进是对高精度滚动的利用。如果主机支持更高级别的鼠标滚轮滚动精度，scrcpy将自动使用它来实现更平滑的滚动。</p>
+
+<p class="translated">scrcpy v1.25中有许多较小的增强和更改，您可以在下面找到它们。</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_5"><p class="translated"><strong> scrcpy v1.25变更日志:</strong></p><p class="translated">自1.24版以来的变化:</p><ul> <li class="translated">为Android 13调整复制粘贴内部功能(<a href="https://github.com/Genymobile/scrcpy/issues/3497"> #3497 </a>)</li> <li class="translated">增加对高精度滚动的支持(<a href="https://github.com/Genymobile/scrcpy/issues/3363"> #3363 </a>，<a href="https://github.com/Genymobile/scrcpy/pull/3369"> #3369 </a>)</li> <li class="translated">添加Linux的桌面入口文件(<a href="https://github.com/Genymobile/scrcpy/issues/295"> #295 </a>、<a href="https://github.com/Genymobile/scrcpy/pull/296"> #296 </a>、<a href="https://github.com/Genymobile/scrcpy/issues/748"> #748 </a>、<a href="https://github.com/Genymobile/scrcpy/issues/1636"> #1636 </a>、<a href="https://github.com/Genymobile/scrcpy/pull/3351"> #3351 </a>)</li> <li class="translated">为-s/ - serial ( <a href="https://github.com/Genymobile/scrcpy/issues/3522"> #3522 </a>，<a href="https://github.com/Genymobile/scrcpy/pull/3523"> #3523 </a>)添加bash和zsh自动完成功能</li> <li class="translated">将当前adb端口(如果有)用于- tcpip ( <a href="https://github.com/Genymobile/scrcpy/issues/3591"> #3591 </a>，<a href="https://github.com/Genymobile/scrcpy/pull/3592"> #3592 </a>)</li> <li class="translated">添加回退功能以获取一些设备的显示信息(<a href="https://github.com/Genymobile/scrcpy/pull/3416"> #3416 </a>，<a href="https://github.com/Genymobile/scrcpy/pull/3573"> #3573 </a>)</li> <li class="translated">修复设置了- forward-all-clicks时的点击行为(<a href="https://github.com/Genymobile/scrcpy/issues/3568"> #3568 </a>，<a href="https://github.com/Genymobile/scrcpy/pull/3579"> #3579 </a>)</li> <li class="translated">修复窗口标题中非ASCII字符的支持(<a href="https://github.com/Genymobile/scrcpy/issues/2932"> #2932 </a>，<a href="https://github.com/Genymobile/scrcpy/pull/3547"> #3547 </a>)</li> <li class="translated">修复了Android 13 beta ( <a href="https://github.com/Genymobile/scrcpy/issues/3446"> #3446 </a>)某些版本的getDisplayIds()崩溃问题</li> <li class="translated">在Windows版本中将平台工具升级到33.0.3 (adb)</li> <li class="translated">在Windows 64位版本中将FFmpeg升级到5.1.2</li> <li class="translated">在Windows版本中将SDL升级到2.26.1</li> <li class="translated">各种技术修复</li> </ul> </div></section>
+<p class="translated">您可以在GitHub上探索并贡献于scrcpy存储库，也可以下载预编译的版本。如果您已经通过软件包管理器安装了应用程序，请检查其中的更新以获得最新版本。</p>
+
+<p class="translated"><strong> <a href="https://github.com/Genymobile/scrcpy/releases/latest">下载scrcpy </a> </strong></p>
+
+ </div>
+
+
+<p id="article-waypoint"/>
+</section>
+
+
+        </div>    
+</body>
+</html>

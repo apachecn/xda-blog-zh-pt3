@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>How to unlock the bootloader and root the Google Pixel 4a</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何解锁bootloader并root谷歌Pixel 4a</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/google-pixel-4a-how-to-unlock-bootloader-root-pass-safetynet/#0001-01-01">https://www.xda-developers.com/google-pixel-4a-how-to-unlock-bootloader-root-pass-safetynet/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p/><p class="translated">谷歌推出期待已久的谷歌Pixel 4a已经有几个星期了，该公司已经发布了这款智能手机的Android 11测试版。Pixel 4a的工厂图像和内核源代码也已经在<a href="https://www.xda-developers.com/google-pixel-4a-android-11-beta-factory-image-kernel-source/">发布</a>，这正是改装爱好者开始使用该设备所需的正确成分。如果你专门为了修补而购买这款手机，那么你会很高兴地知道XDA认可的开发商<a href="https://forum.xda-developers.com/member.php?u=6037748"> Zackptg5 </a>已经成功地在谷歌Pixel 4a上实现了root。开发人员还整理了一份精美的指南，利用XDA资深公认开发人员<a href="https://forum.xda-developers.com/member.php?u=4470081"> topjohnwu的</a> s <a href="https://forum.xda-developers.com/apps/magisk"> Magisk </a>在解锁引导程序后对设备进行根操作。</p>
+
+  
+<p/><p class="translated"><strong> <a href="https://forum.xda-developers.com/pixel-4a">谷歌Pixel 4a XDA论坛</a> </strong></p>
+
+<p/><p class="translated"><strong> <a href="https://www.amazon.com/dp/B08DY51H2Y/?tag=xda-1qs1r9o-20&amp;ascsubtag=UUxdaUeUpU29584&amp;asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fgoogle-pixel-4a-how-to-unlock-bootloader-root-pass-safetynet%2F&amp;asc_campaign=Short-Term" class="norewrite noskim" rel="sponsored nofollow">从美国亚马逊购买谷歌Pixel 4a</a>| |<a href="https://www.xda-developers.com/best-google-pixel-4a-cases/">Pixel 4a的最佳案例</a> </strong></p>
+
+<p class="translated">在我们进入如何找到像素4a的根之前，记得进行设备外备份。那是因为寻根过程<strong>需要擦除手机上的所有数据，包括内部存储</strong>上的文件。由于<a href="https://www.xda-developers.com/safetynet-hardware-attestation-hide-root-magisk/">安全网认证失败</a>，你的银行应用程序以及Pokémon Go等热门游戏也可能在寻根后停止工作，但我们确实有一个临时的解决办法来解决这个问题。</p>
+
+<hr/>
+
+
+<h2 id="how-to-root-the-google-pixel-4a" class="translated">如何root谷歌Pixel 4a</h2>
+<h3 id="step-1---unlock-the-bootloader" class="translated">步骤1 -解锁引导加载程序</h3>
+<p class="translated">重要的是要注意，下面描述的步骤旨在用于像素4a的载体解锁变体。大多数美国运营商都不允许解锁引导程序，这样就无法锁定你的手机。</p>
+
+<ol> <li class="translated">进入“系统设置”-&gt;“关于手机”-&gt;“内部版本号”几次，直到启用“开发者选项”</li> <li class="translated">返回设置，进入系统-&gt;高级-&gt;开发选项-&gt;启用“OEM解锁”</li> <li class="translated">如果你的手机插在任何东西上，拔掉插头并关机</li> <li class="translated">按住Power + Vol Down进入快速启动界面</li> <li class="translated">将手机插入PC，打开终端/Shell/命令提示符/PowerShell(取决于操作系统)</li> <li class="translated">在终端上键入<code>fastboot flashing unlock</code>并按照设备上的提示解锁引导程序(注意<strong>这一步将设备</strong>复位)</li> <li class="translated">引导程序现在解锁了！</li> </ol>
+
+<h3 id="step-2-patch-the-stock-boot-image-using-magisk-manager" class="translated">步骤2–使用Magisk Manager修补股票启动映像</h3>
+<p class="translated">虽然您可以在我们的论坛上找到Pixel 4a的预补丁启动映像，但请确保验证其来源。您下载的任何预打补丁的启动映像都应该与安装的软件构建版本相匹配，否则您可能会面临严重的异常。我们总是建议您自己修补启动映像。</p>
+
+<ol> <li class="translated"><a href="https://developers.google.com/android/images?hl=en#sunfish">下载与安装版本的库存ROM相对应的出厂固件</a>,并从档案中提取引导镜像</li> <li class="translated">将boot.img复制到您的设备</li> <li class="translated">安装Magisk管理器(从项目的GitHub repo 的<a href="https://github.com/topjohnwu/Magisk/releases/download/manager-v7.5.1/MagiskManager-v7.5.1.apk">发布部分获取)</a></li> <li class="translated">打开Magisk管理器-&gt;选择“安装”-&gt;“选择并修补文件”-&gt;选择boot.img文件</li> <li class="translated">修补后的启动映像应该可以在您的下载文件夹中找到</li> </ol>
+
+<h3 id="step-3-flash-the-patched-boot-image" class="translated">步骤3–刷新补丁启动映像</h3>
+<ol> <li class="translated">将magisk_patched.img复制到您的pc</li> <li class="translated">将您的设备重新启动到快速启动模式(参见上面的解锁部分)</li> <li class="translated">在补丁引导img文件所在的目录下打开一个终端，输入<code>fastboot flash boot magisk_patched.img</code></li> <li class="translated">你现在扎根了！</li> </ol>
+
+<h3 id="optional-step-4---passing-safetynet-on-your-google-pixel-4a" class="translated">(可选)步骤4 -在您的Google Pixel 4a上传递安全网</h3>
+<p class="translated">绕过SafetyNet的硬件证明方法可能不是一件容易的事情，但是下面的解决方法应该可以暂时完成这项工作。</p>
+
+<ol> <li class="translated">从Magisk模块库中下载并安装<a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228"> MagiskHide Props Config </a>模块</li> <li class="translated">重新启动</li> <li class="translated">打开手机上的终端应用，输入“su -c props”</li> <li class="translated">选择“强制基本密钥证明”</li> <li class="translated">这将使您的设备在某些情况下看起来不同，默认情况下，这是Nexus 5。<a href="https://forum.xda-developers.com/member.php?u=6037748"> Zackptg5 </a>更喜欢它看起来像一个没有硬件认证的新设备(像谷歌Pixel 3a)。所以选择:'从指纹列表中选择'- &gt;'谷歌'- &gt;'谷歌像素3a '</li> <li class="translated">重启并验证你应该有希望通过安全网！</li> </ol>
+
+<hr/>
+
+<p class="translated">如果你想了解更多关于这个过程的细节，请查看我们论坛中的以下帖子:</p>
+
+<p/><p class="translated"><strong> <a href="https://forum.xda-developers.com/pixel-4a/how-to/guide-unlock-root-pixel-4a-t4153773">指南:解锁/根/像素4a的安全网</a> </strong></p>
+
+<div class="display-card tag"><div class="w-img "><div class="body-img portrait"><div class="responsive-img img-article-square" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2020/08/Google-Pixel-4a-1-1024x1024-1.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Google Pixel 4a&quot;"> <figure> <picture>  <source media="(min-width: 1024px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2020/08/Google-Pixel-4a-1-1024x1024-1.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="320px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2020/08/Google-Pixel-4a-1-1024x1024-1.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="400px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2020/08/Google-Pixel-4a-1-1024x1024-1.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="300px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2020/08/Google-Pixel-4a-1-1024x1024-1.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <img class="lazyload" alt="For the easiest and most convinent Pixel 4a purchase, go with Amazon! Pixel 4a orders come with Prime shipping, and if you have an Amazon Prime Rewards card, you can sign up for a monthly payment plan to boot." data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2020/08/Google-Pixel-4a-1-1024x1024-1.jpg" src="../Images/7c058dee0fd7d0b006a64a3126925f29.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2020/08/Google-Pixel-4a-1-1024x1024-1.jpg"/> </picture> <figcaption class="body-img-caption">Google Pixel 4a</figcaption> </figure> </div> </div> </div><div class="w-display-card-content"> <h5 class="display-card-title translated">谷歌像素4a</h5><div class="w-display-card-description"><p class="display-card-description translated">亚马逊很早就开始了预购，所以这款手机已经被延期订购了几周。你仍然可以试试你的运气，看看你是否能在遥远的未来买到一台并送货上门。亚马逊也有三种捆绑包可供选择。</p> </div> </div><p class="w-display-card-link"> </p> </div></div>
+
+
+</div>    
+</body>
+</html>

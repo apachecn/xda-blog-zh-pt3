@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>How to dual-boot Windows 10 and Windows 11 on the same PC</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何在同一台PC上双启动Windows 10和Windows 11</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/dual-boot-windows-10-windows-11/#0001-01-01">https://www.xda-developers.com/dual-boot-windows-10-windows-11/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+
+<p class="translated">Windows 11已经推出一年多了，除了发布时提供的所有改进之外，该操作系统在过去一年左右的时间里已经真正成熟了。然而，仍然会出现错误，为了可靠性，你可能更喜欢保留Windows 10，同时尝试Windows 11的功能。出于这个原因，你可以尝试用Windows 11 设置一个<a href="https://www.xda-developers.com/how-to-install-windows-vm/">虚拟机，或者你可以在你的电脑上双启动两个版本的Windows。</a></p>
+
+  
+<p class="translated">在本指南中，我们将向您展示如何在当前安装Windows 10的同时双重启动Windows 11。如果你已经有了Windows 11，你想安装Windows 10，那也是可以的，步骤也差不多。如果你想安装两个操作系统，或者在获得稳定版本的同时尝试Windows 11的预览版，你也可以遵循这些步骤。</p>
+
+<p class="translated">为此，你需要一台符合Windows 11 <a href="https://www.xda-developers.com/windows-11-minimum-requirements/">系统要求</a>的电脑，或者我们<a href="https://www.xda-developers.com/windows-11-compatible-pc/">兼容电脑列表</a>上的设备之一，如果你已经有了Windows 11，这应该不成问题。您还需要一个外置USB闪存驱动器，用作新Windows的安装介质。你还需要硬盘上有足够的可用空间来安装Windows 11。另外，当然，在开始之前要备份你的数据。在这个过程中，不应该对您的文件造成任何损坏，但是确保安全总是好的。</p>
+
+ 
+
+<p class="translated">你需要做的第一件事就是为Windows 11创建USB安装介质。为此，您首先需要使用以下选项之一下载Windows 10或11:</p>
+
+<ul> <li class="translated">使用媒体创建工具下载Windows 11的最新稳定版本(推荐)。<ul> <li class="translated">或者，如果你已经有Windows 11作为主操作系统，你可以下载Windows 10。</li><p> </p> </ul> </li> <li class="translated">如果你特别想尝试Windows 11的实验版本，请下载最新的<a href="https://track.flexlinkspro.com/g.ashx?foid=1.24542&amp;trid=1198401.711&amp;foc=17&amp;fot=9999&amp;fos=1&amp;fobs=a4d34591-180b-4df1-91ff-9cf00527b986&amp;url=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fsoftware-download%2Fwindowsinsiderpreviewiso" rel="noopener noreferrer" target="_blank"> Windows 11 Insider预览版ISO </a>。</li> </ul>
+
+<p class="translated">无论哪种方式，你都需要一个至少8GB容量的u盘。请确保您已经备份了该驱动器上的任何重要数据，因为您必须擦除所有数据才能将其用作安装介质。</p>
+
+
+<p class="translated">如果你想为Windows 11的稳定版本创建安装媒体，媒体创建工具是最简单的方法。你需要做的是:</p>
+
+<ol> <li class="translated">进入<strong> <a href="https://track.flexlinkspro.com/g.ashx?foid=1.24542&amp;trid=1198401.711&amp;foc=17&amp;fot=9999&amp;fos=1&amp;fobs=f49ef317-1944-4f59-a2aa-2aaf556369e1&amp;url=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fsoftware-download%2Fwindows11"> Windows 11下载页面</a> </strong>。</li> <li class="translated">在<strong>创建Windows 11(或Windows 10)安装介质</strong>下，点击<em>立即下载</em>。</li> <li class="translated">运行您下载的文件并接受许可条款。</li> <li class="translated">选择您要用于Windows 11安装的语言。默认情况下，会选取您当前使用的设置，因此您不必进行任何更改。单击下一步。</li> <li class="translated">在下一页，选择<strong> USB闪存驱动器</strong>选项，然后选择您想要使用的驱动器。这将<strong>擦除闪存驱动器上的所有内容</strong>，因此请确保您已经备份了数据。此外，如果您插入了多个驱动器，请确保您选择了正确的驱动器。</li> <li class="translated">点击完成剩下的过程，您将有一个可启动的USB闪存驱动器准备好用作安装介质。</li> </ol>
+
+
+<p class="translated">如果你选择下载Windows Insider预览版ISO，或者如果你已经有了Windows 11的ISO文件，你仍然可以使用Rufus这样的程序创建USB安装介质。这个程序将把你下载的ISO文件保存到你的u盘上，把它变成安装介质。以下是如何做到这一点:</p>
+
+<ol> <li class="translated">从官网下载<strong> <a href="https://rufus.ie/en/"> Rufus </a> </strong>。</li> <li class="translated">运行程序，将您的<strong>闪存驱动器</strong>插入您的PC。请确保您已经备份了闪存驱动器上的所有数据，因为在此过程中这些数据会被擦除。最好拔掉其他USB驱动器，这样就不会意外地选择和删除它们。</li> <li class="translated">点击<strong>引导选择</strong>下的<strong>选择</strong>，找到之前下载的ISO文件。其余的字段将自动更改以匹配。</li> <li class="translated">点击<strong>启动</strong>，然后点击<strong>确定。这个过程将开始。等待它完成，您的闪存驱动器就可以用作安装介质了。</strong></li> </ol>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="creating-a-partition-to-dual-boot-windows-10-and-11" class="translated">创建分区以双启动Windows 10和11</h2>
+<p class="translated">接下来，您需要为Windows 11(或10)在驱动器上创建第二个分区。分区就像硬盘驱动器的虚拟分区，被标记为不同的磁盘。对于一般用途来说，分区没有太多的用途，但是您确实需要它们来进行双重引导。下面是如何创建一个。</p>
+
+<ol> <li class="translated">右键单击<strong>开始菜单图标</strong>(或按键盘上的<strong> Windows键+ X </strong>)并选择<strong>磁盘管理</strong>。</li> <li class="translated">您将看到一个驱动器和分区列表，看起来应该像这样。忽略只有几MB大小的小分区。这些是Windows运行所需的系统分区，它们不应该被篡改。您需要关注最大的分区。</li> <li class="translated">要创建一个新的分区，您需要缩小您已经拥有的分区。右键单击您的主分区并选择<strong>收缩卷</strong> <em>。</em></li> <li class="translated">指定要从分区中删除的空间量。这将受到您已经在其上存储的文件的限制，您输入的数量将是您用于Windows 11安装的空间。对于Windows 11，分区必须至少为64GB，但Windows 10只需20GB即可。</li> <li class="translated">您选择的空间将从您的分区中扣除，并在磁盘管理窗口中列为未分配空间。你可以让它保持原样，然后关上窗户。</li> </ol>
+
+
+<p class="ad-even">
+</p>
+
+
+<h2 id="install-windows-11-on-your-second-partition-for-dual-booting" class="translated">在第二个分区上安装Windows 11进行双启动</h2>
+<p class="translated">双启动Windows 10和11的下一步是在第二个分区上安装Windows。我们将假设您使用的是Windows 10 ISO，但如果您使用的是Windows 11 ISO，过程是类似的。如果您已从PC中取出USB安装介质，请再次将其插入(取出其他闪存驱动器)，然后按照以下步骤操作:</p>
+
+<ol> <li class="translated">打开开始菜单，然后在键盘上按住<strong> Shift </strong>的同时点击<strong>电源</strong>按钮和<strong> - </strong>。点击<strong>重启</strong>。<ul> <li class="translated">或者，打开设置app，进入<strong>更新&amp;安全</strong>，然后选择<strong>恢复</strong>，选择<strong>高级启动</strong>旁边的<strong>立即重启</strong>。</li><p> </p> </ul> </li> <li class="translated">你会看到一系列的启动选项。点击<strong>使用设备</strong>，然后选择您插入的u盘，您的电脑将从u盘启动。</li> <li class="translated">您现在将处于常规的Windows 10设置中，就像您正在设置一台新电脑一样。选择您的语言和区域设置。默认设置应该没问题，所以您只需点击下一步的<strong>即可。</strong></li> <li class="translated">在下一页，点击<strong>立即安装</strong>。</li> <li class="translated">如果您手头有产品密钥，请输入产品密钥。您可以选择暂时跳过这一步，但以后会用到它。</li> <li class="translated">选择要安装的Windows 10版本。您必须选择与您使用的产品密钥相匹配的版本。</li> <li class="translated">接受许可协议，然后选择<strong>自定义:仅安装Windows(高级)</strong> <em>。</em></li> <li class="translated">您将看到上面磁盘管理中的所有分区，以及您创建的未分配空间。选择未分配的空间并点击<strong>新建。</strong> <em> </em>然后，点击<strong>应用</strong>。将在未分配的空间中创建一个分区。</li> <li class="translated">选择新分区，点击<strong>下一步</strong>开始安装。</li> </ol>
+
+<p class="translated">此时，您的电脑将重新启动，您将看到选择操作系统的选项。现在，每次重新启动电脑时，你都会看到此屏幕，因此你可以选择要使用的操作系统。与下面的截图(在Windows 11早期测试期间拍摄的)不同，你应该已经能够看到两个不同名称的不同操作系统。</p>
+
+
+
+<p class="translated">要设置新的Windows 11安装，请选择它，然后按照本指南设置您喜欢的安装。</p>
+
+<p class="translated">从现在开始，你可以在启动时选择Windows 10或Windows 11，不过，几秒钟后，它会启动到你上次使用的选项。例如，如果你担心稳定性，你可以将Windows 10用于工作，将Windows 11用于个人用途。这是一个不用冒大风险就能试用Windows 11的好方法。你可以随时查看我们的<a href="https://www.xda-developers.com/windows-11-update-tracker/">更新追踪器</a>获取最新更新。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

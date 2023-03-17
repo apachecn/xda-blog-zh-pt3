@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Android 14 may come with updatable root certificates</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">Android 14可能会附带可更新的根证书</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/android-14-updatable-root-certificates/#0001-01-01">https://www.xda-developers.com/android-14-updatable-root-certificates/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">根证书是公钥基础设施(PKI)的核心，它们由可信证书颁发机构(ca)签名。浏览器、应用程序和其他程序都有一个预打包的根存储，表明这些证书是可信的。如果您访问的网站支持HTTPS，但没有使用浏览器根存储中由CA签署的证书，则该网站将被标记为不安全。通常，应用程序和浏览器可以更新它们的证书，但你的手机不能，除非通过OTA更新。据<em>斯珀</em>称，随着<a href="https://www.xda-developers.com/android-14"> Android 14 </a>的发布，这种情况可能会改变。</p>
+
+  
+<p class="translated">这些年来，有一些关于证书的恐慌，那是因为当我们访问网站时，我们依赖它们作为信任链的核心。在<em> XDA </em>上，我们的证书是由一个非盈利的CA Let ' s Encrypt签署的。他们的证书由互联网安全研究小组签署，正是这种信任链确保了您与该网站的连接是安全的。这同样适用于你访问的任何其他使用HTTPS的网站。</p>
+
+<p class="translated">每个操作系统都有自己内置的根存储，Android也不例外。实际上，您可以在Android智能手机上通过导航到设备设置中的安全和隐私来查看这个根商店。从那以后，它将取决于你使用的设备类型，但下面的截图显示了它在OneUI 5上的位置。</p>
+
+
+
+
+
+<p class="translated">然而，问题是，即使这个根存储也不是最终的和最重要的。应用程序可以选择使用和信任自己的根存储(Firefox就是这样)，并且它们可以只接受特定的证书(被称为证书锁定),以避免中间人(MITM)攻击。用户可以安装自己的证书，但自Android 7以来，应用程序开发者需要选择允许他们的应用程序使用这些证书。</p>
+
+ 
+<h2 id=""> </h2><p class="ad-odd">
+</p>
+
+
+<h2 id="why-having-updatable-root-certificates-is-important" class="translated">为什么拥有可更新的根证书很重要</h2>
+<p class="translated">随着“让我们加密”证书被互联网安全研究小组交叉签署，大量互联网依赖于ISRG的安全。如果ISRG失去了对其私钥的控制(例如，万一被盗)，那么ISRG将不得不撤销该密钥。根据公司的反应，没有可更新根证书的设备可能无法访问互联网的某些部分。虽然这是一个完全灾难性的噩梦场景(而且纯粹是假设)，但这正是谷歌想要避免的场景。这就是为什么TrustCor目前发生的事情可能是在向Google发出信号，是时候给Android添加可更新的根证书了。</p>
+
+<p class="translated">就背景而言，TrustCor就是这样一个认证机构，在研究人员声称它与一家美国军事承包商有密切联系后，它受到了审查。TrustCor没有丢失它的私钥，但是它<em>已经</em>失去了许多公司的信任，这些公司需要决定在它们的根存储中包含哪些证书。这些研究人员声称，与TrustCor关系密切的美国军事承包商付钱给开发者，让他们在智能手机应用程序中植入数据收集恶意软件。在PKI中，信任就是一切，一旦这些指控曝光，TrustCor就失去了信任。从那以后，像谷歌、微软和Mozilla这样的公司已经放弃了TrustCor作为认证机构的地位。不过，从Android root store中移除TrustCor的证书需要通过OTA进行更新，尽管AOSP已经做出了承诺，但可能要过很长时间，你我才能真正从我们的设备中移除TrustCor的证书。</p>
+
+
+
+<p class="translated">好处是，您现在可以在您的设备上禁用TrustCor的证书，方法是转到您设备上的证书，如上文所示，然后滚动到TrustCor并禁用您设备附带的三个证书。据来自<a href="https://grapheneos.org/releases#2022111000"> GrapheneOS </a>项目的开发人员称，由于除了特定的动态DNS提供商之外，这个CA很少被其他人使用，所以对网络兼容性的影响应该非常小</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="the-solution-project-mainline" class="translated">解决方案:项目主线</h2>
+<p class="translated">如果您熟悉Project Mainline，那么您已经可以看到它是如何帮助解决问题的。Google利用通过Google Play服务框架和谷歌Play商店交付的主线模块。每个主线模块都以APK文件、APEX文件或APEX中的APK文件的形式交付。当主线模块正在更新时，用户会在他们的设备上看到“Google Play系统更新”(GPSU)通知。实际上，为了向关键组件提供更新，谷歌已经绕过了等待OEM厂商推出更新的需要，选择自己完成这项任务。蓝牙和超宽带是谷歌处理的两个必不可少的主线模块。</p>
+
+<p class="translated">根据<a href="https://android-review.googlesource.com/q/topic:%22updatable_certs%22">对AOSP精神</a>(由<em>斯珀</em>发现)的承诺，提供Android的TLS实现的主线模块Conscrypt将在未来的更新中支持可更新的根证书。这意味着可以通过项目主线的Google Play系统更新来删除(甚至添加)证书，确保在未来发生类似TrustCor(或更糟)的情况时，可以更快地处理。目前还不清楚这将在何时推出，但很可能会在Android 14中推出。从技术上来说，谷歌可能想用Android 13 QPR2来推广它，但这只会让谷歌Pixel用户受益，直到明年Android 14普及到所有人。这是因为其他原始设备制造商通常不会推出QPR更新。</p>
+
+<p class="translated">这种情况存在的全部原因是，谷歌可以保持对设备安全的另一个关键方面的控制，而不需要依赖原始设备制造商推送更新。目前要求OTA更新证书，但在紧急情况下，用户没有更新的每一天都可能很重要。利用项目主线来确保用户在需要时能够及时获得关键的证书更新，这无疑是一个受欢迎的变化。</p>
+
+<hr/>
+
+<p class="translated"><strong>来源:</strong> <a href="https://blog.esper.io/android-14-updatable-certificates/" rel="noopener noreferrer" target="_blank">斯珀</a></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

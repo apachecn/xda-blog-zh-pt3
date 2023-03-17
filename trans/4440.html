@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>Download and Install Android USB Drivers for popular OEMs</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">为流行的原始设备制造商下载和安装Android USB驱动程序</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/download-android-usb-drivers/#0001-01-01">https://www.xda-developers.com/download-android-usb-drivers/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+
+<p class="translated">所以你已经有了一个Android设备，并且想要深入到建模的世界中去？无论是<a href="https://www.xda-developers.com/root/">root</a>还是安装像<a href="https://www.xda-developers.com/five-reasons-xda-loves-lineageos/">linegeos</a>这样的定制ROM，大多数售后改装都需要你使用USB电缆将你的Android智能手机连接到电脑，这样你就可以使用像<a href="https://www.xda-developers.com/install-adb-windows-macos-linux/"> Android Debug Bridge (ADB) </a>和Fastboot这样的工具与设备进行交互。对于Android power用户来说，你可能还想在手机上重新安装出厂固件，这意味着你必须处理OEM专用的闪存实用程序。</p>
+
+  
+<p class="translated">然而，如果你的个人电脑不能首先<em>看到</em>目标设备，这些修补工作都是不可能的。与Windows的情况一样，操作系统可能需要一个称为“驱动程序”的附加软件，以便正确识别Android设备显示的所有不同连接模式。下面您可以找到官方OEM提供的Android USB驱动程序包列表和通用驱动程序安装指南。如果你没有看到你的设备的制造商被列出，或者你看到一个错误的链接，给<a href="https://www.xda-developers.com/author/titokhan/">塞犍陀·哈扎里卡</a>(论坛上的<a href="https://forum.xda-developers.com/m/skandah.5301049/">斯坎达</a>)发一条消息，告诉他设备的详细信息。</p>
+
+
+
+
+<h2 id="purpose-of-android-usb-drivers" class="translated">Android USB驱动程序的用途</h2>
+<p class="translated">Android设备的USB接口是一个非常复杂的对象。根据配置的不同，它可能会向计算机公开标准的Android USB调试接口、fastboot接口和各种其他SoC特定的诊断接口。还支持同时维护多个接口，例如，在<a href="https://www.xda-developers.com/enable-volte-vowifi-asus-zenfone-8-oneplus-9-pro/">配置内部调制解调器参数</a>时，您可以通过ADB与您的设备进行交互。</p>
+
+<p class="translated">请记住，上述场景与通过普通老式媒体传输协议(MTP)或图片传输协议(PTP)模式连接设备略有不同。MTP使最终用户能够从PC上浏览设备的内部存储器，就像它是一个外部存储驱动器一样。从Windows XP开始，微软为每个版本的Windows都提供了通用的MTP/PTP驱动程序，所以你不需要外部驱动程序。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="download-android-usb-drivers-for-popular-oems" class="translated">为流行的原始设备制造商下载Android USB驱动程序</h2>
+<p class="translated">大多数Android OEMs为他们的设备提供官方驱动程序包。除了ADB和Fastboot接口，这些驱动程序还支持由相应设备制造商设计的专有闪存协议。例如，如果您想<a href="https://www.xda-developers.com/update-firmware-any-samsung-phone/">闪存一个三星Galaxy设备</a>，您必须事先安装三星USB驱动程序包。</p>
+
+<p class="translated">请注意，微软已经在Windows上发布了一个通用的ADB驱动程序，所以仅仅为了USB调试而安装OEM驱动程序听起来可能不再值得了。Windows还可以通过Windows Update 实时检查并安装缺失的驱动程序。然而，微软推荐的驱动程序并不总是复杂USB接口的最佳选择，所以尽可能检查官方驱动程序包。</p>
+<div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Windows-generic-ADB-driver.png" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;The inbox Android USB debugging driver of Windows in action&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Windows-generic-ADB-driver.png?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Windows-generic-ADB-driver.png?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Windows-generic-ADB-driver.png?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Windows-generic-ADB-driver.png?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <img class="lazyload" alt="Windows generic ADB driver" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Windows-generic-ADB-driver.png" src="../Images/99f9733f6d37d8638add5b28449d7f35.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Windows-generic-ADB-driver.png"/> </picture> <figcaption class="body-img-caption">The inbox Android USB debugging driver of Windows in action</figcaption> </figure> </div>
+
+
+ </div>
+
+
+<p class="translated">从以下索引中获取适合您设备的驱动程序:</p>
+
+<p class="ad-even">
+</p>
+
+
+<h2 id="how-to-install-android-usb-drivers" class="translated">如何安装Android USB驱动程序</h2>
+<p class="translated">既然您已经为您的设备下载了合适的驱动程序包，是时候安装它了。一些OEM提供标准的安装程序可执行文件，这意味着您可以通过双击安装文件并遵循向导来轻松安装整个驱动程序套件。</p>
+
+
+
+<p class="translated">然而，Google和其他一些供应商更喜欢使用裸INF和相关的二进制文件，它们被打包在ZIP或RAR档案中。这类软件包需要使用设备管理器来安装，但是您必须事先提取归档文件的内容。</p>
+
+<ul> <li class="translated">右击开始按钮并选择<strong>设备管理器</strong>条目。您也可以直接从运行中调用名为<code>devmgmt.msc</code>的Microsoft管理控制台管理单元来打开设备管理器。</li> </ul>
+
+
+
+
+<div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Device-Manager-Windows-10.png" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Device Manager under Windows 10&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Device-Manager-Windows-10.png?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Device-Manager-Windows-10.png?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Device-Manager-Windows-10.png?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Device-Manager-Windows-10.png?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <img class="lazyload" alt="Device Manager under Windows 10" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Device-Manager-Windows-10.png" src="../Images/224995fc5620e88317289fb9c4380c61.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/07/Device-Manager-Windows-10.png"/> </picture> <figcaption class="body-img-caption">Device Manager under Windows 10</figcaption> </figure> </div>
+
+
+ </div>
+
+
+<ul> <li class="translated">将Android设备连接到您的PC。根据选定的配置，您可能会看到一个或多个未知设备弹出。</li> </ul>
+
+
+
+<ul> <li class="translated">(可选)右键单击未知设备条目，选择<em>属性</em>，移动到<em>详细信息</em>选项卡，最后从下拉菜单中选择<em>硬件id</em>。现在打开您最喜欢的搜索引擎，将硬件标识符粘贴到搜索框中，并浏览搜索结果。这是确定您的设备当前可能公开的接口的粗略方法。</li> </ul>
+
+
+
+<ul> <li class="translated">右键单击未知设备条目并选择<strong>更新驱动程序</strong>。现在选择<strong>浏览我的电脑中的驱动程序/驱动程序软件</strong>并将向导指向您提取驱动程序包的文件夹。</li> </ul>
+
+
+
+
+
+<ul> <li class="translated">如果一切正常，您应该会看到如下所示的确认页面。</li> </ul>
+
+
+
+<h3 id="manually-install-the-driver-for-an-unsupported-device" class="translated">为不受支持的设备手动安装驱动程序</h3>
+<p class="translated">在某些情况下，OEM驱动程序是不够的。也许你偶然发现了一个没有名字的普通平板电脑，或者你闪亮的新手机的闪光模式界面还没有得到制造商的官方驱动程序。在这种情况下，您可以通过设备管理器强制安装类似USB接口的现有驱动程序包。</p>
+
+<ul> <li class="translated">打开<strong>设备管理器</strong>并找到未知设备条目。</li> <li class="translated">右键点击并选择<strong>更新驱动</strong>。选择<strong>浏览我的电脑上的驱动软件</strong>，然后选择名为<strong>的选项，让我从电脑上的可用驱动列表中选择</strong>。</li> </ul>
+
+
+
+<ul> <li class="translated">现在选择<strong>显示所有设备</strong>并点击<strong>下一步</strong>。在下一个屏幕上，点击<strong>拥有磁盘...</strong>按钮。</li> </ul>
+
+
+
+
+
+<ul> <li class="translated">此时，您需要浏览到为类似设备提取的驱动程序所在的位置。从文件列表中选择INF文件，并选择<em>打开</em>。</li> </ul>
+
+
+
+<ul> <li class="translated">现在仔细选择驱动模型。例如，如果你试图为一个设备安装快速启动模式驱动程序，从谷歌的驱动程序集中选择<em> Android启动加载程序接口</em>。Windows可能会显示与兼容性相关的警告，但您可以忽略它，继续安装过程。</li> </ul>
+
+
+
+
+
+
+
+<p class="translated">此方法允许您强制安装已签名的驱动程序，而不会破坏其数字签名，因此您不需要在64位Windows实例上关闭驱动程序签名强制。</p>
+
+<hr/>
+
+<p class="translated">现在，您已经在计算机上安装了正确的USB驱动程序，您的Android设备可以接收指令了。现在是时候把它们放在一起，运行您的第一个ADB命令了！</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

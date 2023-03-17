@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Amazon Fire TV Devices are being Infected with Cryptocurrency Malware</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">亚马逊Fire TV设备正被加密货币恶意软件感染</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/amazon-fire-tv-cryptocurrency-malware/#0001-01-01">https://www.xda-developers.com/amazon-fire-tv-cryptocurrency-malware/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p/><p class="translated">我们论坛上的几个用户<a href="https://forum.xda-developers.com/fire-tv/general/firestick-gen-2-test-app-popping-t3771601">报告</a>他们的亚马逊Fire TV和亚马逊Fire TV Stick设备突然变得非常慢。这种突然的放缓与一个简单称为“测试”的应用程序的出现不谋而合，该应用程序不断随机弹出。弹出窗口不仅令人讨厌，还会导致视频播放停止，应用程序停止响应，从而很难继续正常使用设备。</p>
+
+  
+<p class="translated">事实证明，这个“测试”应用程序实际上是正在感染亚马逊Fire TV和Fire TV Stick设备的加密货币恶意软件。包名为“<em> com.google.time.timer </em>的测试APK自动启动，执行一个<a href="http://blog.netlab.360.com/adb-miner-more-information-en/">臭名昭著的ADB的变体。矿工</a>恶意软件。一旦设备被感染，病毒就开始使用设备100%的处理资源，利用CoinHive挖掘Monero。更糟糕的是，该恶意软件使用ADB将自己传播到同一网络上的其他Android设备，这使得处理这种情况变得很困难。</p>
+
+ 
+<h2 id="is-my-device-infected" class="translated">我的设备被感染了吗？</h2>
+<p class="translated">受感染的亚马逊Fire TV设备速度大幅下降，应用程序需要很长时间才能加载，所有操作都反应迟缓。测试应用程序还会在屏幕上随机弹出，并使与UI的交互变得困难。</p>
+
+<p class="translated">简单地在应用程序列表或应用程序管理设置中检查测试应用程序不起作用，因为应用程序<strong>没有出现在这些列表中</strong>。而是使用亚马逊应用商店的<a href="https://www.amazon.com/dp/B00H4IHJ8M/?tag=xda-5rr6na0-20&amp;ascsubtag=UUxdaUeUpU21253&amp;asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Famazon-fire-tv-cryptocurrency-malware%2F&amp;asc_campaign=Short-Term" class="norewrite noskim" rel="sponsored nofollow">总指挥官</a>这样的应用程序来检查。测试应用甚至可以出现在自己没有侧装任何应用的设备上，因为恶意软件可以通过网络将自己传播到其他设备。</p>
+
+<p class="translated">恶意软件的确切来源应用程序目前还不确定。然而，将责任归咎于帮助盗版电影和电视节目的侧装应用程序并不牵强。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="cleanup-solutions" class="translated">清理解决方案</h2>
+<p class="translated">如果你的一个设备被感染了，同一网络上的其他Android设备(不仅仅是亚马逊Fire TV设备)也很有可能被感染。在进行清理之前，请确保您禁用所有设备上的ADB调试，无论是否受感染。</p>
+
+<h3 id="factory-reset" class="translated">工厂重置</h3>
+<p class="translated">最有效的解决方案是对受感染的设备以及同一网络上的所有其他设备进行出厂重置。可以在系统设置中找到恢复出厂设置。它将清除设备上的所有内容，并从头开始。在进行工厂重置之前，请务必备份任何重要内容。</p>
+
+<h3 id="uninstall-modded-virus" class="translated">卸载修改的病毒</h3>
+<p class="translated">不建议使用这种解决方案，因为病毒的范围及其对您系统的影响是未知的。只有在绝对不能将您的设备重置为出厂设置时，您才应该考虑此选项。</p>
+
+<p class="translated">您可以使用以下ADB命令删除病毒文件:</p>
+
+<pre> <code class="hljs xml">shell rm data/<span class="hljs-built_in">local</span>/tmp/ufo.apk<br/>shell rm data/<span class="hljs-built_in">local</span>/tmp/lock.txt<br/>shell rm data/<span class="hljs-built_in">local</span>/tmp/smi<br/>shell rm data/<span class="hljs-built_in">local</span>/tmp/endat<br/>shell rm data/<span class="hljs-built_in">local</span>/tmp/nohup<br/><span class="hljs-selector-tag">uninstall</span> <span class="hljs-selector-tag">com</span><span class="hljs-selector-class">.google</span><span class="hljs-selector-class">.time</span><span class="hljs-selector-class">.timer</span><br/>reboot</code> </pre>
+<h3 id="install-a-modded-virus" class="translated">安装病毒模型</h3>
+<p class="translated">这种解决方案不如工厂重置您的设备，因此，不推荐。你可以安装一个修改过的病毒应用，由XDA成员<a href="https://forum.xda-developers.com/member.php?u=511852"> innovaciones </a>创建，它“关闭”了病毒的挖掘功能。这是通过用没有挖掘脚本的空白页面替换病毒中的run.html文件来实现的。其他变化欺骗病毒报告成功，而实际上，病毒不会产生任何收入。然后您可以隐藏该应用程序。</p>
+
+<p class="translated">你可以在我们的论坛中找到这个帖子中附带的修改病毒<a href="https://forum.xda-developers.com/showpost.php?p=76539315&amp;postcount=46">。</a></p>
+
+<hr/>
+
+<p class="translated">为防止再次感染，请小心安装在设备上的应用程序，并在不使用时关闭“ADB调试”。即使您的设备没有显示感染迹象，谨慎的做法是检查该应用程序的存在，并在您真正需要它之前禁用ADB调试。</p>
+
+<hr/>
+
+<p class="translated"><a href="https://forum.xda-developers.com/fire-tv/general/firestick-gen-2-test-app-popping-t3771601"> <strong>来源:消防电视论坛</strong> </a></p>
+
+<p class="translated"><a href="http://www.aftvnews.com/android-malware-worm-that-mines-cryptocurrency-is-infecting-amazon-fire-tv-and-fire-tv-stick-devices/"> <strong>故事Via: AFTV新闻</strong> </a></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

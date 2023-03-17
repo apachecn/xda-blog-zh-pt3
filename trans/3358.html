@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Here's how you can get the new watch faces from the Pixel Watch on your Wear OS 3 smartwatch</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">以下是如何在Wear OS 3智能手表上从Pixel Watch获得新的手表表盘</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/install-pixel-watch-watch-faces-on-wear-os-3-smartwatch/#0001-01-01">https://www.xda-developers.com/install-pixel-watch-watch-faces-on-wear-os-3-smartwatch/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">谷歌的第一款Wear OS智能手表<a href="https://www.xda-developers.com/google-pixel-watch-review/"> Pixel Watch </a>，可能不是<a href="https://www.xda-developers.com/best-smartwatches/">最好的智能手表</a>。但它提供了一些独特的功能，这些功能是其他原始设备制造商的智能手表所没有的。例如，它配备了许多新的表盘，赋予它独特的美感，但不幸的是，其他Wear OS智能手表上没有。如果你想在你的Wear OS 3智能手表上安装它们，你会很高兴知道有一个简单的解决方法。</p>
+
+  
+<p class="translated">Pixel手表有18个独特的表盘，从只显示时间的最小表盘到提供许多健康和健身跟踪指标的更复杂的表盘。以下图库展示了Galaxy Watch 4上运行的Pixel Watch的所有新手表外观。</p>
+
+
+
+
+
+<p class="translated">如果你想在Wear OS 3智能手表上获得这些手表外观，如<a href="https://www.xda-developers.com/samsung-galaxy-watch-5-review/"> Galaxy Watch 5 </a>或<a href="https://www.xda-developers.com/samsung-galaxy-watch-4-classic-review/"> Galaxy Watch 4 </a>，你会很高兴知道APK现在可以下载了。点击下面的链接下载谷歌手表面部APK，并将其加载到你的智能手表上。如果你不熟悉这个过程，这里有一个快速概述。</p>
+
+
+
+
+<h2 id="sideload-pixel-watch-watch-faces-on-a-wear-os-3-smartwatch" class="translated">Wear OS 3智能手表的侧面像素手表表盘</h2>
+<p class="translated">你必须使用ADB在你的Wear OS 3智能手表上安装Pixel Watch的表盘。但首先，您必须从APKMirror下载APK，并将其保存在与您PC上的ADB平台工具相同的目录中。完成后，按照下面提供的步骤为智能手表准备ADB调试:</p>
+
+<ol> <li class="translated">打开Wear OS 3智能手表上的<strong>设置应用</strong>，导航至<strong>软件信息</strong>页面。</li> <li class="translated">轻按几次<strong>软件版本</strong>以启用<strong>开发者选项</strong>。</li> <li class="translated">一旦你看到一个提示<strong>开发者模式开启</strong>的提示，回到主设置菜单，选择<strong>开发者选项</strong>按钮。</li> <li class="translated">在接下来的页面中，点击<em> </em> ADB调试旁边的<strong>开关将其启用，然后启用<strong>通过Wi-Fi调试</strong>选项。</strong></li> <li class="translated">确保您的手表已连接到Wi-Fi，并记下“通过Wi-Fi调试”选项下提到的<strong> IP地址</strong>。</li> </ol>
+
+<p class="translated">启用通过Wi-Fi调试后，切换到您的PC，将其连接到同一个Wi-Fi网络，并在ADB平台工具目录中打开一个新的命令提示符窗口。在命令提示窗口中输入<strong> adb connect，</strong>后跟IP地址，然后点击<strong> enter </strong>连接到您的智能手表。</p>
+
+
+
+<p class="translated">您应该立即在手表上看到一个提示，询问您是否允许调试。选择<strong> OK </strong>，如果你想允许调试这一次，或者<strong>总是允许从这台计算机</strong>，如果你不想重复这个过程。</p>
+
+
+
+<p class="translated">现在，键入以下ADB命令并按enter键安装Pixel Watch手表面部APK。如前所述，您必须将APK与ADB平台工具放在同一个目录中，这样该命令才能正常工作。您还应该重命名APK，使命令不那么复杂。</p>
+
+<pre> <code class="hljs xml">adb -s <span class="hljs-string">"IP address"</span> install filename.apk</code> </pre>
+<p class="translated">安装完成后，您应该会在命令提示符窗口中看到“成功”。之后，使用以下命令断开与ADB的连接，并在智能手表上禁用ADB调试。</p>
+
+<pre> <code class="hljs ">adb disconnect</code> </pre>
+<p class="translated">就是这样！现在，您应该可以在手表的配套应用程序中看到新的Pixel Watch表盘。我在我的Galaxy Watch 4上安装了手表面部，所有18个都可以在可穿戴应用程序中使用。</p>
+
+
+
+
+
+<p class="translated"><em>感谢米莎尔·拉赫曼的提示！</em></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

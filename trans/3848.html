@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>How to Force Daydream VR Compatibility on Unsupported Android Devices</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何在不支持的Android设备上强制兼容Daydream VR</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/force-daydream-vr-compatibility/#0001-01-01">https://www.xda-developers.com/force-daydream-vr-compatibility/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p/><p class="translated"><a href="https://vr.google.com/daydream/smartphonevr/">谷歌Daydream VR </a>是<a href="https://forum.xda-developers.com/mobile-vr/google-daydream-vr">谷歌针对移动设备的虚拟现实解决方案</a>。设备需要得到谷歌的官方许可才能被贴上兼容Daydream的标签，其中一些要求相当严格。大多数要求只是保证在官方支持的设备上有良好的VR性能，但也有一些设备，如OnePlus 3、OnePlus 3T或OnePlus 5，应该可以运行Daydream VR。</p>
+
+  
+<p class="translated">为了支持高性能虚拟现实模式(官方Daydream VR支持所必需的)，您的设备必须支持带有Open GL ES 3.2的Vulkan Graphics API，屏幕分辨率至少为1080p，最低刷新率为60Hz，理想情况下显示延迟不超过3毫秒，持续时间不超过5毫米。屏幕尺寸也应该在4.7英寸到6英寸之间，设备应该支持蓝牙4.2 LE，并具有温度传感器来读取手机的体温。你可以在这里查看技术要求<a href="https://source.android.com/compatibility/android-cdd#7_9_virtual_reality">的完整列表。</a></p>
+
+<p class="translated">如果你现有的、不支持Daydream VR的设备或多或少符合上述要求，那么你应该能够享受Daydream VR体验——只要你<strong>拥有root权限</strong>！本教程将向您展示如何通过Magisk或修改/system来无系统地启用Daydream VR。</p>
+
+<hr/>
+
+
+<h2 id="force-daydream-vr-compatibility-system-mod" class="translated">强制Daydream VR兼容(系统模式)</h2>
+<p class="translated">首先，如前所述，您需要在您的设备上获得root访问权限。如果你的设备的引导程序已经解锁，你可以通过自定义恢复比如TWRP来刷新<a href="https://forum.xda-developers.com/apps/supersu"> SuperSU </a>或者<a href="https://forum.xda-developers.com/apps/magisk"> Magisk </a>来得到这个。一旦你有了，安装一个文件浏览应用程序，它将允许你编辑/system中的文件。我推荐<a href="https://forum.xda-developers.com/showthread.php?t=1523691"> MiXplorer </a>或者流行的Solid Explorer。</p>
+
+<h3 id="step-1" class="translated">第一步</h3>
+<p class="translated">打开MiXplorer，授予它root访问权限，导航到/system/etc/permissions，找到名为handheld_core_hardware.xml的文件。</p>
+
+<p class="translated">注意:我在这里使用的是Solid Explorer，但是使用MiXplorer的步骤是一样的。</p>
+
+
+
+
+
+<h3 id="step-2" class="translated">第二步</h3>
+<p class="translated">打开名为“handheld_core_hardware.xml”的文件，在最后一行前添加以下内容:</p>
+
+<pre> <code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">feature</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"android.software.vr.mode"</span> /&gt;</span> </code> </pre>
+<pre> <code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">feature</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"android.hardware.vr.high_performance"</span> /&gt;</span></code> </pre>
+<p class="translated">保存文件。</p>
+
+
+
+
+
+<h3 id="step-3" class="translated">第三步</h3>
+<p class="translated">接下来，您需要打开位于/system中的build.prop文件。该文件用于识别设备的许多系统属性。我们感兴趣的行是<strong> ro.product.device </strong>条目，它定义了您的设备的产品名称。将列出的设备更换为“<strong>旗鱼</strong>”。这是谷歌Pixel，它被认为是Daydream VR兼容手机。该行应读作:</p>
+
+<pre> <code class="hljs ">ro.product.device=sailfish</code> </pre>
+
+
+
+
+<h3 id="step-4" class="translated">第四步</h3>
+<p class="translated">重启手机，安装谷歌Play商店的Daydream应用程序、谷歌虚拟现实服务和Daydream键盘。如果你在Play Store中看不到这些，试着从下面的APKMirror.com安装它们。</p>
+
+
+
+<p class="translated">你现在应该可以在你的Android设备上使用Daydream VR耳机了！如果你还没有，你可以在亚马逊上买一个。</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="force-daydream-vr-compatibility-systemless-mod" class="translated">强制Daydream VR兼容性(无系统模式)</h2>
+<p class="translated">遵循这些步骤将需要安装MagiskSU而不是SuperSU，因此请确保您已经安装了Magisk。这个文件有点冗长，因为它是特定于设备的，所以您需要制作自己的Magisk模块。<strong>这需要Linux，因为它使用shell脚本。</strong>首先，你需要<a href="https://github.com/topjohnwu/magisk-module-template">下载这个模板</a>并解压。你还需要使用Vim或Nano。</p>
+
+<h3 id="step-1" class="translated">第一步</h3>
+<p class="translated">首先，您需要提取自己的handheld_core_hardware.xml文件，只需从/system/etc/permissions中复制出来即可。把这个拷贝到你的电脑上。导航到Magisk模块模板文件夹，并输入名为system的文件夹。删除占位符文件，创建一个名为“<strong> etc </strong>的文件夹，然后输入并创建一个名为“<strong> permissions </strong>的文件夹。在您的权限文件夹中是您想要复制handheld_core_hardware.xml文件的位置。文件层次结构应该如下所示。</p>
+
+
+
+
+
+<h3 id="step-2" class="translated">第二步</h3>
+<p class="translated">现在打开您的handheld_core_hardware.xml文件，在之前添加这些行</p>
+
+<pre> <code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">feature</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"android.software.vr.mode"</span> /&gt;</span> </code> </pre>
+<pre> <code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">feature</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"android.hardware.vr.high_performance"</span> /&gt;</span></code> </pre>
+<p class="translated">保存并导航回Magisk模块模板文件夹的根目录。</p>
+
+<h3 id="step-3" class="translated">第三步</h3>
+<p class="translated">剩下的你可以简单地按照GitHub页面上的说明来命名你的模块并使它独一无二！一旦完成，运行config.sh文件，刷新你新创建的zip文件，也刷新<a href="https://forum.xda-developers.com/attachment.php?attachmentid=4122637&amp;d=1492899137">这个Magisk模块</a>，它改变你的build.prop，由<a href="https://forum.xda-developers.com/member.php?u=4152720"> XDA成员4k4n</a>在<a href="https://forum.xda-developers.com/mobile-vr/google-daydream-vr/spoofing-daydream-compatible-device-t3534943">这个线程</a>中创建。</p>
+
+<p class="translated">就是这样！你可以走了！</p>
+
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="explanation" class="translated">说明</h2>
+<p class="translated">只需编辑一个首选项文件，列出您的设备支持的功能即可。我们编辑它以欺骗应用程序认为它支持谷歌Daydream VR。然而，这对于一些应用程序来说还不够，因为一些Daydream应用程序在启动之前会根据官方支持的设备列表先检查设备类型。这就是我们的build.prop编辑有望进入的地方，它告诉应用程序我们的设备实际上是一个Google Pixel。</p>
+
+<p class="translated">现在，走出去，在手机上享受虚拟现实的世界吧！以下是一些帮助您入门的应用程序:</p>
+
+
+
+<p class="translated">查看Daydream VR XDA论坛，了解与新兴VR平台相关的新闻和讨论！</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

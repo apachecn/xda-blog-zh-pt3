@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>New Windows 11 Dev build removes WSL and fixes a lot of issues</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">新的Windows 11开发版本删除了WSL并修复了许多问题</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/windows-11-dev-channel-25272/#0001-01-01">https://www.xda-developers.com/windows-11-dev-channel-25272/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">在假期休息了几周之后，微软又开始向内部人士发布Windows 11的新版本，那些在开发频道注册的人将获得版本25272。这个新版本没有包括很多新功能，但它确实删除了微软<a href="http://www.xda-developers.com/windows-11-build-25247-search-copied-text/">在最近版本</a>中添加的几个实验，此外还删除了预装的Linux版Windows子系统。除此之外，在这个版本中也有很多修正。</p>
+
+ 
+<h2 id="search-suggested-action-and-website-recommendations-are-gone" class="translated">搜索建议操作和网站推荐没有了</h2>
+<p class="translated">事实上，这个版本中最大的变化之一是微软取消了过去几周一直在测试的两个功能。一个是建议动作，当用户复制一些文本时，提示用户开始网络搜索，这将搜索所选择的术语。</p>
+
+<p class="translated">另一个被删除的功能是“开始”菜单中的网站推荐。这将在开始菜单中直接显示你所在地区的热门网站，使它们更容易访问，但这也意味着你的开始菜单被你可能不关心的内容填满了。微软没有说以后会恢复这些功能，这表明它收到了关于它们的负面反馈。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="wsl-is-now-downloaded-through-the-microsoft-store" class="translated">WSL现在可以通过微软商店下载</h2>
+<p class="translated">另一个乍一看似乎很大的变化是，微软正在从Windows 11安装中删除Linux的Windows子系统(WSL)。这并不是因为该特性不再受支持，事实上，情况恰恰相反。面向Linux的Windows子系统将于2022年底<a href="https://www.xda-developers.com/run-gui-linux-apps-windows-10-wsl/">在微软商店</a>上市，这使得微软能够更快地向该平台提供更新。</p>
+
+<p class="translated">以前，你的WSL版本与你的Windows版本捆绑在一起，而Windows本身大约一年才进行一次重大更新。通过将WSL与操作系统分离，微软可以更好地支持它。</p>
+
+<p class="translated">如果你还没有从微软商店下载WSL，你将需要这样做来继续在Windows中使用你的Linux发行版，但是微软说它希望这在未来自动完成，这样你就不会因为过渡而经历任何中断。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="miscellaneous-changes-and-fixes" class="translated">杂项更改和修复</h2>
+<p class="translated">除了这两个大的变化，这里没有什么太大的变化。微软已经将以前在“开始”菜单的Windows工具文件夹中找到的快速助手工具直接移到了应用程序列表中，这样更容易找到。微软还在Windows打印队列中添加了一个刷新按钮。</p>
+
+<p class="translated">这个版本中也有很多修复，包括一个针对Arm设备的修复，当从睡眠中醒来时，这些设备可能会出现黑屏。下面是完整的修复列表。</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_11"><p class="translated"><strong>【常规】</strong></p><ul> <li class="translated">修复了一些Arm64设备在从睡眠或休眠状态恢复时出现黑屏的问题。</li> <li class="translated">修正了一个问题，导致应用程序中的各种UI元素有时在最近的版本中消失和重新出现。</li> </ul><p class="translated"><strong>【任务栏上的搜索】</strong></p><p class="translated"><em>这些修复只适用于Windows内部人员，他们收到了任务栏上搜索外观的不同处理方式之一，这些处理方式开始向内部人员推出</em> <a href="https://blogs.windows.com/windows-insider/2022/11/28/announcing-windows-11-insider-preview-build-25252/"> <em>版本25252: </em> </a></p><ul> <li class="translated">我们修复了导致任务栏上的搜索框无法正确呈现并显示视觉效果的问题。</li> <li class="translated">日语IME候选项现在应该正确显示在任务栏的搜索框中。</li> </ul><p class="translated"><strong>【任务管理器】</strong></p><ul> <li class="translated">修复了导致按发布者名称过滤在进程页面上不正确匹配的问题。</li> <li class="translated">修复了应用过滤后导致某些服务不显示在服务页面中的问题。</li> <li class="translated">修正了一个问题，导致新的进程出现在一个过滤列表中，如果启动，而一个过滤器被设置。</li> <li class="translated">修正了一个问题，任务管理器不能正确显示亮暗内容，导致潜在的不可读文本。</li> <li class="translated">修正了一个问题，导致任务管理器中的启动应用页面没有为一些内部人员列出任何应用。</li> <li class="translated">如果没有匹配的搜索结果，任务管理器将明确指出。</li> <li class="translated">修正了当试图结束某些进程时可能发生的任务管理器崩溃。</li> <li class="translated">现在，您可以通过按CTRL + F将焦点设置到搜索框。</li> </ul><p class="translated"><strong>【旁白】</strong></p><ul> <li class="translated">修复了在立陶宛语和匈牙利语版本中打开或关闭讲述人后导致设置崩溃的问题。</li> <li class="translated">讲述人现在应该可以与Windows Defender Application Guard for Edge一起正常工作。</li> </ul><p class="translated"><strong>【直播字幕】</strong></p><ul> <li class="translated">我们修复了在开发频道最新的内部预览版中导致直播字幕无法工作的问题。</li> </ul><p class="translated"><strong>【输入】</strong></p><ul> <li class="translated">将日语IME与“讲述人”一起使用时，“讲述人”将不再在您每次按键时读出整个合成字符串。</li> <li class="translated">如果只安装了一种输入语言，第一次使用ALT + Shift时显示的消息将不再显示。</li> <li class="translated">修复了Surface Pen在最近的版本中无法继续播放PowerPoint幻灯片的问题。</li> <li class="translated">进行了更改，以帮助提高游戏中使用高报告率鼠标时的性能。</li> <li class="translated">修正了一个问题，如果你使用触摸手势打开开始菜单，它可能会中途卡住。</li> <li class="translated">修复了在使用日文或中文ime时，可能导致Excel对某些鼠标拖动事件停止响应的问题。</li> </ul><p class="translated"><strong>【设置】</strong></p><ul> <li class="translated">修正了一个问题，当你连接到VPN时，如果你取消了认证认证，可能会导致挂起。</li> <li class="translated">修正了有时打开电源和电池时设置崩溃的问题。</li> <li class="translated">修正了当导航到蓝牙部分时导致快速设置崩溃的问题。</li> <li class="translated">修复了设置&gt;应用程序&gt;默认应用程序下的应用程序图标可能模糊的问题。</li> </ul><p class="translated"><strong>【开窗】</strong></p><ul> <li class="translated">修正了在最近的版本中，当ALT+tab退出某些游戏时导致黑屏的问题。</li> <li class="translated">在使用黑暗模式时，当您在文件资源管理器和某些其他应用程序中高亮显示最大化按钮时，它应该不再比关闭和最小化按钮略小。</li> <li class="translated">修正了几个在最近版本中引入的DWM崩溃。</li> </ul><p class="translated"><strong>【其他】</strong></p><ul> <li class="translated">修复了导致一些Windows安全应用崩溃的问题。</li> <li class="translated">修复了打印队列显示打印机连接打印机的陈旧作业信息的问题。</li> <li class="translated">修复了在浏览器中为网站创建FIDO2凭据时，在某些情况下可能会连续看到两次对话框的问题。</li> <li class="translated">此版本包含对某些电脑上影响Windows Hello的问题的修复。我们正在继续调查特定于Arm64电脑的问题(参见已知问题)。</li> <li class="translated">修复了一个问题，如果你在录制视频时按下暂停，可能会导致相机应用程序显示出错。</li> </ul> </div></section>
+<p class="translated">然而，这个版本仍然有一些已知的问题，Arm设备还没有完全摆脱这些问题。使用Windows Hello面部识别登录可能无法在这些设备上运行，因此您必须输入您的PIN。以下是微软分享的已知问题的完整列表:</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_13"><p class="translated"><strong>【任务栏&amp;系统托盘】</strong></p><ul> <li class="translated">使用平板电脑优化的任务栏时，任务栏有时会被裁剪成两半。您也可能在辅助显示器上看到此问题。</li> </ul><p class="translated"><strong>【任务栏搜索】</strong></p><p class="translated"><em>以下已知问题仅适用于Windows内部人员，他们收到了任务栏上搜索外观的不同处理方式之一，开始向内部人员推出</em> <a href="https://blogs.windows.com/windows-insider/2022/11/28/announcing-windows-11-insider-preview-build-25252/"> <em>内部版本25252 </em> </a> <em> : </em></p><ul> <li class="translated">在从右向左显示的语言中，如阿拉伯语，任务栏上搜索框中的文本存在布局问题。</li> </ul><p class="translated"><strong>【任务管理器】</strong></p><ul> <li class="translated">从任务管理器设置页面应用时，某些对话框可能无法以正确的主题呈现。</li> <li class="translated">当在任务管理器设置页面中应用主题更改时，流程页面的数据内容区域可能会闪烁一次。</li> </ul><p class="translated"><strong>【微件】</strong></p><ul> <li class="translated">我们正在调查一个问题，对于中国的内部人员(也可能是其他人)来说，widgets板会卡在一个看不见的状态，导致屏幕左侧的点击不起作用。如果遇到这种情况，按WIN + D可能会解决问题。</li> <li class="translated">在像阿拉伯语这样的从右向左显示的语言中，当点击窗口小部件板的扩展视图时，在窗口小部件板调整大小之前，内容在视图之外动画显示。</li> </ul> </div></section>
+<p class="translated">如果您注册了开发人员频道，新版本将很快自动下载，但如果您不想等待，可以立即进入Windows Update并检查更新。微软今天还发布了一个测试版频道，其中包括开始菜单中重新设计的搜索栏。</p>
+
+<hr/>
+
+<p class="translated"><strong>来源:</strong> <a href="https://blogs.windows.com/windows-insider/2023/01/05/announcing-windows-11-insider-preview-build-25272/" rel="noopener noreferrer" target="_blank">微软</a></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

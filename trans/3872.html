@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>The challenges Huawei faces getting Google apps on the Huawei Mate 30</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">华为在华为Mate 30上安装谷歌应用面临的挑战</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/huawei-mate-30-google-play-store-challenges/#0001-01-01">https://www.xda-developers.com/huawei-mate-30-google-play-store-challenges/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p/><p class="translated">明天，来自世界各地的记者将聚集在德国慕尼黑<a href="https://www.xda-developers.com/huawei-mate-30-september-19th/">的一个会场</a>观看华为消费者业务集团首席执行官Richard Yu宣布他的公司最新的消费者产品。该公司预计将推出<a href="https://www.xda-developers.com/huawei-watch-gt-2-huawei-band-4-huawei-tv-harmony-os-mate-30-event">两款可穿戴配件、</a>一台电视、<a href="https://www.xda-developers.com/huawei-mate-30-pro-porsche-design-lite-leak-renders/">四款智能手机</a>。焦点将主要集中在新的华为Mate 30系列智能手机上，谷歌<a href="https://www.xda-developers.com/huawei-mate-30-without-google-play-apps-services/">证实该系列智能手机不能与Google Play应用和服务一起销售</a>。没有谷歌的应用套件，新的华为手机在欧洲、印度和其他市场将会很艰难。但Richard Yu <a href="https://www.androidauthority.com/huawei-mate-30-install-google-1026829/">在2019年IFA上暗示</a>该公司有一个变通办法，允许用户在Mate 30上安装谷歌应用程序，并指出这一过程对用户来说“相当容易”。我们对在XDA下载Google Play应用和服务并不陌生，但鉴于华为的独特情况，我们认为可能值得探索该公司有哪些选择，以及它们是否真的可以为用户提供下载谷歌应用套件的方式。</p>
+
+ 
+<h2 id="mada-gms-and-android-certification" class="translated">MADA、GMS和Android认证</h2>
+<p class="translated">为了在Android设备上预装谷歌移动服务(GMS)，即Play Store和Play Services等谷歌应用和服务的集合，设备制造商必须签署移动应用分发协议(MADA)才能成为<a href="https://www.android.com/certified/partners/">授权的Android合作伙伴</a>。然后，设备制造商必须构建满足所有要求的软件，以被视为与<a href="https://source.android.com/compatibility/"> Android兼容</a>，包括但不限于遵循<a href="https://source.android.com/compatibility/cdd">兼容性定义文件</a> (CDD)中规定的规则，并通过<a href="https://source.android.com/compatibility/cts">兼容性测试套件</a> (CTS)。<a href="https://arxiv.org/pdf/1904.05572.pdf">根据谷歌</a>，“使用Android作为商标名称来宣传其与Android应用程序兼容性的设备需要通过兼容性测试套件(CTS)。”最后，该软件必须通过谷歌测试套件(GTS)才能被视为与谷歌移动服务兼容。</p>
+
+<p class="translated">我们查看了提供给设备制造商的“地理可用性图表”的副本，这些设备制造商签署了在欧洲经济区(EEA)的31个国家分发GMS应用程序的MADA。该图表的日期是2018年10月，因此它可能没有反映出谷歌为在欧洲经济区分发GMS应用程序的合作伙伴制定的最新要求。不过，我们可以大致了解一下欧洲要求发布哪些谷歌应用。</p>
+
+<p class="translated">“地理可用性图表”根据重要性区分了Google apps:</p>
+
+<ul> <li class="translated"><strong>普通GMS应用</strong>:普通Android设备必须附带的核心应用。</li> <li class="translated"><strong> Go GMS应用</strong>:Android(Go版)设备必须搭载的核心应用。</li> <li class="translated"><strong>核心服务</strong>:所有设备都必须附带的GMS软件组件。这些被其他Google应用程序使用，不会在启动器中显示给用户。</li> <li class="translated"><strong>可选GMS应用</strong>:设备制造商可以选择预装的其他GMS应用。</li> </ul>
+
+<p class="translated">对于欧洲经济区，以下GMS应用程序被视为“常规GMS应用程序”</p>
+
+<ul> <li class="translated">谷歌应用*</li> <li class="translated">谷歌浏览器*</li> <li class="translated">谷歌邮箱</li> <li class="translated">谷歌地图</li> <li class="translated">油管（国外视频网站）</li> <li class="translated">谷歌Play商店</li> <li class="translated">Google Drive</li> <li class="translated">Google Play音乐</li> <li class="translated">Google Play电影</li> <li class="translated">谷歌二重奏</li> <li class="translated">Google相册</li> </ul>
+
+<p class="translated">*继欧盟委员会因违反反垄断法对€处以43.4亿美元的罚款后，谷歌现在要求设备制造商签署一份额外的许可，以便在欧洲经济区销售谷歌应用程序和谷歌浏览器。</p>
+
+<p class="translated">“核心服务”包括系统应用和库，如GMSCore(也称为Google Play服务)、Google Services Framework、ConfigUpdater、AndroidPlatformServices、GoogleBackupTransport、Widevine DRM等。“可选的GMS应用程序”包括谷歌应用程序，如谷歌日历、谷歌Keep、谷歌翻译、信息、谷歌手机等等。Google Pay是一个可选的GMS应用程序，如果它已经在该国推出，合作伙伴可以分发该应用程序。例如，在分发这张“地理可用性图表”时，Google Pay尚未在法国推出，因此Google警告称，Pay“不得”在该国发售或用于任何营销活动。</p>
+
+<p class="translated">由于华为无法与谷歌签署新的MADA，华为Mate 30、华为Mate 30 Pro和华为Mate 30 Lite将不允许附带任何GMS应用程序的完整版本，包括核心服务。那么华为和用户可以做些什么来解决这一限制呢？</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="sideloading-google-play-apps-and-services" class="translated">侧装Google Play应用和服务</h2>
+<p class="translated">即使设备制造商没有从谷歌获得在任何给定设备上发布GMS应用程序和组件的认证，用户仍有可能手动下载这些应用程序和组件。</p>
+
+<p class="translated"><b>场景1 </b></p>
+
+<p class="translated">了解核心服务，如谷歌Play商店和Google Play服务非常强大，通常拥有不能授予标准用户应用程序的权限。因此，这并不像从网上下载一个APK文件(Android应用程序的容器)然后安装它那么简单。这些应用程序<i>必须</i>安装为具有特权许可的<a href="https://source.android.com/devices/tech/config/perms-whitelist">系统应用程序。</a></p>
+
+<p class="translated">一些设备制造商，如华为本身、华为的子品牌Honor、小米和其他公司，预装了我喜欢称之为所需应用程序的“存根”版本。他们还提前将这些应用程序列入白名单，并授予必要的特权权限。这些“存根”apk基本上是休眠版本，只是等待更新；这里的技巧是，虽然<i>你</i>不能只插入谷歌Play商店并作为系统应用程序播放服务，但你可以<em>在这些“存根”apk上安装一个“更新”</em>来激活它们，并将其转换为完整版本。用户可以从第三方平台如<a href="https://www.apkmirror.com/"> <i> APKMirror </i> </a>下载谷歌Play商店、Google Play服务和其他谷歌应用的最新完整版本。</p>
+
+
+
+
+
+<p/><p class="translated"><em>Honor Magic 2是由华为子品牌Honor制造的设备，仅在中国市场型号中可用，因此不与谷歌Play商店一起发货。然而，正如华为的亚马逊列表中所提到的，你可以毫无问题地下载Google Play应用。这是因为，如Honor Magic 2固件转储左侧的截图所示，必要的“核心服务”已经预装。此外，如右边的屏幕截图所示，核心服务应用程序已被授予必要的操作权限。</em></p>
+
+<p class="translated">据我所知，华为、Honor和小米对他们在中国独家销售的手机采取了这种做法，因为他们的Android许可协议要求他们为他们在国际市场销售的手机预装完整的Google Play应用程序和服务。我怀疑华为、Honor和小米这样做是因为他们知道他们的中国市场设备经常出口到其他国家。</p>
+
+<p class="translated"><b>场景二</b></p>
+
+<p class="translated">为了构建场景1，设备制造商可能会在自己的应用商店中提供Google Play应用和服务的下载器。例如，中国设备制造商魅族<a href="http://forum.flymeos.com/thread-17454-1-1.html">就采取了这种方式</a>。在过去的几天里，我看到了关于“<a href="https://community.hihonor.com/fi/topic/6869/detail.htm">谷歌服务助手</a>”应用程序的讨论，经检查，该应用程序似乎使用华为企业API来安装Google Play应用程序和服务。用户已经在像<a href="https://www.xda-developers.com/honor-9x-pro-announced-kirin-810/"> Honor 9X和Honor 9X Pro </a>这样的设备上使用了这款应用，这两款设备目前都只在中国销售。我不知道Honor是否批准使用这个应用程序，所以我们联系了Honor的联系人进行确认。这款应用目前在华为AppGallery上不可用，不管它值不值得。</p>
+
+<p class="translated"><b>场景3 </b></p>
+
+<p class="translated">如果设备制造商没有在他们的软件中预装“存根”apk，那么用户可以启动和运行谷歌Play商店和Google Play服务的唯一方法就是手动安装这些应用程序，并授予他们所请求的特权权限。如果不在被称为“寻根”的过程中修改设备上的软件，就无法做到这一点Root访问权限授予用户修改他们通常不被允许访问的文件的能力。可以把它想象成Windows上的“管理员”帐户。通过root访问，用户可以使用来自<a href="https://opengapps.org/"> Open GApps项目</a>的社区成员制作的预打包容器轻松安装Google Play应用和服务。</p>
+
+
+
+<p/><p class="translated"><em> OpenGapps提供了你需要的所有GMS应用的一个漂亮的、高度压缩的包。上面显示的是“pico”包，它只包含必要的核心服务。</em></p>
+
+<p class="translated">然而,“扎根”你的设备并不是没有缺点的。获得root访问权限的过程是特定于设备的，对于普通用户来说，有时可能太难执行。获得root访问权限还需要设备制造商提供“解锁引导加载程序”的方法，或者禁用获得root访问权限所需的引导级保护，设备制造商可能允许也可能不允许。例如，华为<a href="https://www.xda-developers.com/huawei-stop-providing-bootloader-unlock-codes/">不允许这种做法</a>。最后，如果用户解锁引导程序，许多设备制造商会取消保修，尽管这种做法在消费者保护法更宽松的国家可能不成立。</p>
+
+<p class="translated">我们刚刚谈到的一切都只涉及安装谷歌Play商店和Google Play服务。实际上还有<i>运行</i>这些应用的步骤，这可能不像点击启动器中的应用图标那么简单。</p>
+
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="google-s-crackdown-on-uncertified-devices" class="translated">谷歌对未认证设备的打击</h2>
+<p class="translated">2018年3月，谷歌开始向一些设备没有通过谷歌认证的用户显示“<a href="https://www.xda-developers.com/google-blocks-gapps-uncertified-devices-custom-rom-whitelist/">设备没有通过谷歌</a>认证”的消息。该消息警告用户，设备制造商“未经谷歌认证就预装了谷歌应用和服务”，并警告设备制造商“需要谷歌的许可才能分发应用和服务。”在此消息得到处理之前，您不能使用任何Google apps。用户可以绕过这条消息的唯一方法是<a href="https://www.xda-developers.com/how-to-fix-device-not-certified-by-google-error/">手动向谷歌</a>注册他们的设备，但这只能由运行“定制ROM”(售后软件)的用户使用。</p>
+<div class="body-img portrait"><div class="responsive-img image-expandable img-article-item-portrait" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/09/Google-Play-Uncertified-Rotated.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Photo by XDA Senior Member &lt;a href=\&quot;https:\/\/forum.xda-developers.com\/member.php?u=5823687\&quot;&gt;liam_davenport&lt;\/a&gt;&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/09/Google-Play-Uncertified-Rotated.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/09/Google-Play-Uncertified-Rotated.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="600px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/09/Google-Play-Uncertified-Rotated.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="360px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/09/Google-Play-Uncertified-Rotated.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <img class="lazyload" alt="Google Play uncertified device error" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/09/Google-Play-Uncertified-Rotated.jpg" src="../Images/445aa71d8e02faea8266c67f145b7374.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/09/Google-Play-Uncertified-Rotated.jpg"/> </picture> <figcaption class="body-img-caption">Photo by XDA Senior Member <a href="https://forum.xda-developers.com/member.php?u=5823687">liam_davenport</a></figcaption> </figure> </div>
+
+
+ </div>
+
+
+<p class="translated">谷歌不关心定制ROM社区中的个人用户是否安装了Google Play应用和服务，这就是为什么谷歌这么长时间以来对GApps包的分发视而不见，尽管他们完全有权利关闭它。另一方面，谷歌<em>确实</em>关心未经许可的制造商是否在分发他们的应用，因此他们去年开始显示这一警告。</p>
+
+<p class="translated">在我们发表了我们的文章之后，魅族的一位代表联系了我们，询问他们是否可以重新发布我关于此事的解决方法教程，因此似乎这个警告已经击中了许多在中国销售的设备。我不知道这个警告截至今天有多广泛，但我个人上一次遇到这个警告是在一个Pixel 3 XL上闪现一个<a href="https://www.xda-developers.com/android-q-dark-theme-desktop-mode-permission-revamp/">泄露的Android 10系统映像</a>时。</p>
+
+
+
+<p/><p class="translated"><em>如果谷歌没有将华为设备列入警告白名单，那么用户将不得不按照该页面上的说明使用Google Play应用和服务。</em></p>
+
+<p class="translated">如果你在目前在中国销售的华为、Honor和小米设备上下载场景1或2中概述的Google Play应用和服务，你可能不会看到这条消息。原因是，即使这些中国市场的手机不需要满足谷歌的Android认证要求，但这些设备制造商<em>无论如何都满足要求</em><i/>。遵守CDD并通过CTS已经是他们工程师工作流程的一部分，这些公司已经遵循谷歌对他们大多数其他设备的要求。我已经在<a href="https://forum.xda-developers.com/magic-2"> Honor Magic 2 </a>、<a href="https://forum.xda-developers.com/honor-note-8"> Honor Note 8 </a>、<a href="https://forum.xda-developers.com/note-10"> Honor Note 10 </a>和腾讯<a href="https://forum.xda-developers.com/rog-phone-2">华硕ROG Phone II </a>上下载了Google Play应用和服务，没有出现任何问题。</p>
+
+
+
+<p/><p class="translated"><em>Honor Magic 2通过了CTS，尽管它从未在中国以外的地区推出，也没有附带GMS应用程序。不过，由于华为在亚马逊上销售这款手机，他们知道进口商会希望获得Google Play应用和服务。</em></p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="the-problem-for-the-huawei-mate-30" class="translated"><b>华为Mate 30的问题</b></h2>
+<p class="translated"><i>免责声明:我不知道华为是否与谷歌达成了任何协议，所以我提出以下我自己对可能发生的事情的分析。</i></p>
+
+<p class="translated">因为美国的贸易禁令限制谷歌将安卓授权给华为的新产品，如华为Mate 30系列，华为Mate 30不能搭载谷歌移动服务。华为<i>可能</i>能够预装“存根”apk以方便侧装，但他们实际上无法在自己的应用商店(即<a href="https://www.xda-developers.com/huawei-request-developers-publish-appgallery/">华为AppGallery </a>)上托管完整的GMS应用。)正如来自<i> ArsTechnica </i> 的<a href="https://arstechnica.com/gadgets/2019/05/huaweis-us-ban-a-look-at-the-hardware-and-software-supply-problems/"> Ron Amadeo所指出的，美国公司制作的应用也受到美国禁令的限制，因此谷歌不能在华为AppGallery上分发自己的应用。华为<i>可能</i>能够为GMS应用程序托管一个安装程序——同样，我们已经接触荣誉，看看“谷歌服务助手”应用程序是否是他们正式推荐的——但我不确定如果安装程序是由华为制作的，这种情况会持续下去。</a></p>
+
+<p class="translated">即便如此，在华为Mate 30和华为和Honor的其他新设备上侧装GMS应用程序可能会触发“设备未经谷歌认证”的错误消息出现。对于普通用户来说，克服这一信息将是一个重大的进入障碍，我很好奇华为将如何处理这一问题。从现在起大约24小时后，当华为Mate 30系列在德国慕尼黑正式亮相时，我们就会知道了。你可以在这里观看活动<a href="https://consumer.huawei.com/en/campaign/mate30/?utm_medium=fsm&amp;utm_source=facebook&amp;utm_campaign=mate30_global_teaser">的直播，活动将于CEST时间下午2点/美国东部时间上午8点开始。我怀疑华为不会让Mate 30系列立即在欧洲上市，事实上，</a><a href="https://nl.letsgodigital.org/smartphones/huawei-mate-30-modellen/"><em>LetsGoDigital</em></a>正在报道这一点。尽管如此，华为最终可能会披露他们与谷歌秘密达成的协议，让我们大吃一惊。</p>
+
+<p/><p class="translated"><a href="https://forum.xda-developers.com/mate-30"> <strong>华为Mate 30论坛</strong> </a> ||| <a href="https://forum.xda-developers.com/mate-30-pro"> <strong>华为Mate 30 Pro论坛</strong> </a> ||| <a href="https://forum.xda-developers.com/mate-30-lite"> <strong>华为Mate 30 Lite论坛</strong> </a></p>
+
+<hr/>
+
+<p class="translated"><em>特色图片致谢:埃文·布拉斯(@ <a href="https://twitter.com/evleaks"> evleaks </a> ) </em></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

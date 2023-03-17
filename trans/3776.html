@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Wine 8.0 released with better controller compatibility, experimental WoW64 support, and more</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">Wine 8.0发布了更好的控制器兼容性、实验性WoW64支持等等</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/wine-80-released/#0001-01-01">https://www.xda-developers.com/wine-80-released/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">如果你想在Linux上运行Windows应用程序，那么你可能听说过Wine。Wine作为一个层，将Windows API调用转换为POSIX(可移植操作系统接口)调用，同时重新创建Windows目录结构，并提供系统服务的替代实现。它也不使用任何仿真或虚拟化来执行Windows二进制文件。现在，Wine版本刚刚发布，进行了大量的改进和更改。</p>
+
+  
+<p class="translated">最显著的变化之一是完成了可移植可执行文件(PE)转换，即Windows二进制格式。这很重要，因为这意味着检查系统模块的磁盘和内存内容是否相同的各种复制保护方案现在将信任它们运行的系统。Wine开发者表示，这将允许“64位主机上的32位应用程序、Windows调试器、ARM上的x86应用程序”等等。</p>
+
+<p class="translated">此外，wow 64(<strong>W</strong>windows 32位<strong>o</strong>n<strong>W</strong>windows<strong>64</strong>位)支持已经为“几乎所有”Unix库实现。这允许在64位环境中执行32位应用程序，而不需要适当的32位库。Wind开发人员还不建议将其用于一般用途，但可以通过使用'- enable-archs '选项来启用它。</p>
+
+<p class="translated">其他改进包括:</p>
+
+<ul> <li class="translated">默认配置下启用新灯光主题</li> <li class="translated">许多Direct3D优化和改进</li> <li class="translated">控制器热插拔支持得到改进</li> <li class="translated">驱动轮检测</li> <li class="translated">使用hidraw后端时，支持索尼DualShock和DualSense控制器</li> <li class="translated">Windows运行时(WinRT)模块。游戏。输入已经被引入，一个访问游戏手柄、操纵杆和驱动轮的编程接口</li> <li class="translated">Wine Gecko获得可访问性支持</li> </ul>
+
+<p class="translated">请务必查看葡萄酒8.0官方公告，了解更多信息。虽然二进制文件还不能下载，但是您可以自己构建或者等待这些二进制文件发布。一旦完成，你就可以在Ubuntu、Debian、Fedora和macOS上安装它了。葡萄酒构成了<a href="https://www.xda-developers.com/steam-deck-review">蒸汽甲板</a>的<a href="https://www.xda-developers.com/how-proton-on-the-steam-deck-works/">质子</a>的一部分，因此其中一些改进可能会在未来使蒸汽甲板上的游戏变得更好。</p>
+
+<hr/>
+
+<p class="translated"><strong>来源:</strong> <a href="https://www.winehq.org/announce/8.0" rel="noopener noreferrer" target="_blank">酒</a></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

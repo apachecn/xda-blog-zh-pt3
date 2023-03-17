@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>How to root the Google Pixel 6, 6 Pro, and the Pixel 6a running Android 13 QPR2 Beta using Magisk</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">如何用Magisk谷歌Pixel 6，6 Pro，和运行Android 13 QPR2 Beta的Pixel 6a</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/google-pixel-6-pro-6a-android-13-qpr2-beta-root/#0001-01-01">https://www.xda-developers.com/google-pixel-6-pro-6a-android-13-qpr2-beta-root/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">当谷歌启动了Android 13第二季度平台发布(通常被称为QPR2)的测试计划时，许多爱好者认为在这些版本上实现root就像在稳定的渠道固件上实现root一样容易，但事实证明并非如此。准确地说，涉及使用Magisk修补启动映像的<a href="https://www.xda-developers.com/root/">通用根向导</a>对谷歌Pixel 6系列不再有效。如果您有Pixel 6、6 Pro或Pixel 6a，Magisk的stable或Canary版本都无法为QPR2 beta版本上的超级用户访问生成有效的修补启动映像。但是解决这个谜题似乎是一个时间问题，而不是如果的问题，Android修改场景已经找到了一个聪明的方法，通过借用<a href="https://www.xda-developers.com/google-pixel-7-pro-review/"> Pixel 7 </a>的一些位来为运行Android 13 QPR2 beta的Pixel 6阵容提供基础。</p>
+
+  
+
+
+
+<p class="translated">对于正在阅读这篇文章的人来说，你可能对root有好感。毕竟，由于root权限，你能够<a href="https://www.xda-developers.com/best-android-root-apps/">在系统范围内阻止广告，调整内核参数</a>，或者完全放弃定制ROM的需要，这要感谢通过<a href="https://www.xda-developers.com/best-magisk-modules/"> Magisk模块</a>和<a href="https://www.xda-developers.com/best-xposed-modules/"> Xposed框架</a>提供的无数定制。也就是说，考虑到Android和OEM皮肤的成熟度，root访问对普通用户来说毫无意义。对于运营商和设备制造商来说，root访问实际上是一个令人头疼的问题，它阻止这些公司将你的手机锁定在他们的应用和服务生态系统中。但归根结底，这是XDA，这意味着尽管获得root访问权对消费者来说是一场失败的战斗，但修改社区不会停止。</p>
+
+<p class="translated">不用说，售后市场的发展似乎进展顺利。事实上，一些用户已经证实了一种有趣的<em> frankenbuild </em>方法的存在，这种方法可以让这些手机基于Android 13的最新测试版。Pixel家族逐渐转向<a href="https://www.xda-developers.com/google-generic-kernel-image/">通用内核映像</a>在这一发现中发挥了关键作用，而两代张量芯片组之间的相似性使得完成这一命运成为可能。简而言之，仍然可以根运行Android 13 QPR2测试版的谷歌Pixel 6阵容，但这个过程需要一些额外的步骤。</p>
+
+ 
+<h2 id="the-rise-of-init-boot" class="translated">init_boot崛起</h2>
+<p class="translated">为了在Android设备上进行root访问，需要在引导时启动超级用户可执行文件和su守护程序。在Marshmallow之前，这是通过修改/system分区来实现的，以便在init中包含引导时实现root访问所需的脚本。由于device-mapper-verity (dm-verity)的引入，Google基本上消除了修改/system的可能性，这导致了“无系统”的根方法。Magisk是最受欢迎的超级用户权限提供程序，它为目标设备的普通引导映像打补丁。然后，如果设备的引导加载程序被解锁以允许修改二进制文件，您可以刷新修补后的引导映像以获得root访问权限。</p>
+
+<p class="translated">对于使用Android 13启动的设备，通用ramdisk将从引导映像中移除，并放在一个单独的init_boot分区中。例如，在Google Pixel 7系列上，你必须用Magisk为stock init_boot映像打补丁以获得root访问权限。然而，Pixel 6系列没有init_boot分区，因为它们是在Android 12中推出的。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="exploiting-gki-for-rooting" class="translated">利用GKI生根</h2>
+<p class="translated">请记住，使用内核版本5.10或更高版本启动的设备必须附带GKI内核，以符合<a href="https://source.android.com/docs/core/architecture/kernel/generic-kernel-image#gki2" rel="noopener noreferrer" target="_blank"> GKI 2.0规范</a>。因此，Pixel 6、6 Pro和6a的引导映像包含通用ramdisk和GKI内核。</p>
+
+<p class="translated">虽然我们还不知道Magisk和谷歌Pixel 6家族的QPR2 beta启动映像之间不兼容的确切原因，但似乎<strong>你可以使用Pixel 7系列的补丁启动映像来根化它们</strong>。这种奇怪的现象实际上是可能的，因为:</p>
+
+<ol> <li class="translated">由于内部相似性，对应于驱动像素6的第一代张量和像素7的张量G2的核源共享相当多的公共比特。</li> <li class="translated">如果在带有兼容引导加载程序的传统SAR A-only设备上没有OEM提供的通用ramdisk，Magisk <a href="https://github.com/topjohnwu/Magisk/commit/985249c3d0bccff479f8c1efd5967922ab8d855e" rel="noopener noreferrer" target="_blank">会在修补引导映像时添加一个基本的通用ramdisk </a>，以便在引导模式下可以访问Magisk接口。这个修复也适用于一些Android 13 GKIs，如Pixel 6系列，需要<a href="https://github.com/topjohnwu/Magisk/issues/5819" rel="noopener noreferrer" target="_blank">一个额外的ramdisk压缩格式修复</a>。似乎没有ramdisk的兼容启动映像(如Pixel 7系列中的映像)最终可以转换为Pixel 6系列，使用Magisk手动添加的工作通用ramdisk。</li> </ol>
+<p class="ad-even">
+</p>
+
+
+<h2 id="how-to-root-the-google-pixel-6-series-running-android-13-qpr2-beta-with-magisk" class="translated">如何用Magisk运行Android 13 QPR2 beta的Google Pixel 6系列</h2>
+<p class="translated">确保您的Pixel 6/6 Pro/6a具有解锁的引导加载程序，以便您可以引导修改后的引导映像。重申一下，<strong>你需要修补Pixel 7的启动映像，Magisk才能工作</strong>。最简单的方法是事先从工厂映像中提取谷歌Pixel 7的股票启动映像，并使用Magisk应用程序对其进行修补。</p>
+
+<ol> <li class="translated">在您的PC/Mac上，下载与安装在Pixel 6/6 Pro/6a上的QPR2测试版相对应的Pixel 7或Pixel 7 Pro的工厂图像。在我们的测试中，我们在Pixel 6a上运行QPR2 Beta 2 (T2B2.221216.006)构建，因此Pixel 7的相同Beta应该足够了。</li> <li class="translated">使用您最喜欢的档案管理器打开工厂图像，找到图像- <device codename=""> - <build number="">。zip文件，并从中提取boot.img文件。</build></device></li> <li class="translated">使用Magisk 修补启动映像，但不要刷新它。<ul> <li class="translated">虽然推荐使用Magisk的最新稳定版本(在撰写本文时是<a href="https://www.xda-developers.com/magisk-25-2-release-rust-logging/"> v25.2 </a>，但是您也可以选择最新的<a href="https://raw.githubusercontent.com/topjohnwu/magisk-files/canary/app-release.apk"> Canary build </a>。</li> <li class="translated">启动映像可以在任何Android设备上打补丁——你不一定需要在Pixel 6或Pixel 7上执行该任务。</li><p> </p> </ul> </li> <li class="translated">将Magisk修补的启动映像从手机复制到PC/Mac，并将其重命名为magisk_patched_boot.img。</li> <li class="translated">如果USB调试打开，将Pixel 6 (/6 Pro/6a)重新启动到引导加载程序模式:<pre> <code class="hljs ">adb reboot bootloader</code> </pre></li> <li class="translated">刷新补丁启动图像，重启手机。<pre> <code class="hljs xml">fastboot flash boot /path/to/magisk_patched_boot.img<br/>fastboot reboot</code> </pre></li> <li class="translated">打开Magisk应用程序，您的Pixel 6/6 Pro/6a应该显示为rooted。</li> </ol>
+
+
+
+
+
+<p class="translated">我们可以确认，Pixel 7和Pixel 7 Pro的补丁启动映像可以在vanilla Pixel 6上互换使用，在6 Pro和6a上也是如此。</p>
+
+<p class="translated"><strong> XDA论坛:<a href="https://forum.xda-developers.com/f/google-pixel-6.12311/">谷歌像素6 </a> || <a href="https://forum.xda-developers.com/f/google-pixel-6-pro.12313/">像素6 Pro </a> || <a href="https://forum.xda-developers.com/f/google-pixel-6a.12605/">像素6a </a> || <a href="https://forum.xda-developers.com/f/google-pixel-7.12607/">像素7 </a> || <a href="https://forum.xda-developers.com/f/google-pixel-7-pro.12609/">像素7 Pro </a> </strong></p>
+
+<p class="translated">到目前为止，我们论坛上的多个用户报告称，他们已经使用这种方法成功地对运行Android 13 QPR2 beta的Pixel 6、6 Pro和6a进行了rooted。然而，根过程的本质本身有点挑剔，而且你不能再通过OTA安装更新的测试版。尽管如此，如果你拥有一台Pixel 6系列设备，并希望在beta通道上获得root访问权限，这似乎是实现它的唯一途径。</p>
+
+<p class="translated">一定要试一试，让我们知道它是否对你有效！</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>
