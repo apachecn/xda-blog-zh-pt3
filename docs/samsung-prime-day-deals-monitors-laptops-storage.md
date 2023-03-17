@@ -1,0 +1,70 @@
+# 三星 Prime Day 优惠包括 700 美元的奥德赛 Neo G9 等
+
+> 原文：<https://www.xda-developers.com/samsung-prime-day-deals-monitors-laptops-storage/>
+
+随着亚马逊优惠日从今天开始，交易正在如火如荼地进行，三星正在为这一场合打折一些主要产品。如果你是 Prime 会员，现在有几个很棒的交易正在进行，这是除了[三星 Galaxy Book 2 Pro](https://www.amazon.com/SAMSUNG-Computer-Processor-Certified-Lightweight/dp/B09R94XYBS?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) 之外的，它也有 300 美元的大折扣。
+
+首先，有三星智能显示器 M8，这是三星最新的显示器/智能电视混合产品。通常，它的零售价为 729.99 美元，但现在，它打了 25%的折扣，只需 549.99 美元，这是一个非常好的价格。这款 32 英寸显示器配有超清晰的 4K 面板，非常有利于提高工作效率，并为您提供大量空间来处理多任务和完成工作。此外，它还包括一个磁性网络摄像头，非常适合视频通话和会议。它还运行 Tizen，所以你也可以安装三星智能电视上的所有应用程序，而且你不需要连接电脑就可以工作。
+
+另一项优惠是三星 Odyssey Neo G9，该公司最新的旗舰游戏显示器。通常价格为 2，299 美元，但现在降到了 1，599.99 美元，虽然这个价格仍然很高，但你确实物有所值。这是一台超宽的 49 英寸显示器，长宽比为 32:9，本质上与两台 27 英寸的显示器并排放置是一样的。这是一个具有 2，048 个调光区的迷你 LED 面板，因此您可以通过 HDR2000 获得高对比度和出色的 HDR 支持。此外，它具有 240Hz 的刷新率，因此可以提供超流畅的游戏体验。你甚至不需要成为一个主要成员来获得这笔交易。
+
+*   <picture>![The Odyssey Neo G9 is the dream gaming monitow, with an ultra-wide 32:9 aspect ratio and smooth 240Hz refresh rate combined with mini-LED panel that delivers fantastic HDR performance. It's everything you could want, and it's discounted to $1,599.99, which is a great price.](img/4a0155ba13d3599a4f54f2f6ac88ec05.png)</picture>
+
+    三星奥德赛 Neo G9(700 美元起)
+
+    ##### 三星奥德赛 Neo G9
+
+    奥德赛 Neo G9 是梦幻游戏显示器，拥有超宽 32:9 的宽高比和平滑的 240Hz 刷新率，结合迷你 LED 面板，提供梦幻般的 HDR 它是你想要的一切，并且打折到 1，599.99 美元，这是一个非常棒的价格。
+
+*   <picture>![The Samsung Galaxy Book Go 5G is one of the cheapest ways to get 5G support on a laptop, and it has solid performance, too.](img/9790df3acefdb9cf95fcd3a3e2233af3.png)</picture>
+
+    三星 Galaxy Book Go 5G
+
+    ##### 三星 Galaxy Book Go
+
+    三星 Galaxy Book Go 是一款基于 Arm 的经济型笔记本电脑，考虑到其低廉的价格，它可以提供出色的性能和可靠的整体体验。350 美元就已经物超所值了，但是现在你可以花 239.99 美元买到它，没有理由不去买它。
+
+我们还强调了三星 Galaxy Book Go，因为它是一款非常便宜的笔记本电脑，即使它有点老化。我们去年对它进行了评估，发现它的标价为 349.99 美元，这是一个令人难以置信的价值主张，但现在你可以用 239.99 美元买到它。如果您需要一台基本的笔记本电脑来浏览网页，并且想要更长的电池续航时间，这是一个非常棒的选择，因为它采用了高通骁龙 7c 芯片组，而且价格也很合理。
+
+但即使这样也不是你现在能得到的所有折扣。三星为亚马逊 Prime Day 提供了更多优惠，包括一些最新一代的笔记本电脑，如果你不想在最新款上花太多钱，现在这些笔记本电脑更加实惠。以下是一些目前最划算的交易:
+
+| 
+
+产品
+
+ | 
+
+种类
+
+ | 
+
+通常价格
+
+ | 
+
+折扣价(点击价格查看更多信息)
+
+ |
+| --- | --- | --- | --- |
+| [三星奥德赛 G3 G32A 27 寸(全高清，165Hz)](https://www.amazon.com/SAMSUNG-Free-Sync-Adjustable-Capability-LS27AG320NNXZA/dp/B09Q7SLP6F?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 班长 | $279.99 | [$189.99](https://www.amazon.com/SAMSUNG-Free-Sync-Adjustable-Capability-LS27AG320NNXZA/dp/B09Q7SLP6F?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星奥德赛 G3 G32A 32 寸(全高清，165HZ)](https://www.amazon.com/SAMSUNG-Free-Sync-Adjustable-Capability-LS32AG320NNXZA/dp/B09Q7P3QGC?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 班长 | $329.99 | [$239.99](https://www.amazon.com/SAMSUNG-Free-Sync-Adjustable-Capability-LS32AG320NNXZA/dp/B09Q7P3QGC?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星智能显示器 M5 27 寸(全高清，60Hz)](https://www.amazon.com/SAMSUNG-27-inch-Streaming-Tunerless-LS27AM500NNXZA/dp/B08JX2J5T4?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 班长 | $249.99 | [$189.99](https://www.amazon.com/SAMSUNG-27-inch-Streaming-Tunerless-LS27AM500NNXZA/dp/B08JX2J5T4?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 S65UA 34 英寸(Ultra WQHD，100Hz)](https://www.amazon.com/SAMSUNG-Adjustable-TUV-Certified-Intelligent-LS34A650UXNXGO/dp/B08V71HXY3?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 班长 | $699.99 | [$499.99](https://www.amazon.com/SAMSUNG-Adjustable-TUV-Certified-Intelligent-LS34A650UXNXGO/dp/B08V71HXY3?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 TU87F 32 寸(4K，60Hz)](https://www.amazon.com/SAMSUNG-Thunderbolt-DisplayPort-Adjustable-LF32TU874VNXGO/dp/B09JS2VPBV?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 班长 | $689.99 | [$454.99](https://www.amazon.com/SAMSUNG-Thunderbolt-DisplayPort-Adjustable-LF32TU874VNXGO/dp/B09JS2VPBV?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 S60UA 32 寸(QHD，75Hz)](https://www.amazon.com/SAMSUNG-Adjustable-TUV-Certified-Intelligent-LS32A600UUNXGO/dp/B08YGQCT2F?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 班长 | $429.99 | [$369.99](https://www.amazon.com/SAMSUNG-Adjustable-TUV-Certified-Intelligent-LS32A600UUNXGO/dp/B08YGQCT2F?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 Galaxy Book Pro 15 英寸神秘银(第 11 代酷睿 i7、16GB 内存、512GB 固态硬盘)](https://www.amazon.com/Samsung-Electronics-Platform-Processor-Long-Lasting/dp/B09D8QJZ4Z?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 笔记本电脑 | $1,299.99 | [$879.99](https://www.amazon.com/Samsung-Electronics-Platform-Processor-Long-Lasting/dp/B09D8QJZ4Z?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 Galaxy Book Pro 15 英寸神秘蓝(第 11 代酷睿 i7、16GB 内存、512GB 固态硬盘)](https://www.amazon.com/Samsung-Electronics-Platform-Processor-Long-Lasting/dp/B09D8SGXB6?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 笔记本电脑 | $1,299.99 | [$879.99](https://www.amazon.com/Samsung-Electronics-Platform-Processor-Long-Lasting/dp/B09D8SGXB6?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 Galaxy Book Pro 13 英寸神秘银(第 11 代酷睿 i5、8GB 内存、256GB 固态硬盘)](https://www.amazon.com/dp/B09D8RX28J?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 笔记本电脑 | $999.99 | [$579.99](https://www.amazon.com/dp/B09D8RX28J?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 Galaxy Book Pro 13 英寸神秘蓝(第 11 代酷睿 i5、8GB 内存、256GB 固态硬盘)](https://www.amazon.com/Samsung-Electronics-Platform-Processor-Long-Lasting/dp/B09D8SG1PH?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 笔记本电脑 | $999.99 | [$579.99](https://www.amazon.com/Samsung-Electronics-Platform-Processor-Long-Lasting/dp/B09D8SG1PH?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 T7 盾 1TB](https://www.amazon.com/SAMSUNG-Portable-Photographers-MU-PE1T0S-AM/dp/B09VLK9W3S?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 外部存储器 | $159.99 | [$99.99](https://www.amazon.com/SAMSUNG-Portable-Photographers-MU-PE1T0S-AM/dp/B09VLK9W3S?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 T7 盾 2TB](https://www.amazon.com/SAMSUNG-Resistant-Photographers-MU-PE2T0S-AM/dp/B09VLHR4JC?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 外部存储器 | $289.99 | [$199.99](https://www.amazon.com/SAMSUNG-Resistant-Photographers-MU-PE2T0S-AM/dp/B09VLHR4JC?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 Pro Plus microSD 卡 256GB (UHS-3、V30、A2)](https://www.amazon.com/SAMSUNG-microSDXC-Expanded-MB-MD256KA-AM/dp/B09B1J3BK2?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 外部存储器 | $54.99 | [$27.99](https://www.amazon.com/SAMSUNG-microSDXC-Expanded-MB-MD256KA-AM/dp/B09B1J3BK2?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 Pro Plus microSD 卡 512GB (UHS-3，V30，A2)](https://www.amazon.com/SAMSUNG-Adapter-microSDXC-MB-MD512KA-AM/dp/B09B1HYPR9?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 外部存储器 | $109.99 | [$54.99](https://www.amazon.com/SAMSUNG-Adapter-microSDXC-MB-MD512KA-AM/dp/B09B1HYPR9?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 Pro Plus SD 卡 256GB (UHS-3，V30) + SD 卡读卡器](https://www.amazon.com/SAMSUNG-Reader-256GB-MB-SD256KB-AM/dp/B09HXTZ58Z?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 外部存储器 | $62.99 | [$29.99](https://www.amazon.com/SAMSUNG-Reader-256GB-MB-SD256KB-AM/dp/B09HXTZ58Z?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 980 PRO PCIe 4.0 SSD 1TB 带散热器](https://www.amazon.com/Electronics-Heatsink-Internal-Compatible-MZ-V8P1T0CW/dp/B09JHL33X7?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 内存储器 | $229.99 | [$139.99](https://www.amazon.com/Electronics-Heatsink-Internal-Compatible-MZ-V8P1T0CW/dp/B09JHL33X7?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 980 PRO PCIe 4.0 SSD 2TB 带散热器](https://www.amazon.com/Electronics-Heatsink-Internal-Compatible-MZ-V8P2T0CW/dp/B09JHKSNNG?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 内存储器 | $399.99 | [$249.99](https://www.amazon.com/Electronics-Heatsink-Internal-Compatible-MZ-V8P2T0CW/dp/B09JHKSNNG?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 980 PRO PCIe 4.0 SSD 1TB](https://www.amazon.com/Electronics-Heatsink-Internal-Compatible-MZ-V8P2T0CW/dp/B08GLX7TNT?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 内存储器 | $209.99 | [$119.99](https://www.amazon.com/Electronics-Heatsink-Internal-Compatible-MZ-V8P2T0CW/dp/B08GLX7TNT?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 980 PRO PCIe 4.0 SSD 2TB](https://www.amazon.com/Electronics-Heatsink-Internal-Compatible-MZ-V8P2T0CW/dp/B08RK2SR23?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 内存储器 | $379.99 | [$229.99](https://www.amazon.com/Electronics-Heatsink-Internal-Compatible-MZ-V8P2T0CW/dp/B08RK2SR23?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+| [三星 870 Evo SATA SSD 4TB](https://www.amazon.com/SAMSUNG-Inch-Internal-MZ-77E4T0B-AM/dp/B08QBL36GF?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) | 内存储器 | $499.99 | [$349.99](https://www.amazon.com/SAMSUNG-Inch-Internal-MZ-77E4T0B-AM/dp/B08QBL36GF?tag=xda-76pb7ba-20&ascsubtag=UUxdaUeUpU42495&asc_refurl=https%3A%2F%2Fwww.xda-developers.com%2Fsamsung-prime-day-deals-monitors-laptops-storage%2F&asc_campaign=Affiliate) |
+
+这些都是满足各种需求的好交易。如果顶部的亮点不适合你，也许这些产品会引起你的兴趣。三星 980 PRO 是为您的 PC 添加超高速存储的一个好方法，现在提供的 Prime Day 交易使它更具吸引力。
