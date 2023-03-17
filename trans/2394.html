@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Windows 11 build 22622.586 brings a ton of fixes to the Beta channel</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">Windows 11 build 22622.586 为测试版带来了大量修复</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/windows-11-build-22622-586-22621-586-fixes/#0001-01-01">https://www.xda-developers.com/windows-11-build-22622-586-22621-586-fixes/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">对于 Windows Insider 计划来说，这是忙碌的一天，因为除了开发频道之外，微软还在测试频道推出了新版本的 Windows 11。对于测试版渠道，实际上有两个更新- Windows 11 build 22621.586 和 build 22622.586 现在都在推出，这是因为它们本质上是相同的更新。如果您选择升级到 22622 分支，您可以启用一些功能，但两者的基础位是相同的。</p>
+
+  
+<p class="translated">不过，这一次，两个更新几乎都集中在修复上。尽管如此，Windows 11 build 22622.586 仍然备受关注，它有大量独家修复，主要围绕文件浏览器。随着发布<a href="https://www.xda-developers.com/windows-11-22h2/"> Windows 11 版本 22H2 </a>以及预计今年晚些时候<a href="https://www.xda-developers.com/windows-11-22h2-september-20th-report/">发布的后续功能下降(或“时刻”)更新，微软正在努力完善这些功能。这一功能的下降可能会包括文件浏览器标签等功能，这就是为什么它需要大量的修复。以下是完整列表:</a></p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_2"><h3 id="fixes-in-windows-11-build-22622-586" class="translated">Windows 11 内部版本 22622.586 中的修复</h3><p class="translated"><strong>【常规】</strong></p><ul> <li class="translated">我们修复了 22622.575 上的内部人员导致 DWM 崩溃(导致黑色闪烁或内容滞留在屏幕上)的问题。</li> <li class="translated">我们修复了导致 SQL Server Management Studio 无法为某些内部人员启动的问题。</li> </ul><p class="translated"><strong>【文件浏览器】</strong></p><ul> <li class="translated">修正了一些内部人员不能通过鼠标或触摸拖动文件浏览器标题栏左半部分的问题。</li> <li class="translated">选择多个文件夹，然后使用上下文菜单选项在新选项卡中打开它们，现在实际上会这样做，而不是在新选项卡中打开第一个文件夹，在新窗口中打开所有其他文件夹。</li> <li class="translated">我们修复了导致主页、文档、图片和潜在的其他文件夹在文件资源管理器的导航窗格中意外重复或出现在桌面上的问题。</li> <li class="translated">我们修复了关闭新打开的文件浏览器窗口时可能发生的 explorer.exe 崩溃。</li> <li class="translated">我们修复了一个问题，即文件浏览器中的搜索框背景可能与您当前的模式颜色相反(例如，在亮模式下为暗)。</li> <li class="translated">修复了文件资源管理器在从特定位置启动后(例如，当从 Microsoft Edge 打开下载文件的位置时)，在完成绘制之前会出现打开、关闭和重新打开的问题。</li> <li class="translated">修复了当文件浏览器关闭时可能导致 explorer.exe 崩溃的问题。</li> <li class="translated">文件资源管理器中的向上箭头应该不会再错位。</li> <li class="translated">移除了一些人意外看到的工具栏(查看/编辑等)。)在文件资源管理器中引入制表符之后。作为其中的一部分，文件夹选项中的“总是显示菜单”选项也被删除了，但没有任何作用。</li> <li class="translated">修复了当文件资源管理器启动中止时可能发生的底层 explorer.exe 崩溃，例如，如果您试图从运行对话框访问网络共享，系统会提示您输入凭据，然后单击取消而不是输入凭据。</li> <li class="translated">修正了一个问题，导致删除键意外不工作的文件浏览器中的文件有时。</li> <li class="translated">修复了一个可能导致无法从快速访问中取消固定桌面、图片或文档文件夹的问题。</li> <li class="translated">修正了一个问题，当拖放一个文件夹以将其固定到导航窗格时，在黑暗模式下指示其插入位置的线没有足够的对比度。</li> <li class="translated">修正了当使用对比主题时，最小/最大/关闭按钮在文件浏览器中不可见的问题。</li> </ul><p class="translated"><strong>【任务栏】</strong></p><ul> <li class="translated">修正了一个可能导致任务栏溢出图标意外出现在屏幕另一侧的问题。</li> <li class="translated">修复了一个问题，如果你在显示比例改变后打开任务栏溢出弹出按钮，它可能会出现浮动远离任务栏。</li> <li class="translated">修复了一个问题，如果你在任务栏中右键单击一个应用程序并选择关闭所有窗口，如果它在关闭前需要注意(例如，如果你没有保存记事本窗口的内容)，它不会再将应用程序带到前台。</li> <li class="translated">修复了当任务栏溢出打开时，如果你试图重新排列任务栏上的应用程序图标，explorer.exe 可能会崩溃的问题。</li> <li class="translated">修复了至少有两台显示器的内部人员的问题，如果显示器具有不同的 DPI，任务栏溢出可能会在需要之前出现，或者最终与辅助显示器上的日期和时间重叠。</li> </ul><p class="translated"><strong>【设置】</strong></p><ul> <li class="translated">修复了卸载某些应用程序时可能发生的设置崩溃。</li> <li class="translated">我们修复了一个问题，在设置&gt;应用程序&gt;已安装的应用程序中改变当前视图的按钮可能会意外地显示覆盖在顶部的箭头。</li> </ul><p class="translated"><strong>【建议行动】</strong></p><ul> <li class="translated">修复了一个问题，当建议的行动被启用时，如果你在一行中复制多个项目到你的剪贴板历史，一些项目可能不会显示后，你按下 WIN + V。</li> <li class="translated">“系统”&gt;“剪贴板”下的“建议操作”设置的首选状态应该是从此版本继续升级。</li> </ul> </div></section>
+<p class="translated">尽管如此，仍然有相当多的修复适用于 Windows 11 build 22622.286 和 builld 22621.586。其中包括对导致一些联想设备无法获得新版本的问题的重大修复，所以如果你已经在旧版本中停留了一段时间，这是一个获取最新版本的好时机。以下是适用于这两个版本的完整修复列表:</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_4"><h3 id="fixes-for-windows-11-build-22622-586-and-22621-586" class="translated">Windows 11 内部版本 22622.586 和 22621.586 的修复程序</h3><ul> <li class="translated">我们修复了一个问题，一些联想设备没有收到预期的更新。</li> <li class="translated">我们修复了一个问题，导致域证书在之前的测试版渠道飞行中对一些内部人员无效。</li> <li class="translated">我们修复了“设置&gt;系统&gt;剪贴板”下的“跨设备同步”选项无法保持启用的问题。</li> <li class="translated">我们修复了一个影响 Microsoft Defender Application Guard(MDAG)的问题。它延迟或阻止 MDAG 打开。</li> <li class="translated">我们修复了一个影响 JavaScript 生成的 URL 的问题。当您在 IE 模式下将这些 URL 添加到收藏夹菜单时，它们无法正常工作。</li> <li class="translated">我们修复了一个问题，强制在一个会话中的 IE 模式标签重新加载。</li> <li class="translated">我们修复了在 IE 模式下影响<strong>打开</strong>的问题。</li> <li class="translated">我们修复了在 IE 模式下成功打开浏览器窗口以显示 PDF 文件的问题。稍后，在同一个窗口中浏览另一个 IE 模式站点失败。40411607</li> <li class="translated">我们修复了可能绕过 Windows Defender 应用程序控制(WDAC)的 MSHTML 和 ActiveX 规则的问题。</li> <li class="translated">我们修复了一个影响 SharedPC 帐户管理器的问题。该问题阻止它在清理期间删除许多帐户。</li> <li class="translated">我们修复了一个影响网络静态 IP 的问题。该问题导致静态 IP 的配置不一致。因此，<strong>NetworkAdapterConfiguration()</strong>偶尔会失败。</li> <li class="translated">我们修复了一个影响<strong> FindNextFileNameW() </strong>的问题，它可能会泄漏内存。</li> </ul> </div></section>
+<p class="translated">即使进行了所有这些修复，在这些构建中仍然有几个问题需要解决，尽管目前已知问题的列表几乎是空的。这个版本中的一个新问题是，安装了 Xbox dev kit 的内部人员可能会在 explorer.exe 遇到一些崩溃。还有一个长期存在的问题，一些内部人士无法播放音频，这个问题尚未解决。最后，还有一个问题，如果你全屏打开文件资源管理器，并且任务栏被设置为自动隐藏，任务栏可能无法显示。</p>
+
+<hr/>
+
+<p class="translated">来源:<a href="https://blogs.windows.com/windows-insider/2022/08/24/announcing-windows-11-insider-preview-build-22621-586-and-22622-586/">微软</a></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

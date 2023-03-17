@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>TWRP 3.7.0 released, finally brings Android 12 support</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">TWRP 3.7.0 发布，终于带来 Android 12 支持</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/twrp-3-7-0-release-android-12-support/#0001-01-01">https://www.xda-developers.com/twrp-3-7-0-release-android-12-support/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">TeamWin Recovery Project，简称 TWRP，是目前为止 Android 售后开发领域最流行的定制恢复解决方案。有了它，您可以刷新新的自定义 rom，进行完整的数据备份，修改受保护的文件，以及用您的设备做更多的事情。该项目已经存在多年，支持多种设备。</p>
+
+  
+<p class="translated">上一个主要的 TWRP 版本是在去年 11 月宣布的。将近一年后，TeamWin 带着另一个重大更新回来了:TWRP 3.7.0。除了新增功能，这个版本还增加了对 Android 12 的官方支持。</p>
+
+ 
+<h2 id="what-s-new-in-twrp-3-7-0" class="translated">TWRP 3.7.0 的新功能</h2>
+<p class="translated">这个版本最重要的变化是 TWRP 现在跨三个不同的分支开发。新推出的<em> android-12.1 </em>分支现在支持运行 Android 12/12L 的设备上的数据解密，因此它是新设备的默认目标。出于兼容性原因，现有的<em> android-11 </em>分支也从其继任者那里获得了一系列功能。另一方面，大多数传统设备仍然可以从<em> android-9.0 </em>分支中构建出来。</p>
+
+<p class="translated">您可以通过查看构建版本来检查设备正在使用哪个分支——来自最新分支的正式构建在文件名中会有“12-0”。</p>
+
+<p class="translated">值得注意的是，TWRP 还没有对 Android 13 的任何官方支持，但它正在开发中。</p>
+
+<p class="translated">TWRP 3.7.0 的完整变更日志可以在下面找到:</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_7"><h3 id="twrp-3-7-0-changelog" class="translated">TWRP 3.7.0 变更日志</h3><p/><p class="translated"><strong>安卓 12.1 和安卓 11 分支</strong></p><ul> <li class="translated">FFS 设备的 MTP 错误处理- nijel8</li> <li class="translated">模块正在加载 opt-in - CaptainThrowback</li> <li class="translated">SELINUX 缺少上下文- CaptainThrowback</li> <li class="translated">使用加密备份删除更多不推荐使用的代码</li> <li class="translated">主题版本移植到 golang - AndroiableDroid</li> <li class="translated">TWRP 的 Python 支持- CaptainThrowback</li> <li class="translated">中文更新- bluehomewu</li> <li class="translated">排除/data/extm - sekaicg</li> <li class="translated">MTP 修复复制文件&gt; 4G - sekaicg</li> <li class="translated">在供应商 bigbiff 中配置硬件二进制文件</li> <li class="translated">不要强制使用超大容量的滚烫咖啡</li> <li class="translated">解锁 setup - me-cafebabe 中的所有块分区</li> <li class="translated">二进制 xml - me-cafebabe 上的 RapidXML bail</li> <li class="translated">仅当逻辑分区存在时才创建其符号链接- me-cafebabe</li> <li class="translated">状态栏图标的主题变量</li> <li class="translated">委员会定义的备份目录排除- DarthJabba9</li> <li class="translated">波兰语更新- kacskrz</li> <li class="translated">包括 fastbootd 和板变量- me-cafebae</li> <li class="translated">在 zip 安装期间解锁块设备</li> <li class="translated">更新 size - me-cafebabe 时将分区挂载为 RO</li> <li class="translated">允许取消超级设备在“只有我的设备”咖啡桌上的映射</li> <li class="translated">在刷新 TWRP 之前解锁块分区</li> </ul><p/><p class="translated"><strong>安卓 12.1 分支</strong></p><ul> <li class="translated">构建期间的 BASH 和 nano 修复</li> <li class="translated">zip 安装增强功能- DarthJabba9</li> <li class="translated">Android 12 加密支持- bigbiff</li> <li class="translated">12 - me-cafebabe 的依赖关系修复</li> <li class="translated">cryptfs-hw fixes - me-cafebabe</li> <li class="translated">FDE 兼容性-我的咖啡</li> <li class="translated">boot-hal 1.2 支持- tnakamur</li> <li class="translated">boot-hal 库修复- CaptainThrowback</li> <li class="translated">不要将 fastbootd 包括在所有设备中</li> <li class="translated">内核模块加载-等待电池系统初始化- sekaicg</li> <li class="translated">修复安装自定义主题- sekaicg</li> <li class="translated">android 12 - me-cafebabe 中 XML 二进制文件的更新处理</li> <li class="translated">跳过解密修复- sekaicg</li> <li class="translated">ABX xml 文件的集成代码- _that 和 DarthJabba9</li> </ul><p/><p class="translated"><strong> Android 11 分支</strong></p><ul> <li class="translated">修复在没有供应商分区的设备上复制策略- webgeek1234</li> <li class="translated">为 system _ ext partition-me-cafe babe 设置默认值</li> </ul><p/><p class="translated"><strong>安卓 9 分支</strong></p><ul> <li class="translated">中文更新- bluehomewu</li> <li class="translated">波兰语更新- kacskrz</li> <li class="translated">TWRP 对 Oreo 及以上版本的 Python 支持</li> <li class="translated">V1 修复- bigbiff</li> </ul> </div></section>
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="newly-supported-devices" class="translated">新支持的设备</h2>
+<p class="translated">除了主要版本的提升，官方支持的设备列表也有所增长。该团队现在增加了对以下智能手机的支持:</p>
+
+
+<p class="translated">此外，一些设备(如下所列)已经获得了新的维护者。</p>
+
+
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="download" class="translated">[计] 下载</h2>
+<p class="translated">TWRP 3.7.0 版本适用于大多数当前支持的设备。要为您的设备下载最新版本，请通过下面的链接访问 TWRP 官方网站。一定要看看你的设备的 XDA 分论坛，因为 TWRP 的维护者可能会在新版本上线时发布额外的设备特定说明。</p>
+
+<p/><p class="translated"><strong> <a href="https://twrp.me/Devices/">为您的设备下载 TWRP</a></strong></p>
+
+<p class="translated">如果你想在不使用 PC/Mac 的情况下下载 TWRP 的官方版本，你应该看看 TWRP 的官方应用程序。当新版本的自定义恢复可用时，该应用程序会提醒您。</p>
+
+ 
+
+
+
+<hr/>
+
+<p class="translated"><strong>来源:</strong> <a href="https://twrp.me/site/update/2022/10/10/3.7.0-released.html"> TWRP </a></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

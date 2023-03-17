@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>What is Matter, and why the new smart home standard should matter to you</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">什么是重要的，为什么新的智能家居标准对你很重要</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/matter/#0001-01-01">https://www.xda-developers.com/matter/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">生态系统锁定并不总是不好的，但当涉及到智能家居时，前景是混乱的。目前，有不同的标准，无数的品牌，甚至像<a href="https://www.xda-developers.com/best-alexa-skills/"> Alexa </a>、<a href="https://www.xda-developers.com/best-google-home-smart-lights/"> Google Home </a>和 HomeKit 这样的平台游戏。似乎每个人都想拥有你的房子，但很少所有这些技术能很好地结合在一起。</p>
+
+  
+<p class="translated">这就是为什么物质，呃，重要。</p>
+
+<p class="translated">有很多方法可以让你所有的智能家居技术在某种程度上协同工作。例如，你可以在 Alexa 上全押，让亚马逊的助手充当中间人。但是你不能用支持 HomeKit 和<strong>而不是</strong> Alexa 的东西来支持 Alexa。像优秀的<a href="https://www.home-assistant.io/">家庭助手</a>这样的项目的存在是为了让你获得一些实现有凝聚力的智能家庭的方法，但它不是最友好的消费者解决方案。</p>
+
+<p class="translated">很明显，事情就在眼前，它应该会彻底改变智能家居的前景。这里是关于什么，为什么，希望是什么时候的简要概述。</p>
+
+ 
+<h2 id="so-what-is-matter" class="translated">那么物质是什么？</h2>
+
+
+<p class="translated">目前，在智能家居领域，有不同的协议、标准和公司在做自己的事情，而没有太多考虑支持他人。Matter 是智能家居行业的重头戏，它支持单一标准，有助于硬件之间更好的互操作性。它以前被称为通过 IP(芯片)连接家庭。Matter 也被设计成开放的，所以你可以去它的<a href="https://github.com/project-chip/connectedhomeip#readme"> GitHub 库</a>亲自体验一下。</p>
+
+<p class="translated">Matter truly 是一项联合努力，旨在统一包括最知名品牌在内的 170 多个不同品牌的行业。亚马逊、谷歌、苹果、三星、飞利浦、华为，甚至 Zigbee，都参与了 Matter。谷歌和亚马逊是最大的驱动力之一，苹果已经承诺将 HomeKit 完全集成到 Matter 中。不过，它并不是一个全新的协议，而是专注于成为一个连通性标准，使设备之间的通信更加容易。</p>
+
+<p class="translated">目前，你还不能直接将 HomeKit 设备与亚马逊 Echo 之类的东西进行交流。云可以做一些提升，但 Matter 背后的想法是所有这些设备将在本机上一起“工作”。例如，你的 HomeKit 传感器可以触发你的普通旧 Wi-Fi 灯泡。或者你的门铃可能会触发谷歌 Nest 硬件上的一个动作。至少计划是这样的。这是 Matter 在其官方网站<a href="https://csa-iot.org/all-solutions/matter/">上的描述:</a></p>
+
+<blockquote>
+<p class="translated">Matter 是一个基于 IP 的统一连接协议，构建于成熟的技术之上，帮助您连接并构建可靠、安全的物联网生态系统。</p>
+ </blockquote>
+<p class="translated">来自支持 Matter <strong>的公司的产品应该</strong>彼此无缝运作。在物质真正发射之前，我们不会看到它有多容易(或不容易)，但这个理论是合理的。</p>
+
+<h3 id="support-for-hardware-old-and-new" class="translated">支持新旧硬件</h3>
+
+
+<p class="translated">Matter 也不仅仅适用于新硬件。一些，而不是全部，现有的硬件可能会更新，以支持物质。例如，亚马逊将更新最新的 Echo 设备。同样，谷歌的 Nest 产品也将支持 Matter，可以追溯到最初的谷歌家庭扬声器。三星还承诺支持其 SmartThings 生态系统。同样，你可以期待当前 HomeKit 设备的美好前景。</p>
+
+<p class="translated">因为 Matter 是作为基于 IP 的连接标准开发的，所以有更多的余地将其反向移植到现有的硬件上。理论上，如果智能家居设备可以连接到无线网络，它就可以与物质兼容。</p>
+
+<p class="translated">你不应该想当然地认为你现有的所有硬件都会升级以支持 Matter，但是也有很大的可能。</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="how-will-matter-work" class="translated">物质将如何工作？</h2>
+
+
+<p class="translated">最初，Matter 将使用 Wi-Fi 和 Thread 协议来连接设备。Thread 是一种低功耗无线协议，它创建了一个网状网络，并允许设备相互通信。它已经在一些最受欢迎的产品中使用，包括<a href="https://www.xda-developers.com/apple-homepod-mini-review/"> HomePod 迷你</a>和谷歌 Nest Hub Max。对你来说，这真的无关紧要，你不应该看到最终结果的任何差异。但它表明了物质是如何拥抱已经建立的技术，使一切工作变得更容易。</p>
+
+<p class="translated">蓝牙低能耗也将有助于调试。未来的计划似乎包括让 Matter 和 Zigbee 互相对话，Zigbee 联盟已经参与了合作。Zigbee 不是一个基于 IP 的协议，所以要让它与物质对话还有很多工作要做。</p>
+
+<hr/>
+<p class="ad-even">
+</p>
+
+
+<h2 id="why-should-matter-matter-to-you" class="translated">为什么物质对你很重要？</h2>
+<p class="translated">从消费者的角度来看，我们已经看到了如何设置物联网设备可以得到改善。<a href="https://www.xda-developers.com/bluetooth-peripherals-google-fast-pair/">谷歌在安卓系统中的快速配对</a>功能即将更新，以增加对物质的支持。这看起来像是一个 HomeKit 式的设置过程，只需扫描智能家居设备上的二维码，就可以启动一个快速设置过程。</p>
+
+<p class="translated">现有的语音助手如 Alexa 和 Google Assistant 仍将是与 Matter 设备交互的免提方式。苹果还完全重建了 Mac 和 iOS 的家庭应用程序，一旦标准正式推出，物质支持将成为其中的一部分。总而言之，这将极大地简化构建和维护智能家居的过程，在理想的世界中，消费者不再需要受到设备之间兼容性问题的困扰。</p>
+
+<hr/>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="when-will-matter-be-available" class="translated">物质何时可用？</h2>
+<p class="translated">64000 美元的问题。现在每个人都被告知期待 2022 年下半年的事情。除此之外，就没什么可说的了。一旦获得批准，你可以期待看到一系列新产品，以及现有产品的更新。</p>
+
+<p class="translated">好消息是你真的不需要等待。假设你从一家致力于支持物质的公司购买产品，你可以在任何时候开始，一切都应该在发布后到位。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

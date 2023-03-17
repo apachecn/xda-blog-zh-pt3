@@ -4,11 +4,11 @@
 <link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="translated">Magisk v25.0引入了重新设计的MagiskInit来解决SELinux问题</h1>
+<h1 class="translated">Magisk v25.0 引入了重新设计的 MagiskInit 来解决 SELinux 问题</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/magisk-v25-release-selinux-fix/#0001-01-01">https://www.xda-developers.com/magisk-v25-release-selinux-fix/#0001-01-01</a></blockquote><div><header class="article_heading">
 
 
-<h1 class="heading_title translated">Magisk v25.0改进了SELinux处理，修改了根权限管理，等等</h1>
+<h1 class="heading_title translated">Magisk v25.0 改进了 SELinux 处理，修改了根权限管理，等等</h1>
 
 <p class="heading_sharing">
  </p>
@@ -23,22 +23,22 @@
 <section id="article-body" class="article-body" itemprop="articleBody">
 
 <div class="content-block-regular">
-<p class="translated">在这一点上，我们XDA肯定你们大多数人至少听说过Magisk。该项目由吴炯创建，又名XDA认可的开发人员<a href="https://forum.xda-developers.com/m/topjohnwu.4470081/"> topjohnwu </a>，该项目最初是作为一个无系统的根方法开始的，并逐渐发展成为一个更加多样化和强大的解决方案，不仅仅是一个简单的超级用户权限提供者。不言而喻，开发者和贡献者总是积极地努力完善它。Magisk最新的重大更新，对应的是第二十五版(v25)，现在已经到了公测分支。变更日志是微妙但非常重要的，所以让我们深入了解它。</p>
+<p class="translated">在这一点上，我们 XDA 肯定你们大多数人至少听说过 Magisk。该项目由吴炯创建，又名 XDA 认可的开发人员<a href="https://forum.xda-developers.com/m/topjohnwu.4470081/"> topjohnwu </a>，该项目最初是作为一个无系统的根方法开始的，并逐渐发展成为一个更加多样化和强大的解决方案，不仅仅是一个简单的超级用户权限提供者。不言而喻，开发者和贡献者总是积极地努力完善它。Magisk 最新的重大更新，对应的是第二十五版(v25)，现在已经到了公测分支。变更日志是微妙但非常重要的，所以让我们深入了解它。</p>
 
   
-<p/><p class="translated"><strong> <a href="https://forum.xda-developers.com/f/magisk.5903/"> Magisk XDA论坛</a> </strong></p>
+<p/><p class="translated"><strong> <a href="https://forum.xda-developers.com/f/magisk.5903/"> Magisk XDA 论坛</a> </strong></p>
 
-<p class="translated">此次更新的第一件事(可能也是最重要的一件事)是重新编写的MagiskInit软件。对于不知情的人来说，<code>magiskinit</code>二进制程序负责替换股票<code>init</code>进程作为第一个运行的程序，将Magisk服务注入<code>init.rc</code>，并修补SELinux策略规则。由于引入了全新的策略注入机制，开发人员已经成功解决了大多数与SELinux相关的不兼容问题。此外，MagiskInit现在支持<a href="https://www.xda-developers.com/google-pixel-6-6-pro-mainline-linux-kernel-support/"> Android 13的通用内核映像</a> (GKI)格式。</p>
+<p class="translated">此次更新的第一件事(可能也是最重要的一件事)是重新编写的 MagiskInit 软件。对于不知情的人来说，<code>magiskinit</code>二进制程序负责替换股票<code>init</code>进程作为第一个运行的程序，将 Magisk 服务注入<code>init.rc</code>，并修补 SELinux 策略规则。由于引入了全新的策略注入机制，开发人员已经成功解决了大多数与 SELinux 相关的不兼容问题。此外，MagiskInit 现在支持<a href="https://www.xda-developers.com/google-pixel-6-6-pro-mainline-linux-kernel-support/"> Android 13 的通用内核映像</a> (GKI)格式。</p>
 
-<p class="translated">最后但并非最不重要的一点是，新版本为MagiskSU组件提供了一些安全性增强。根权限管理已经过改进，以防止恶意UID重用攻击。Magisk现在强制执行根管理器APK签名验证，以保护用户免受已被篡改的Magisk管理器的修改版本的影响。尽管如此，开发人员在从Magisk的代码库构建Magisk时，仍然可以使用他们自己的签名密钥。你也可以选择官方的调试版本，以防你为了修补而需要去掉签名验证。</p>
+<p class="translated">最后但并非最不重要的一点是，新版本为 MagiskSU 组件提供了一些安全性增强。根权限管理已经过改进，以防止恶意 UID 重用攻击。Magisk 现在强制执行根管理器 APK 签名验证，以保护用户免受已被篡改的 Magisk 管理器的修改版本的影响。尽管如此，开发人员在从 Magisk 的代码库构建 Magisk 时，仍然可以使用他们自己的签名密钥。你也可以选择官方的调试版本，以防你为了修补而需要去掉签名验证。</p>
 
-<p class="translated">这是Magisk v25.0的官方变更日志:</p>
+<p class="translated">这是 Magisk v25.0 的官方变更日志:</p>
 
-<ul> <li class="translated">[MagiskInit]更新2SI实现，显著提高设备兼容性(如索尼Xperia设备)</li> <li class="translated">[MagiskInit]推出新的<code>sepolicy</code>注射机制</li> <li class="translated">[MagiskInit]支持Oculus Go</li> <li class="translated">【MagiskInit】支持Android 13 GKIs(像素6)</li> <li class="translated">[MagiskBoot]修复vbmeta提取实现</li> <li class="translated">[应用]修复旧版本Android上的存根应用</li> <li class="translated">使用<code>sharedUserId</code>正确支持应用程序</li> <li class="translated">[MagiskSU]修复了<code>magiskd</code>中可能出现的崩溃</li> <li class="translated">[MagiskSU]一旦<code>system_server</code>重新启动就删除未使用的UID，以防止UID重用攻击</li> <li class="translated">[MagiskSU]验证并强制执行已安装的Magisk应用程序的证书，以匹配分销商的签名</li> <li class="translated">[MagiskSU] [Zygisk]适当的软件包管理和检测</li> <li class="translated">[Zygisk]修复运行旧内核Android 12的设备上的函数挂钩</li> <li class="translated">[Zygisk]修复Zygisk的自代码卸载实现</li> <li class="translated">[DenyList]修复共享UID应用程序上的DenyList</li> <li class="translated">[BusyBox]为运行旧内核的设备添加解决方法</li> </ul>
+<ul> <li class="translated">[MagiskInit]更新 2SI 实现，显著提高设备兼容性(如索尼 Xperia 设备)</li> <li class="translated">[MagiskInit]推出新的<code>sepolicy</code>注射机制</li> <li class="translated">[MagiskInit]支持 Oculus Go</li> <li class="translated">【MagiskInit】支持 Android 13 GKIs(像素 6)</li> <li class="translated">[MagiskBoot]修复 vbmeta 提取实现</li> <li class="translated">[应用]修复旧版本 Android 上的存根应用</li> <li class="translated">使用<code>sharedUserId</code>正确支持应用程序</li> <li class="translated">[MagiskSU]修复了<code>magiskd</code>中可能出现的崩溃</li> <li class="translated">[MagiskSU]一旦<code>system_server</code>重新启动就删除未使用的 UID，以防止 UID 重用攻击</li> <li class="translated">[MagiskSU]验证并强制执行已安装的 Magisk 应用程序的证书，以匹配分销商的签名</li> <li class="translated">[MagiskSU] [Zygisk]适当的软件包管理和检测</li> <li class="translated">[Zygisk]修复运行旧内核 Android 12 的设备上的函数挂钩</li> <li class="translated">[Zygisk]修复 Zygisk 的自代码卸载实现</li> <li class="translated">[DenyList]修复共享 UID 应用程序上的 DenyList</li> <li class="translated">[BusyBox]为运行旧内核的设备添加解决方法</li> </ul>
 
-<p class="translated">您可以通过下面的链接下载最新版本。如果您不熟悉Magisk，您应该查看我们关于如何使用该工具根化您的设备的深入指南。如果你碰巧遇到了最新版本的任何问题，确保在项目的<a href="https://github.com/topjohnwu/Magisk/issues"> GitHub库</a>上提交一份错误报告。</p>
+<p class="translated">您可以通过下面的链接下载最新版本。如果您不熟悉 Magisk，您应该查看我们关于如何使用该工具根化您的设备的深入指南。如果你碰巧遇到了最新版本的任何问题，确保在项目的<a href="https://github.com/topjohnwu/Magisk/issues"> GitHub 库</a>上提交一份错误报告。</p>
 
-<p/><p class="translated"><strong>T5下载Magisk v 25.0T7】</strong></p>
+<p/><p class="translated"><strong>T5 下载 Magisk v 25.0T7】</strong></p>
 
 <hr/>
 

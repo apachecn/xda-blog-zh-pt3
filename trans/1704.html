@@ -4,13 +4,13 @@
 <link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="translated">什么是LSPosed，你可以在你的Android设备上用它做什么？</h1>
+<h1 class="translated">什么是 LSPosed，你可以在你的 Android 设备上用它做什么？</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/lsposed/#0001-01-01">https://www.xda-developers.com/lsposed/#0001-01-01</a></blockquote><div><div class="content-block-regular">
 
-<p class="translated">我们过去已经讨论过Magisk和它的模块,以及它们如何提供一个以“无系统”方式完成的修改世界。Magisk基于覆盖的界面像Xposed一样越来越受欢迎，这也不无道理。除了无系统带来的所有好处，Magisk还可以用于通过<a href="https://www.xda-developers.com/riru/"> Riru </a>在<a href="https://developer.android.com/topic/performance/memory-overview"> Android Zygote进程</a>的环境中运行代码。对于一些修改者来说，这些理由足以让他们涉足所有没有系统的东西。</p>
+<p class="translated">我们过去已经讨论过 Magisk 和它的模块,以及它们如何提供一个以“无系统”方式完成的修改世界。Magisk 基于覆盖的界面像 Xposed 一样越来越受欢迎，这也不无道理。除了无系统带来的所有好处，Magisk 还可以用于通过<a href="https://www.xda-developers.com/riru/"> Riru </a>在<a href="https://developer.android.com/topic/performance/memory-overview"> Android Zygote 进程</a>的环境中运行代码。对于一些修改者来说，这些理由足以让他们涉足所有没有系统的东西。</p>
 
   
-<p class="translated">最初的Xposed框架早就被抛弃了，但是后市场社区却出现了屈指可数的精神继承者。以Magisk和Riru为基础，<strong> LSPosed </strong>就是这样一个项目，提供了一个无系统的艺术挂钩框架。</p>
+<p class="translated">最初的 Xposed 框架早就被抛弃了，但是后市场社区却出现了屈指可数的精神继承者。以 Magisk 和 Riru 为基础，<strong> LSPosed </strong>就是这样一个项目，提供了一个无系统的艺术挂钩框架。</p>
 
  
 <h2 id="what-is-lsposed" class="translated">什么是假的？</h2>
@@ -21,44 +21,44 @@
 </p>
 
 
-<h2 id="what-are-the-features-of-lsposed" class="translated">LSPosed的特点是什么？</h2>
-<ul> <li class="translated">兼容Riru和Zygisk。</li> <li class="translated">支持多用户设置。</li> <li class="translated">您可以隐藏管理器应用程序。</li> <li class="translated">与Android Oreo 8.1到<a href="https://www.xda-developers.com/android-13-beta-1-released/"> Android 13 Beta 1 </a>兼容。</li> </ul>
+<h2 id="what-are-the-features-of-lsposed" class="translated">LSPosed 的特点是什么？</h2>
+<ul> <li class="translated">兼容 Riru 和 Zygisk。</li> <li class="translated">支持多用户设置。</li> <li class="translated">您可以隐藏管理器应用程序。</li> <li class="translated">与 Android Oreo 8.1 到<a href="https://www.xda-developers.com/android-13-beta-1-released/"> Android 13 Beta 1 </a>兼容。</li> </ul>
 <p class="ad-even">
 </p>
 
 
-<h2 id="how-to-download-lsposed" class="translated">如何下载LSPosed？</h2>
-<p class="translated">LSposed的最新版本可以在其GitHub repo上找到。请记住，该模块同时支持Riru和Zygisk，因此您应该根据您现有的设置选择合适的版本。</p>
+<h2 id="how-to-download-lsposed" class="translated">如何下载 LSPosed？</h2>
+<p class="translated">LSposed 的最新版本可以在其 GitHub repo 上找到。请记住，该模块同时支持 Riru 和 Zygisk，因此您应该根据您现有的设置选择合适的版本。</p>
 
-<p class="translated"><strong> <a href="https://github.com/LSPosed/LSPosed/releases/latest">下载LSposed </a> </strong></p>
+<p class="translated"><strong> <a href="https://github.com/LSPosed/LSPosed/releases/latest">下载 LSposed </a> </strong></p>
 
-<p class="translated">虚拟经理位于谷歌Play商店。请记住，仅仅安装应用程序不足以激活框架。</p>
+<p class="translated">虚拟经理位于谷歌 Play 商店。请记住，仅仅安装应用程序不足以激活框架。</p>
 
 <p class="translated">[app box Google play " org . lsposed . manager "]</p>
 <p class="ad-odd">
 </p>
 
 
-<h2 id="how-can-i-install-lsposed" class="translated">如何安装LSPosed？</h2>
-<p class="translated">在安装LSposed之前，请确保在目标设备上安装了最新版本的Magisk和Riru。</p>
+<h2 id="how-can-i-install-lsposed" class="translated">如何安装 LSPosed？</h2>
+<p class="translated">在安装 LSposed 之前，请确保在目标设备上安装了最新版本的 Magisk 和 Riru。</p>
 
-<ol> <li class="translated">从前面提到的URL下载LSposed ZIP包。如果您已经在PC或Mac上下载了它，那么将您的Android设备连接到它，并将下载的ZIP文件复制到目标设备的内存中。</li> <li class="translated">打开Magisk应用程序，使用底部导航菜单切换到<em>模块</em>选项卡。</li> <li class="translated">点击名为<em>从存储器安装</em>的按钮。接下来，浏览并选择您之前下载的ZIP文件。<ul> <li class="translated">如果您使用的是Zygisk，那么刷新名为LSPosed-xxx-zygisk-release.zip的文件。</li> <li class="translated">如果你用的是Riru，那就闪存名为LSPosed-xxx-riru-release.zip的文件，</li><p> </p> </ul> </li> <li class="translated">成功安装后，重新启动您的设备。</li> <li class="translated">您应该会在启动器中看到LSPosed Manager图标。<ul> <li class="translated">如果图标不存在，您可以拨<code>*#*#5776733#*#*</code>(又名LSPosed)来启动管理器界面。这一招在隐藏app后也有效。</li><p> </p> </ul> </li> <li class="translated">就是这样！</li> </ol>
+<ol> <li class="translated">从前面提到的 URL 下载 LSposed ZIP 包。如果您已经在 PC 或 Mac 上下载了它，那么将您的 Android 设备连接到它，并将下载的 ZIP 文件复制到目标设备的内存中。</li> <li class="translated">打开 Magisk 应用程序，使用底部导航菜单切换到<em>模块</em>选项卡。</li> <li class="translated">点击名为<em>从存储器安装</em>的按钮。接下来，浏览并选择您之前下载的 ZIP 文件。<ul> <li class="translated">如果您使用的是 Zygisk，那么刷新名为 LSPosed-xxx-zygisk-release.zip 的文件。</li> <li class="translated">如果你用的是 Riru，那就闪存名为 LSPosed-xxx-riru-release.zip 的文件，</li><p> </p> </ul> </li> <li class="translated">成功安装后，重新启动您的设备。</li> <li class="translated">您应该会在启动器中看到 LSPosed Manager 图标。<ul> <li class="translated">如果图标不存在，您可以拨<code>*#*#5776733#*#*</code>(又名 LSPosed)来启动管理器界面。这一招在隐藏 app 后也有效。</li><p> </p> </ul> </li> <li class="translated">就是这样！</li> </ol>
 <p class="ad-even">
 </p>
 
 
-<h2 id="comparison-between-lsposed-and-the-original-xposed-framework" class="translated">LSPosed和原始Xposed框架之间的比较</h2>
-<p class="translated">Android Oreo之后，遗留的Xposed框架停止工作。此外，它修改了核心系统文件，以取代app-process和ART运行时。这样的设计对于现代安卓版本来说是不可行的。</p>
+<h2 id="comparison-between-lsposed-and-the-original-xposed-framework" class="translated">LSPosed 和原始 Xposed 框架之间的比较</h2>
+<p class="translated">Android Oreo 之后，遗留的 Xposed 框架停止工作。此外，它修改了核心系统文件，以取代 app-process 和 ART 运行时。这样的设计对于现代安卓版本来说是不可行的。</p>
 
-<p class="translated">另一方面，LSPosed是一个强大的Magisk模块，有很大的潜力。维护人员经常向代码库添加补丁和新特性。它不仅兼容各种定制的Android皮肤，而且还支持Zygisk(即Zygote中的Magisk)，这在长期可持续性方面是一大优势。</p>
+<p class="translated">另一方面，LSPosed 是一个强大的 Magisk 模块，有很大的潜力。维护人员经常向代码库添加补丁和新特性。它不仅兼容各种定制的 Android 皮肤，而且还支持 Zygisk(即 Zygote 中的 Magisk)，这在长期可持续性方面是一大优势。</p>
 
-<p class="translated"><strong><a href="https://forum.xda-developers.com/t/4228973/">XDA提出的讨论思路</a> </strong></p>
+<p class="translated"><strong><a href="https://forum.xda-developers.com/t/4228973/">XDA 提出的讨论思路</a> </strong></p>
 <p class="ad-odd">
 </p>
 
 
 <h2 id="conclusion" class="translated">结论</h2>
-<p class="translated">一旦你安装并配置了LSPosed，请查看<a href="https://www.xda-developers.com/best-xposed-modules/">最佳曝光模块</a>，为你的Android改造之旅充能。为了释放root权限的全部力量，你还应该看看适用于rooted Android设备的<a href="https://www.xda-developers.com/best-android-root-apps/">最佳应用</a>。</p>
+<p class="translated">一旦你安装并配置了 LSPosed，请查看<a href="https://www.xda-developers.com/best-xposed-modules/">最佳曝光模块</a>，为你的 Android 改造之旅充能。为了释放 root 权限的全部力量，你还应该看看适用于 rooted Android 设备的<a href="https://www.xda-developers.com/best-android-root-apps/">最佳应用</a>。</p>
 
  </div>
 

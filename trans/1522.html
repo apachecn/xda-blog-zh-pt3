@@ -4,27 +4,27 @@
 <link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="translated">Android隐藏代码:所有自定义拨号器代码和他们做什么</h1>
+<h1 class="translated">Android 隐藏代码:所有自定义拨号器代码和他们做什么</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/android-secret-codes/#0001-01-01">https://www.xda-developers.com/android-secret-codes/#0001-01-01</a></blockquote><div><div class="content-block-regular">
 
-<p class="translated">Android操作系统以其隐藏功能和复活节彩蛋而闻名，比如使用自定义拨号器代码来访问各种隐藏的应用程序和设置。其中一些代码是通用的，这意味着你可以在任何Android设备上获得想要的输出，无论它们是<a href="https://www.xda-developers.com/best-android-phones/">伟大的旗舰</a>还是<a href="https://www.xda-developers.com/best-cheap-android-phones/">廉价的手机</a>。然而，定制OEM皮肤(如三星的One UI和小米的MIUI)和运营商定制的模型通常都有自己的一套隐藏代码。</p>
+<p class="translated">Android 操作系统以其隐藏功能和复活节彩蛋而闻名，比如使用自定义拨号器代码来访问各种隐藏的应用程序和设置。其中一些代码是通用的，这意味着你可以在任何 Android 设备上获得想要的输出，无论它们是<a href="https://www.xda-developers.com/best-android-phones/">伟大的旗舰</a>还是<a href="https://www.xda-developers.com/best-cheap-android-phones/">廉价的手机</a>。然而，定制 OEM 皮肤(如三星的 One UI 和小米的 MIUI)和运营商定制的模型通常都有自己的一套隐藏代码。</p>
 
   
-<p class="translated">下面你可以找到一堆通用的和特定于设备的Android隐藏代码。给他们一个尝试，发现你的手机的一些最方便的秘密功能。如果你没有看到你的设备被列出或者你想提交一个新的代码，给<a href="https://www.xda-developers.com/author/titokhan/">塞犍陀·哈扎里卡</a>(论坛上的<a href="https://forum.xda-developers.com/m/skandah.5301049/">斯坎达</a>)发一条消息，告诉他所有相关的细节。</p>
+<p class="translated">下面你可以找到一堆通用的和特定于设备的 Android 隐藏代码。给他们一个尝试，发现你的手机的一些最方便的秘密功能。如果你没有看到你的设备被列出或者你想提交一个新的代码，给<a href="https://www.xda-developers.com/author/titokhan/">塞犍陀·哈扎里卡</a>(论坛上的<a href="https://forum.xda-developers.com/m/skandah.5301049/">斯坎达</a>)发一条消息，告诉他所有相关的细节。</p>
 
  
-<h2 id="structure-of-the-android-hidden-codes" class="translated">Android隐藏代码的结构</h2>
-<p class="translated">所谓的隐藏代码基本上是人机界面(MMI)模式的一部分。这些代码与非结构化补充业务数据(USSD)代码略有不同，尽管它们都以星号(*)开头，后跟由命令或数据组成的数字。数字组可以由附加的星号分隔。消息以散列符号(#)结束，但自定义MMI代码也可能以星号结束。</p>
+<h2 id="structure-of-the-android-hidden-codes" class="translated">Android 隐藏代码的结构</h2>
+<p class="translated">所谓的隐藏代码基本上是人机界面(MMI)模式的一部分。这些代码与非结构化补充业务数据(USSD)代码略有不同，尽管它们都以星号(*)开头，后跟由命令或数据组成的数字。数字组可以由附加的星号分隔。消息以散列符号(#)结束，但自定义 MMI 代码也可能以星号结束。</p>
 
-<p class="translated">USSD码用于与移动网络运营商的服务器进行通信，以获得基于菜单的信息服务、移动货币服务和基于位置的内容服务，而MMI补充服务码则完全离线工作。</p>
+<p class="translated">USSD 码用于与移动网络运营商的服务器进行通信，以获得基于菜单的信息服务、移动货币服务和基于位置的内容服务，而 MMI 补充服务码则完全离线工作。</p>
 
-<p class="translated">就像USSD一样，你必须拨打股票拨号程序上的“隐藏”代码，才能调用相应的操作。</p>
+<p class="translated">就像 USSD 一样，你必须拨打股票拨号程序上的“隐藏”代码，才能调用相应的操作。</p>
 <p class="ad-odd">
 </p>
 
 
 <h2 id="generic-hidden-codes" class="translated">通用隐藏代码</h2>
-<ul> <li class="translated"><code>*#06#</code>显示IMEI号码。</li> </ul>
+<ul> <li class="translated"><code>*#06#</code>显示 IMEI 号码。</li> </ul>
 
 
 
@@ -36,11 +36,11 @@
 
 
 
-<ul> <li class="translated"><code>*#*#426#*#*</code>显示<a href="https://firebase.google.com/docs/cloud-messaging">Firebase Cloud Messaging</a>(FCM)诊断页面或与Google Play服务相关的信息。</li> </ul>
+<ul> <li class="translated"><code>*#*#426#*#*</code>显示<a href="https://firebase.google.com/docs/cloud-messaging">Firebase Cloud Messaging</a>(FCM)诊断页面或与 Google Play 服务相关的信息。</li> </ul>
 
 
 
-<ul> <li class="translated"><code>*#*#759#*#*</code>显示<a href="https://blog.chromium.org/2010/06/in-open-for-rlz.html"> RLZ调试界面</a>，带有唯一的设备ID和其他与应用安装相关的数据。也可以通过这个界面打开(和关闭)OEM模式。</li> </ul>
+<ul> <li class="translated"><code>*#*#759#*#*</code>显示<a href="https://blog.chromium.org/2010/06/in-open-for-rlz.html"> RLZ 调试界面</a>，带有唯一的设备 ID 和其他与应用安装相关的数据。也可以通过这个界面打开(和关闭)OEM 模式。</li> </ul>
 
 
 
@@ -52,21 +52,21 @@
 
 
 <h2 id="special-hidden-codes-for-popular-android-brands" class="translated">热门安卓品牌的特殊隐藏代码</h2>
-<p class="translated">通用代码应该适用于所有的Android设备。如果您正在寻找OEM专用代码，请查看以下索引。</p>
+<p class="translated">通用代码应该适用于所有的 Android 设备。如果您正在寻找 OEM 专用代码，请查看以下索引。</p>
 
 
 
 <h3 id="asus" class="translated">华硕</h3>
-<ul> <li class="translated"><code>*#07#</code><ul> <li class="translated">显示监管标签。</li><p> </p> </ul> </li> <li class="translated"><code>.12345+=</code>(必须在股票计算器app中输入)<ul> <li class="translated">打开工程模式。</li><p> </p> </ul> </li> </ul>
+<ul> <li class="translated"><code>*#07#</code><ul> <li class="translated">显示监管标签。</li><p> </p> </ul> </li> <li class="translated"><code>.12345+=</code>(必须在股票计算器 app 中输入)<ul> <li class="translated">打开工程模式。</li><p> </p> </ul> </li> </ul>
 
 <h3 id="google" class="translated">谷歌</h3>
-<p class="translated">谷歌Pixel设备运行的是普通Android的增强版，这意味着你只能使用上面提到的通用代码。</p>
+<p class="translated">谷歌 Pixel 设备运行的是普通 Android 的增强版，这意味着你只能使用上面提到的通用代码。</p>
 
 <h3 id="motorola" class="translated">摩托罗拉</h3>
-<ul> <li class="translated"><code>*#*#2486#*#*</code><ul> <li class="translated">打开工程模式。在尝试这段代码之前，您可能需要在fastboot界面的“BP Tools”部分启动至少一次。</li><p> </p> </ul> </li> <li class="translated"><code>*#07#</code><ul> <li class="translated">显示法规信息。</li><p> </p> </ul> </li> </ul>
+<ul> <li class="translated"><code>*#*#2486#*#*</code><ul> <li class="translated">打开工程模式。在尝试这段代码之前，您可能需要在 fastboot 界面的“BP Tools”部分启动至少一次。</li><p> </p> </ul> </li> <li class="translated"><code>*#07#</code><ul> <li class="translated">显示法规信息。</li><p> </p> </ul> </li> </ul>
 
 <h3 id="nokia" class="translated">诺基亚（总部设在芬兰）</h3>
-<ul> <li class="translated"><code>*#*#372733#*#*</code><ul> <li class="translated">打开维修模式(也称为FQC菜单)。</li><p> </p> </ul> </li> </ul>
+<ul> <li class="translated"><code>*#*#372733#*#*</code><ul> <li class="translated">打开维修模式(也称为 FQC 菜单)。</li><p> </p> </ul> </li> </ul>
 
 
 
@@ -74,15 +74,15 @@
 <ul> <li class="translated"><code>*#*#682#*#*</code><ul> <li class="translated">打开脱机更新工具。</li><p> </p> </ul> </li> </ul>
 
 <h3 id="oneplus" class="translated">一加</h3>
-<ul> <li class="translated"><code>1+=</code>(必须在股票计算器app中输入)<ul> <li class="translated">在计算器应用程序上显示公司的座右铭“永不满足”。请注意，这段代码可能不适用于OxygenOS 12及更高版本。</li><p> </p> </ul> </li> </ul>
+<ul> <li class="translated"><code>1+=</code>(必须在股票计算器 app 中输入)<ul> <li class="translated">在计算器应用程序上显示公司的座右铭“永不满足”。请注意，这段代码可能不适用于 OxygenOS 12 及更高版本。</li><p> </p> </ul> </li> </ul>
 
 
 
-<ul> <li class="translated"><code>*#66#</code><ul> <li class="translated">以加密格式显示IMEI和MEID</li><p> </p> </ul> </li> </ul>
+<ul> <li class="translated"><code>*#66#</code><ul> <li class="translated">以加密格式显示 IMEI 和 MEID</li><p> </p> </ul> </li> </ul>
 
 
 
-<ul> <li class="translated"><code>*#888#</code><ul> <li class="translated">显示电话主板的PCB版本。</li><p> </p> </ul> </li> </ul>
+<ul> <li class="translated"><code>*#888#</code><ul> <li class="translated">显示电话主板的 PCB 版本。</li><p> </p> </ul> </li> </ul>
 
 
 
@@ -97,7 +97,7 @@
 
 
 
-<ul> <li class="translated"><code>*#888#</code><ul> <li class="translated">显示电话主板的PCB版本。</li><p> </p> </ul> </li> </ul>
+<ul> <li class="translated"><code>*#888#</code><ul> <li class="translated">显示电话主板的 PCB 版本。</li><p> </p> </ul> </li> </ul>
 
 
 
@@ -150,15 +150,15 @@
 <ul> <li class="translated"><code>*#*#73788423#*#*</code><ul> <li class="translated">显示维修菜单。</li><p> </p> </ul> </li> <li class="translated"><code>*#07#</code><ul> <li class="translated">显示认证详细信息。</li><p> </p> </ul> </li> </ul>
 
 <h3 id="xiaomi" class="translated">小米</h3>
-<ul> <li class="translated"><code>*#*#64663#*#*</code><ul> <li class="translated">显示硬件诊断菜单(也称为QC测试菜单)。</li><p> </p> </ul> </li> </ul>
+<ul> <li class="translated"><code>*#*#64663#*#*</code><ul> <li class="translated">显示硬件诊断菜单(也称为 QC 测试菜单)。</li><p> </p> </ul> </li> </ul>
 
 
 
-<ul> <li class="translated"><code>*#*#86583#*#*</code><ul> <li class="translated">启用VoLTE载波检查。</li><p> </p> </ul> </li> <li class="translated"><code>*#*#86943#*#*</code><ul> <li class="translated">启用VoWiFi运营商检查。</li><p> </p> </ul> </li> </ul>
+<ul> <li class="translated"><code>*#*#86583#*#*</code><ul> <li class="translated">启用 VoLTE 载波检查。</li><p> </p> </ul> </li> <li class="translated"><code>*#*#86943#*#*</code><ul> <li class="translated">启用 VoWiFi 运营商检查。</li><p> </p> </ul> </li> </ul>
 
 <hr/>
 
-<p class="translated">我们希望这个指南能让你进出Android中的隐藏菜单。我们将为特定手机更新更多此类代码，请稍后再次查看。</p>
+<p class="translated">我们希望这个指南能让你进出 Android 中的隐藏菜单。我们将为特定手机更新更多此类代码，请稍后再次查看。</p>
 
  </div>
 

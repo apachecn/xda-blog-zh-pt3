@@ -4,64 +4,64 @@
 <link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="translated">A/B分区和无缝更新如何影响XDA上的定制开发</h1>
+<h1 class="translated">A/B 分区和无缝更新如何影响 XDA 上的定制开发</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/how-a-b-partitions-and-seamless-updates-affect-custom-development-on-xda/#0001-01-01">https://www.xda-developers.com/how-a-b-partitions-and-seamless-updates-affect-custom-development-on-xda/#0001-01-01</a></blockquote><div><div class="content-block-regular">
-<p/><p class="translated">当Android牛轧糖发布时，它让我们谈论<a href="https://www.xda-developers.com/android-7-0-nougat-finally-released-coming-your-way/">各种新功能</a>。我们为初学者提供了一个最新的用户界面，以及期待已久的多窗口功能和Vulkan图形API支持。但是一个隐藏在引擎盖下的附加功能却让大多数用户感到困惑。Android Nougat在支持A/B分区的设备上推出了“无缝更新”。绝大多数现有的Android设备(不包括新的谷歌Pixel和谷歌Pixel XL)当时没有A/B分区，因此无法利用无缝更新。此功能的基本前提是设备有第二组系统、引导、供应商和其他重要分区，当您获得OTA更新时，更新在后台进行，同时第二组分区被修补，这允许您无缝地重新启动到更新的软件版本。如果更新失败，你将被踢回一个工作版本，这意味着公司将有更少的麻烦要处理，消费者得到更好的保护。</p>
+<p/><p class="translated">当 Android 牛轧糖发布时，它让我们谈论<a href="https://www.xda-developers.com/android-7-0-nougat-finally-released-coming-your-way/">各种新功能</a>。我们为初学者提供了一个最新的用户界面，以及期待已久的多窗口功能和 Vulkan 图形 API 支持。但是一个隐藏在引擎盖下的附加功能却让大多数用户感到困惑。Android Nougat 在支持 A/B 分区的设备上推出了“无缝更新”。绝大多数现有的 Android 设备(不包括新的谷歌 Pixel 和谷歌 Pixel XL)当时没有 A/B 分区，因此无法利用无缝更新。此功能的基本前提是设备有第二组系统、引导、供应商和其他重要分区，当您获得 OTA 更新时，更新在后台进行，同时第二组分区被修补，这允许您无缝地重新启动到更新的软件版本。如果更新失败，你将被踢回一个工作版本，这意味着公司将有更少的麻烦要处理，消费者得到更好的保护。</p>
 
   
-<p class="translated">与Project Treble不同，任何新的Android设备都不需要支持无缝更新。因此，绝大多数新的Android设备不支持该功能。<a href="https://www.xda-developers.com/list-android-devices-seamless-updates/">到目前为止，我们一直在保存所有受支持设备的列表</a>，很明显这个功能并没有得到广泛支持。这很遗憾，因为A/B分区给普通用户和高级用户都带来了很多好处。然而，该功能在发烧友社区中有一点坏名声，因为它被认为使Android开发和刷新自定义修改更加困难。实际情况并非如此，所以我们想揭开无缝更新的神秘面纱，并解释A/B分区如何影响XDA上的定制开发。</p>
+<p class="translated">与 Project Treble 不同，任何新的 Android 设备都不需要支持无缝更新。因此，绝大多数新的 Android 设备不支持该功能。<a href="https://www.xda-developers.com/list-android-devices-seamless-updates/">到目前为止，我们一直在保存所有受支持设备的列表</a>，很明显这个功能并没有得到广泛支持。这很遗憾，因为 A/B 分区给普通用户和高级用户都带来了很多好处。然而，该功能在发烧友社区中有一点坏名声，因为它被认为使 Android 开发和刷新自定义修改更加困难。实际情况并非如此，所以我们想揭开无缝更新的神秘面纱，并解释 A/B 分区如何影响 XDA 上的定制开发。</p>
 
-<p class="translated"><em>非常感谢XDA资深成员<a href="https://forum.xda-developers.com/member.php?u=5848265"> npjohnson </a>，他是 LineageOS的<a href="https://wiki.lineageos.org/contributors.html">贡献者和</a>摩托罗拉Moto Z2 Force的<a href="https://www.xda-developers.com/lineageos-15-1-supports-a-b-devices-moto-z2-force/">维护者，他帮助我们核实了这篇文章。</a></em></p>
+<p class="translated"><em>非常感谢 XDA 资深成员<a href="https://forum.xda-developers.com/member.php?u=5848265"> npjohnson </a>，他是 LineageOS 的<a href="https://wiki.lineageos.org/contributors.html">贡献者和</a>摩托罗拉 Moto Z2 Force 的<a href="https://www.xda-developers.com/lineageos-15-1-supports-a-b-devices-moto-z2-force/">维护者，他帮助我们核实了这篇文章。</a></em></p>
 
 <hr/>
 
 
-<h2 id="partitions-on-an-android-device" class="translated">Android设备上的分区</h2>
-<p class="translated">分区只是手机内部存储空间中保存数据的一个独立部分。每个分区上保存什么样的数据取决于硬件、操作系统和许多其他因素。引导装载程序会有一个，系统(Android OS)会有一个，用户数据会有一个...诸如此类。当你看到人们谈论“/系统”和“/缓存”时，他们指的是这些分区的名字。例如，OnePlus 6有<strong> 72个分区</strong>。这听起来很多，但OnePlus 6是支持无缝更新的设备之一，这意味着许多分区只是彼此的副本。</p>
+<h2 id="partitions-on-an-android-device" class="translated">Android 设备上的分区</h2>
+<p class="translated">分区只是手机内部存储空间中保存数据的一个独立部分。每个分区上保存什么样的数据取决于硬件、操作系统和许多其他因素。引导装载程序会有一个，系统(Android OS)会有一个，用户数据会有一个...诸如此类。当你看到人们谈论“/系统”和“/缓存”时，他们指的是这些分区的名字。例如，OnePlus 6 有<strong> 72 个分区</strong>。这听起来很多，但 OnePlus 6 是支持无缝更新的设备之一，这意味着许多分区只是彼此的副本。</p>
 
 
 
 
 
-<p/><p class="translated"><em>OnePlus 6上分区的部分输出。出于演示目的，一些A/B分区带有下划线。</em></p>
+<p/><p class="translated"><em>OnePlus 6 上分区的部分输出。出于演示目的，一些 A/B 分区带有下划线。</em></p>
 
-<p class="translated">一个设备上有很多分区，作为用户你永远不用担心。在刷新定制的rom、内核、恢复或修改(如Magisk或Xposed)时，这些分区中的许多都不会被修改。这些分区中有很多要么没有被我们使用，要么太危险了，除非你知道你在做什么(想到了华为/Honor设备上的XLOADER和OEMINFO。)对于绝大多数Android用户来说，我们最常处理的分区是系统、引导、恢复、用户数据以及最近的供应商和vbmeta。下面是每个分区用途的简要说明:</p>
+<p class="translated">一个设备上有很多分区，作为用户你永远不用担心。在刷新定制的 rom、内核、恢复或修改(如 Magisk 或 Xposed)时，这些分区中的许多都不会被修改。这些分区中有很多要么没有被我们使用，要么太危险了，除非你知道你在做什么(想到了华为/Honor 设备上的 XLOADER 和 OEMINFO。)对于绝大多数 Android 用户来说，我们最常处理的分区是系统、引导、恢复、用户数据以及最近的供应商和 vbmeta。下面是每个分区用途的简要说明:</p>
 
-<ul> <li class="translated">system -保存Android操作系统、系统库、系统应用程序和其他系统媒体，如bootanimations、股票壁纸、铃声等。</li> <li class="translated">引导-保存内核、内存磁盘和A/B设备上的恢复</li> <li class="translated">recovery—保存恢复，其中TWRP最常在仅限A的设备上刷新(A/B设备没有专用的恢复分区)</li> <li class="translated">userdata -保存您的所有应用程序、系统和内部存储数据</li> <li class="translated">供应商持有特定于平台和设备的Hal，这是Android操作系统与底层硬件通信所必需的文件</li> <li class="translated">VB meta-Android Verified Boot 2.0的分区，用于验证引导过程的完整性</li> </ul>
+<ul> <li class="translated">system -保存 Android 操作系统、系统库、系统应用程序和其他系统媒体，如 bootanimations、股票壁纸、铃声等。</li> <li class="translated">引导-保存内核、内存磁盘和 A/B 设备上的恢复</li> <li class="translated">recovery—保存恢复，其中 TWRP 最常在仅限 A 的设备上刷新(A/B 设备没有专用的恢复分区)</li> <li class="translated">userdata -保存您的所有应用程序、系统和内部存储数据</li> <li class="translated">供应商持有特定于平台和设备的 Hal，这是 Android 操作系统与底层硬件通信所必需的文件</li> <li class="translated">VB meta-Android Verified Boot 2.0 的分区，用于验证引导过程的完整性</li> </ul>
 
-<p class="translated">设备OEM可以更改他们的分区方案，以使用他们想要的任何布局。例如，华为将引导分区分为ramdisk_recovery和kernel。还有许多额外的分区可能包含其他系统应用程序，如cust、product和oem，虽然这些修改是安全的，但如果您想让自己更容易返回库存，通常不建议这样做。那么A/B分区在哪里发挥作用呢？</p>
+<p class="translated">设备 OEM 可以更改他们的分区方案，以使用他们想要的任何布局。例如，华为将引导分区分为 ramdisk_recovery 和 kernel。还有许多额外的分区可能包含其他系统应用程序，如 cust、product 和 oem，虽然这些修改是安全的，但如果您想让自己更容易返回库存，通常不建议这样做。那么 A/B 分区在哪里发挥作用呢？</p>
 
 <hr/>
 <p class="ad-odd">
 </p>
 
 
-<h2 id="the-a-b-partition-scheme" class="translated">A/B分区方案</h2>
+<h2 id="the-a-b-partition-scheme" class="translated">A/B 分区方案</h2>
 <h3 id="how-updates-work-on-devices-with-seamless-updates" class="translated">无缝更新设备上的更新方式</h3>
-<p class="translated">下面这张非常简单的图片展示了如何在支持A/B分区的设备上处理更新。所示的分区是系统分区，尽管诸如引导和供应商之类的其他分区也可以用来自OEM的任何给定OTA更新来更新。这种更新过程不仅发生在主要的Android版本更新中，也发生在安全补丁更新中。</p>
+<p class="translated">下面这张非常简单的图片展示了如何在支持 A/B 分区的设备上处理更新。所示的分区是系统分区，尽管诸如引导和供应商之类的其他分区也可以用来自 OEM 的任何给定 OTA 更新来更新。这种更新过程不仅发生在主要的 Android 版本更新中，也发生在安全补丁更新中。</p>
 
 
 
-<ol> <li class="translated">我们从两个系统分区开始，system_a和system_b，都在同一个版本的Android上。</li> <li class="translated">假设system_a是活动的，OTA更新将在后台修补system_b，即不活动的分区。</li> <li class="translated">一旦用户重新启动，system_a将设置为非活动状态，system_b将变为活动状态。</li> <li class="translated">当前不活动的分区system_a将在下一次OTA更新推出时更新。</li> </ol>
+<ol> <li class="translated">我们从两个系统分区开始，system_a 和 system_b，都在同一个版本的 Android 上。</li> <li class="translated">假设 system_a 是活动的，OTA 更新将在后台修补 system_b，即不活动的分区。</li> <li class="translated">一旦用户重新启动，system_a 将设置为非活动状态，system_b 将变为活动状态。</li> <li class="translated">当前不活动的分区 system_a 将在下一次 OTA 更新推出时更新。</li> </ol>
 
 <p class="translated">这种更新过程有什么好处？</p>
 
-<ol> <li class="translated">如果更新失败，设备将回滚到另一个插槽上的工作版本。</li> <li class="translated">即使更新被破坏，您的数据也会保持完好无损，因为只有一个分区(用户数据)存放您的数据。</li> <li class="translated">更新流:如果您的数据分区已满，那么可以下载更新并将其流至非活动插槽。这是一个非常简洁的功能，意味着你不必浪费任何临时存储空间来更新。这就是为什么A/B设备上没有缓存分区，因为不再需要它们。</li> </ol>
+<ol> <li class="translated">如果更新失败，设备将回滚到另一个插槽上的工作版本。</li> <li class="translated">即使更新被破坏，您的数据也会保持完好无损，因为只有一个分区(用户数据)存放您的数据。</li> <li class="translated">更新流:如果您的数据分区已满，那么可以下载更新并将其流至非活动插槽。这是一个非常简洁的功能，意味着你不必浪费任何临时存储空间来更新。这就是为什么 A/B 设备上没有缓存分区，因为不再需要它们。</li> </ol>
 
-<h3 id="what-impact-does-the-a-b-partitioning-scheme-have-on-the-storage-of-a-device" class="translated">A/B分区方案对设备的存储有什么影响？</h3>
-<p class="translated">无缝更新导致大量重复分区的事实是否意味着您正在损失大量存储空间？<strong>完全没有</strong>。谷歌表示，由于移除了/cache和/recovery分区，支持无缝更新的设备应该只下降了大约几百兆字节。删除这两个分区可以平衡添加第二组分区的成本。根据谷歌的说法，Pixel的A/B系统图像是纯A系统图像的一半大小。大多数额外的存储使用实际上来自于第二个供应商分区的添加。这是有意义的，因为供应商分区包含了OEM使用的所有专有二进制文件(Project Treble的一部分)，所以预计会占用相当多的空间。虽然谷歌不建议在4GB存储的设备上进行A/B分区(因为它占总可用存储的近10%)，但他们建议在8GB或更高的设备上进行A/B分区。</p>
+<h3 id="what-impact-does-the-a-b-partitioning-scheme-have-on-the-storage-of-a-device" class="translated">A/B 分区方案对设备的存储有什么影响？</h3>
+<p class="translated">无缝更新导致大量重复分区的事实是否意味着您正在损失大量存储空间？<strong>完全没有</strong>。谷歌表示，由于移除了/cache 和/recovery 分区，支持无缝更新的设备应该只下降了大约几百兆字节。删除这两个分区可以平衡添加第二组分区的成本。根据谷歌的说法，Pixel 的 A/B 系统图像是纯 A 系统图像的一半大小。大多数额外的存储使用实际上来自于第二个供应商分区的添加。这是有意义的，因为供应商分区包含了 OEM 使用的所有专有二进制文件(Project Treble 的一部分)，所以预计会占用相当多的空间。虽然谷歌不建议在 4GB 存储的设备上进行 A/B 分区(因为它占总可用存储的近 10%)，但他们建议在 8GB 或更高的设备上进行 A/B 分区。</p>
 
-<p class="translated">以下是谷歌Pixel在有和没有A/B分区的情况下使用的存储空间的细目分类。</p>
+<p class="translated">以下是谷歌 Pixel 在有和没有 A/B 分区的情况下使用的存储空间的细目分类。</p>
 
-<div class="table-container"><table border="1" cellpadding="1" cellspacing="1"><thead><tr><th><p class="translated">分区大小</p> </th><th><p class="translated">A/B</p> </th><th><p class="translated">仅限a级</p> </th> </tr></thead><tbody><tr><td><p class="translated">引导装载程序</p> </td><td><p class="translated">50MB*2</p> </td><td><p class="translated">50MB</p> </td> </tr><tr><td><p class="translated">靴子</p> </td><td><p class="translated">32MB*2</p> </td><td><p class="translated">32MB</p> </td> </tr><tr><td><p class="translated">恢复</p> </td><td> </td><td><p class="translated">32MB</p> </td> </tr><tr><td><p class="translated">隐藏物</p> </td><td> </td><td><p class="translated">100MB</p> </td> </tr><tr><td><p class="translated">收音机</p> </td><td><p class="translated">70MB*2</p> </td><td><p class="translated">70MB</p> </td> </tr><tr><td><p class="translated">小贩</p> </td><td><p class="translated">300MB*2</p> </td><td><p class="translated">300MB</p> </td> </tr><tr><td><p class="translated">系统</p> </td><td><p class="translated">2048MB*2</p> </td><td><p class="translated">4096MB</p> </td> </tr><tr><td><p class="translated"><strong>总计</strong></p> </td><td><p class="translated"><strong> 5000MB </strong></p> </td><td><p class="translated"><strong> 4680MB </strong></p> </td> </tr></tbody> </table> </div>
+<div class="table-container"><table border="1" cellpadding="1" cellspacing="1"><thead><tr><th><p class="translated">分区大小</p> </th><th><p class="translated">A/B</p> </th><th><p class="translated">仅限 a 级</p> </th> </tr></thead><tbody><tr><td><p class="translated">引导装载程序</p> </td><td><p class="translated">50MB*2</p> </td><td><p class="translated">50MB</p> </td> </tr><tr><td><p class="translated">靴子</p> </td><td><p class="translated">32MB*2</p> </td><td><p class="translated">32MB</p> </td> </tr><tr><td><p class="translated">恢复</p> </td><td> </td><td><p class="translated">32MB</p> </td> </tr><tr><td><p class="translated">隐藏物</p> </td><td> </td><td><p class="translated">100MB</p> </td> </tr><tr><td><p class="translated">收音机</p> </td><td><p class="translated">70MB*2</p> </td><td><p class="translated">70MB</p> </td> </tr><tr><td><p class="translated">小贩</p> </td><td><p class="translated">300MB*2</p> </td><td><p class="translated">300MB</p> </td> </tr><tr><td><p class="translated">系统</p> </td><td><p class="translated">2048MB*2</p> </td><td><p class="translated">4096MB</p> </td> </tr><tr><td><p class="translated"><strong>总计</strong></p> </td><td><p class="translated"><strong> 5000MB </strong></p> </td><td><p class="translated"><strong> 4680MB </strong></p> </td> </tr></tbody> </table> </div>
 <h3 id="what-happened-to-the-recovery-partition" class="translated">恢复分区怎么了？</h3>
-<p class="translated">Android设备上的底层Linux内核让Android能够在智能手机上正确识别和使用硬件。在纯Android设备上，通常有两个版本的内核:一个在恢复分区中，另一个在引导分区中。在支持无缝更新的A/B设备上，恢复现在与内核一起在引导映像中进行。恢复的主要功能是安装更新，但由于这是由系统本身处理的(<a href="https://android.googlesource.com/platform/system/update_engine/"> update_engine </a>)，当Android启动时，不再需要专用的恢复分区。</p>
+<p class="translated">Android 设备上的底层 Linux 内核让 Android 能够在智能手机上正确识别和使用硬件。在纯 Android 设备上，通常有两个版本的内核:一个在恢复分区中，另一个在引导分区中。在支持无缝更新的 A/B 设备上，恢复现在与内核一起在引导映像中进行。恢复的主要功能是安装更新，但由于这是由系统本身处理的(<a href="https://android.googlesource.com/platform/system/update_engine/"> update_engine </a>)，当 Android 启动时，不再需要专用的恢复分区。</p>
 
-<p class="translated">要在A/B设备上安装自定义恢复，我们需要修改引导分区，并用我们自己的恢复替换库存恢复。这就是为什么要安装TWRP，你需要先使用一个快速启动命令来启动一个定制的启动映像，然后<em>再</em>刷新TWRP安装脚本，因为快速启动不能修补分区——只能刷新整个分区。从技术上来说，你可以用TWRP预先修补你现有的启动映像，然后通过快速启动来刷新它，但是这太麻烦了，不值得。TWRP安装程序脚本对boot_a和boot_b分区进行修补，以安装TWRP。</p>
+<p class="translated">要在 A/B 设备上安装自定义恢复，我们需要修改引导分区，并用我们自己的恢复替换库存恢复。这就是为什么要安装 TWRP，你需要先使用一个快速启动命令来启动一个定制的启动映像，然后<em>再</em>刷新 TWRP 安装脚本，因为快速启动不能修补分区——只能刷新整个分区。从技术上来说，你可以用 TWRP 预先修补你现有的启动映像，然后通过快速启动来刷新它，但是这太麻烦了，不值得。TWRP 安装程序脚本对 boot_a 和 boot_b 分区进行修补，以安装 TWRP。</p>
 
-<p class="translated">有趣的事实:处理无缝更新的Android update_engine基本上是直接从Chrome OS上抄袭来的。<a href="https://android-review.googlesource.com/c/platform/system/update_engine/+/635980">直到最近</a>包含“Chrome OS”的字符串才从update_engine的日志中删除，以避免碰巧查看logcat的人感到困惑。</p>
+<p class="translated">有趣的事实:处理无缝更新的 Android update_engine 基本上是直接从 Chrome OS 上抄袭来的。<a href="https://android-review.googlesource.com/c/platform/system/update_engine/+/635980">直到最近</a>包含“Chrome OS”的字符串才从 update_engine 的日志中删除，以避免碰巧查看 logcat 的人感到困惑。</p>
 
-<h3 id="does-my-android-smartphone-support-a-b-partitions-for-seamless-updates" class="translated">我的Android智能手机支持无缝更新的A/B分区吗？</h3>
+<h3 id="does-my-android-smartphone-support-a-b-partitions-for-seamless-updates" class="translated">我的 Android 智能手机支持无缝更新的 A/B 分区吗？</h3>
 <p class="translated">虽然我们<a href="https://www.xda-developers.com/list-android-devices-seamless-updates/">保留了所有支持它的设备的列表</a>，但是<a href="https://www.xda-developers.com/how-to-check-android-device-supports-seamless-updates/">你也可以很容易地检查你自己</a>。</p>
 
 <hr/>
@@ -70,50 +70,50 @@
 
 
 <h2 id="how-do-seamless-updates-affect-custom-development" class="translated">无缝更新如何影响定制开发？</h2>
-<h3 id="user-perception-of-a-b-partitions" class="translated">用户对A/B分区的看法</h3>
-<p class="translated">无缝更新被许多用户视为定制软件开发的障碍，但实际上对开发人员来说却是一个福音。A/B设备被认为具有较差开发支持的原因归结于第一个A/B设备的价格。毕竟，谷歌Pixel设备是首批支持无缝更新的设备，而且与过去的Nexus智能手机相比，它们相对昂贵。此外，由于谷歌对Android操作系统进行了大量改进，使得定制rom和修改在谷歌设备上不那么受欢迎，谷歌Pixel智能手机在我们的论坛上的表现远不如Nexus智能手机。外部因素的结合导致了谷歌Pixel智能手机定制开发的减少，尽管大多数用户选择责怪A/B分区支持。在我们的论坛上比较谷歌Pixel等设备和小米Mi A1 <a href="https://forum.xda-developers.com/mi-a1/development">等设备上定制开发的可用性。</a></p>
+<h3 id="user-perception-of-a-b-partitions" class="translated">用户对 A/B 分区的看法</h3>
+<p class="translated">无缝更新被许多用户视为定制软件开发的障碍，但实际上对开发人员来说却是一个福音。A/B 设备被认为具有较差开发支持的原因归结于第一个 A/B 设备的价格。毕竟，谷歌 Pixel 设备是首批支持无缝更新的设备，而且与过去的 Nexus 智能手机相比，它们相对昂贵。此外，由于谷歌对 Android 操作系统进行了大量改进，使得定制 rom 和修改在谷歌设备上不那么受欢迎，谷歌 Pixel 智能手机在我们的论坛上的表现远不如 Nexus 智能手机。外部因素的结合导致了谷歌 Pixel 智能手机定制开发的减少，尽管大多数用户选择责怪 A/B 分区支持。在我们的论坛上比较谷歌 Pixel 等设备和小米 Mi A1 <a href="https://forum.xda-developers.com/mi-a1/development">等设备上定制开发的可用性。</a></p>
 
-<p class="translated">此外，对A/B分区如何改变用户安装定制rom、内核、恢复和修改的方式缺乏了解，导致A/B分区支持不受欢迎。由于恢复现在位于引导映像中，以错误的顺序(如Magisk或Xposed)刷新修改可能会导致冲突并导致引导循环。你闪存这些模块的顺序可能很重要，尽管在定制rom的情况下，你不需要担心你闪存到哪个插槽。与普遍的看法相反，大多数定制rom的安装脚本并不同时闪速写入两个插槽。您基本上不需要担心这一点，因为您不需要手动交换插槽。</p>
+<p class="translated">此外，对 A/B 分区如何改变用户安装定制 rom、内核、恢复和修改的方式缺乏了解，导致 A/B 分区支持不受欢迎。由于恢复现在位于引导映像中，以错误的顺序(如 Magisk 或 Xposed)刷新修改可能会导致冲突并导致引导循环。你闪存这些模块的顺序可能很重要，尽管在定制 rom 的情况下，你不需要担心你闪存到哪个插槽。与普遍的看法相反，大多数定制 rom 的安装脚本并不同时闪速写入两个插槽。您基本上不需要担心这一点，因为您不需要手动交换插槽。</p>
 
 
 
-<h3 id="how-developers-view-a-b-partitions" class="translated">开发人员如何看待A/B分区</h3>
-<p class="translated">当构建一个ROM时，开发人员可以利用这两个分区来测试不同的构建。如果一个不工作，他们可以恢复到工作分区并重建他们的ROM。开发人员还可以通过简单地安装更新、切换活动分区并比较两者来测试回归，而不必擦除数据。以下是LineageOS团队对A/B分区支持的看法:</p>
+<h3 id="how-developers-view-a-b-partitions" class="translated">开发人员如何看待 A/B 分区</h3>
+<p class="translated">当构建一个 ROM 时，开发人员可以利用这两个分区来测试不同的构建。如果一个不工作，他们可以恢复到工作分区并重建他们的 ROM。开发人员还可以通过简单地安装更新、切换活动分区并比较两者来测试回归，而不必擦除数据。以下是 LineageOS 团队对 A/B 分区支持的看法:</p>
 
 <blockquote>
-<p/><h4 class="translated">“Android社区中的许多人抨击A/B‘难以支持’和‘对开发人员不友好’，而事实上，正确实施后，它更容易支持和对开发人员友好。”——jrizzo Li，<a href="https://lineageos.org/Changelog-19/">linegeos Changelog 19</a></h4>
+<p/><h4 class="translated">“Android 社区中的许多人抨击 A/B‘难以支持’和‘对开发人员不友好’，而事实上，正确实施后，它更容易支持和对开发人员友好。”——jrizzo Li，<a href="https://lineageos.org/Changelog-19/">linegeos Changelog 19</a></h4>
  </blockquote>
-<p class="translated">对开发人员来说，A/B支持最初的困难来自于修改他们现有的工具来支持这些设备。Magisk的开发者topjohnwu在谷歌Pixel发布一年后增加了对它的官方支持——不是因为它很难，而是因为他花了一年时间才真正获得可以使用的设备。在主要开发者Dees_Troy尝试之后，TWRP对A/B设备的支持<a href="https://www.xda-developers.com/twrp-v3-1-0-is-now-rolling-out-with-support-for-adb-backup-ab-ota-zips-and-more/">来得很快</a>。在志愿者找到时间修复他们的addon.d脚本后，LineageOS 15.1 <a href="https://www.xda-developers.com/lineageos-15-1-supports-a-b-devices-moto-z2-force/">现在支持</a> A/B设备。</p>
+<p class="translated">对开发人员来说，A/B 支持最初的困难来自于修改他们现有的工具来支持这些设备。Magisk 的开发者 topjohnwu 在谷歌 Pixel 发布一年后增加了对它的官方支持——不是因为它很难，而是因为他花了一年时间才真正获得可以使用的设备。在主要开发者 Dees_Troy 尝试之后，TWRP 对 A/B 设备的支持<a href="https://www.xda-developers.com/twrp-v3-1-0-is-now-rolling-out-with-support-for-adb-backup-ab-ota-zips-and-more/">来得很快</a>。在志愿者找到时间修复他们的 addon.d 脚本后，LineageOS 15.1 <a href="https://www.xda-developers.com/lineageos-15-1-supports-a-b-devices-moto-z2-force/">现在支持</a> A/B 设备。</p>
 
-<h3 id="how-to-update-an-a-b-device-that-has-a-custom-recovery-kernel-or-other-mods" class="translated">如何更新具有自定义恢复、内核或其他模块的A/B设备</h3>
-<p/><h4 class="translated">定制rom</h4>
+<h3 id="how-to-update-an-a-b-device-that-has-a-custom-recovery-kernel-or-other-mods" class="translated">如何更新具有自定义恢复、内核或其他模块的 A/B 设备</h3>
+<p/><h4 class="translated">定制 rom</h4>
 
-<p class="translated">在一个带有定制ROM的设备上刷新更新意味着你必须小心你也在刷新哪个插槽，对吗？不完全是。TWRP实际上会为你处理很多，它默认为非活动插槽，用于刷新自定义ROM。如果您的活动插槽是A，并且您刷新了自定义ROM，则实际上是刷新到插槽b。当您重新启动时，活动插槽现在是b。开发人员可以修改安装脚本并刷新到两个插槽，以使最终用户更加方便，尽管大多数自定义ROM安装脚本目前仅刷新到单个插槽。最后，定制ROM可以在其ROM中实现A/B更新程序，这样用户甚至不需要手动更新——最新的LineageOS 15.1包括一个沿袭更新程序工具，XDA高级成员<a href="https://forum.xda-developers.com/member.php?u=5184450"> USA-RedDragon </a>制作了一个<a href="https://github.com/mikecriggs/jacob_derped_updater">通用A/B更新程序</a>，其他开发人员可以使用。</p>
+<p class="translated">在一个带有定制 ROM 的设备上刷新更新意味着你必须小心你也在刷新哪个插槽，对吗？不完全是。TWRP 实际上会为你处理很多，它默认为非活动插槽，用于刷新自定义 ROM。如果您的活动插槽是 A，并且您刷新了自定义 ROM，则实际上是刷新到插槽 b。当您重新启动时，活动插槽现在是 b。开发人员可以修改安装脚本并刷新到两个插槽，以使最终用户更加方便，尽管大多数自定义 ROM 安装脚本目前仅刷新到单个插槽。最后，定制 ROM 可以在其 ROM 中实现 A/B 更新程序，这样用户甚至不需要手动更新——最新的 LineageOS 15.1 包括一个沿袭更新程序工具，XDA 高级成员<a href="https://forum.xda-developers.com/member.php?u=5184450"> USA-RedDragon </a>制作了一个<a href="https://github.com/mikecriggs/jacob_derped_updater">通用 A/B 更新程序</a>，其他开发人员可以使用。</p>
 
 <p/><h4 class="translated">股票光盘</h4>
 
-<p class="translated">但是，如果你的设备运行的是经过各种修改的普通ROM，而你想在不丢失所有这些修改的情况下安装一个更新，这难道不是一个问题吗？如果您不知道安装更新的正确步骤，可能会出现这种情况。例如，在OnePlus 6上，您不能在修改后的设备上刷新增量OTA，因为增量OTA会尝试修补修改后的启动映像。因此，您可能会以引导循环结束，这就是为什么您必须刷新完整的ROM更新以完全覆盖您修改的引导映像。以下是在OnePlus 6上安装OxygenOS更新时需要采取的一般步骤，同时仍保留TWRP、Magisk和可选的自定义内核。</p>
+<p class="translated">但是，如果你的设备运行的是经过各种修改的普通 ROM，而你想在不丢失所有这些修改的情况下安装一个更新，这难道不是一个问题吗？如果您不知道安装更新的正确步骤，可能会出现这种情况。例如，在 OnePlus 6 上，您不能在修改后的设备上刷新增量 OTA，因为增量 OTA 会尝试修补修改后的启动映像。因此，您可能会以引导循环结束，这就是为什么您必须刷新完整的 ROM 更新以完全覆盖您修改的引导映像。以下是在 OnePlus 6 上安装 OxygenOS 更新时需要采取的一般步骤，同时仍保留 TWRP、Magisk 和可选的自定义内核。</p>
 
-<ol> <li class="translated">下载了最新的<strong>完整版ROM </strong> zip</li> <li class="translated">恢复时刷新完整的ROM压缩文件</li> <li class="translated">(可选)Flash自定义内核</li> <li class="translated">Flash TWRP安装程序</li> <li class="translated">直接重启以恢复</li> <li class="translated">Flash Magisk</li> </ol>
+<ol> <li class="translated">下载了最新的<strong>完整版 ROM </strong> zip</li> <li class="translated">恢复时刷新完整的 ROM 压缩文件</li> <li class="translated">(可选)Flash 自定义内核</li> <li class="translated">Flash TWRP 安装程序</li> <li class="translated">直接重启以恢复</li> <li class="translated">Flash Magisk</li> </ol>
 
-<p class="translated">在谷歌Pixel设备上，你可以<a href="https://www.xda-developers.com/flash-monthly-security-update-google-pixel/">刷新出厂图像而不擦除数据</a>，然后启动TWRP，通过安装脚本安装TWRP，然后安装Magisk。</p>
+<p class="translated">在谷歌 Pixel 设备上，你可以<a href="https://www.xda-developers.com/flash-monthly-security-update-google-pixel/">刷新出厂图像而不擦除数据</a>，然后启动 TWRP，通过安装脚本安装 TWRP，然后安装 Magisk。</p>
 
 
-<p class="translated">许多A/B设备的更新文件与纯A设备相比略有不同。它们不再只是包含大量图像的zip文件(不包括谷歌和Razer的工厂图像)，而是以payload.bin文件的形式存在。您可以提取这个文件，并手动刷新每个部分，但这需要一个特殊的工具来完成。如果你有兴趣了解如何在OnePlus 6、小米Mi A1和许多其他A/B设备上这样做，请继续阅读。</p>
+<p class="translated">许多 A/B 设备的更新文件与纯 A 设备相比略有不同。它们不再只是包含大量图像的 zip 文件(不包括谷歌和 Razer 的工厂图像)，而是以 payload.bin 文件的形式存在。您可以提取这个文件，并手动刷新每个部分，但这需要一个特殊的工具来完成。如果你有兴趣了解如何在 OnePlus 6、小米 Mi A1 和许多其他 A/B 设备上这样做，请继续阅读。</p>
 
-<p/><h4 class="translated">设置提取payload.bin</h4>
+<p/><h4 class="translated">设置提取 payload.bin</h4>
 
-<ol> <li class="translated">确保你已经安装了Python 3.6 <a href="https://www.python.org/downloads/release/python-360/">和</a>。</li> <li class="translated">在这里下载payload_dumper.py和update_metadata_pb2.py <a href="https://gist.github.com/ius/42bd02a5df2226633a342ab7a9c60f15">。</a></li> <li class="translated">解压缩OTA压缩文件，并将payload.bin放在与这些文件相同的文件夹中。</li> <li class="translated">根据您的操作系统，打开PowerShell、命令提示符或终端。</li> <li class="translated">输入以下命令:<code>python -m pip install protobuf</code></li> <li class="translated">完成后，输入这个命令:<code>python payload_dumper.py payload.bin</code></li> <li class="translated">这将开始将payload.bin文件中的图像提取到您所在的当前文件夹中。</li> </ol>
+<ol> <li class="translated">确保你已经安装了 Python 3.6 <a href="https://www.python.org/downloads/release/python-360/">和</a>。</li> <li class="translated">在这里下载 payload_dumper.py 和 update_metadata_pb2.py <a href="https://gist.github.com/ius/42bd02a5df2226633a342ab7a9c60f15">。</a></li> <li class="translated">解压缩 OTA 压缩文件，并将 payload.bin 放在与这些文件相同的文件夹中。</li> <li class="translated">根据您的操作系统，打开 PowerShell、命令提示符或终端。</li> <li class="translated">输入以下命令:<code>python -m pip install protobuf</code></li> <li class="translated">完成后，输入这个命令:<code>python payload_dumper.py payload.bin</code></li> <li class="translated">这将开始将 payload.bin 文件中的图像提取到您所在的当前文件夹中。</li> </ol>
 
 
 
 <p class="translated">如果你愿意，现在可以通过快速启动分别刷新这些图像。下一节将向您展示如何做到这一点。</p>
 
 <h3 id="using-fastboot-to-flash-images-on-a-device-that-supports-seamless-updates" class="translated">在支持无缝更新的设备上使用快速启动来刷新映像</h3>
-<p class="translated">有许多命令是A/B分区系统设备专用的。您可以将活动插槽和闪存更改为特定插槽。如果你有一个Project Treble- <a href="https://www.xda-developers.com/list-android-devices-project-treble-support/">兼容设备</a>并想学习如何<a href="https://www.xda-developers.com/flash-generic-system-image-project-treble-device/">刷新通用系统镜像</a>，你应该熟悉这些命令。看看下面的表格。</p>
+<p class="translated">有许多命令是 A/B 分区系统设备专用的。您可以将活动插槽和闪存更改为特定插槽。如果你有一个 Project Treble- <a href="https://www.xda-developers.com/list-android-devices-project-treble-support/">兼容设备</a>并想学习如何<a href="https://www.xda-developers.com/flash-generic-system-image-project-treble-device/">刷新通用系统镜像</a>，你应该熟悉这些命令。看看下面的表格。</p>
 
-<div class="table-container"><table border="1" cellpadding="1" cellspacing="1"><thead><tr><th><p class="translated">快速启动命令</p> </th><th><p class="translated">命令</p> </th> </tr></thead><tbody><tr><td><p class="translated">获取当前活动插槽</p> </td><td><p class="translated">fast boot getvar all | grep“current-slot”如果你在Windows PC上，“grep”命令就不起作用了。</p> </td> </tr><tr><td><p class="translated">将其他插槽设置为活动</p> </td><td><p class="translated">快速启动set_active other</p> </td> </tr><tr><td><p class="translated">将指定的插槽设置为活动</p> </td><td><p class="translated">fast boot set _ active $ or fast boot-set-active = _ $ slot其中$是a或b</p> </td> </tr><tr><td><p class="translated">将映像闪存到当前插槽中的指定分区</p> </td><td><p class="translated">快速启动闪存分区partition.img</p> </td> </tr><tr><td><p class="translated">将映像闪存到指定插槽中的指定分区</p> </td><td><p class="translated">fast boot flash partition _ a partition . imgfastboot flash partition _ b partition . img</p> </td> </tr></tbody> </table> </div>
-<p class="translated">(注意:在A/B设备上，您可以在特定插槽中指定要闪存到的分区，也可以省略插槽后缀，它将闪存到当前活动插槽。例如，您可以将flash命令中的“分区”替换为“系统”、“系统a”或“系统b”。)</p>
+<div class="table-container"><table border="1" cellpadding="1" cellspacing="1"><thead><tr><th><p class="translated">快速启动命令</p> </th><th><p class="translated">命令</p> </th> </tr></thead><tbody><tr><td><p class="translated">获取当前活动插槽</p> </td><td><p class="translated">fast boot getvar all | grep“current-slot”如果你在 Windows PC 上，“grep”命令就不起作用了。</p> </td> </tr><tr><td><p class="translated">将其他插槽设置为活动</p> </td><td><p class="translated">快速启动 set_active other</p> </td> </tr><tr><td><p class="translated">将指定的插槽设置为活动</p> </td><td><p class="translated">fast boot set _ active $ or fast boot-set-active = _ $ slot 其中$是 a 或 b</p> </td> </tr><tr><td><p class="translated">将映像闪存到当前插槽中的指定分区</p> </td><td><p class="translated">快速启动闪存分区 partition.img</p> </td> </tr><tr><td><p class="translated">将映像闪存到指定插槽中的指定分区</p> </td><td><p class="translated">fast boot flash partition _ a partition . imgfastboot flash partition _ b partition . img</p> </td> </tr></tbody> </table> </div>
+<p class="translated">(注意:在 A/B 设备上，您可以在特定插槽中指定要闪存到的分区，也可以省略插槽后缀，它将闪存到当前活动插槽。例如，您可以将 flash 命令中的“分区”替换为“系统”、“系统 a”或“系统 b”。)</p>
 <div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/current-slot-1.png" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;On Windows PCs, you can't use grep, so just remove that part and look for \&quot;current-slot\&quot;.&quot;">
  
 <figure> <picture>  <source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/current-slot-1.png?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/current-slot-1.png?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/current-slot-1.png?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/current-slot-1.png?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <img class="lazyload" alt="" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/current-slot-1.png" src="../Images/4da1f57b96433827c2bd868f377ba281.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/current-slot-1.png"/> </picture> <figcaption class="body-img-caption">On Windows PCs, you can't use grep, so just remove that part and look for "current-slot".</figcaption> </figure> </div>
@@ -127,8 +127,8 @@
 </p>
 
 
-<h2 id="a-word-on-project-treble-and-seamless-updates" class="translated">关于项目Treble和无缝更新的一句话</h2>
-<p class="translated">一个常见的误解是，项目三重支持和A/B分区支持是相互关联的，但事实并非如此。拥有一个并不意味着另一个。摩托罗拉Moto Z2 Force使用A/B分区方案，但不支持高音。另一方面，Honor 9 Lite支持Project Treble，但却是一款仅限A的设备。</p>
+<h2 id="a-word-on-project-treble-and-seamless-updates" class="translated">关于项目 Treble 和无缝更新的一句话</h2>
+<p class="translated">一个常见的误解是，项目三重支持和 A/B 分区支持是相互关联的，但事实并非如此。拥有一个并不意味着另一个。摩托罗拉 Moto Z2 Force 使用 A/B 分区方案，但不支持高音。另一方面，Honor 9 Lite 支持 Project Treble，但却是一款仅限 A 的设备。</p>
 <div class="body-img portrait"><div class="responsive-img image-expandable img-article-item-portrait" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/Screenshot_20180716-205436.png" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;The Honor 9 Lite supports Project Treble but does not support Seamless Updates&quot;">
  
 <figure> <picture>  <source media="(min-width: 1024px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/Screenshot_20180716-205436.png?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/Screenshot_20180716-205436.png?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="600px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/Screenshot_20180716-205436.png?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="360px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/Screenshot_20180716-205436.png?q=50&amp;fit=crop&amp;dpr=1.5"/> <img class="lazyload" alt="" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/Screenshot_20180716-205436.png" src="../Images/5e3936a6309b575f5f953836c49fdb3d.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/07/Screenshot_20180716-205436.png"/> </picture> <figcaption class="body-img-caption">The Honor 9 Lite supports Project Treble but does not support Seamless Updates</figcaption> </figure> </div>
@@ -143,7 +143,7 @@
 
 
 <h2 id="frequently-asked-questions-summary" class="translated">常见问题/摘要</h2>
-<ul> <li class="translated"><strong>A/B分区有什么好处？</strong><ul> <li class="translated">A/B分区允许您在使用Android智能手机时更新它，当您准备好启动新版本时，只需重新启动即可。它还可以防止砖块——如果更新出错，您将返回到工作安装。</li> </ul> </li> <li class="translated"><strong>有A/B分区会阻碍开发吗？</strong><ul> <li class="translated">虽然开发人员确实需要一些时间来适应，但答案几乎是否定的。事实上，它可以帮助开发人员，因为他们可以用旧版本和新测试版本双重引导他们的自定义ROM，以检查回归。</li> </ul> </li> <li class="translated"><strong>A/B分区如何影响自定义内核、Magisk、或Xposed等mod？</strong><ul> <li class="translated">你必须小心安装它们，但目前没有问题。Magisk官方支持设备的无缝更新，只要你以正确的顺序刷新，就不会有问题。确保在刷新你的其他模块之前刷新自定义内核，这样你就可以开始了。</li> </ul> </li> <li class="translated">我可以在每个分区和双引导上闪存两个不同的rom吗？<ul> <li class="translated">理论上，是的。但是由于共享数据分区会出现问题，所以不推荐这样做。</li> </ul> </li> <li class="translated"><strong>拥有A/B分区方案是否意味着我减少了存储空间？</strong><ul> <li class="translated">没有。谷歌表示，支持无缝更新的设备只需要牺牲几百兆的存储空间来支持它。收益大于成本。</li> </ul> </li> <li class="translated"><strong>我的设备支持A/B分区，这是否意味着我可以使用Project Treble通用系统映像？</strong><ul> <li class="translated">不一定。项目高音和A/B支持是不相关的。摩托罗拉Moto Z2 Force不支持Project Treble，但它支持A/B分区方案。</li> </ul> </li> <li class="translated"><strong>我的设备支持Project Treble，这是否意味着我有A/B分区方案？</strong><ul> <li class="translated">情况并非总是如此。Honor 9 Lite是一个很好的例子，因为它支持高音项目，但没有A/B分区方案。</li> </ul> </li> <li class="translated"><strong>为什么我需要先用fastboot启动TWRP，然后再刷新？</strong><ul> <li class="translated">这是因为快速启动的工作方式以及恢复分区不再存在的事实。恢复放在引导分区内，所以我们必须修改boot_a和boot_b。您不能在快速引导中修补分区，只能覆盖它。理论上，你可以制作一个预打补丁的引导镜像，然后刷新它。</li> </ul> </li> <li class="translated"><strong>A/B分区有危险吗？回滚保护如何影响事物？</strong><ul> <li class="translated">谷歌已经尽了最大努力来解决这个问题，但在摩托罗拉Moto Z2 Force的情况下，已知有设备在升级到Android Oreo后重新激活旧插槽的情况。这意味着回滚保护开始生效，设备所有者只能通过EDL恢复来拯救他们的智能手机。谷歌表示，回滚保护只在第一次启动后生效，所以在升级后，你不能再降级之前，插槽需要完全发挥作用。</li> </ul> </li> </ul>
+<ul> <li class="translated"><strong>A/B 分区有什么好处？</strong><ul> <li class="translated">A/B 分区允许您在使用 Android 智能手机时更新它，当您准备好启动新版本时，只需重新启动即可。它还可以防止砖块——如果更新出错，您将返回到工作安装。</li> </ul> </li> <li class="translated"><strong>有 A/B 分区会阻碍开发吗？</strong><ul> <li class="translated">虽然开发人员确实需要一些时间来适应，但答案几乎是否定的。事实上，它可以帮助开发人员，因为他们可以用旧版本和新测试版本双重引导他们的自定义 ROM，以检查回归。</li> </ul> </li> <li class="translated"><strong>A/B 分区如何影响自定义内核、Magisk、或 Xposed 等 mod？</strong><ul> <li class="translated">你必须小心安装它们，但目前没有问题。Magisk 官方支持设备的无缝更新，只要你以正确的顺序刷新，就不会有问题。确保在刷新你的其他模块之前刷新自定义内核，这样你就可以开始了。</li> </ul> </li> <li class="translated">我可以在每个分区和双引导上闪存两个不同的 rom 吗？<ul> <li class="translated">理论上，是的。但是由于共享数据分区会出现问题，所以不推荐这样做。</li> </ul> </li> <li class="translated"><strong>拥有 A/B 分区方案是否意味着我减少了存储空间？</strong><ul> <li class="translated">没有。谷歌表示，支持无缝更新的设备只需要牺牲几百兆的存储空间来支持它。收益大于成本。</li> </ul> </li> <li class="translated"><strong>我的设备支持 A/B 分区，这是否意味着我可以使用 Project Treble 通用系统映像？</strong><ul> <li class="translated">不一定。项目高音和 A/B 支持是不相关的。摩托罗拉 Moto Z2 Force 不支持 Project Treble，但它支持 A/B 分区方案。</li> </ul> </li> <li class="translated"><strong>我的设备支持 Project Treble，这是否意味着我有 A/B 分区方案？</strong><ul> <li class="translated">情况并非总是如此。Honor 9 Lite 是一个很好的例子，因为它支持高音项目，但没有 A/B 分区方案。</li> </ul> </li> <li class="translated"><strong>为什么我需要先用 fastboot 启动 TWRP，然后再刷新？</strong><ul> <li class="translated">这是因为快速启动的工作方式以及恢复分区不再存在的事实。恢复放在引导分区内，所以我们必须修改 boot_a 和 boot_b。您不能在快速引导中修补分区，只能覆盖它。理论上，你可以制作一个预打补丁的引导镜像，然后刷新它。</li> </ul> </li> <li class="translated"><strong>A/B 分区有危险吗？回滚保护如何影响事物？</strong><ul> <li class="translated">谷歌已经尽了最大努力来解决这个问题，但在摩托罗拉 Moto Z2 Force 的情况下，已知有设备在升级到 Android Oreo 后重新激活旧插槽的情况。这意味着回滚保护开始生效，设备所有者只能通过 EDL 恢复来拯救他们的智能手机。谷歌表示，回滚保护只在第一次启动后生效，所以在升级后，你不能再降级之前，插槽需要完全发挥作用。</li> </ul> </li> </ul>
 </div>
 
 

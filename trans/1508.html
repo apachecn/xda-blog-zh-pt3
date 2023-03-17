@@ -4,16 +4,16 @@
 <link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="translated">Dirac如何提升一加、小米、OPPO和华为设备的音质</h1>
+<h1 class="translated">Dirac 如何提升一加、小米、OPPO 和华为设备的音质</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/dirac-sound-quality-oneplus-xiaomi-oppo-huawei/#0001-01-01">https://www.xda-developers.com/dirac-sound-quality-oneplus-xiaomi-oppo-huawei/#0001-01-01</a></blockquote><div><div class="content-block-regular">
 <p/><p class="translated">你可能从未听说过<a href="https://www.dirac.com/">迪拉克</a>，但如果你近年来用过<a href="http://xda-developers.com/tag/xiaomi">小米</a>、<a href="http://xda-developers.com/tag/oppo"> OPPO </a>、<a href="http://xda-developers.com/tag/huawei">华为</a>或<a href="http://xda-developers.com/tag/oneplus">一加</a>手机，你很可能听说过它们的软件在运行。这家瑞典音频公司与越来越多的设备制造商合作，优化智能手机扬声器和耳机输出的音质。</p>
 
   
-<p class="translated">Dirac的智能手机套件Power Sound通过校正脉冲、相位和幅度频率响应来增强低音和提高扬声器的清晰度。与现成的均衡器解决方案不同，Power Sound内置于设备固件中，可在系统层面进行调整。</p>
+<p class="translated">Dirac 的智能手机套件 Power Sound 通过校正脉冲、相位和幅度频率响应来增强低音和提高扬声器的清晰度。与现成的均衡器解决方案不同，Power Sound 内置于设备固件中，可在系统层面进行调整。</p>
 
-<p class="translated">在去年的世界移动通信大会上，我有机会亲身体验了这一点，差别是惊人的。启用了全景声音(Power Sound的过滤效果之一)的<a href="https://forum.xda-developers.com/nexus-6p"> Google Nexus 6P </a>上的扬声器通过超宽的声场产生了清晰、清晰的耳机级音频。在一个音乐视频中，木吉他上的琴弦听起来好像是在离我耳朵几英寸远的地方被拨动，而不是来自我面前几英尺的智能手机扬声器。</p>
+<p class="translated">在去年的世界移动通信大会上，我有机会亲身体验了这一点，差别是惊人的。启用了全景声音(Power Sound 的过滤效果之一)的<a href="https://forum.xda-developers.com/nexus-6p"> Google Nexus 6P </a>上的扬声器通过超宽的声场产生了清晰、清晰的耳机级音频。在一个音乐视频中，木吉他上的琴弦听起来好像是在离我耳朵几英寸远的地方被拨动，而不是来自我面前几英尺的智能手机扬声器。</p>
 
-<p class="translated">为了更多地了解这项技术，我有机会和Dirac的移动业务总经理Erik Rudolphi通了电话。我们谈到了该公司目前的合作伙伴关系，其解决方案对流媒体音乐应用的适用性，以及未来的计划。</p>
+<p class="translated">为了更多地了解这项技术，我有机会和 Dirac 的移动业务总经理 Erik Rudolphi 通了电话。我们谈到了该公司目前的合作伙伴关系，其解决方案对流媒体音乐应用的适用性，以及未来的计划。</p>
 <div class="body-img portrait"><div class="responsive-img image-expandable img-article-item-portrait" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/03/download.png" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Erik Rudolphi, General Manager of Mobile at Dirac.&quot;">
  
 <figure> <picture>  <source media="(min-width: 1024px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/03/download.png?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="750px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/03/download.png?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="600px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/03/download.png?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="360px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/03/download.png?q=50&amp;fit=crop&amp;dpr=1.5"/> <img class="lazyload" alt="" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/03/download.png" src="../Images/398f238346aa21247c336f26066c9829.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/03/download.png"/> </picture> <figcaption class="body-img-caption">Erik Rudolphi, General Manager of Mobile at Dirac.</figcaption> </figure> </div>
@@ -22,18 +22,18 @@
  </div>
 
 
-<p class="translated"><strong> Kyle Wiggers:首先，让我们谈谈您的智能手机解决方案的当前化身，Dirac Power Sound和Dirac HD Sound，以及设备如何从中受益。</strong></p>
+<p class="translated"><strong> Kyle Wiggers:首先，让我们谈谈您的智能手机解决方案的当前化身，Dirac Power Sound 和 Dirac HD Sound，以及设备如何从中受益。</strong></p>
 
 <blockquote>
 <p/><h4 class="translated"><em> Erik Rudolphi:我们有基本的技术来跟踪耳机或扬声器的脉冲响应和频率响应。我们为智能手机扬声器增加的是让它们尽可能大声地播放，并增强低音——通常耳机不需要这样做，但扬声器需要这样做。所以，有一组[...]不同的技术来增强基础，我们有一种叫做虚拟低音的东西，主要是欺骗你的耳朵。我们所做的是弹奏低音的泛音，如果你以正确的水平弹奏泛音，你的耳朵会被基本音填满，并相信有低音。</em></h4>
-<p/><h4 class="translated">我们在CES[消费电子展]上大肆宣传我们与小米的合作关系，在MWC[世界移动通信大会]上，我们宣布与AAC Technology合作。AAC Technologies恰好是世界上最大的微型扬声器制造商，我们为这些手机提供微型扬声器——至少是我所知道的所有大型原始设备制造商。因此，这是一种战略合作伙伴关系，我们开发控制扬声器的软件，他们开发由我们的产品控制的扬声器。这是我们已经努力了两年的事情，我们已经开始看到成果了。</h4>
+<p/><h4 class="translated">我们在 CES[消费电子展]上大肆宣传我们与小米的合作关系，在 MWC[世界移动通信大会]上，我们宣布与 AAC Technology 合作。AAC Technologies 恰好是世界上最大的微型扬声器制造商，我们为这些手机提供微型扬声器——至少是我所知道的所有大型原始设备制造商。因此，这是一种战略合作伙伴关系，我们开发控制扬声器的软件，他们开发由我们的产品控制的扬声器。这是我们已经努力了两年的事情，我们已经开始看到成果了。</h4>
  </blockquote>
-<p class="translated"><strong> K:作为一名智能手机购买者，我知道，与普通手机相比，采用Dirac技术的智能手机的音频效果可能会更好。有了AAC的合作，一般人怎么能指望受益呢？也许你可以解释一下。</strong></p>
+<p class="translated"><strong> K:作为一名智能手机购买者，我知道，与普通手机相比，采用 Dirac 技术的智能手机的音频效果可能会更好。有了 AAC 的合作，一般人怎么能指望受益呢？也许你可以解释一下。</strong></p>
 
 <blockquote>
-<p/><h4 class="translated"><em> E:例如，我们在MWC展示了一些立体声扬声器解决方案和智能手机的模型。立体声扬声器的一个挑战是房地产。去年在MWC，我们在[华为Nexus 6P]上展示了我们的技术。Nexus手机的好处是它有两个大扬声器，所以相对容易做一个令人印象深刻的演示。现在，我们的大多数客户都希望拥有一个大显示屏。音频和显示器之间发生了冲突，因此没有扬声器的空间。实际上，在其中一个演示中，我们在手机顶部为听筒安装了一个非常小的扬声器。那是耳机，但那个接收器也能产生相当高的输出，所以声音可能相当大。</em></h4>
+<p/><h4 class="translated"><em> E:例如，我们在 MWC 展示了一些立体声扬声器解决方案和智能手机的模型。立体声扬声器的一个挑战是房地产。去年在 MWC，我们在[华为 Nexus 6P]上展示了我们的技术。Nexus 手机的好处是它有两个大扬声器，所以相对容易做一个令人印象深刻的演示。现在，我们的大多数客户都希望拥有一个大显示屏。音频和显示器之间发生了冲突，因此没有扬声器的空间。实际上，在其中一个演示中，我们在手机顶部为听筒安装了一个非常小的扬声器。那是耳机，但那个接收器也能产生相当高的输出，所以声音可能相当大。</em></h4>
 <p/><h4 class="translated"><em>然后是扬声器，向下发射的扬声器在底部，我们在这里做的技巧是我们可以平衡它们，即使声音与两者非常不同——顶部的扬声器和底部的扬声器。我们可以平衡这两者，并从这两个扬声器中获得出色的环绕声。</em></h4>
-<p/><h4 class="translated"><em>此外，我们还制作了一款智能扬声器模型，通过微型扬声器发出声音。我们可以从一个非常小的紧凑型封装中产生非常响亮的高保真声音，就像Echo Dot一样，但它听起来会比原始的亚马逊Echo Dot更响亮，更好。</em></h4>
+<p/><h4 class="translated"><em>此外，我们还制作了一款智能扬声器模型，通过微型扬声器发出声音。我们可以从一个非常小的紧凑型封装中产生非常响亮的高保真声音，就像 Echo Dot 一样，但它听起来会比原始的亚马逊 Echo Dot 更响亮，更好。</em></h4>
  </blockquote>
 <p class="translated"><strong> K:关于智能扬声器实施的快速问题。那会是来自四面八方吗？我的意思是，你站在房间的哪个位置并不重要——它会听起来响亮而清晰，对吗？</strong></p>
 
@@ -41,22 +41,22 @@
 <p/><h4 class="translated">是的。</h4>
  </blockquote>
 <blockquote>
-<p/><h4 class="translated"><em>因此，我们也有了一个新的演示，这是一个AR[增强现实]耳机模型。我们有两个扬声器，因为在ar中，你不想捂住耳朵，你想听到周围的自然声音，但除此之外，你还想添加AR声音。我们所做的是当我们在耳朵上有两个扬声器，不是在你面前，而是在上面，我们把声音传送到你的耳朵。这意味着它可以放得很大声，但是你听不到你邻居的声音。</em></h4>
+<p/><h4 class="translated"><em>因此，我们也有了一个新的演示，这是一个 AR[增强现实]耳机模型。我们有两个扬声器，因为在 ar 中，你不想捂住耳朵，你想听到周围的自然声音，但除此之外，你还想添加 AR 声音。我们所做的是当我们在耳朵上有两个扬声器，不是在你面前，而是在上面，我们把声音传送到你的耳朵。这意味着它可以放得很大声，但是你听不到你邻居的声音。</em></h4>
  </blockquote>
 <p class="translated">K:这真的很有创意。没有人真正解决过那个问题。</p>
 
 <blockquote>
-<p/><h4 class="translated"><em>爱因斯坦:对。这就是我们的进展——我的意思是，就开发平台而言，AR确实还没有上市，但它即将上市。此外，我们正在演示一个新版本的虚拟现实，我们有一个真正的虚拟环绕声系统...]那就像你耳朵周围的一圈扬声器。你可以听到来自任何地方的声音。</em></h4>
+<p/><h4 class="translated"><em>爱因斯坦:对。这就是我们的进展——我的意思是，就开发平台而言，AR 确实还没有上市，但它即将上市。此外，我们正在演示一个新版本的虚拟现实，我们有一个真正的虚拟环绕声系统...]那就像你耳朵周围的一圈扬声器。你可以听到来自任何地方的声音。</em></h4>
  </blockquote>
 <p class="translated"><strong>克:像真正的定向音频。</strong></p>
 
 <blockquote>
 <p/><h4 class="translated">是的。</h4>
  </blockquote>
-<p class="translated"><strong> <span> K: O </span> h太棒了，太棒了。所以，你提到消费者如何想要更大的边到边显示屏的手机，而这些手机实际上没有空间容纳立体声扬声器。你提到你的解决方案是，基本上，你可以把它缩小，也许可以把[扬声器]放在别的地方。但谷歌最近收购了[英国音频初创公司] <a href="https://www.xda-developers.com/google-buys-uk-audio-tech-startup-redux/"> Redux </a>，这是一种完全不同的方法——使用屏幕来制作音频。所以我想知道，你对这种方法有什么看法，你的方法有什么不同，有什么优点和缺点？</strong></p>
+<p class="translated"><strong> <span> K: O </span> h 太棒了，太棒了。所以，你提到消费者如何想要更大的边到边显示屏的手机，而这些手机实际上没有空间容纳立体声扬声器。你提到你的解决方案是，基本上，你可以把它缩小，也许可以把[扬声器]放在别的地方。但谷歌最近收购了[英国音频初创公司] <a href="https://www.xda-developers.com/google-buys-uk-audio-tech-startup-redux/"> Redux </a>，这是一种完全不同的方法——使用屏幕来制作音频。所以我想知道，你对这种方法有什么看法，你的方法有什么不同，有什么优点和缺点？</strong></p>
 
 <blockquote>
-<p/><h4 class="translated"><em> E:是的，音频显示器已经成为业界的热门话题五到七年了。我们仍然没有在市场上看到任何令人信服的东西。我们也在努力解决这个问题，但我认为现在说这个还为时过早。我知道会有发射——我不确定他们是否会和Dirac一起。但这是一个需要算法来控制显示的应用。因此，这对我们来说是一个明显的机会，我们正在与合作伙伴一起寻找解决方案。</em></h4>
+<p/><h4 class="translated"><em> E:是的，音频显示器已经成为业界的热门话题五到七年了。我们仍然没有在市场上看到任何令人信服的东西。我们也在努力解决这个问题，但我认为现在说这个还为时过早。我知道会有发射——我不确定他们是否会和 Dirac 一起。但这是一个需要算法来控制显示的应用。因此，这对我们来说是一个明显的机会，我们正在与合作伙伴一起寻找解决方案。</em></h4>
  </blockquote>
 <blockquote>
 <p/><h4 class="translated">我想我只能说这么多了。但我认为问题可能是，如果你想让好的立体声真正控制显示器，控制声音的方向，那将是一个挑战。</h4>
@@ -66,7 +66,7 @@
 <blockquote>
 <p/><h4 class="translated">我认为这是一个很大的挑战，我还没有看到任何解决方案。</h4>
  </blockquote>
-<p class="translated">克:明白了。因此，暂时停留在智能手机的话题上，你已经将你的技术集成到了一些小米设备中。我敢肯定，许多智能手机用户可能会花大价钱让他们的扬声器以这种方式得到增强。你认为有可能将这个解决方案作为一个应用程序来销售吗，或者你走OEM路线有什么特殊的原因吗？除了软件还需要硬件优化吗？</p>
+<p class="translated">克:明白了。因此，暂时停留在智能手机的话题上，你已经将你的技术集成到了一些小米设备中。我敢肯定，许多智能手机用户可能会花大价钱让他们的扬声器以这种方式得到增强。你认为有可能将这个解决方案作为一个应用程序来销售吗，或者你走 OEM 路线有什么特殊的原因吗？除了软件还需要硬件优化吗？</p>
 
 <blockquote>
 <p/><h4 class="translated">拥有一个独立于硬件的解决方案作为应用程序？</h4>
@@ -76,29 +76,29 @@
 <blockquote>
 <p/><h4 class="translated">当然你可以有任何情商，但是你可以做的是一个智能系统，它会听输出，然后做某种自我修正。这需要一些时间，我只能说这么多。</h4>
 <p/><h4 class="translated">问题是你手机里的麦克风离扬声器太近，无法真实再现你所听到的声音。这是可以想象的，但不会很快发生。做那种事很复杂。</h4>
-<p/><h4 class="translated"><em>另一个选项是，如果你想到耳机和你使用USB Type-C和蓝牙的数字耳机，你可以识别耳机，如果你知道这些耳机有节拍模式，并且你有一个配置文件库，你可以自动下载耳机的配置文件。所以这当然是一种选择。然而，它的问题是，你不能增强系统级的音频流——它需要更深入地集成到手机中。必须有某种预整合。比如，你可以做一个MP3播放器什么的，但是没有人再播放MP3文件了。我们希望我们的技术在系统层面上工作，并支持YouTube和Spotify以及所有这些不同的音频流。</em></h4>
+<p/><h4 class="translated"><em>另一个选项是，如果你想到耳机和你使用 USB Type-C 和蓝牙的数字耳机，你可以识别耳机，如果你知道这些耳机有节拍模式，并且你有一个配置文件库，你可以自动下载耳机的配置文件。所以这当然是一种选择。然而，它的问题是，你不能增强系统级的音频流——它需要更深入地集成到手机中。必须有某种预整合。比如，你可以做一个 MP3 播放器什么的，但是没有人再播放 MP3 文件了。我们希望我们的技术在系统层面上工作，并支持 YouTube 和 Spotify 以及所有这些不同的音频流。</em></h4>
  </blockquote>
 <p class="translated"><strong>克:有道理。否则，人们想要使用的流行应用程序将不会真正工作。如果一些应用程序得到了增强，而另一些没有，这也会是一种不和谐的体验。我能理解这有多糟糕。</strong></p>
 
 <blockquote>
-<p/><h4 class="translated">是的。因此，当然有可能为YouTube或Spotify用户提供一个优质的解决方案。这是我们一直在思考但没有积极追求的东西，但它将是可能的。</h4>
+<p/><h4 class="translated">是的。因此，当然有可能为 YouTube 或 Spotify 用户提供一个优质的解决方案。这是我们一直在思考但没有积极追求的东西，但它将是可能的。</h4>
  </blockquote>
 <p class="translated">K:那就要捆绑销售了？明确地说，例如，作为订户，你每月会多付一点钱，然后从这种增强的音频中受益？它会内置在应用程序中吗？</p>
 
 <blockquote>
 <p/><h4 class="translated"><em> E:对，没错。通过内容提供商传输的任何音频都可以受益于这种增强。</em></h4>
  </blockquote>
-<p class="translated"><strong> K:我真的很想知道它会走向何方，因为我们已经看到一些音频流媒体服务试图用更高质量的流媒体来区分自己，比如Tidal，但这并没有像他们预期的那样真正起飞。这真的会让他们中的一些人与众不同。</strong></p>
+<p class="translated"><strong> K:我真的很想知道它会走向何方，因为我们已经看到一些音频流媒体服务试图用更高质量的流媒体来区分自己，比如 Tidal，但这并没有像他们预期的那样真正起飞。这真的会让他们中的一些人与众不同。</strong></p>
 
 <p class="translated">因此，回到你最初的问题。我想问的是专注。你想把你的技术介绍给在美国销售手机的制造商(除了一加)吗？这是你的具体目标吗？</p>
 
 <blockquote>
 <p/><h4 class="translated">我们当然愿意，这对我们的品牌和品牌在西方世界的认知度非常有帮助。美国市场由苹果和三星主导，所以我们当然在和他们谈判，但这并不容易。他们有自己的技术。</h4>
-<p/><h4 class="translated">但是我们很乐意与之合作的公司是一加。此外，我相信小米已经开始在西班牙和波兰销售(其手机)，而不仅仅是在亚洲。当然，他们现在在印度非常成功。我认为小米在印度拥有超过25%的市场，他们基本上...]干掉了那里的国产品牌。所以这也是一个有趣的发展。华为当然正在接管市场份额。因此，我认为(这些公司)可能会在未来几年改变(智能手机)市场。</h4>
+<p/><h4 class="translated">但是我们很乐意与之合作的公司是一加。此外，我相信小米已经开始在西班牙和波兰销售(其手机)，而不仅仅是在亚洲。当然，他们现在在印度非常成功。我认为小米在印度拥有超过 25%的市场，他们基本上...]干掉了那里的国产品牌。所以这也是一个有趣的发展。华为当然正在接管市场份额。因此，我认为(这些公司)可能会在未来几年改变(智能手机)市场。</h4>
  </blockquote>
 <hr/>
 
-<p class="translated">感谢你坚持到这次采访结束！我们希望听到您对Dirac和/或智能手机音频质量的总体看法。请在下面的评论中告诉我们你的观点！</p>
+<p class="translated">感谢你坚持到这次采访结束！我们希望听到您对 Dirac 和/或智能手机音频质量的总体看法。请在下面的评论中告诉我们你的观点！</p>
 
  </div>
 

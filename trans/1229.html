@@ -4,28 +4,28 @@
 <link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="translated">TWRP 3.6.0发布，支持搭载Android 11的设备</h1>
+<h1 class="translated">TWRP 3.6.0 发布，支持搭载 Android 11 的设备</h1>
 <blockquote>原文：<a href="https://www.xda-developers.com/twrp-3-6-0-release-android-11-support/#0001-01-01">https://www.xda-developers.com/twrp-3-6-0-release-android-11-support/#0001-01-01</a></blockquote><div><div class="content-block-regular">
-<p class="translated">Team Win Recovery Project(简称TWRP)已经存在了几年，它已经发展成为Android社区的首选，以更先进、功能更丰富的替代品取代他们设备上的股票恢复。对于大多数用户来说，安装任何一种售后软件修改，无论是<a href="https://www.xda-developers.com/most-popular-custom-roms-android/">定制ROM </a>、<a href="https://www.xda-developers.com/most-popular-custom-kernels-for-android/">定制内核</a>、<a href="https://www.xda-developers.com/how-to-install-magisk/"> Magisk </a>还是其他工具，都需要使用TWRP。自定义恢复是开源的，它支持数百种设备。今天，该项目已经升级到3.6.0版本，带来了Android 11支持，解密方面的许多改进，新功能，大量新支持的设备，以及TWRP安装方式的重大变化。</p>
+<p class="translated">Team Win Recovery Project(简称 TWRP)已经存在了几年，它已经发展成为 Android 社区的首选，以更先进、功能更丰富的替代品取代他们设备上的股票恢复。对于大多数用户来说，安装任何一种售后软件修改，无论是<a href="https://www.xda-developers.com/most-popular-custom-roms-android/">定制 ROM </a>、<a href="https://www.xda-developers.com/most-popular-custom-kernels-for-android/">定制内核</a>、<a href="https://www.xda-developers.com/how-to-install-magisk/"> Magisk </a>还是其他工具，都需要使用 TWRP。自定义恢复是开源的，它支持数百种设备。今天，该项目已经升级到 3.6.0 版本，带来了 Android 11 支持，解密方面的许多改进，新功能，大量新支持的设备，以及 TWRP 安装方式的重大变化。</p>
 
  
-<h2 id="what-s-new-in-twrp-3-6-0" class="translated">TWRP 3.6.0的新功能</h2>
-<p class="translated">到目前为止，在带有A/B分区的设备上刷新TWRP需要临时启动TWRP镜像(使用<code>fastboot boot</code>命令),然后使用<em>安装恢复Ramdisk </em>选项永久安装。然而，在这个实现中，ramdisk不能自己填充，因为您仍然需要将它指向下载的TWRP映像。今后，用户将在自定义恢复的<em>高级</em>部分看到一个新的<em>闪光电流TWRP </em>选项。选择该选项会将您刚刚启动的TWRP映像永久安装到设备上，从而简化整个安装过程。</p>
+<h2 id="what-s-new-in-twrp-3-6-0" class="translated">TWRP 3.6.0 的新功能</h2>
+<p class="translated">到目前为止，在带有 A/B 分区的设备上刷新 TWRP 需要临时启动 TWRP 镜像(使用<code>fastboot boot</code>命令),然后使用<em>安装恢复 Ramdisk </em>选项永久安装。然而，在这个实现中，ramdisk 不能自己填充，因为您仍然需要将它指向下载的 TWRP 映像。今后，用户将在自定义恢复的<em>高级</em>部分看到一个新的<em>闪光电流 TWRP </em>选项。选择该选项会将您刚刚启动的 TWRP 映像永久安装到设备上，从而简化整个安装过程。</p>
 
-<p class="translated">与高级用户最相关的另一个变化是包含了两个与<a href="https://www.xda-developers.com/android-q-dynamic-system-updates-project-treble/">动态分区</a>和<a href="https://www.xda-developers.com/google-virtual-ab-seamless-updates-android-11/">虚拟A/B分区设置</a>相关的新故障排除选项。首先，有一个名为<em> Unmap Super Devices </em>的选项，允许您轻松禁用所有动态分区并卸载它们。第二个称为<em>合并快照</em>，如果您遇到快照合并的问题，并且想要强制提交对动态分区的更新，这可能会很方便。它们都可以在TWRP主菜单的<em>高级</em>部分找到。</p>
+<p class="translated">与高级用户最相关的另一个变化是包含了两个与<a href="https://www.xda-developers.com/android-q-dynamic-system-updates-project-treble/">动态分区</a>和<a href="https://www.xda-developers.com/google-virtual-ab-seamless-updates-android-11/">虚拟 A/B 分区设置</a>相关的新故障排除选项。首先，有一个名为<em> Unmap Super Devices </em>的选项，允许您轻松禁用所有动态分区并卸载它们。第二个称为<em>合并快照</em>，如果您遇到快照合并的问题，并且想要强制提交对动态分区的更新，这可能会很方便。它们都可以在 TWRP 主菜单的<em>高级</em>部分找到。</p>
 
-<p class="translated">除此之外，TWRP现在完全兼容工厂安装的Android 11设备。由于TWRP代码库的主要部分已经在本课程中从头开始重写，以支持谷歌引入的架构变化，项目维护者希望看到一个更快的Android 12发布过程。</p>
+<p class="translated">除此之外，TWRP 现在完全兼容工厂安装的 Android 11 设备。由于 TWRP 代码库的主要部分已经在本课程中从头开始重写，以支持谷歌引入的架构变化，项目维护者希望看到一个更快的 Android 12 发布过程。</p>
 
 <p class="translated">TWRP 3.6.0 的<a href="https://twrp.me/site/update/2021/11/28/twrp-3.6.0-released.html">完整变更日志如下:</a></p>
 
-<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_6"><h3 id="twrp-3-6-0-changelog" class="translated">TWRP 3.6.0变更日志</h3><p class="translated"><strong>安卓9分支:</strong></p><ul> <li class="translated">修理<ul> <li class="translated">clarity的SAR更新脚本名称- CaptainThrowback</li> <li class="translated">修复android-7.1中的构建工具箱- CaptainThrowback</li> <li class="translated">修复巴什-贾尔-企鹅</li> </ul> </li> </ul><p class="translated"><strong>安卓11分支:</strong></p><ul> <li class="translated">添加对安装realme/OPPO OTA - Ctapchuk的支持</li> <li class="translated">更新定制makefiles到golang模块</li> <li class="translated">策略更新- nebrassy、bigbiff、CaptainThrowback</li> <li class="translated">a11 - bigbiff、micky387、CaptainThrowback的加密更新</li> <li class="translated">供应商内核模块加载器- bigbiff</li> <li class="translated">虚拟A/B更新- bigbiff</li> <li class="translated">快照合并- bigbiff</li> <li class="translated">重新打包警告- CaptainThrowback</li> <li class="translated">f2fs格式化修复- systemad</li> <li class="translated">bootdevice中的symlink动态分区- Mohd Faraz</li> <li class="translated">修理<ul> <li class="translated">修复解析清除缓存的get_args</li> <li class="translated">供应商hal fixes - Mohd Faraz</li> <li class="translated">修复三星haptics - soulr344</li> <li class="translated">摘要检查修复- epicX</li> <li class="translated">ozip解密修复- Ctapchuk</li> <li class="translated">改变空白屏幕的工作方式-肖恩·霍伊特</li> </ul> </li> </ul><p class="translated"><strong>安卓9和安卓11分支:</strong></p><ul> <li class="translated">为PIN输入添加数字模板- CaptainThrowback</li> <li class="translated">忽略A12 XML文件二进制格式- zhenyolka</li> <li class="translated">添加对A12 keymaster_key_blob文件结构的支持- zhenyolka</li> <li class="translated">keymaster恢复:当pin、密码或模式启用时发出警告</li> <li class="translated">作为引导设备进行恢复的新闪存方法:</li> <li class="translated">高级&gt;闪光电流twrp - nebrassy<ul> <li class="translated">工厂擦除和mtp修复- CaptainThrowback</li> </ul> </li> <li class="translated">添加印度尼西亚语言- Xdisk</li> <li class="translated">更新俄语- Ctapchuk</li> <li class="translated">添加取消加密页面- CaptainThrowback</li> <li class="translated">在TWRP复制日志时复制logcat</li> <li class="translated">修理<ul> <li class="translated">FBE加密修复- CaptainThrowback</li> <li class="translated">用于压缩的重新打包修复程序- nebrassy</li> <li class="translated">修复恢复Bootloop - CaptainThrowback的排除标准</li> <li class="translated">如果供应商不可用，卸载供应商- LinkBoi00</li> <li class="translated">主题更新- LinkBoi00</li> </ul> </li> </ul> </div></section>
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_6"><h3 id="twrp-3-6-0-changelog" class="translated">TWRP 3.6.0 变更日志</h3><p class="translated"><strong>安卓 9 分支:</strong></p><ul> <li class="translated">修理<ul> <li class="translated">clarity 的 SAR 更新脚本名称- CaptainThrowback</li> <li class="translated">修复 android-7.1 中的构建工具箱- CaptainThrowback</li> <li class="translated">修复巴什-贾尔-企鹅</li> </ul> </li> </ul><p class="translated"><strong>安卓 11 分支:</strong></p><ul> <li class="translated">添加对安装 realme/OPPO OTA - Ctapchuk 的支持</li> <li class="translated">更新定制 makefiles 到 golang 模块</li> <li class="translated">策略更新- nebrassy、bigbiff、CaptainThrowback</li> <li class="translated">a11 - bigbiff、micky387、CaptainThrowback 的加密更新</li> <li class="translated">供应商内核模块加载器- bigbiff</li> <li class="translated">虚拟 A/B 更新- bigbiff</li> <li class="translated">快照合并- bigbiff</li> <li class="translated">重新打包警告- CaptainThrowback</li> <li class="translated">f2fs 格式化修复- systemad</li> <li class="translated">bootdevice 中的 symlink 动态分区- Mohd Faraz</li> <li class="translated">修理<ul> <li class="translated">修复解析清除缓存的 get_args</li> <li class="translated">供应商 hal fixes - Mohd Faraz</li> <li class="translated">修复三星 haptics - soulr344</li> <li class="translated">摘要检查修复- epicX</li> <li class="translated">ozip 解密修复- Ctapchuk</li> <li class="translated">改变空白屏幕的工作方式-肖恩·霍伊特</li> </ul> </li> </ul><p class="translated"><strong>安卓 9 和安卓 11 分支:</strong></p><ul> <li class="translated">为 PIN 输入添加数字模板- CaptainThrowback</li> <li class="translated">忽略 A12 XML 文件二进制格式- zhenyolka</li> <li class="translated">添加对 A12 keymaster_key_blob 文件结构的支持- zhenyolka</li> <li class="translated">keymaster 恢复:当 pin、密码或模式启用时发出警告</li> <li class="translated">作为引导设备进行恢复的新闪存方法:</li> <li class="translated">高级&gt;闪光电流 twrp - nebrassy<ul> <li class="translated">工厂擦除和 mtp 修复- CaptainThrowback</li> </ul> </li> <li class="translated">添加印度尼西亚语言- Xdisk</li> <li class="translated">更新俄语- Ctapchuk</li> <li class="translated">添加取消加密页面- CaptainThrowback</li> <li class="translated">在 TWRP 复制日志时复制 logcat</li> <li class="translated">修理<ul> <li class="translated">FBE 加密修复- CaptainThrowback</li> <li class="translated">用于压缩的重新打包修复程序- nebrassy</li> <li class="translated">修复恢复 Bootloop - CaptainThrowback 的排除标准</li> <li class="translated">如果供应商不可用，卸载供应商- LinkBoi00</li> <li class="translated">主题更新- LinkBoi00</li> </ul> </li> </ul> </div></section>
 <hr/>
 <p class="ad-odd">
 </p>
 
 
 <h2 id="newly-supported-devices" class="translated">新支持的设备</h2>
-<p class="translated">如前所述，TWRP可用于过多的设备，并且名单还在不断增加。除了发布新的主要版本，该团队现在还正式添加了对以下智能手机的支持:</p>
+<p class="translated">如前所述，TWRP 可用于过多的设备，并且名单还在不断增加。除了发布新的主要版本，该团队现在还正式添加了对以下智能手机的支持:</p>
 
 
 <p class="translated">此外，一些设备(如下所列)已经获得了新的维护者。就长期发展支助而言，这对它们来说确实是一个好迹象。</p>
@@ -37,11 +37,11 @@
 
 
 <h2 id="download" class="translated">[计] 下载</h2>
-<p class="translated">您可以从下面链接的官方网站为您的设备下载最新版本的TWRP。请务必查看您的设备的XDA分论坛，因为当新版本上线时，TWRP维护者可能会在那里发布更多特定于设备的说明。</p>
+<p class="translated">您可以从下面链接的官方网站为您的设备下载最新版本的 TWRP。请务必查看您的设备的 XDA 分论坛，因为当新版本上线时，TWRP 维护者可能会在那里发布更多特定于设备的说明。</p>
 
-<p/><p class="translated"><strong> <a href="https://twrp.me/Devices/">为您的设备下载TWRP</a></strong></p>
+<p/><p class="translated"><strong> <a href="https://twrp.me/Devices/">为您的设备下载 TWRP</a></strong></p>
 
-<p class="translated">最后，一定要从Google Play下载TWRP官方应用。当新版本的自定义恢复可用时，该应用程序会提醒您。它还能让你从你的设备上下载最新版本。</p>
+<p class="translated">最后，一定要从 Google Play 下载 TWRP 官方应用。当新版本的自定义恢复可用时，该应用程序会提醒您。它还能让你从你的设备上下载最新版本。</p>
 
 <p class="translated">[app box Google play " me . twrp . twrpapp "]</p>
 
