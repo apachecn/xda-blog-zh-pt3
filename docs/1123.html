@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Microsoft releases Windows 10 build 18363.1766 – here’s what’s new</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">微软发布Windows 10 build 18363.1766——以下是新内容</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/microsoft-releases-windows-10-build-18383-1766-whats-new/#0001-01-01">https://www.xda-developers.com/microsoft-releases-windows-10-build-18383-1766-whats-new/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p/><p class="translated">正如月末经常发生的那样，微软发布了几个Windows 10的累积更新。这些被称为累积更新预览，因为它们是完全可选的，其中的变化将滚动到下个月的补丁星期二。获得更新的Windows 10版本是1909和1809，更新使它们的内部版本号分别为18363.1766和17763.2145。这些版本的Windows 10仅支持教育和企业(1909版)以及LTSC(1809版)客户。</p>
+
+  
+<p class="translated">对于Windows 10版本1909，该更新被标记为<a href="https://support.microsoft.com/en-us/topic/august-26-2021-kb5005103-os-build-18363-1766-preview-4e23362c-5e43-4d8f-95e5-9fdade60605f"> KB5005103 </a>，如上所述，它将内部版本号更改为18363.1766。你可以<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005103">在这里</a>手动下载更新，它有以下亮点:</p>
+
+<ul> <li class="translated">更新了阻止Windows电影和电视应用程序播放某些视频(<b> .mp4 </b>文件)的问题。</li> <li class="translated">更新了一个问题，该问题会在安装Windows更新后将Microsoft OneDrive的同步重置为“仅已知文件夹”。</li> </ul>
+
+<p class="translated">此更新中的完整修复列表可在下面找到:</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_4"><h3 id="fixes-and-improvements-in-windows-10-build-18393-1766" class="translated">Windows 10 build 18393.1766中的修复和改进</h3><ul> <li class="translated">解决了阻止用户跟踪分布式组件对象模型(DCOM)激活失败的问题。</li> <li class="translated">解决了在高负载下可能导致Windows远程管理(WinRM)服务停止工作的线程问题。</li> <li class="translated">解决了导致Windows Management Instrumentation(WMI)提供程序主机进程停止工作的问题。发生这种情况是因为在使用所需的状态配置(DSC)时发生了未处理的访问冲突。</li> <li class="translated">解决了导致存储在不同卷上的分布式文件系统(DFS)路径之间的文件迁移失败的问题。当您使用使用<b> Move-Item </b>命令的PowerShell脚本实现迁移时，会出现此问题。</li> <li class="translated">解决了出现内存不足情况后，无法写入WMI存储库的问题。</li> <li class="translated">解决了一个可能会阻止您最小化使用非主题化窗口的应用程序的问题。</li> <li class="translated">解决了阻止Windows电影和电视应用程序播放包含像素纵横比(PAR)信息的<b> .mp4 </b>媒体文件的问题。</li> <li class="translated">解决了导致身份验证机制保证(AMA)停止工作的问题。当您迁移到Windows Server 2016(或更新版本的Windows)以及将AMA与来自Windows Hello for Business的证书结合使用时，会出现此问题。</li> <li class="translated">解决了阻止安全启动在某些设备上工作的问题。</li> <li class="translated">解决了在代码完整性策略中指定包系列名称规则时，代码完整性规则无法正常工作的问题。出现此问题是因为对区分大小写的名称的处理不正确。</li> <li class="translated">解决了一个问题，该问题会阻止ShellHWDetection服务在特权访问工作站(PAW)设备上启动，并阻止您管理BitLocker驱动器加密。</li> <li class="translated">解决了Windows Defender漏洞保护中的一个问题，该问题阻止某些Microsoft Office应用程序在具有某些处理器的计算机上工作。</li> <li class="translated">解决了一个即使在远程应用程序关闭时也导致输入法编辑器(IME)工具栏出现的问题。</li> <li class="translated">解决“打开文件”对话框无法处理的重大异常问题。结果，一个Microsoft Foundation Class (MFC)应用程序意外关闭。</li> <li class="translated">解决配置策略“删除系统重新启动时超过指定天数的用户配置文件”时可能出现的问题。如果用户登录的时间超过了策略中指定的时间，设备可能会在启动时意外删除配置文件。</li> <li class="translated">解决Microsoft OneDrive同步设置“始终保留在此设备上”的问题。安装Windows更新后，该设置意外重置为“仅已知文件夹”。</li> <li class="translated">解决了在就地升级过程中可能会创建重复的内置本地帐户(如管理员或来宾帐户)的问题。如果您先前重命名了这些帐户，则会出现此问题。因此，升级后，本地用户和组MMC管理单元(<b> lusrmgr.msc </b>)显示为空白，没有帐户。此更新将从受影响计算机上的本地安全帐户管理器(SAM)数据库中删除重复的帐户。如果系统检测到并删除了重复的帐户，它会在系统事件日志中记录一个ID为16986的目录服务SAM事件。</li> <li class="translated">增加本地安全机构(LSA)查找缓存中的默认条目数，以提高高查找量情况下的查找性能。</li> <li class="translated">解决<b> srv2中的停止错误0x1E！SMB 2 checkandvalidateccffile</b>。</li> <li class="translated">解决在重复数据消除筛选器检测到重分析点中的损坏后可能导致系统停止工作的问题。出现此问题是因为在以前的更新中引入了重复数据消除驱动程序更改。</li> <li class="translated">解决了使用带有备份选项(<b> /B </b>)的<b>机器人复制</b>命令来修复数据丢失的问题。当源位置包含分层的Azure文件同步文件或分层的云文件时，会出现此问题。</li> <li class="translated">停止对过时的存储运行状况功能中的OneSettings APIs运行查询。</li> </ul> </div></section>
+<p class="translated">Microsoft不知道此更新有任何问题。</p>
+
+<p class="translated">至于Windows 10版本1809的用户，他们将获得一个标签为<a href="https://support.microsoft.com/en-us/topic/august-26-2021-kb5005102-os-build-17763-2145-preview-84c556d7-4a14-49d9-b1ba-35690209acd3"> KB5005102 </a>的更新，这使他们的内部版本号为17763.2145。您可以<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005102">在这里</a>下载更新，它包括以下亮点，其中一项与1909版本相同:</p>
+
+
+
+<p class="translated">可以在下面找到完整的修复列表:</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_9"><h3 id="fixes-and-improvements-in-windows-10-build-17763-2145" class="translated">Windows 10 build 17763.2145中的修复和改进</h3> </div></section>
+<p class="translated">与Windows 10内部版本18363.1766不同，此更新确实包括几个已知问题。以下是你需要注意的:</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_11"><h3 id="known-issues-in-windows-10-build-17763-2145" class="translated">Windows 10内部版本17763.2145中的已知问题</h3><div class="table-container"><table border="1" cellpadding="1" cellspacing="1"><thead><tr><th><p class="translated">症状</p> </th><th><p class="translated">工作区</p> </th> </tr></thead><tbody><tr><td><p class="translated">安装<a href="https://support.microsoft.com/en-us/help/4493509" target="_blank" rel="noopener"> KB4493509 </a>后，安装了某些亚洲语言包的设备可能会收到错误“0x 800 f 0982-PSFX _ E _ MATCHING _ COMPONENT _ NOT _ FOUND”</p> </td><td><ol> <li><p class="translated">卸载并重新安装任何最近添加的语言包。有关说明，请参见<a href="https://support.microsoft.com/en-us/help/4496404" target="_blank" rel="noopener">管理Windows 10 </a>中的输入和显示语言设置。</p> </li> <li class="translated">选择<b>检查更新</b>并安装2019年4月的累积更新。有关说明，请参见更新Windows 10。</li> </ol><p class="translated"><b>注意</b>如果重新安装语言包不能解决问题，请按如下方式重置您的电脑:</p><ol> <li class="translated">进入<b>设置</b>app&gt;T14】恢复。</li> <li class="translated">在<b>重置本电脑</b>恢复选项下选择<b>开始</b>。</li> <li class="translated">选择<b>保存我的文件</b>。</li> </ol><p class="translated">Microsoft正在解决这个问题，并将在即将发布的版本中提供更新。</p> </td> </tr><tr><td><p class="translated">安装<a href="https://support.microsoft.com/en-us/topic/april-13-2021-kb5001342-os-build-17763-1879-52e9180d-0cd3-4ab9-8a35-514c07ea9e08"> KB5001342 </a>或更高版本后，由于找不到群集网络驱动程序，群集服务可能无法启动。</p> </td><td><p class="translated">出现此问题是因为此服务使用的PnP类驱动程序的更新。大约20分钟后，您应该能够重新启动设备，并且不会遇到此问题。有关此问题的具体错误、原因和解决方法的更多信息，请参见<a href="https://support.microsoft.com/en-us/topic/after-installing-kb5001342-the-cluster-service-fails-to-start-because-a-cluster-network-driver-is-not-found-april-30-2021-684eb343-17cc-4196-a52a-f483dc116ad3"> KB5003571。</a></p> </td> </tr></tbody> </table> </div> </div></section>
+<p class="translated">如上所述，这些是可选的更新，所以你不需要去获取它们。这里所有的改变都将在下个月的补丁星期二发布，所以你可以耐心等待。说到等待，Windows内部人士本周还没有Windows 11版本，尽管我们仍有机会看到罕见的周五版本。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

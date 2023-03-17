@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Microsoft releases Windows 10 build 19043.1023 - here's what's new</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">微软发布Windows 10 build 19043.1023——以下是新内容</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/microsoft-windows-10-build-19043-1013/#0001-01-01">https://www.xda-developers.com/microsoft-windows-10-build-19043-1013/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p/><p class="translated">又到了每月的这个时候。微软发布了新版Windows 10的可选累积更新。事实上，今天的更新适用于消费者支持的所有版本的操作系统，包括版本2004、20H2和21H1。这也是自<a href="https://www.xda-developers.com/the-windows-10-may-2021-update-is-probably-coming-out-today/"> Windows 10版本21H1发布</a>以来的首次累积更新。</p>
+
+  
+<p class="translated">这是因为所有三个版本都获得了完全相同的更新。将它们彼此分开的唯一东西是一个实现包。这个包突出了一些特性，并提高了版本号。</p>
+
+<p class="translated">如果你使用的是Windows 10版本21H1、20H2或2004，你将会得到<a href="https://support.microsoft.com/en-us/topic/may-25-2021-kb5003214-os-builds-19041-1023-19042-1023-and-19043-1023-preview-8a58ac95-cf5e-4032-9272-23de9ee1d186"> KB5003214 </a>，使版本号分别为19043.1023、19042.1023或19041.1023。这里可以<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB5003214">手动下载，以下是亮点:</a></p>
+
+<blockquote>
+
+ </blockquote>
+<p class="translated">以下是修复的完整列表:</p>
+
+<blockquote>
+
+ </blockquote>
+<p class="translated">还有一些已知的问题需要注意:</p>
+
+<div class="table-container"><table border="1" cellpadding="1" cellspacing="1"><thead><tr><th><p class="translated">症状</p> </th><th><p class="translated">工作区</p> </th> </tr></thead><tbody><tr><td><p class="translated">将设备从Windows 10版本1809或更高版本更新到更高版本的Windows 10时，系统和用户证书可能会丢失。如果设备已经安装了2020年9月16日或更晚发布的任何最新累积更新(LCU ),然后从没有集成2020年10月13日或更晚发布的LCU的媒体或安装源更新到更高版本的Windows 10，则设备将受到影响。这主要发生在通过更新管理工具(如Windows Server Update Services(WSUS)或Microsoft Endpoint Configuration Manager)使用过时的捆绑包或介质更新受管设备时。当使用过时的物理介质或没有集成最新更新的ISO映像时，也可能发生这种情况。</p><p/><p class="translated"><b>注意</b>使用Windows Update for Business或直接连接到Windows Update的设备不受影响。任何连接到Windows Update的设备应该总是接收最新版本的功能更新，包括最新的LCU，而无需任何额外的步骤。</p> </td><td><p class="translated">如果您已经在您的设备上遇到了这个问题，您可以在卸载窗口中使用此处的说明<a href="https://support.microsoft.com/windows/recovery-options-in-windows-10-31ce2444-7de3-818c-d626-e3b5a3024da5#bkmk_section6" target="_blank" rel="noopener">返回到您以前的Windows版本来缓解这个问题。卸载窗口可能是10天或30天，具体取决于您的环境配置和您要更新到的版本。在您的环境中解决该问题后，您需要更新到更高版本的Windows 10。<b>注意</b>在卸载窗口中，你可以通过使用DISM命令/Set-OSUninstallWindow来增加你必须回到你之前版本的Windows 10的天数。你必须在默认卸载窗口过期之前<b>做出这个改变。更多信息，请参见<a href="https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-uninstallos-command-line-options" target="_blank" rel="noopener"> DISM操作系统卸载命令行选项</a>。</b></a></p><p/><p class="translated">我们正在制定解决方案，并将在未来几周内提供更新的捆绑包和更新的介质。</p> </td> </tr><tr><td><p class="translated">当使用Microsoft日文输入法编辑器(IME)在自动允许输入假名字符的应用程序中输入汉字字符时，您可能无法获得正确的假名字符。您可能需要手动输入汉字注音字符。</p><p/><p class="translated"><b>注意</b>受影响的应用程序正在使用<b>ImmGetCompositionString()</b>函数。</p> </td><td><p class="translated">我们正在制定解决方案，并将在即将发布的版本中提供更新。</p> </td> </tr><tr><td><p class="translated">安装此更新后，一小部分用户报告游戏性能低于预期。受此问题影响的大多数用户都在全屏或无边框窗口模式下运行游戏，并使用两个或更多显示器。</p> </td><td><p class="translated">使用<a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831" target="_blank" rel="noopener">已知问题回滚(KIR) </a>解决此问题。请注意，解决方案可能需要24小时才能自动传播到消费者设备和非受管企业设备。重新启动您的设备可能有助于更快地将分辨率应用到您的设备。对于安装了受影响的更新并遇到此问题的企业管理设备，可以通过安装和配置特殊的<a href="https://download.microsoft.com/download/e/e/e/eee62513-e95c-4d8a-99f8-2c1d62f15b0b/Windows%2010%20(2004%20&amp;%2020H2)%20Known%20Issue%20Rollback%20042121%2001.msi" target="_blank" rel="noopener">组策略</a>来解决。</p><p/><p class="translated"><b>注意</b>配置特殊组策略后，设备需要重启。如需帮助，请参见<a href="https://docs.microsoft.com/en-us/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback" target="_blank" rel="noopener">如何使用组策略部署已知问题回滚</a>。有关使用组策略的一般信息，请参见<a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831791(v=ws.11)" target="_blank" rel="noopener">组策略概述</a>。</p> </td> </tr><tr><td><p class="translated">安装此更新后，当使用某些音频设备和Windows设置时，5.1 Dolby Digital audio可能会在某些应用程序中播放包含高音调噪音或吱吱声的声音。</p><p/><p class="translated"><b>注意</b>使用立体声时不会出现此问题。</p> </td><td><p class="translated">要缓解此问题，您可以尝试以下一种或多种方法:</p><ul> <li class="translated">在网页浏览器或不同的应用程序中流式传输视频或音频，而不是受此问题影响的应用程序。</li> <li class="translated">右击或长按<b>通知区</b>的<b>音量图标</b>，选择<b>空间声音(关)</b>，选择任意可用选项，启用<b>空间声音</b>设置。</li> </ul><p/><p class="translated">我们正在制定解决方案，并将在即将发布的版本中提供更新。</p> </td> </tr><tr><td><p class="translated">安装了从自定义离线介质或自定义ISO映像创建的Windows的设备可能会被此更新删除<a href="https://support.microsoft.com/en-us/microsoft-edge/what-is-microsoft-edge-legacy-3e779e55-4c55-08e6-ecc8-2333768c0fb0" target="_blank" rel="noopener"> Microsoft Edge旧版本</a>，但不会被新的Microsoft Edge自动替换。只有在没有首先安装2021年3月29日或更高版本发布的独立服务堆栈更新(SSU)的情况下，通过将此更新组合到映像中创建自定义离线媒体或ISO映像时，才会遇到此问题。</p><p/><p class="translated"><b>注意</b>直接连接到Windows Update以接收更新的设备不受影响。这包括使用Windows Update for Business的设备。任何连接到Windows Update的设备应该总是接收最新版本的SSU和最新的累积更新(LCU ),而无需任何额外的步骤。</p> </td><td><p class="translated">为了避免这个问题，请确保首先将2021年3月29日或之后发布的SSU整合到自定义离线媒体或ISO映像中，然后再整合LCU。要使用现在用于Windows 10，版本20H2和Windows 10，版本2004的SSU和LCU组合包来完成此操作，您需要从组合包中提取SSU。使用以下步骤提取使用SSU:</p><ol> <li class="translated">通过这个命令行从msu中提取cab(以KB5000842的包为例):<b>展开windows 10.0-kb 5000842-x64 . MSU/f:windows 10.0-kb 5000842-x64 . cab&lt;目的路径&gt; </b></li> <li class="translated">通过这个命令行从之前提取的cab中提取SSU:<b>展开窗口10.0-KB5000842-x64.cab /f:* &lt;目的路径&gt; </b></li> <li class="translated">然后您将拥有SSU出租车，在本例中命名为<b> SSU-19041.903-x64.cab </b>。首先将该文件整合到您的离线图像中，然后是LCU。</li> </ol><p/><p class="translated">如果您已经通过使用受影响的自定义介质安装操作系统遇到了此问题，您可以通过直接安装<a href="https://www.microsoft.com/en-us/edge" target="_blank" rel="noopener">新的微软Edge </a>来缓解此问题。如果您需要广泛部署新的Microsoft Edge for business，请参见<a href="https://www.microsoft.com/en-us/edge/business/download" target="_blank" rel="noopener">下载并部署Microsoft Edge for business </a></p> </td> </tr></tbody> </table> </div>
+<p class="translated">由于这是一个C/D周更新，它是可选的。这意味着，如果你现在在Windows Update中检查更新，它将为toy提供选择加入的选项。如果你忽视它，你就不会得到它。相反，这些修复将被纳入下个月的补丁星期二更新，这是强制性的。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

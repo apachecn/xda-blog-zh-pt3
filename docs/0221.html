@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Qualcomm announces the Snapdragon 865 SoC for Flagship Smartphones</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">高通宣布旗舰智能手机骁龙865 SoC</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/qualcomm-snapdragon-865-processor-specifications-features/#0001-01-01">https://www.xda-developers.com/qualcomm-snapdragon-865-processor-specifications-features/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p/><p class="translated">由于高通为经济型、中档和高端移动设备设计芯片，高通的骁龙芯片组被用于数百万部安卓智能手机和平板电脑。每年12月，高通都会举办一场他们称之为骁龙科技峰会的活动，在那里他们会宣布他们最新的高端移动平台。今年，该公司有两款新的SOC可以展示:高通骁龙765和高通骁龙865。后者是2019年发布的大多数旗舰Android设备中的高通骁龙855的继任者，它在CPU，DSP，ISP和调制解调器等关键领域进行了重大升级。</p>
+
+  
+<p class="translated">随着Snapdragon 800系列的每一个新成员的加入，我们都会看到符合我们预期的逐年改进。今年的不同之处在于，该行业的其他公司终于迎头赶上，充分利用了芯片的全部功能。5G连接不再仅仅是一个谈论点- <a href="https://www.xda-developers.com/t-mobiles-5g-live-oneplus-7t-pro-mclaren-galaxy-note-10-plus/">它已经在许多城市可用</a>并且由少数设备支持。高像素、多摄像头设备正在成为常态108MP五摄像头<a href="https://www.xda-developers.com/xiaomi-mi-note-10-mi-note-10-pro-redmi-note-8t-arrive-europe/">小米Note 10 </a>立即浮现在脑海中。高刷新率技术现在是移动行业的主流，因为许多大公司在其最新设备上添加了90甚至120Hz的面板。凭借新的高通骁龙865，我们可以看到2020年的设备拥有比我们以前见过的更高的百万像素摄像头、更快的刷新率面板和更快的网络连接。</p>
+
+<p class="translated">高通今年强调了许多重大的换代变化，但在深入研究骁龙865规格表时，我们也发现了许多较小的改进。这是你需要知道的一切。</p>
+
+<p class="translated"><em>免责声明:高通赞助我去夏威夷毛伊岛参加骁龙科技峰会。公司支付了我的机票和酒店费用。然而，他们没有对该文章的内容提出任何意见。</em></p>
+
+<p class="translated">首先，我整理了一张表格，对上一代高通骁龙855和新一代高通骁龙865进行了广泛的比较。如果你不熟悉这些术语中的大部分，这个表格很难理解。在表格下方，我将我对同比改进和新特性的解释分成了多个部分。</p>
+
+<div class="table-container"><table border="1" cellpadding="1" cellspacing="1"><thead><tr><th> </th><th><p class="translated">高通骁龙855 (sm8150)</p> </th><th><p class="translated">高通骁龙865 (sm8250)</p> </th> </tr></thead><tbody><tr><td><p class="translated"><strong> CPU </strong></p> </td><td><p>1个Kryo 485(基于ARM Cortex A76)主内核@ 2.84GHz，1个512KB pL2高速缓存3个Kryo 485(基于ARM Cortex A76)性能内核@ 2.42GHz，3个256KB pL2高速缓存4个Kryo 385(基于ARM Cortex A55)效率内核@ 1.8GHz，4个128KB pL2高速缓存2MB sL3高速缓存</p> </td><td><p>1个Kryo 585(基于ARM Cortex A77)主内核@ 2.84GHz，1个512KB pL2高速缓存3个Kryo 585(基于ARM Cortex A77)性能内核@ 2.4GHz，3个256KB pL2高速缓存4个Kryo 385(基于ARM Cortex A55)效率内核@ 1.8GHz，4个128KB pL2高速缓存4MB sL3高速缓存<strong>性能提升25%</strong></p> </td> </tr><tr><td><p class="translated"><strong> GPU </strong></p> </td><td><p>adre no 640 @ 600 MHz vulkan 1.1 snapdragon Elite gaming视频播放:H.264 (AVC)、H.265 (HEVC)、VP8、VP9、4K HDR10、HLG、HDR10+、杜比视界</p> </td><td><p>adre no 650 vulkan 1.1 snapdragon Elite游戏，具有新的桌面正向渲染、游戏色彩增强、可更新的GPU驱动程序<strong>图形渲染速度快20%</strong><strong>能效高35%</strong>视频播放:H.264 (AVC)、H.265 (HEVC)、VP8、VP9、4K HDR10、HLG、HDR10+、杜比视界</p> </td> </tr><tr><td><p><strong>显示</strong></p> </td><td><p>最大设备上显示支持:uhd最大外部显示支持:UHDHDR支持USB Type-C上的显示端口支持</p> </td><td><p>最大设备上显示支持:UHD @ 60Hz，QHD+@ 144hz最大外部显示支持:UHD @ 60HzHDR支持USB Type-C上的显示端口支持</p> </td> </tr><tr><td><p><strong>艾</strong></p> </td><td><p>具有六边形矢量扩展和六边形张量加速器的六边形690第四代人工智能引擎7顶</p> </td><td><p>Hexagon 698，带有Hexagon矢量扩展和新的Hexagon张量加速器第五代人工智能引擎高通传感中心15顶</p> </td> </tr><tr><td><p><strong>内存</strong></p> </td><td><p>4个16位LPDDR4 @ 2133MHz、16GB3MB系统级高速缓存</p> </td><td><p>4个16位LPDDR4 @ 2133MHz，16GBLPDDR5 @ 2750MHz3MB系统级高速缓存</p> </td> </tr><tr><td><p class="translated"><strong> ISP </strong></p> </td><td><p>双14位Spectra 380单摄像头:最高48MP带ZSL；最高22MP双摄像头:最高22MP带ZSLVideo捕捉:4K·HDR @ 60 fps；慢动作高达720p @ 480 fpsHDR10、HDR10+、HLG</p> </td><td><p>双14位Spectra 480单摄像头:最高64MP带ZSL；最高200MPDual摄像头:最高25MP带ZSLVideo捕捉:4K HDR @ 60 fps + 64MP连拍图像；4K @ 120 fps；8K @ 30 fps慢动作高达720p@960 fps(不限)；HDR10、HDR10+、HLG、杜比视界</p> </td> </tr><tr><td><p><strong>调制解调器</strong></p> </td><td><p>骁龙X24 4G LTE模式下行链路:2.0 Gbps上行链路:316MbpsSnapdragon X50 5G模式下行链路:5.0 Gbps模式:NSA、TDDmmWave: 800MHz带宽、8个载波、2x2 MIMOsub-6 GHz: 100MHz带宽、4x4 MIMO</p> </td><td><p>骁龙X55 4G LTE和5G多模模式下行链路:7.5Gbps (5G)，2.5Gbps (4G LTE)上行链路:3Gbps，316Mbps (4G LTE)模式:NSA，SA，TDD，fddmm微波:800MHz带宽，8个载波，2x2 MIMOsub-6 GHz: 200MHz带宽，4x4 MIMO</p> </td> </tr><tr><td><p><strong>充电</strong></p> </td><td><p>高通快充4+</p> </td><td><p>高通快充4+高通快充AI</p> </td> </tr><tr><td><p><strong>连通性</strong></p> </td><td><p>位置:北斗，伽利略，GLONASS，GPS，QZSS，SBAS，双频支持Wi-Fi:高通FastConnect 6200Wi-Fi 6就绪；2.4/5GHz频段；20/40/80 MHz频道；DBS、TWT、WPA3、8x8 MU-mimobluteooth:版本5.0、aptX TWS和aptX自适应</p> </td><td><p>位置:北斗，伽利略，GLONASS，GPS，QZSS，SBAS，双频支持Wi-Fi:高通FastConnect 6800Wi-Fi 6认证；2.4/5GHz频段；20/40/80 MHz频道；DBS、TWT、WPA3、8x8 MU-MIMO、OFDMA、1024QAMBluetooth:版本5.1、aptX TWS、aptX自适应和aptX语音</p> </td> </tr><tr><td><p><strong>制造过程</strong></p> </td><td><p>7纳米(TSMC的N7)</p> </td><td><p>7纳米(TSMC的N7P)</p> </td> </tr></tbody> </table> </div>
+
+
+<p class="translated"><strong> CPU </strong></p>
+
+<p>高通表示，骁龙865的原始CPU性能比骁龙855快了25%,或者在同样的性能点上，CPU能效高了25%。他们是如何实现性能和效率提升的？很可能是因为添加了新的ARM内核。高通骁龙865具有相同的CPU核心配置(甚至相同的时钟速度和pL2高速缓存！)作为骁龙855，但唯一的主内核和3个性能内核现在都来自于<strong> ARM Cortex-A77 </strong>设计，而不是Cortex-A76。高通称这些新的CPU内核为Kryo 585，据报道，这一次他们没有对标准ARM Cortex A77参考设计进行定制。<a href="https://www.xda-developers.com/qualcomm-travis-lanier-snapdragon-855-kryo-485-cpu-hexagon-690-dsp/">去年的Kryo 485对ARM Cortex A76 </a>设计进行了改进，引入了更大的无序执行窗口和重新排序缓冲区，以及更高效的数据预取器。</p>
+
+<p/><p><img class="aligncenter wp-image-262623" src="../Images/0011068fb90456257bfbe88ed9a0d686.png" alt="ARM Cortex-A77" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/05/ARM-Cortex-A77-1-1024x517.jpg"/> <em> ARM Cortex-A75与Cortex-A76与Cortex-A77单CPU内核@ 3GHz，在SPEC int2006中进行基准测试。来源:ARM。</em></p>
+
+<p><strong>图形处理器</strong></p>
+
+<p>对于新的Adreno 650，高通宣称与去年骁龙855中的Adreno 640相比，图形渲染速度快了20 %( T20)或能效提高了35 %( T22 )(在相同的性能点上)。高通强调，新的Adreno 650允许更好的持续性能，这意味着在你的游戏开始丢帧之前需要更长的时间。不幸的是，我们没有太多关于Adreno 650本身复杂性的细节(比如它的最大时钟速度)，因为高通非常保护它的定制GPU设计。也有很好的理由:Adreno GPU长期以来一直优于ARM的Mali GPU。当然，我们必须在骁龙865设备上测试GPU性能，以确认这一代是否仍然如此。</p>
+
+<p>随着手机游戏越来越受欢迎，并随之变得越来越复杂和性能密集，高通以其“骁龙精英游戏”品牌的一系列功能做出回应。骁龙精英游戏于去年与骁龙855 一起推出，目前它由邱建减速器等功能组成，旨在优化游戏期间的芯片组操作。现在，骁龙精英游戏正在增加对<strong> 5个新功能</strong>的支持:桌面前向渲染、游戏色彩增强、可更新的GPU驱动程序、骁龙游戏性能引擎和Adreno HDR快速混合。</p>
+
+<ul> <li><strong>桌面前向渲染</strong>:高通致力于将虚幻引擎的这一<a href="https://trello.com/c/l6pi3bkE/476-desktop-forward-renderer-on-mobile">功能引入安卓系统。它被游戏开发者用于桌面级的动态阴影、平面反射、运动模糊和其他后期处理效果。</a></li> <li><strong> Game Color Plus </strong>:越来越多的智能手机拥有符合HDR标准的显示屏。然而，HDR内容仍然稀缺，尤其是在手机游戏领域。这项功能将手机游戏的颜色从SDR转换为HDR，但据称是以一种“智能”的方式进行的，不会牺牲颜色的准确性。高通承诺“增强细节，提高色彩饱和度和局部色调映射。”OPPO <a href="https://www.xda-developers.com/oppo-qualcomm-game-color-plus-dual-wi-fi-technology-mobile-gaming/">此前宣布</a>他们将率先利用这项技术。<div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/08/Game-Color-Plus-on-PUBG-Mobile-1024x473.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Game Color Plus on PUBG Mobile: Left is Enabled, Right is Disabled&quot;"><figure><picture><source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/08/Game-Color-Plus-on-PUBG-Mobile-1024x473.jpg?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/><source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/08/Game-Color-Plus-on-PUBG-Mobile-1024x473.jpg?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/><source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/08/Game-Color-Plus-on-PUBG-Mobile-1024x473.jpg?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/><source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/08/Game-Color-Plus-on-PUBG-Mobile-1024x473.jpg?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/><img class="lazyload" alt="" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/08/Game-Color-Plus-on-PUBG-Mobile-1024x473.jpg" src="../Images/86410d8bec91e9bada571e611ab06c58.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/08/Game-Color-Plus-on-PUBG-Mobile-1024x473.jpg"/></picture><figcaption class="body-img-caption">游戏颜色加在PUBG上移动:左为启用，右为禁用</figcaption> </figure> </div> </div></li> <li><strong>可更新的GPU驱动程序</strong>:通常情况下，GPU驱动程序的更新会与其他更新一起打包，然后通过OTA发送给用户。骁龙865 BSP的新功能是能够更新单独的GPU驱动程序存根。如果OEM支持，用户可以直接从应用商店下载GPU驱动程序的更新。谷歌<a href="https://www.xda-developers.com/project-treble-google-pixel-2-graphics-drivers/">通过Project Treble </a>在Android端实现了这一点，但我们还没有看到许多原始设备制造商利用这一点。</li> <li>骁龙游戏性能引擎(Game Performance Engine):高通没有提供该功能的更多细节，但骁龙865的新闻稿称，该功能“游戏性能现已优化至微秒级”，“提供自适应和预测性的实时系统调优，以实现更长时间的持续性能。”听起来这里可能会使用一些机器学习——也许原始设备制造商或开发人员可以根据游戏来训练模型，当部署时，调整参数以保持最佳性能，类似于<a href="https://www.xda-developers.com/huawei-honor-gpu-turbo-3/">华为的GPU Turbo如何工作</a>。</li> <li><strong> Adreno HDR快速混合</strong>:这是一种新的“硬件嵌入式”功能，可用于在重度混合的场景中提高性能高达2倍(与骁龙855相比)，例如在屏幕上渲染复杂粒子时。</li> </ul>
+
+<p><strong>显示</strong></p>
+
+<p>高刷新率显示器多年来一直是PC游戏的主要产品——只要看看有多少144Hz的游戏显示器就知道了——但这项技术最终在移动领域起飞了。谷歌Pixel 4、一加7T、Realme X2 Pro和OPPO Reno Ace都是最近发布的90赫兹显示屏，而华硕ROG Phone II和夏普Aquos R3则是120赫兹显示屏。虽然ROG Phone II和Aquos R3的显示屏更平滑，但他们牺牲了显示屏分辨率来实现这一目标。高分辨率和高刷新率的显示器给GPU带来了沉重的压力，但骁龙865中的Adreno 650能够在144Hz下推动<strong> QHD+分辨率</strong>。我们不知道何时会有QHD+144赫兹显示屏的智能手机上市，但如果已经有一款智能手机在研发中，它最有可能是由骁龙865驱动的。</p>
+
+<p>高通的3D Sonic技术，该公司的超声波下显示指纹扫描仪，仍然受到支持，但值得注意的是，该技术正在进行重大升级。这项技术的最新版本被称为3D Sonic Max，识别面积为30毫米×20毫米，比以前大17倍。高通说现在的精确度是1:1，000，000比1:50，000。更大的识别区域使两个手指同时被认证成为可能，尽管从更实际的角度来说，这将使用户更容易找到他们的手指在传感器上的位置。</p>
+<div class="body-img landscape"><div class="responsive-img image-expandable img-article-item" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/12/3D-Sonic-Max.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;3D Sonic Max allowing for dual fingerprint authentication. Source: Qualcomm&quot;">
+ 
+<figure> <picture>  <source media="(min-width: 1024px)" sizes="1500px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/12/3D-Sonic-Max.jpg?q=50&amp;fit=crop&amp;w=1500&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="943px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/12/3D-Sonic-Max.jpg?q=50&amp;fit=crop&amp;w=943&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="767px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/12/3D-Sonic-Max.jpg?q=50&amp;fit=crop&amp;w=767&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/12/3D-Sonic-Max.jpg?q=50&amp;fit=crop&amp;w=480&amp;dpr=1.5"/> <img class="lazyload" alt="Qualcomm 3D Sonic Max" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/12/3D-Sonic-Max.jpg" src="../Images/0cafd9cdfa318ecb1f335940f71da8f7.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/12/3D-Sonic-Max.jpg"/> </picture> <figcaption class="body-img-caption">3D Sonic Max allowing for dual fingerprint authentication. Source: Qualcomm</figcaption> </figure> </div>
+
+
+ </div>
+
+
+<p>只有三星在Galaxy S10和Galaxy Note 10上使用了3D声波指纹扫描仪，所以即将到来的<a href="https://forum.xda-developers.com/galaxy-s11"> Galaxy S11 </a>可能会采用新的3D Sonic Max技术。</p>
+
+<p><strong>艾</strong></p>
+
+<p>虽然有很多<a href="https://www.cs.princeton.edu/~arvindn/talks/MIT-STS-AI-snakeoil.pdf">是蛇油</a>，但也有很多令人印象深刻和有用的功能利用了我们所谓的“人工智能”以<a href="https://www.xda-developers.com/google-pixel-4-specs-features-pricing-availability/">谷歌Pixel 4的</a>自动白平衡调整和天文摄影功能为例。谷歌根据一组有良好照明和没有良好照明的照片训练了一个模型，他们根据一组星空照片训练了另一个模型。结果是，Pixel 4可以推断出最佳的白平衡设置应该是什么，以校正不良的照明(自动白平衡调整)，它还可以从树木和其他地面物体中分割出天际线(天体摄影)。这两种功能都需要骁龙的Spectra ISP、Hexagon DSP和Adreno GPU提供的计算能力。</p>
+
+<p>结合对GPU、DSP和其他模块的改进，人工智能性能同比提升了超过<strong>2倍</strong>。骁龙855管理7个top(万亿次运算)，而骁龙865管理<strong> 15个top</strong>。这要归功于骁龙865的<strong>第五代人工智能引擎</strong>。第五代AI引擎最大的改进是Hexagon 698 DSP中的<strong>更新的Hexagon张量加速器</strong>。高通升级了HTA，提供了超过4倍的性能，同时能效提高了35%。</p>
+
+<p>高通设计了一个新的组件，它被称为“<strong>传感中枢</strong>”，旨在有效地检测音频。传感集线器利用&lt; 1mW的功率，使其保持<strong>始终开启，几乎不消耗任何功率</strong>。它支持多词唤醒，这意味着它可以对“嘿谷歌”或“Alexa”热词做出反应，以触发谷歌助手或亚马逊Alexa查询。传感器框架是可扩展的，因此它不仅限于这些用例。例如，高通说传感中枢可以用来监听驾驶、办公室工作、电影院等的声音。开发人员可以使用更新的<a href="https://developer.qualcomm.com/software/qualcomm-neural-processing-sdk">高通神经处理SDK </a>、<a href="https://wiki.codeaurora.org/xwiki/bin/+Qualcomm+Hexagon+NN+Offload+Framework/"> Hexagon NN卸载框架</a>和高通AI模型增强器工具来创建这些和其他功能。</p>
+
+<p>互联网服务提供商</p>
+
+<p>可以说，骁龙865相对于骁龙855的最大改进在于ISP。新的Spectra 480 ISP每秒可以处理20亿像素。为了利用这种提高的处理性能，高通减慢了时钟周期，并开始每时钟周期处理4个像素，而不是每时钟周期1个像素。其结果是更好的节能、更高的热效率，以及降噪等任务的像素处理速度提高40%。此外，Spectra 480有一个新的视频分析引擎(EVA)来处理所有的计算机视觉(CV)任务。</p>
+
+<p>Spectra 480 ISP的“千兆像素速度”使得同时捕捉<strong> 4K HDR视频和64MP连拍图像</strong>成为可能。高通说ISP可以处理高达200兆像素的图像。这也不仅仅是一个理论上的数字，正如高通所说，智能手机图像传感器供应商确实在研究这些高得离谱的百万像素传感器。然而，在更实际的情况下，Spectra 480现在能够处理零快门延迟(来自单个传感器)的<strong> 64MP图像。)这比骁龙855在ZSL的48MP还要高。</strong></p>
+
+<p>骁龙865的视频处理能力也明显强于骁龙855。首先，骁龙865现在支持30fps的8K分辨率。接下来，Spectra 480能够支持720p 分辨率的<strong> 960fps慢动作视频- <strong>，没有任何时间限制</strong>。4K视频分辨率的120fps慢动作也是可能的。最后，Spectra 480现在支持杜比视界HDR </strong>中的<strong>视频捕捉，甚至可以动态处理和转换颜色，尽管原始设备制造商可能需要为此支付许可费。</strong></p>
+
+<p><strong>连通性</strong></p>
+
+<p class="translated"><strong> <em> Modem </em> </strong></p>
+
+<p>在去年的骁龙科技峰会上，高通将第一天的时间都花在了5G上。当他们这样做的时候，5G在我们的脑海中仍然只是一个技术演示。一年后，我们已经看到毫米波和低于6 GHz的5G网络在现实世界中出现。智能手机制造商急于成为第一个上市者，他们的第一代5G智能手机配备了高通多年的骁龙X50 5G调制解调器。X50当然有令人印象深刻的速度，但它是使用旧的，效率较低的过程制造的，支持的模式比新的骁龙X55调制解调器更少。</p>
+
+<p>今年早些时候宣布骁龙X55为2G/3G/4G/5G多模式调制解调器，采用更新的7纳米制造工艺制造。它支持分别高达7.5Gbps和3.0Gbps的理论下载和上传速度、动态频谱共享(DSS)、全球5G漫游和5G多SIM连接。此外，骁龙X55支持SA(独立)5G网络、毫米波和FDD频率下的6GHz以下，并在6GHz以下频率下将带宽提高了一倍。因此，骁龙X55不仅比骁龙X50更快、更节能，而且不需要与单独的调制解调器配对来实现4G连接。</p>
+
+
+
+<p>虽然高通骁龙865支持<strong>骁龙X55调制解调器</strong>，但它没有将该调制解调器集成到SoC中。我们很可能会在下一代800系列SoC中看到这种情况。此外，骁龙X55仍然需要包括高通的QTM525或QTM527毫米波天线，以支持毫米波5G网络。</p>
+
+<p><strong> <em> WiFi和蓝牙</em> </strong></p>
+
+<p>不久前，Wi-Fi联盟最终确定了802.11ax标准，更好地称为Wi-Fi 6规范，但迄今为止，只有<a href="https://www.xda-developers.com/samsung-galaxy-s10-connectivity-specs/">三星Galaxy S10 </a>系列和三星Galaxy Note 10系列通过了Wi-Fi 6认证。根据高通的说法，骁龙855中的Wi-Fi调制解调器包含在高通FastConnect 6200移动连接子系统中，是“Wi-Fi 6就绪”，而骁龙865的<strong>新FastConnect 6800 </strong>是“<a href="https://wi-fi.org/discover-wi-fi/wi-fi-certified-6"> <strong> Wi-Fi认证6 </strong> </a>”这是否意味着所有具有骁龙865的设备都将支持Wi-Fi 6仍有待观察，但至少，<a href="https://www.qualcomm.com/media/documents/files/qualcomm-fastconnect-6800-product-brief.pdf"> FastConnect 6800 </a>确实带来了新的Wi-Fi功能，如OFDMA(正交频分多址)以减少网络拥塞，以及1024QAM(正交调幅)以提高吞吐量。</p>
+
+<p>蓝牙连接也在这一代得到了轻微的升级。骁龙865的FastConnect 6800现在支持<strong>蓝牙5.1 </strong>，而骁龙855的FastConnect 6200支持蓝牙5.0。该规范的5.1版特别引入了到达角和离开角，以便对设备进行更精确的局部跟踪。</p>
+
+<p>骁龙865还支持高通的新<strong> aptX语音</strong>，这是<a href="https://www.xda-developers.com/qualcomm-aptx-adaptive-bluetooth-audio-codec/"> aptX自适应</a>蓝牙音频编解码器的一个子集，允许通过蓝牙进行超宽带(32kHz)语音传输，实现“一种新的清晰音频”较新版本的aptX Adaptive支持24位96kHz音频和超过600kbps的比特率。原始设备制造商和蓝牙配件制造商必须分别许可aptX语音和/或aptX自适应修订版2用于智能手机和配件。</p>
+
+<p><strong>记忆</strong></p>
+
+<p>像三星这样的公司终于<a href="https://www.xda-developers.com/samsung-mass-production-12gb-lpddr5-dram-galaxy-note/">大规模生产用于移动设备的LPDDR5 RAM </a>模块，所以骁龙865 <strong>支持高达2750MHz的LPDDR5内存</strong>也就不足为奇了。LPDDR5是<a href="https://blogs.synopsys.com/vip-central/2018/02/22/lpddr5-enhancements-in-bandwidth-reliability-and-power-for-iot-ai-and-image-processing/">的最新规格</a>，它实现了多种功能，如双差分时钟系统，用于在不增加引脚数的情况下提高频率；新的深度睡眠模式，用于降低功耗；链接ECC，用于从失败的读/写操作中恢复数据。</p>
+
+<p>由于应用程序和游戏不断在RAM中交换，因此拥有更快的RAM将导致更快的应用程序切换。就像从UFS 2.1迁移到UFS 3.0存储一样，我们不知道理论上内存性能的提升最终会有多大影响。预计将会看到三星或一加的高端旗舰智能手机率先上市，采用LPDDR5 RAM。</p>
+
+<p><strong>充电</strong></p>
+
+<p>不幸的是，高通最新的快速充电技术还没有在骁龙865上市。<a href="https://www.xda-developers.com/qualcomm-introduces-quick-charge-4-nubia-z17-to-bring-it-first/">高通的快速充电4+ </a>仍然可用——只要原始设备制造商许可——最高可提供27W的快速有线充电。虽然充电速度不会提高，但电池寿命可能会提高。高通新的<strong>快速充电人工智能承诺延长电池寿命周期</strong>，这样你就可以继续使用你的设备更长时间，而不必购买新手机或更换电池(这在当今几乎是不可能的。)</p>
+
+<p>我们没有关于快速充电AI如何延长电池寿命的细节，但它可能会像USB Power Delivery的可编程电源(PPS)一样动态调整电压。与骁龙730的类似设备相比，高通表示，骁龙765和快速充电人工智能的设备可以持续多达200个额外的电池寿命周期。没有提供骁龙855与骁龙865的可比数据，但我们可以猜测它们会是相似的。</p>
+
+<section class="emaki-custom-block emaki-custom-expandable"><div class="emaki-custom expandable" id="custom_block_43"><h3 id="qualcomm-snapdragon-865-complete-feature-list-click-to-expand">高通骁龙865完整的功能列表。单击以展开。</h3><p><strong>人工智能</strong></p><ul> <li class="translated">Adreno 650 GPU</li> <li class="translated">Kryo 585 CPU</li> <li>Hexagon 698处理器  <ul> <li>六边形张量加速器</li> <li>六边形向量扩展</li> <li>六边形标量加速器</li> </ul> </li> <li>高通传感中心  <ul> <li>用于音频、语音和传感器的超低功耗集线器</li> <li>低功耗支持人工智能算法</li> <li>支持融合上下文数据流，包括传感器、音频和语音</li> <li>支持多个语音助手</li> <li>始终在线的多话筒远场检测和回声消除</li> </ul> </li> </ul><p><strong> 5G调制解调器-射频系统</strong></p><ul> <li>骁龙X55 5G调制解调器-射频系统</li> <li>5G毫米波和6 GHz以下，独立(SA)和非独立(NSA)模式，FDD、TDD</li> <li>动态频谱共享</li> <li>毫米波:800 MHz带宽，8个载波，2x2 MIMO</li> <li>低于6 GHz: 200 MHz带宽，4x4 MIMO</li> <li>高通5G节能</li> <li>高通智能传输技术</li> <li>高通宽带包络跟踪</li> <li>高通信号增强自适应天线调谐</li> <li>全球5G多SIM卡</li> <li>下行链路:最高7.5 Gbps</li> <li>上行链路:最高3 Gbps (5G)</li> <li>多模支持:5G NR、LTE，包括CBRS、WCDMA、HSPA、TD-SCDMA、CDMA 1x、EV-DO、GSM/EDGE</li> </ul><p><strong> Wi-Fi &amp;蓝牙</strong></p><ul> <li>高通快速连接6800子系统  <ul> <li>Wi-Fi标准:Wi-Fi 6 (802.11ax)、802.11ac Wave 2、802.11a/b/g/n</li> <li>Wi-Fi频段:2.4 GHz、5 GHz</li> <li>峰值速度:1.774 Gbps</li> <li>信道利用率:20/40/80 MHz</li> <li>8流探测(用于8×8 MU-MIMO)MIMO配置:2x2 (2流)</li> <li>MU-MIMO(上行链路和下行链路)</li> <li>1024 QAM (2.4和5 GHz)</li> <li>OFDMA (2.4和5 GHz)</li> <li>双频同步(DBS)</li> <li>Wi-Fi安全性:WPA3-企业级、WPA3-增强型开放式、wpa 3轻松连接、wpa 3-个人级</li> </ul> </li> <li>集成蓝牙  <ul> <li>蓝牙版本:蓝牙5.1</li> <li>蓝牙功能:一对多蓝牙广播，高达18dB的链路余量改善</li> <li>蓝牙音频:用于超宽带语音通话的高通aptX语音音频，用于强劲、低延迟、高质量音频的高通aptX自适应音频，高通TrueWireless，高通TrueWireless立体声</li> </ul> </li> <li>高通60 GHz无线网络  <ul> <li>Wi-Fi标准:802.11ad、802.11ay</li> <li>Wi-Fi频段:60 GHz</li> <li>峰值速度:10 Gbps</li> <li>始终开启的环境Wi-Fi感应</li> </ul> </li> </ul><p><strong>摄像头</strong></p><ul> <li>高通Spectra 480图像信号处理器</li> <li>双通道14位ISP</li> <li>高达每秒20亿像素</li> <li>计算机视觉硬件加速器(CV-ISP)</li> <li>高达200万像素的照片拍摄</li> <li>高达2500万像素的双摄像头，零快门延迟</li> <li>高达6400万像素的单摄像头，零快门延迟</li> <li>建议。2020色域视频捕捉</li> <li>高达10位色彩深度视频捕捉</li> <li>4K视频拍摄+6400万像素照片(5连拍)</li> <li>8K视频拍摄</li> <li>720p、960fps的慢动作视频拍摄</li> <li>HEIF: HEIC照片捕捉，HEVC视频捕捉</li> <li>视频采集格式:HDR10+，HDR10，HLG，杜比视觉</li> <li>每秒120帧的4K视频捕捉</li> <li>4K·HDR用肖像模式拍摄视频(散景)</li> <li>多帧降噪(MFNR)</li> <li>实时对象分类、分割和替换</li> </ul><p><strong>音频</strong></p><ul> <li>用于硬件加速语音信号处理的六边形语音辅助加速器</li> <li>高通Aqstic音频编解码器(最高支持WCD9385)  <ul> <li>总谐波失真+噪声(THD+N)，回放:-108dB</li> <li>原生DSD支持，PCM最高384 kHz/32位</li> <li>可定制的“金耳朵”过滤器</li> </ul> </li> <li>高通Aqstic智能扬声器放大器(高达WSA8815)</li> </ul><p><strong>显示</strong></p><ul> <li>设备上显示支持:</li> <li>最大外部显示器支持:高达60Hz 4K</li> <li>10位颜色深度。2020色域</li> <li>HDR10和HDR10+</li> </ul><p class="translated"><strong> CPU </strong></p><ul> <li>高通Kryo 585，八核中央处理器</li> <li>高达2.84 GHz</li> <li>64位架构</li> </ul><p><strong>视觉子系统</strong></p><ul> <li class="translated">Adreno 650 GPU</li> <li>Vulkan 1.1 API支持</li> <li>HDR游戏(10位色深，录制。2020色域)</li> <li>基于物理的渲染</li> <li>API支持:OpenGL ES 3.2、OpenCL 2.0 FP、Vulkan 1.1</li> <li>硬件加速的H.265和VP9解码器</li> <li>支持HDR10+、HDR10、HLG和杜比视界的HDR回放编解码器</li> </ul><p><strong>安全</strong></p><ul> <li>安全处理单元:移动支付，双卡/双待</li> <li>高通三维声波传感器</li> <li>生物认证:指纹、虹膜、声音、面部</li> <li>设备上:高通移动安全、密钥供应安全、高通处理器安全、高通内容保护、高通可信执行环境、摄像头安全、加密引擎、恶意软件防护、安全引导、安全令牌</li> </ul><p><strong>充电</strong></p><ul> <li>高通快充4+技术</li> <li>高通快充AI</li> </ul><p><strong>位置</strong></p><ul> <li>GPS、Glonass、北斗、伽利略、QZSS和SBAS</li> <li>双频支持</li> <li>低功耗地理围栏和跟踪、传感器辅助导航</li> <li>近场通信(NFC):支持</li> </ul><p><strong>内存</strong></p><ul> <li>支持高达2750MHz的LP-DDR5内存</li> <li>支持最高2133 MHz的LPDDR4x内存</li> <li>内存密度:高达16 GB</li> </ul><p><strong>通用规格</strong></p><ul> <li>全套骁龙精英游戏功能</li> <li>7纳米工艺技术</li> <li>USB版本3.1；USB类支持</li> <li>零件号:SM8250</li> </ul> </div></section>
+<p>智能手机行业今年发展迅速，新款骁龙865反映了这些变化。5G、高刷新率显示器、高百万像素摄像头和人工智能功能只会继续变得更加强大和复杂，高通最新的高级SoC似乎已经准备好应对即将到来的2020年旗舰智能手机。小米、OPPO、HMD Global(诺基亚品牌智能手机的制造商)和摩托罗拉已经确认了他们推出基于骁龙865移动平台的智能手机的计划。</p>
+
+
+
+
+
+<p>然而，高通并不是唯一一个拥有高端足球的球员。<a href="https://www.xda-developers.com/mediatek-dimensity-1000-7nm-soc-integrated-5g/">联发科的Dimensity 1000 </a>、<a href="https://www.xda-developers.com/huawei-hisilicon-kirin-990-5g-integrated-modem/">华为的海思麒麟990 </a>和<a href="https://www.xda-developers.com/samsung-exynos-990-5g-modem-5123-7nm/">三星的Exynos 990 </a>都与高通的骁龙865在同一级别，所以我们必须等待商业产品开始出货，才能宣布其中一款为最佳移动SoC。</p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>

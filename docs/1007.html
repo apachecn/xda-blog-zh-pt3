@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Microsoft releases Windows 10 build 18363.1645 - here's what's new</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">微软发布了Windows 10 build 18363 . 1645——以下是新内容</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/microsoft-releases-windows-10-build-18363-1645-heres-whats-new/#0001-01-01">https://www.xda-developers.com/microsoft-releases-windows-10-build-18363-1645-heres-whats-new/#0001-01-01</a></blockquote><div><header class="article_heading">
+
+
+<h1 class="heading_title translated">微软发布了Windows 10 build 18363 . 1645——以下是新内容</h1>
+
+<p class="heading_sharing">
+ </p>
+
+
+<p class="heading_excerpt translated">微软已经发布了Windows 10版本1909和1809的新累积更新。它们包括很长的修复列表，您现在就可以下载。</p>
+
+
+
+  </header>
+
+<section id="article-body" class="article-body" itemprop="articleBody">
+
+<div class="content-block-regular">
+<p/><p class="translated">微软发布了Windows 10版本1909的新累积更新。补丁星期二<a href="https://www.xda-developers.com/microsoft-windows-10-build-19043-1052-changelog/">就在上周</a>，今天的更新是所谓的C/D更新。这是完全可选的，这里的改变将会在7月的下一个星期二发布。这些更新将是强制性的，所以如果你愿意，你可以等待它们。Windows 10版本21H1、20H2和2004也将在本月晚些时候获得可选更新。</p>
+
+  
+<p class="translated">目前，如果你运行的是Windows 10版本1909，你将获得<a href="https://support.microsoft.com/en-us/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620"> KB5003698 </a>更新，这将使内部版本号达到18363.1645。你可以<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB5003698">在这里</a>手动下载，或者通过Windows Update下载，它会显示为可选更新。以下是此次发布的亮点:</p>
+
+<ul> <li class="translated">更新了阻止某些屏幕阅读器应用程序运行的问题。</li> <li class="translated">更新了连接第二台外部显示器时导致音频丢失的问题。</li> <li class="translated">更新可能导致VPN失败的问题。错误消息是，“没有更多文件”。</li> <li class="translated">更新了导致某些屏幕分辨率下Windows任务栏上的新闻和兴趣按钮上的文本模糊的问题。</li> <li class="translated">更新当您右键单击任务栏并关闭“新闻和兴趣”时，Windows任务栏上搜索框图形出现的问题。使用黑暗模式时，这个图形问题尤其明显</li> </ul>
+
+<p class="translated">这些问题中有许多很容易发生在任何人身上，所以很高兴看到它们得到解决。然而，在这个版本中有更多的修正。以下是完整的列表，绝对是巨大的:</p>
+
+<ul> <li class="translated">解决了在使用多种版本的国家语言支持(NLS)排序时，排序无法正常工作的问题。</li> <li class="translated">解决了在非英语语言环境中使用<strong> MultiByteToWideChar() </strong>函数时出现的性能问题。</li> <li class="translated">解决了在用户会话结束前无法正确管理触摸输入相关内存的问题。</li> <li class="translated">解决了导致组成员列表过期的问题。出现此问题是因为组策略服务(GPSVC)对Windows Management Instrumentation(WMI)会话进行不频繁的更新。因此，这会减缓Active Directory (AD)管理员对用户或组成员身份所做更改的传播速度。</li> <li class="translated">解决了导致Windows在使用AppLocker验证具有多个签名的文件时停止工作的问题。错误是0x3B。</li> <li class="translated">解决了<strong>Set-rule option</strong>PowerShell命令无法为Windows Defender应用程序控制(WDAC)策略提供将使用过期证书签名的文件视为未签名的选项的问题。</li> <li class="translated">解决了可能导致BitLocker在更新受信任的平台模块(TPM)固件后进入恢复模式的问题。当设置了“交互式登录:计算机帐户锁定阈值”策略并且有不正确的密码尝试时，会出现这种情况。</li> <li class="translated">解决了在启用受虚拟机管理程序保护的代码完整性(HVCI)时，某些屏幕阅读器应用程序无法运行的问题。</li> <li class="translated">解决了导致Windows生成许多AppLocker或SmartLocker成功事件的问题。</li> <li class="translated">提高Microsoft 365端点数据丢失防护(DLP)分类引擎中敏感数据分析的准确性和效率。</li> <li class="translated">解决远程访问服务器(RAS)服务器上的Internet密钥交换(IKE) VPN服务的问题。用户无法定期通过IKE协议将VPN连接到服务器。此问题可能在重新启动服务器或重新启动IKEEXT服务几个小时或几天后出现。一些用户可以连接，而许多其他用户无法连接，因为服务处于DoS保护模式，这限制了传入的连接尝试。</li> <li class="translated">解决了续订用户自动注册证书后可能导致VPN失败的问题。错误消息是，“没有更多文件”。</li> <li class="translated">为欧洲语言的<strong> InkFree.ttf </strong>字体系列添加新字形。</li> <li class="translated">解决了连接第二台外部显示器时导致音频丢失的问题。</li> <li class="translated">解决了元数据编码问题，该问题会导致免费无损音频编解码器(FLAC)音乐文件在您更改其标题、艺术家或其他元数据时变得无法播放。有关更多信息，请参见<a href="https://support.microsoft.com/en-us/topic/kb5003430-flac-encoded-music-file-is-corrupted-when-metadata-is-edited-in-windows-explorer-38619369-0787-44a8-950f-b408114ae856">在Windows资源管理器</a>中编辑元数据时，FLAC编码的音乐文件被损坏。</li> <li class="translated">增加对<strong>的支持。高效图像文件(HEIF)图像的hif </strong>文件扩展名。</li> <li class="translated">解决了在启用用户数据报协议(UDP)时导致远程桌面会话停止响应的问题。</li> <li class="translated">增加对<strong> USBTest和MeasurementClass </strong>的支持。</li> <li class="translated">解决了<strong>Adamsync.exe</strong>中影响大型活动目录子树同步的问题。</li> <li class="translated">解决当轻型目录访问协议(LDAP)绑定缓存已满且LDAP客户端库收到引用时发生的错误。</li> <li class="translated">解决当连接关闭时系统删除绑定对象时发生的争用情况所导致的重定向器停止错误。</li> <li class="translated">解决了长时间运行SmbConnectStress时可能导致停止错误的问题。</li> <li class="translated">解决了阻止用户在C驱动器上设置或查询磁盘配额的问题。</li> <li class="translated">解决了在某些显示配置下导致Windows任务栏上的新闻和兴趣按钮文本模糊的问题。</li> <li class="translated">解决当您使用任务栏的上下文菜单关闭新闻和兴趣时，Windows任务栏上搜索框图形出现的问题。使用黑暗模式时，这个图形问题尤其明显。</li> </ul>
+
+<p class="translated">好消息是这个版本中只有一个已知问题。在更新之前，您需要注意以下几点:</p>
+
+<div class="table-container"><table border="1" cellpadding="1" cellspacing="1"><thead><tr><th><p class="translated"><strong>症状</strong></p> </th><th><p class="translated"><strong>解决方法</strong></p> </th> </tr></thead><tbody><tr><td><p class="translated">将设备从Windows 10版本1809或更高版本更新到更高版本的Windows 10时，系统和用户证书可能会丢失。如果设备已经安装了2020年9月16日或更晚发布的任何最新累积更新(LCU ),然后从没有集成2020年10月13日或更晚发布的LCU的媒体或安装源更新到更高版本的Windows 10，则设备将受到影响。这主要发生在通过更新管理工具(如Windows Server Update Services(WSUS)或Microsoft Endpoint Configuration Manager)使用过时的捆绑包或介质更新受管设备时。当使用过时的物理介质或没有集成最新更新的ISO映像时，也可能发生这种情况。注意:使用Windows Update for Business或直接连接到Windows Update的设备不受影响。任何连接到Windows Update的设备应该总是接收最新版本的功能更新，包括最新的LCU，而无需任何额外的步骤。</p> </td><td><p class="translated">如果您已经在您的设备上遇到了此问题，您可以通过使用此处的说明返回到以前版本的Windows，在卸载窗口中缓解此问题。卸载窗口可能是10天或30天，具体取决于您的环境配置和您要更新到的版本。在您的环境中解决该问题后，您需要更新到更高版本的Windows 10。<strong>注意</strong>在卸载窗口中，你可以通过使用DISM命令/Set-OSUninstallWindow来增加你必须回到之前版本的Windows 10的天数。你必须在默认的卸载窗口失效之前做出这个改变。更多信息，请参见<a href="https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-uninstallos-command-line-options"> DISM操作系统卸载命令行选项</a>。我们正在制定解决方案，并将在未来几周内提供更新的捆绑包和更新的介质。</p> </td> </tr></tbody> </table> </div>
+<p class="translated">正如我们在顶部提到的，Windows 10版本1809也有可选的累积更新。该版本仅在长期服务渠道中受支持，这意味着它将在最初发布后的十年内获得支持。那个更新是<a href="https://support.microsoft.com/en-us/topic/june-15-2021-kb5003703-os-build-17763-2028-preview-687c70f6-98ed-4440-9cc7-72c9ef735bfe"> KB5003703 </a>，它把构建号提升到17763.2028。你可以<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB5003703">在这里</a>手动下载。</p>
+
+ </div>
+
+
+<p id="article-waypoint"/>
+</section>
+
+
+        </div>    
+</body>
+</html>

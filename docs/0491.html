@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Project Treble gets ported to Samsung Galaxy phones with Exynos 7870</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">Project Treble移植到搭载Exynos 7870的三星Galaxy手机上</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/developers-project-treble-samsung-galaxy-exynos-7870/#0001-01-01">https://www.xda-developers.com/developers-project-treble-samsung-galaxy-exynos-7870/#0001-01-01</a></blockquote><div><header class="article_heading">
+
+
+<h1 class="heading_title translated">开发人员通过Exynos 7870为几款三星Galaxy手机带来了Project Treble支持</h1>
+
+<p class="heading_sharing">  </p>
+
+
+<p class="heading_excerpt translated">一批基于Exynos 7870的三星Galaxy手机通过手动分区和定制供应商实施获得了Project Treble兼容性。</p>
+
+
+
+  </header>
+
+<section id="article-body" class="article-body" itemprop="articleBody">
+
+<div class="content-block-regular">
+<p/><p class="translated">Exynos 7870是三星使用最广泛的SOC之一。自2016年以来，原始设备制造商一直在其手机中使用这种八核(8个ARM Cortex-A53内核，主频为1.6GHz)片上系统，甚至在2019年发布了采用相同14纳米处理器的<a href="https://www.xda-developers.com/samsung-galaxy-m20-m10-india-launch/"> Galaxy M10 </a>。有趣的是，一些更新的基于Exynos 7870的设备搭载了Android Oreo，这使得它们与<a href="https://www.xda-developers.com/googles-project-treble-modularize-android-so-oems-can-update-devices-faster/">项目Treble </a>兼容。虽然三星没有正式向后移植对传统Exynos 7870智能手机的三重支持，但XDA的开发者社区已经设法做到了这一点。</p>
+
+  
+<p/><p class="translated"><strong> <a href="https://forum.xda-developers.com/project-treble">访问XDA项目三宝论坛</a> </strong></p>
+
+<p>基于XDA认可开发人员<a href="https://forum.xda-developers.com/member.php?u=4637718"> ananjaser1211 </a>、XDA成员<a href="https://forum.xda-developers.com/member.php?u=10011205"> SPARTANICUS </a>和XDA资深成员<a href="https://forum.xda-developers.com/member.php?u=2047373"> Valera1978 </a>的贡献，XDA认可开发人员<a href="https://forum.xda-developers.com/member.php?u=6917540"> Astrako </a>创建了一个自动化分区工具和一个针对Exynos 7870平台的统一供应商内核组合。定制内核(<strong> H-Kernel </strong>)基于用于<a href="https://www.xda-developers.com/samsung-galaxy-a70s-update-android-10-one-ui-2-0/">三星Galaxy A6 (2018) </a>的Android 10内核源代码，而名为“<strong> H-Vendor </strong>”的自制厂商分区则是从用于<a href="https://www.xda-developers.com/samsung-galaxy-j6-nokia-3-2-receive-stable-android-10-update/">三星Galaxy J6 </a>、<a href="https://www.xda-developers.com/samsung-galaxy-a40-a80-a7-2018-android-10-one-ui-2-0-rollout/"> Galaxy A7 (2018) </a>和Galaxy S20的Android 10固件移植而来。国防部使总共七部基于Exynos 7870的传统智能手机能够启动现有的Android 10 <a href="https://www.xda-developers.com/tag/generic-systemimage/">通用系统映像</a> (GSI)，并为基于Android 11 的GSIs做好准备。</p>
+
+<p>值得一提的是，离线充电和蓝牙通话在H-vendor的初始版本中被打破。此外，SELinux在H-Kernel上被设置为许可的，不幸的是，这是一个主要的安全问题，我们希望很快得到解决。下面列出了特定于设备的已知问题:</p>
+
+
+<p>需要更新的自定义恢复来执行供应商分区创建步骤，该步骤由<strong>exy nos 7870 _ create vendor _ xx . zip</strong>处理。尽管上述三星手机都没有采用<a href="https://www.xda-developers.com/how-a-b-partitions-and-seamless-updates-affect-custom-development-on-xda/"> A/B双分区方案</a>，但用户需要在刷新H-Vendor zip之前刷新A/B ARM64系统GSI映像。那些来自库存三星固件必须格式化数据分区(这将删除内部存储的内容)，然后再刷新这个模块，所以要执行完整的备份。</p>
+
+<p/><p><strong><a href="https://forum.xda-developers.com/galaxy-j7/samsung-galaxy-j7-nxt--j701f-core-nxt-exynos-7870/treble-h-vendor-v1-0-t4116285">H-厂商和H-Kernel项目三重端口— XDA下载讨论线程</a> </strong></p>
+
+ </div>
+
+
+<p id="article-waypoint"/>
+</section>
+
+
+        </div>    
+</body>
+</html>
