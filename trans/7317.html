@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>How does Samsung’s Adaptive Pixel feature on the Galaxy S22 series camera work?</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">三星在Galaxy S22系列相机上的自适应像素功能是如何工作的？</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/samsung-galaxy-s22-camera-adaptive-pixel/#0001-01-01">https://www.xda-developers.com/samsung-galaxy-s22-camera-adaptive-pixel/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">三星2022年的最新旗舰智能手机带来了一系列新功能和改进。Galaxy S21 Ultra是市面上最好的拍照手机之一，而<a href="https://www.xda-developers.com/samsung-galaxy-s22-hands-on/"> Galaxy S22 </a>、<a href="https://www.xda-developers.com/samsung-galaxy-s22-hands-on/"> Galaxy S22 Plus </a>和<a href="https://www.xda-developers.com/samsung-galaxy-s22-ultra-hands-on/"> Galaxy S22 Ultra </a>正在保持这一地位。当然，这些手机配备了一些新的硬件和软件变化，如更新的芯片组、S Pen和更好的显示屏。但是，今年最大的不同在于相机部门的硬件和软件。除了新的传感器，三星还专注于一些软件相关的功能。其中之一是新的自适应像素技术。</p>
+
+  
+<p class="translated">自适应像素技术只是今年Galaxy S22系列的许多新<a href="https://www.xda-developers.com/samsung-galaxy-s22-series-camera-features/">相机功能之一。三星试图从三款Galaxy S22系列手机的硬件中获得最佳效果，而这只能通过使用正确的软件来实现。图像处理和相机优化在决定智能手机相机的输出质量方面发挥着巨大的作用，这就是这些功能发挥作用的地方。无论是字面上还是象征性的。让我们试着了解三星新智能手机的自适应像素功能是什么，以及它将如何惠及你，最终用户。</a></p>
+
+
+
+<p class="translated">在我们进入Adaptive Pixel的细节和它到底做什么之前，为了更好地理解上下文，首先理解一些基础知识是很重要的。为此，让我们首先了解智能手机相机中像素宁滨的概念。</p>
+
+ 
+<h2 id="nona-binning-and-tetra-binning-on-samsung-galaxy-s22-series" class="translated">三星Galaxy S22系列上的诺娜宁滨和特拉宁滨</h2>
+<p class="translated">如果你在过去几年一直关注智能手机领域，你会意识到品牌已经开始使用非常高像素的相机传感器。虽然大的百万像素不一定意味着更好的相机性能，但它可以达到两个目的——为手机提供营销优势，并捕捉更多细节，特别是当你放大图像时。</p>
+
+<p class="translated">然而，使用像50MP和108MP这样的高像素传感器意味着拍摄的每张照片的文件大小都将非常大。这并不理想，因为智能手机的存储空间有限。如果一张图片的大小是50-60MB，你很快就会填满手机的大部分存储空间。在相机传感器中塞入如此多的像素的另一个轻微缺点是，每个单独像素的尺寸最终相当小。这对于弱光摄影来说并不理想。</p>
+
+
+
+<p/><p data-inc="2" class="translated">为了解决这两个问题，智能手机品牌利用了一种被称为像素宁滨的技术。像素宁滨本质上是将一组相邻像素组合成一个大像素。这样，一个像素的大小变得相当大，从而产生更好的照片。它还会将图像的大小和分辨率大幅降低一倍，这取决于经历宁滨的像素数量。</p>
+
+<p class="translated">例如，Galaxy S22 Ultra采用了<a href="https://www.xda-developers.com/nona-binning-tetra-binning-explained/">诺娜宁滨</a>，这意味着相机传感器中的3×3相邻像素网格(其中9个)组合起来形成一个大像素。因此，108百万像素的相机(本质上意味着相机传感器中有1.08亿像素)现在将产生12百万像素的图像(108除以9)。简单地说，现在有12个集群，每个集群包含900万个像素，总共有1.08亿个像素，即108兆像素。</p>
+
+
+
+<p class="translated">类似地，标准的Galaxy S22和Galaxy S22 Plus使用四宁滨，通常被称为四宁滨。四宁滨不是组合9个像素，而是将2×2网格中的四个相邻像素组合成一个大像素。因此，Galaxy S22和Galaxy S22 Plus上的50MP主传感器将默认点击12.5MP图像。</p>
+
+<p class="translated">这种在网格中组合相邻像素的过程被称为像素宁滨。这是一种常见的行业惯例，尤其是当手机使用大像素的相机传感器时。现在我们知道了什么是像素宁滨，让我们回到最初的话题——自适应像素——并了解它是如何工作的。</p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="adaptive-pixel-on-samsung-galaxy-s22-series" class="translated">三星Galaxy S22系列上的自适应像素</h2>
+<p class="translated">像素宁滨是一种节省智能手机存储空间的好方法，它也使传感器能够捕捉更多的光，因为像素的有效尺寸变得更大。然而，以更高的分辨率拍照也有好处。当你通过108兆像素的传感器捕捉图像时，捕捉到的细节水平会非常高。这是你无法通过软件复制或匹配的。因此，三星提出了一种混合解决方案，称之为<em>自适应像素</em>。</p>
+
+
+
+<p class="translated">Adaptive Pixel采用了一种智能方式来保留108MP传感器的细节，同时还减小了文件大小。它是通过每次点击一张图片时捕捉两张图像而不是一张来实现的。手机在108MP模式下拍摄一张照片，在12MP模式下拍摄另一张照片。一旦以每种分辨率捕捉到两幅图像，就会有一些软件处理在后台进行，将它们合并成一幅图像。</p>
+
+<p class="translated">最终产品是一张光线充足、尺寸不太大、细节丰富的照片。由于现代智能手机中强大的芯片组和图像信号处理器，所有这一切都在后台发生，只需一眨眼的时间。如果你是一个经常拍照并放大照片的人，自适应像素肯定会对你有益。</p>
+
+<p class="translated"><strong>注意:</strong>只有在全108MP模式下点击照片时，自适应像素功能才会出现在画面中(相当字面上的意思)。如果你在默认的像素合并模式下拍摄，图像将包含与12MP图像相关的细节。</p>
+
+<hr/>
+
+<p class="translated">这是三星在Galaxy S22系列中推出的几个新相机功能之一。像这样的功能可能会吸引智能手机摄影师转向新的Galaxy S22 Ultra，特别是因为Galaxy S21 Ultra是最通用的拍照手机之一，Galaxy S22 Ultra进一步加强了这一概念。如果你想知道更多关于相机的细节，以及Galaxy S22系列中所有三款手机的方方面面，你可以等待我们的评论，它应该很快就会下降。如果你计划购买该系列三款手机中的任何一款，你可以查看<a href="https://www.xda-developers.com/best-samsung-galaxy-s22-deals/">最佳Galaxy S22交易</a>，以利用所有优惠和折扣并节省一些钱。</p>
+
+<div class="display-card tag"><div class="w-img "><div class="body-img portrait"><div class="responsive-img img-article-square" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Pink-Gold_Product-Box-Image_49652-e1644317124639.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Samsung Galaxy S22&quot;"> <figure> <picture>  <source media="(min-width: 1024px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Pink-Gold_Product-Box-Image_49652-e1644317124639.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="320px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Pink-Gold_Product-Box-Image_49652-e1644317124639.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="400px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Pink-Gold_Product-Box-Image_49652-e1644317124639.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="300px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Pink-Gold_Product-Box-Image_49652-e1644317124639.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <img class="lazyload" alt="The Samsung Galaxy S22 is the entry flagship for 2022, bringing over top of the line performance and camera capabilities in a form that fits many pockets and budgets." data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Pink-Gold_Product-Box-Image_49652-e1644317124639.jpg" src="../Images/47038c6cd51aa946444dc5d6a7e81aa3.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Pink-Gold_Product-Box-Image_49652-e1644317124639.jpg"/> </picture> <figcaption class="body-img-caption">Samsung Galaxy S22</figcaption> </figure> </div> </div> </div><div class="w-display-card-content"> <div class="w-display-card-description"><p class="display-card-description translated">三星Galaxy S22是2022年的入门级旗舰产品，以适合许多口袋和预算的形式带来了顶级的性能和相机功能。</p> </div> </div> </div>
+<div class="display-card tag"><div class="w-img "><div class="body-img portrait"><div class="responsive-img img-article-square" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Plus-Green_Product-Box-Image_19557-e1644317101690.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Samsung Galaxy S22 Plus&quot;"> <figure> <picture>  <source media="(min-width: 1024px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Plus-Green_Product-Box-Image_19557-e1644317101690.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="320px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Plus-Green_Product-Box-Image_19557-e1644317101690.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="400px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Plus-Green_Product-Box-Image_19557-e1644317101690.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="300px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Plus-Green_Product-Box-Image_19557-e1644317101690.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <img class="lazyload" alt="The Samsung Galaxy S22 Plus is the mid flagship of the company's 2022 lineup, bringing over top of the line performance, display, and camera capabilities. It runs One UI 4.1 (based on Android 12)." data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Plus-Green_Product-Box-Image_19557-e1644317101690.jpg" src="../Images/3659da736120e268168547df64b37aba.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Plus-Green_Product-Box-Image_19557-e1644317101690.jpg"/> </picture> <figcaption class="body-img-caption">Samsung Galaxy S22 Plus</figcaption> </figure> </div> </div> </div><div class="w-display-card-content"> <h5 class="display-card-title translated">三星Galaxy S22 Plus</h5><div class="w-display-card-description"><p class="display-card-description translated">三星Galaxy S22 Plus是2022年的中期旗舰产品，在更大的外壳中为那些需要做更多事情的人带来了顶级的性能、显示和相机功能。</p> </div> </div> </div>
+<div class="display-card tag"><div class="w-img "><div class="body-img portrait"><div class="responsive-img img-article-square" data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Ultra-Phantom-White_Product-Box-Image_62197-e1644317278143.jpg" data-modal-id="single-image-modal" data-modal-container-id="single-image-modal-container" data-img-caption="&quot;Samsung Galaxy S22 Ultra&quot;"> <figure> <picture>  <source media="(min-width: 1024px)" sizes="480px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Ultra-Phantom-White_Product-Box-Image_62197-e1644317278143.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 768px)" sizes="320px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Ultra-Phantom-White_Product-Box-Image_62197-e1644317278143.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 481px)" sizes="400px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Ultra-Phantom-White_Product-Box-Image_62197-e1644317278143.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <source media="(min-width: 0px)" sizes="300px" data-srcset="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Ultra-Phantom-White_Product-Box-Image_62197-e1644317278143.jpg?q=50&amp;fit=crop&amp;dpr=1.5"/> <img class="lazyload" alt="The Samsung Galaxy S22 Ultra is the top flagship for 2022, bringing over top of the line performance, display and camera capabilities alongside S Pen capabilities to deliver an ultra experience for power users." data-img-url="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Ultra-Phantom-White_Product-Box-Image_62197-e1644317278143.jpg" src="../Images/9ece91033072839f67848f4df356ce53.png" data-original-src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/02/Samsung-Galaxy-S22-Ultra-Phantom-White_Product-Box-Image_62197-e1644317278143.jpg"/> </picture> <figcaption class="body-img-caption">Samsung Galaxy S22 Ultra</figcaption> </figure> </div> </div> </div><div class="w-display-card-content"> <div class="w-display-card-description"><p class="display-card-description translated">三星Galaxy S22 Ultra是2022年的顶级旗舰产品，带来了顶级的性能、显示和相机功能以及S Pen功能，为高级用户提供了超高体验。</p> </div> </div> </div></div>
+
+
+</div>    
+</body>
+</html>

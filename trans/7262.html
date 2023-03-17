@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Android 14 Developer Preview 2 is here with selected photos access and other changes</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="translated">Android 14开发者预览版2现已发布，提供精选照片访问和其他更改</h1>
+<blockquote>原文：<a href="https://www.xda-developers.com/android-14-developer-preview-2-is-here-with/#0001-01-01">https://www.xda-developers.com/android-14-developer-preview-2-is-here-with/#0001-01-01</a></blockquote><div><div class="content-block-regular">
+<p class="translated">Android 14的第一个开发者预览版于上个月发布，它为世界上最大的操作系统的下一次迭代奠定了基础。第一个开发者预览版有定制选项和更好的电池寿命承诺，第二个开发者预览版对其中一些变化进行了加倍。此外，它还引入了保护您的安全和隐私的新方法，例如允许您选择应用程序可以在您的设备上访问的照片。</p>
+
+  
+<p class="translated">正如标题“开发者预览版”所暗示的，这些版本仅供开发者使用。这是为了测试新功能，并确保他们的应用程序能够在更新的设备上正常工作。会有漏洞，会有其他问题，谷歌将在未来几个月里向<em>开发者</em>寻求反馈。如果你不介意遇到问题，那么无论如何，试试Android 14吧。然而，如果你依赖你的智能手机持续稳定，那么等待预计在今年下半年发布的完整Android 14版本可能是值得的。</p>
+
+<p class="translated">Android 14开发者预览版2最显著的功能包括:</p>
+
+<ul> <li class="translated"><strong>让用户对他们的数据拥有更多控制权</strong>:已经引入了一些变化，用户可以选择应用程序在设备上访问哪些特定的照片，这样你就不需要与应用程序共享你的整个照片库。还添加了屏幕截图检测API，以防止对用户数据的不必要访问。</li> <li class="translated"><strong>更多、更安全的登录方式</strong>:一种新的API提供了一种安全的无密码登录方式，通过密码登录应用。</li> <li class="translated">Android设备系统健康状况的改善:Android 14将致力于简化应用程序的运行方式，包括防止它们在冻结时运行，以节省电池寿命和性能。</li> </ul>
+
+<p class="translated">我们预计还会有其他的变化，我们会密切关注的。</p>
+
+ 
+<h2 id="when-will-android-14-release" class="translated">Android 14什么时候发布？</h2>
+
+
+<p class="translated">对于Android更新，谷歌通常会揭示一个“平台稳定性”里程碑，以便开发者可以知道谷歌打算何时交付最终的SDK/NDK API，以及最终的内部API和面向应用的系统行为。谷歌打算在2023年6月达到平台稳定，在正式发布前至少计划“几周”。Android 13在2022年6月达到平台稳定，最终版本是在当年的<a href="https://www.xda-developers.com/android-13-launched/">8月</a>发布的<a href="https://www.xda-developers.com/android-12-launched/">。谷歌发布了更多关于发布时间表的细节，你可以去看看。</a></p>
+<p class="ad-odd">
+</p>
+
+
+<h2 id="privacy-and-security" class="translated">隐私和安全</h2>
+<h3 id="selected-photos-access" class="translated">选定照片访问</h3>
+<p class="translated">Photo Picker是Google随Android 13推出的API。应用程序不需要请求任何权限来访问用户通过照片选择器选择的项目，这使得它成为一种保护隐私的方式来与应用程序共享照片和视频。当我们在第一个Android 14开发者预览版中启用它的时候，我们已经详细介绍了这个功能，但基本上，它的工作方式如下。</p>
+
+
+
+<p class="translated">当一个以API级别33为目标的应用程序触发运行时权限对话框，要求用户授予他们READ_MEDIA_VIDEO或READ_MEDIA_IMAGES(或两者都有)时，Android 14可能会在权限对话框中插入一个新条目，上面写着“选择照片”。点击此条目将启动新版本的照片选择器，允许用户选择他们希望授予应用程序访问权限的照片或视频。该应用随后只能访问用户特别选择的那些媒体项目，除非用户选择扩展对附加媒体项目的访问，或者授权该应用访问图像和视频的整个媒体商店集合。</p>
+
+<ul> <li class="translated"><strong>允许访问所有照片</strong>:所有设备上照片&amp;视频的完整库可用。</li> <li class="translated"><strong>选择照片</strong>:只有用户选择的照片&amp;视频将暂时通过MediaStore提供。</li> <li class="translated"><strong>不允许</strong>:拒绝访问所有照片和视频。</li> </ul>
+
+<h3 id="credential-manager-and-passkeys" class="translated">凭据管理器和密钥</h3>
+<p class="translated">Android 14增加了<a href="https://www.xda-developers.com/android-credential-manager-api-alpha/">凭证管理器</a>作为平台API，并通过带有Google Play服务实现的Jetpack库一直带到Android 4.4和更高版本。它通过支持用于检索和存储凭据的API用户配置的凭据提供程序(如密码管理器)来简化登录。</p>
+
+<p class="translated">凭证管理器API还支持密码，这是无密码认证的新行业标准，比使用用户名和密码登录应用程序更安全。它将允许用户为应用程序创建密钥，并将它们存储在谷歌密码管理器中。存储的密钥将在登录到同一个Google帐户的设备之间同步，以获得无缝体验。</p>
+
+<h3 id="safer-implicit-intents" class="translated">更安全的隐含意图</h3>
+<p class="translated">对于以Android 14为目标的应用程序，创建一个带有隐式意图的可变待定意图将引发一个异常，因此它们不能用于触发意外的代码路径。</p>
+
+<h3 id="background-activity-launching" class="translated">后台活动启动</h3>
+<p class="translated">为了减少意外中断的情况，Android 14让前台应用程序能够更多地控制它们与之交互的应用程序启动活动的能力。具体来说，针对Android 14的应用程序需要在发送PendingIntent或绑定服务时授予权限，以便在后台启动活动。</p>
+<p class="ad-even">
+</p>
+
+
+<h2 id="improved-application-experiences" class="translated">改进的应用体验</h2>
+<h3 id="new-packageinstaller-apis" class="translated">新软件包安装程序API</h3>
+<p class="translated">Android 14引入了许多PackageInstaller APIs，以简化和改善安装apk时的用户体验。其中包括:</p>
+
+<ul> <li class="translated"><strong> requestUserPreapproval() </strong>:允许用户推迟下载APK，直到安装被批准。</li> <li class="translated"><strong>setRequestUpdateOwnership()</strong>:允许安装程序表明它对应用程序的未来更新负责。</li> <li class="translated"><strong> setDontKillApp() </strong>:可以在应用程序使用时，通过拆分apk无缝安装应用程序的可选功能。</li> </ul>
+
+<p class="translated">InstallConstraints API还将使应用程序只在方便的时候更新，比如当应用程序不再使用时。</p>
+
+<h3 id="personalization" class="translated">个性化</h3>
+<p class="translated">Android 14允许你设置地区偏好来个性化温度单位、一周的第一天和编号系统。我们在开发者预览版1中也发现了这个特性，并且<a href="https://www.xda-developers.com/android-14-regional-preferences/">通过开发者标志</a>启用了它。例如，居住在美国的欧洲人可能仍然喜欢使用摄氏度来测量温度。</p>
+
+
+
+
+<p class="ad-odd">
+</p>
+
+
+<h2 id="how-to-download-and-install-android-14-developer-preview-1-on-your-google-pixel-device" class="translated">如何在你的谷歌Pixel设备上下载并安装Android 14开发者预览版1</h2>
+<p class="translated">您可以轻松下载Android开发者预览版1，如果您不确定如何安装Android 14，请务必查看我们关于如何安装Android 14的指南。</p>
+
+<p class="translated">谷歌正式发布了针对Pixel 7 Pro、Pixel 7、Pixel 6 Pro、Pixel 6、Pixel 5a 5G、Pixel 5或Pixel 4a (5G)的开发者预览更新。您可以在Android Studio的Android模拟器中使用64位系统映像。</p>
+
+<hr/>
+
+<p class="translated"><em>你对最新的开发者预览版有什么想法？你会在你的设备上安装它吗？你的体验如何？请在下面的评论中告诉我们！</em></p>
+
+ </div>
+
+
+</div>    
+</body>
+</html>
